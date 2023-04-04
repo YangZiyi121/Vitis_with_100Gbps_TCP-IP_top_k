@@ -3,7 +3,7 @@
 This project provides a stream based integer top k sorting using a 100Gbps network. It is achieved by expanding the [100Gbps TCP/IP stack repository](https://github.com/fpgasystems/Vitis_with_100Gbps_TCP-IP) with a custom user kernel.
 
 <h3>Top K User Kernel Design</h3>
-![Architecture](../images/top_k_arch.png)
+![Architecture](../img/top_k_arch.png)
 <h3>Build and Run</h3>
 
 **Clone the Repository**
