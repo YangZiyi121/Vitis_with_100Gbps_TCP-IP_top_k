@@ -4,7 +4,8 @@ This project provides a stream based integer top k sorting using a 100Gbps netwo
 
 <h3>Top K User Kernel Design</h3>
 This design refers to the paper 
-![Architecture](../img/top_k_arch.pdf)
+
+![Architecture](/img/top_k_arch.png)
 <h3>Build and Run</h3>
 
 **Clone the Repository**
