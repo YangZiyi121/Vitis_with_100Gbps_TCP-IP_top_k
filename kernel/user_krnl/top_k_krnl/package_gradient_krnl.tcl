@@ -45,7 +45,7 @@
 # PART OF THIS FILE AT ALL TIMES.
 # 
 # *******************************************************************************/
-set path_to_hdl "./kernel/user_krnl/gradient_krnl/src"
+set path_to_hdl "./kernel/user_krnl/top_k_krnl/src"
 set path_to_packaged "./packaged_kernel_${suffix}"
 set path_to_tmp_project "./tmp_kernel_pack_${suffix}"
 set path_to_common "./kernel/common"
