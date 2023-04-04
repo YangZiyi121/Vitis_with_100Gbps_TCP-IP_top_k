@@ -1,0 +1,262 @@
+
+
+================================================================
+== Vitis HLS Report for 'udp_top'
+================================================================
+* Date:           Sat Mar 18 14:40:36 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        udp_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  2.686 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        7|        7|  22.400 ns|  22.400 ns|    1|    1|  dataflow|
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 11, States = { 1 2 3 4 5 6 7 8 9 10 11 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 12 [2/2] (0.00ns)   --->   "%reg_listen_port_read = read i16 @_ssdm_op_Read.ap_none.i16, i16 %reg_listen_port"   --->   Operation 12 'read' 'reg_listen_port_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%reg_listen_port_c = alloca i64 1"   --->   Operation 13 'alloca' 'reg_listen_port_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+
+State 2 <SV = 1> <Delay = 1.16>
+ST_2 : Operation 14 [1/2] (0.00ns)   --->   "%reg_listen_port_read = read i16 @_ssdm_op_Read.ap_none.i16, i16 %reg_listen_port"   --->   Operation 14 'read' 'reg_listen_port_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (1.16ns)   --->   "%call_ln0 = call void @entry_proc, i16 %reg_listen_port_read, i16 %reg_listen_port_c"   --->   Operation 15 'call' 'call_ln0' <Predicate = true> <Delay = 1.16> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 16 [2/2] (0.00ns)   --->   "%call_ln285 = call void @convert_axis_to_net_axis<512>, i512 %s_axis_rx_data_V_data_V, i64 %s_axis_rx_data_V_keep_V, i64 %s_axis_rx_data_V_strb_V, i1 %s_axis_rx_data_V_last_V, i1024 %s_axis_rx_data_internal" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:285]   --->   Operation 16 'call' 'call_ln285' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 17 [1/2] (0.00ns)   --->   "%call_ln285 = call void @convert_axis_to_net_axis<512>, i512 %s_axis_rx_data_V_data_V, i64 %s_axis_rx_data_V_keep_V, i64 %s_axis_rx_data_V_strb_V, i1 %s_axis_rx_data_V_last_V, i1024 %s_axis_rx_data_internal" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:285]   --->   Operation 17 'call' 'call_ln285' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 18 [4/4] (0.00ns)   --->   "%call_ln224 = call void @process_udp<512>, i16 %reg_listen_port_c, i1024 %s_axis_rx_data_internal, i1 %pu_header_ready, i16 %pu_header_idx, i64 %pu_header_header_V, i1024 %rx_udp2shiftFifo, i1 %metaWritten, i49 %rx_udpMetaFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:224]   --->   Operation 18 'call' 'call_ln224' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 19 [3/4] (0.00ns)   --->   "%call_ln224 = call void @process_udp<512>, i16 %reg_listen_port_c, i1024 %s_axis_rx_data_internal, i1 %pu_header_ready, i16 %pu_header_idx, i64 %pu_header_header_V, i1024 %rx_udp2shiftFifo, i1 %metaWritten, i49 %rx_udpMetaFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:224]   --->   Operation 19 'call' 'call_ln224' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 20 [2/2] (0.00ns)   --->   "%call_ln288 = call void @convert_axis_to_net_axis<512>.1, i512 %s_axis_tx_data_V_data_V, i64 %s_axis_tx_data_V_keep_V, i64 %s_axis_tx_data_V_strb_V, i1 %s_axis_tx_data_V_last_V, i1024 %s_axis_tx_data_internal" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:288]   --->   Operation 20 'call' 'call_ln288' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 21 [2/4] (0.00ns)   --->   "%call_ln224 = call void @process_udp<512>, i16 %reg_listen_port_c, i1024 %s_axis_rx_data_internal, i1 %pu_header_ready, i16 %pu_header_idx, i64 %pu_header_header_V, i1024 %rx_udp2shiftFifo, i1 %metaWritten, i49 %rx_udpMetaFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:224]   --->   Operation 21 'call' 'call_ln224' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 22 [1/2] (0.00ns)   --->   "%call_ln288 = call void @convert_axis_to_net_axis<512>.1, i512 %s_axis_tx_data_V_data_V, i64 %s_axis_tx_data_V_keep_V, i64 %s_axis_tx_data_V_strb_V, i1 %s_axis_tx_data_V_last_V, i1024 %s_axis_tx_data_internal" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:288]   --->   Operation 22 'call' 'call_ln288' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 23 [3/3] (0.00ns)   --->   "%call_ln291 = call void @convert_net_axis_to_axis<512>, i512 %m_axis_rx_data_V_data_V, i64 %m_axis_rx_data_V_keep_V, i64 %m_axis_rx_data_V_strb_V, i1 %m_axis_rx_data_V_last_V, i1024 %m_axis_rx_data_internal" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:291]   --->   Operation 23 'call' 'call_ln291' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 24 [3/3] (0.00ns)   --->   "%call_ln294 = call void @convert_net_axis_to_axis<512>.1, i512 %m_axis_tx_data_V_data_V, i64 %m_axis_tx_data_V_keep_V, i64 %m_axis_tx_data_V_strb_V, i1 %m_axis_tx_data_V_last_V, i1024 %m_axis_tx_data_internal" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:294]   --->   Operation 24 'call' 'call_ln294' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 25 [1/4] (0.00ns)   --->   "%call_ln224 = call void @process_udp<512>, i16 %reg_listen_port_c, i1024 %s_axis_rx_data_internal, i1 %pu_header_ready, i16 %pu_header_idx, i64 %pu_header_header_V, i1024 %rx_udp2shiftFifo, i1 %metaWritten, i49 %rx_udpMetaFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:224]   --->   Operation 25 'call' 'call_ln224' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 26 [3/3] (0.00ns)   --->   "%call_ln239 = call void @split_tx_meta, i176 %s_axis_tx_meta, i48 %m_axis_tx_meta, i64 %tx_udpMetaFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:239]   --->   Operation 26 'call' 'call_ln239' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 1.16>
+ST_8 : Operation 27 [2/3] (1.16ns)   --->   "%call_ln291 = call void @convert_net_axis_to_axis<512>, i512 %m_axis_rx_data_V_data_V, i64 %m_axis_rx_data_V_keep_V, i64 %m_axis_rx_data_V_strb_V, i1 %m_axis_rx_data_V_last_V, i1024 %m_axis_rx_data_internal" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:291]   --->   Operation 27 'call' 'call_ln291' <Predicate = true> <Delay = 1.16> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 28 [2/3] (1.16ns)   --->   "%call_ln294 = call void @convert_net_axis_to_axis<512>.1, i512 %m_axis_tx_data_V_data_V, i64 %m_axis_tx_data_V_keep_V, i64 %m_axis_tx_data_V_strb_V, i1 %m_axis_tx_data_V_last_V, i1024 %m_axis_tx_data_internal" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:294]   --->   Operation 28 'call' 'call_ln294' <Predicate = true> <Delay = 1.16> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 29 [3/3] (0.00ns)   --->   "%call_ln227 = call void @merge_rx_meta, i48 %s_axis_rx_meta, i176 %m_axis_rx_meta, i49 %rx_udpMetaFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:227]   --->   Operation 29 'call' 'call_ln227' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 30 [2/3] (0.00ns)   --->   "%call_ln239 = call void @split_tx_meta, i176 %s_axis_tx_meta, i48 %m_axis_tx_meta, i64 %tx_udpMetaFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:239]   --->   Operation 30 'call' 'call_ln239' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 31 [2/2] (0.00ns)   --->   "%call_ln241 = call void @udp_lshiftWordByOctet<512, 1>, i1 %ls_writeRemainder, i512 %prevWord_data_V_1, i64 %prevWord_keep_V_1, i1024 %tx_shift2udpFifo, i1024 %s_axis_tx_data_internal, i1 %ls_firstWord" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:241]   --->   Operation 31 'call' 'call_ln241' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 1.29>
+ST_9 : Operation 32 [1/3] (0.00ns)   --->   "%call_ln291 = call void @convert_net_axis_to_axis<512>, i512 %m_axis_rx_data_V_data_V, i64 %m_axis_rx_data_V_keep_V, i64 %m_axis_rx_data_V_strb_V, i1 %m_axis_rx_data_V_last_V, i1024 %m_axis_rx_data_internal" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:291]   --->   Operation 32 'call' 'call_ln291' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 33 [1/3] (0.00ns)   --->   "%call_ln294 = call void @convert_net_axis_to_axis<512>.1, i512 %m_axis_tx_data_V_data_V, i64 %m_axis_tx_data_V_keep_V, i64 %m_axis_tx_data_V_strb_V, i1 %m_axis_tx_data_V_last_V, i1024 %m_axis_tx_data_internal" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:294]   --->   Operation 33 'call' 'call_ln294' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 34 [2/3] (1.29ns)   --->   "%call_ln227 = call void @merge_rx_meta, i48 %s_axis_rx_meta, i176 %m_axis_rx_meta, i49 %rx_udpMetaFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:227]   --->   Operation 34 'call' 'call_ln227' <Predicate = true> <Delay = 1.29> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 35 [1/3] (0.00ns)   --->   "%call_ln239 = call void @split_tx_meta, i176 %s_axis_tx_meta, i48 %m_axis_tx_meta, i64 %tx_udpMetaFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:239]   --->   Operation 35 'call' 'call_ln239' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 36 [1/2] (0.00ns)   --->   "%call_ln241 = call void @udp_lshiftWordByOctet<512, 1>, i1 %ls_writeRemainder, i512 %prevWord_data_V_1, i64 %prevWord_keep_V_1, i1024 %tx_shift2udpFifo, i1024 %s_axis_tx_data_internal, i1 %ls_firstWord" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:241]   --->   Operation 36 'call' 'call_ln241' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 37 [2/2] (0.00ns)   --->   "%call_ln225 = call void @udp_rshiftWordByOctet<net_axis<512>, 512, 2>, i1 %fsmState, i512 %prevWord_data_V, i64 %prevWord_keep_V, i1024 %rx_udp2shiftFifo, i1 %rs_firstWord, i1024 %m_axis_rx_data_internal" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:225]   --->   Operation 37 'call' 'call_ln225' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 38 [1/3] (0.00ns)   --->   "%call_ln227 = call void @merge_rx_meta, i48 %s_axis_rx_meta, i176 %m_axis_rx_meta, i49 %rx_udpMetaFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:227]   --->   Operation 38 'call' 'call_ln227' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 39 [2/2] (0.00ns)   --->   "%call_ln243 = call void @generate_udp<512>, i2 %state, i16 %header_idx, i64 %header_header_V, i64 %tx_udpMetaFifo, i1024 %m_axis_tx_data_internal, i1024 %tx_shift2udpFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:243]   --->   Operation 39 'call' 'call_ln243' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 40 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @reg_listen_port_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i16 %reg_listen_port_c, i16 %reg_listen_port_c"   --->   Operation 40 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %reg_listen_port_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 42 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln0 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 1, void @empty_1"   --->   Operation 42 'specdataflowpipeline' 'specdataflowpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 43 [1/1] (0.00ns)   --->   "%empty_35 = specchannel i32 @_ssdm_op_SpecChannel, void @m_axis_rx_data_internal_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i1024 %m_axis_rx_data_internal, i1024 %m_axis_rx_data_internal"   --->   Operation 43 'specchannel' 'empty_35' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 44 [1/1] (0.00ns)   --->   "%empty_36 = specchannel i32 @_ssdm_op_SpecChannel, void @m_axis_tx_data_internal_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i1024 %m_axis_tx_data_internal, i1024 %m_axis_tx_data_internal"   --->   Operation 44 'specchannel' 'empty_36' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 45 [1/1] (0.00ns)   --->   "%empty_37 = specchannel i32 @_ssdm_op_SpecChannel, void @rx_udp2shiftFifo_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i1024 %rx_udp2shiftFifo, i1024 %rx_udp2shiftFifo"   --->   Operation 45 'specchannel' 'empty_37' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 46 [1/1] (0.00ns)   --->   "%empty_38 = specchannel i32 @_ssdm_op_SpecChannel, void @rx_udpMetaFifo_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i49 %rx_udpMetaFifo, i49 %rx_udpMetaFifo"   --->   Operation 46 'specchannel' 'empty_38' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 47 [1/1] (0.00ns)   --->   "%empty_39 = specchannel i32 @_ssdm_op_SpecChannel, void @s_axis_rx_data_internal_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i1024 %s_axis_rx_data_internal, i1024 %s_axis_rx_data_internal"   --->   Operation 47 'specchannel' 'empty_39' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 48 [1/1] (0.00ns)   --->   "%empty_40 = specchannel i32 @_ssdm_op_SpecChannel, void @s_axis_tx_data_internal_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i1024 %s_axis_tx_data_internal, i1024 %s_axis_tx_data_internal"   --->   Operation 48 'specchannel' 'empty_40' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 49 [1/1] (0.00ns)   --->   "%empty_41 = specchannel i32 @_ssdm_op_SpecChannel, void @tx_shift2udpFifo_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i1024 %tx_shift2udpFifo, i1024 %tx_shift2udpFifo"   --->   Operation 49 'specchannel' 'empty_41' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 50 [1/1] (0.00ns)   --->   "%empty_42 = specchannel i32 @_ssdm_op_SpecChannel, void @tx_udpMetaFifo_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i64 %tx_udpMetaFifo, i64 %tx_udpMetaFifo"   --->   Operation 50 'specchannel' 'empty_42' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 51 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_4"   --->   Operation 51 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 52 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 52 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 53 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i48 %s_axis_rx_meta, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 53 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 54 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i48 %s_axis_rx_meta"   --->   Operation 54 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 55 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %s_axis_rx_data_V_data_V, i64 %s_axis_rx_data_V_keep_V, i64 %s_axis_rx_data_V_strb_V, i1 %s_axis_rx_data_V_last_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 55 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 56 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i512 %s_axis_rx_data_V_data_V"   --->   Operation 56 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 57 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %s_axis_rx_data_V_keep_V"   --->   Operation 57 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 58 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %s_axis_rx_data_V_strb_V"   --->   Operation 58 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 59 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %s_axis_rx_data_V_last_V"   --->   Operation 59 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 60 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i176 %m_axis_rx_meta, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 60 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 61 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i176 %m_axis_rx_meta"   --->   Operation 61 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %m_axis_rx_data_V_data_V, i64 %m_axis_rx_data_V_keep_V, i64 %m_axis_rx_data_V_strb_V, i1 %m_axis_rx_data_V_last_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 63 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i512 %m_axis_rx_data_V_data_V"   --->   Operation 63 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 64 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %m_axis_rx_data_V_keep_V"   --->   Operation 64 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 65 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %m_axis_rx_data_V_strb_V"   --->   Operation 65 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 66 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %m_axis_rx_data_V_last_V"   --->   Operation 66 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 67 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i176 %s_axis_tx_meta, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 67 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 68 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i176 %s_axis_tx_meta"   --->   Operation 68 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 69 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %s_axis_tx_data_V_data_V, i64 %s_axis_tx_data_V_keep_V, i64 %s_axis_tx_data_V_strb_V, i1 %s_axis_tx_data_V_last_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 69 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 70 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i512 %s_axis_tx_data_V_data_V"   --->   Operation 70 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 71 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %s_axis_tx_data_V_keep_V"   --->   Operation 71 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 72 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %s_axis_tx_data_V_strb_V"   --->   Operation 72 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 73 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %s_axis_tx_data_V_last_V"   --->   Operation 73 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 74 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i48 %m_axis_tx_meta, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 74 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 75 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i48 %m_axis_tx_meta"   --->   Operation 75 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 76 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %m_axis_tx_data_V_data_V, i64 %m_axis_tx_data_V_keep_V, i64 %m_axis_tx_data_V_strb_V, i1 %m_axis_tx_data_V_last_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 76 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 77 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i512 %m_axis_tx_data_V_data_V"   --->   Operation 77 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 78 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %m_axis_tx_data_V_keep_V"   --->   Operation 78 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 79 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %m_axis_tx_data_V_strb_V"   --->   Operation 79 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 80 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %m_axis_tx_data_V_last_V"   --->   Operation 80 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 81 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i128 %reg_ip_address"   --->   Operation 81 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 82 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %reg_ip_address, void @empty_2, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 82 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 83 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %reg_listen_port"   --->   Operation 83 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 84 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %reg_listen_port, void @empty_2, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 84 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 85 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1024 %s_axis_rx_data_internal, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 85 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 86 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1024 %s_axis_tx_data_internal, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 86 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 87 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1024 %m_axis_rx_data_internal, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 87 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 88 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1024 %m_axis_tx_data_internal, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 88 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 89 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1024 %rx_udp2shiftFifo, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 89 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 90 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i49 %rx_udpMetaFifo, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 90 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 91 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %tx_udpMetaFifo, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 91 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 92 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1024 %tx_shift2udpFifo, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 92 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 93 [1/2] (0.00ns)   --->   "%call_ln225 = call void @udp_rshiftWordByOctet<net_axis<512>, 512, 2>, i1 %fsmState, i512 %prevWord_data_V, i64 %prevWord_keep_V, i1024 %rx_udp2shiftFifo, i1 %rs_firstWord, i1024 %m_axis_rx_data_internal" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:225]   --->   Operation 93 'call' 'call_ln225' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 94 [1/2] (0.00ns)   --->   "%call_ln243 = call void @generate_udp<512>, i2 %state, i16 %header_idx, i64 %header_header_V, i64 %tx_udpMetaFifo, i1024 %m_axis_tx_data_internal, i1024 %tx_shift2udpFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:243]   --->   Operation 94 'call' 'call_ln243' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 95 [1/1] (0.00ns)   --->   "%ret_ln307 = ret" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:307]   --->   Operation 95 'ret' 'ret_ln307' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.2ns, clock uncertainty: 0.864ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 1.17ns
+The critical path consists of the following:
+	register read operation ('reg_listen_port_read') on port 'reg_listen_port' [46]  (0 ns)
+	'call' operation ('call_ln0') to 'entry_proc' [101]  (1.17 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 1.17ns
+The critical path consists of the following:
+	'call' operation ('call_ln291', /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:291) to 'convert_net_axis_to_axis<512>' [104]  (1.17 ns)
+
+ <State 9>: 1.29ns
+The critical path consists of the following:
+	'call' operation ('call_ln227', /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/udp/udp.cpp:227) to 'merge_rx_meta' [108]  (1.29 ns)
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

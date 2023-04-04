@@ -1,0 +1,148 @@
+
+
+================================================================
+== Vitis HLS Report for 'closeConnection_handler'
+================================================================
+* Date:           Sat Mar 18 14:42:54 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        scatter_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  1.168 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        2|        2|  6.400 ns|  6.400 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       16|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       27|    -|
+|Register             |        -|     -|       22|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|       22|       43|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state2_io                |       and|   0|  0|   2|           1|           1|
+    |ap_block_state3_io                |       and|   0|  0|   2|           1|           1|
+    |tmp_i_nbreadreq_fu_26_p3          |       and|   0|  0|   2|           1|           0|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  16|           8|           8|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------+----+-----------+-----+-----------+
+    |                 Name                | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |ap_done                              |   9|          2|    1|          2|
+    |closeConnectionBuffer_blk_n          |   9|          2|    1|          2|
+    |m_axis_close_connection_TDATA_blk_n  |   9|          2|    1|          2|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |Total                                |  27|          6|    3|          6|
+    +-------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------+----+----+-----+-----------+
+    |            Name            | FF | LUT| Bits| Const Bits|
+    +----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                   |   1|   0|    1|          0|
+    |ap_done_reg                 |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2     |   1|   0|    1|          0|
+    |tmp_i_reg_47                |   1|   0|    1|          0|
+    |tmp_i_reg_47_pp0_iter1_reg  |   1|   0|    1|          0|
+    |tmp_reg_51                  |  16|   0|   16|          0|
+    +----------------------------+----+----+-----+-----------+
+    |Total                       |  22|   0|   22|          0|
+    +----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------+-----+-----+------------+-------------------------+--------------+
+|            RTL Ports           | Dir | Bits|  Protocol  |      Source Object      |    C Type    |
++--------------------------------+-----+-----+------------+-------------------------+--------------+
+|ap_clk                          |   in|    1|  ap_ctrl_hs|  closeConnection_handler|  return value|
+|ap_rst                          |   in|    1|  ap_ctrl_hs|  closeConnection_handler|  return value|
+|ap_start                        |   in|    1|  ap_ctrl_hs|  closeConnection_handler|  return value|
+|ap_done                         |  out|    1|  ap_ctrl_hs|  closeConnection_handler|  return value|
+|ap_continue                     |   in|    1|  ap_ctrl_hs|  closeConnection_handler|  return value|
+|ap_idle                         |  out|    1|  ap_ctrl_hs|  closeConnection_handler|  return value|
+|ap_ready                        |  out|    1|  ap_ctrl_hs|  closeConnection_handler|  return value|
+|closeConnectionBuffer_dout      |   in|   16|     ap_fifo|    closeConnectionBuffer|       pointer|
+|closeConnectionBuffer_empty_n   |   in|    1|     ap_fifo|    closeConnectionBuffer|       pointer|
+|closeConnectionBuffer_read      |  out|    1|     ap_fifo|    closeConnectionBuffer|       pointer|
+|m_axis_close_connection_TREADY  |   in|    1|        axis|  m_axis_close_connection|       pointer|
+|m_axis_close_connection_TDATA   |  out|   16|        axis|  m_axis_close_connection|       pointer|
+|m_axis_close_connection_TVALID  |  out|    1|        axis|  m_axis_close_connection|       pointer|
++--------------------------------+-----+-----+------------+-------------------------+--------------+
+

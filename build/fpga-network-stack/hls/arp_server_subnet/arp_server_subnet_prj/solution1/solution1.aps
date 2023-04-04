@@ -1,0 +1,25 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <config>
+        <config_export description="Replies to ARP queries and resolves IP addresses." display_name="ARP Subnet Server" format="ip_catalog" ipname="arp_server_subnet" vendor="ethz.systems.fpga" version="1.1"/>
+    </config>
+    <ExportDesign askAgain="true" evaluate="false" rtl="verilog" formatName="ip_catalog">
+        <Format formatName="ip_catalog" description="Replies to ARP queries and resolves IP addresses." vendor="ethz.systems.fpga" library="" ipname="arp_server_subnet" version="1.1" display_name="ARP Subnet Server" taxonomy=""/>
+    </ExportDesign>
+    <name>
+        <value string="solution1"/>
+    </name>
+    <project>
+        <value string="arp_server_subnet_prj"/>
+    </project>
+    <flowTarget value="vivado"/>
+    <targetInfo>
+        <TargetInfo value="xcu280:-fsvh2892:-2L-e"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/virtexuplus/virtexuplus" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock name="default" default="false" period="3.2"/>
+    </clockList>
+</AutoPilot:solution>
+

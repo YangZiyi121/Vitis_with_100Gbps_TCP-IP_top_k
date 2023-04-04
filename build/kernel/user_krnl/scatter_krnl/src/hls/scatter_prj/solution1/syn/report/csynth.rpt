@@ -1,0 +1,324 @@
+
+
+================================================================
+== Synthesis Summary Report of 'scatter'
+================================================================
++ General Information: 
+    * Date:           Sat Mar 18 14:42:54 2023
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+    * Project:        scatter_prj
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu280-fsvh2892-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |            Modules            |  Issue |       | Latency | Latency| Iteration|         | Trip |          |         |    |            |            |     |
+    |            & Loops            |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF     |     LUT    | URAM|
+    +-------------------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |+ scatter*                     |  Timing|  -0.74|        6|  19.200|         -|        1|     -|  dataflow|  68 (1%)|   -|  7248 (~0%)|  6714 (~0%)|    -|
+    | + txDataBuffer_handler_512_s  |       -|   1.17|        2|   6.400|         -|        1|     -|       yes|        -|   -|   583 (~0%)|    43 (~0%)|    -|
+    | + entry_proc                  |       -|   1.17|        0|   0.000|         -|        0|     -|        no|        -|   -|     2 (~0%)|   200 (~0%)|    -|
+    | + openStatus_handler          |       -|   1.17|        1|   3.200|         -|        1|     -|       yes|        -|   -|    76 (~0%)|    37 (~0%)|    -|
+    | + txStatus_handler            |       -|   1.17|        1|   3.200|         -|        1|     -|       yes|        -|   -|    68 (~0%)|    37 (~0%)|    -|
+    | + client_512_s                |  Timing|  -0.74|        3|   9.600|         -|        1|     -|       yes|        -|   -|   778 (~0%)|  2887 (~0%)|    -|
+    | + rxDataBuffer_handler_512_s  |       -|   1.17|        1|   3.200|         -|        1|     -|       yes|        -|   -|   581 (~0%)|    37 (~0%)|    -|
+    | + txMetaData_handler          |       -|   1.17|        2|   6.400|         -|        1|     -|       yes|        -|   -|    38 (~0%)|    43 (~0%)|    -|
+    | + closeConnection_handler     |       -|   1.17|        2|   6.400|         -|        1|     -|       yes|        -|   -|    22 (~0%)|    43 (~0%)|    -|
+    | + server_512_s                |  Timing|  -0.17|        2|   6.400|         -|        1|     -|       yes|        -|   -|    95 (~0%)|   304 (~0%)|    -|
+    +-------------------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++---------------------------+---------------+-------+-------+-------+--------+-------+--------+
+| Interface                 | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
++---------------------------+---------------+-------+-------+-------+--------+-------+--------+
+| m_axis_close_connection   | both          | 16    |       |       | 1      |       | 1      |
+| m_axis_listen_port        | both          | 16    |       |       | 1      |       | 1      |
+| m_axis_open_connection    | both          | 48    |       |       | 1      |       | 1      |
+| m_axis_read_package       | both          | 32    |       |       | 1      |       | 1      |
+| m_axis_tx_data            | both          | 512   | 64    | 1     | 1      | 64    | 1      |
+| m_axis_tx_metadata        | both          | 32    |       |       | 1      |       | 1      |
+| s_axis_listen_port_status | both          | 8     |       |       | 1      |       | 1      |
+| s_axis_notifications      | both          | 88    |       |       | 1      |       | 1      |
+| s_axis_open_status        | both          | 72    |       |       | 1      |       | 1      |
+| s_axis_rx_data            | both          | 512   | 64    | 1     | 1      | 64    | 1      |
+| s_axis_rx_metadata        | both          | 16    |       |       | 1      |       | 1      |
+| s_axis_tx_status          | both          | 64    |       |       | 1      |       | 1      |
++---------------------------+---------------+-------+-------+-------+--------+-------+--------+
+
+* REGISTER
++------------------+---------+----------+
+| Interface        | Mode    | Bitwidth |
++------------------+---------+----------+
+| clientPkgNum     | ap_none | 32       |
+| expectedRespInKB | ap_none | 16       |
+| finishExperiment | ap_none | 1        |
+| pkgWordCount     | ap_none | 16       |
+| regBasePort      | ap_none | 16       |
+| regIpAddress0    | ap_none | 32       |
+| regIpAddress1    | ap_none | 32       |
+| regIpAddress10   | ap_none | 32       |
+| regIpAddress2    | ap_none | 32       |
+| regIpAddress3    | ap_none | 32       |
+| regIpAddress4    | ap_none | 32       |
+| regIpAddress5    | ap_none | 32       |
+| regIpAddress6    | ap_none | 32       |
+| regIpAddress7    | ap_none | 32       |
+| regIpAddress8    | ap_none | 32       |
+| regIpAddress9    | ap_none | 32       |
+| runExperiment    | ap_none | 1        |
+| useConn          | ap_none | 16       |
+| useIpAddr        | ap_none | 16       |
+| usePort          | ap_none | 16       |
++------------------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------------+-----------+----------------------------------------------+
+| Argument         | Direction | Datatype                                     |
++------------------+-----------+----------------------------------------------+
+| listenPort       | out       | stream<ap_uint<16>, 0>&                      |
+| listenPortStatus | in        | stream<bool, 0>&                             |
+| notifications    | in        | stream<appNotification, 0>&                  |
+| readRequest      | out       | stream<appReadRequest, 0>&                   |
+| rxMetaData       | in        | stream<ap_uint<16>, 0>&                      |
+| rxData           | in        | stream<hls::axis<ap_uint<512>, 0, 0, 0>, 0>& |
+| openConnection   | out       | stream<ipTuple, 0>&                          |
+| openConStatus    | in        | stream<openStatus, 0>&                       |
+| closeConnection  | out       | stream<ap_uint<16>, 0>&                      |
+| txMetaData       | out       | stream<appTxMeta, 0>&                        |
+| txData           | out       | stream<hls::axis<ap_uint<512>, 0, 0, 0>, 0>& |
+| txStatus         | in        | stream<appTxRsp, 0>&                         |
+| runExperiment    | in        | ap_uint<1>                                   |
+| useConn          | in        | ap_uint<16>                                  |
+| useIpAddr        | in        | ap_uint<16>                                  |
+| pkgWordCount     | in        | ap_uint<16>                                  |
+| regBasePort      | in        | ap_uint<16>                                  |
+| usePort          | in        | ap_uint<16>                                  |
+| expectedRespInKB | in        | ap_uint<16>                                  |
+| finishExperiment | in        | ap_uint<1>                                   |
+| clientPkgNum     | in        | ap_uint<32>                                  |
+| regIpAddress0    | in        | ap_uint<32>                                  |
+| regIpAddress1    | in        | ap_uint<32>                                  |
+| regIpAddress2    | in        | ap_uint<32>                                  |
+| regIpAddress3    | in        | ap_uint<32>                                  |
+| regIpAddress4    | in        | ap_uint<32>                                  |
+| regIpAddress5    | in        | ap_uint<32>                                  |
+| regIpAddress6    | in        | ap_uint<32>                                  |
+| regIpAddress7    | in        | ap_uint<32>                                  |
+| regIpAddress8    | in        | ap_uint<32>                                  |
+| regIpAddress9    | in        | ap_uint<32>                                  |
+| regIpAddress10   | in        | ap_uint<32>                                  |
++------------------+-----------+----------------------------------------------+
+
+* SW-to-HW Mapping
++------------------+---------------------------+-----------+
+| Argument         | HW Interface              | HW Type   |
++------------------+---------------------------+-----------+
+| listenPort       | m_axis_listen_port        | interface |
+| listenPortStatus | s_axis_listen_port_status | interface |
+| notifications    | s_axis_notifications      | interface |
+| readRequest      | m_axis_read_package       | interface |
+| rxMetaData       | s_axis_rx_metadata        | interface |
+| rxData           | s_axis_rx_data            | interface |
+| openConnection   | m_axis_open_connection    | interface |
+| openConStatus    | s_axis_open_status        | interface |
+| closeConnection  | m_axis_close_connection   | interface |
+| txMetaData       | m_axis_tx_metadata        | interface |
+| txData           | m_axis_tx_data            | interface |
+| txStatus         | s_axis_tx_status          | interface |
+| runExperiment    | runExperiment             | port      |
+| useConn          | useConn                   | port      |
+| useIpAddr        | useIpAddr                 | port      |
+| pkgWordCount     | pkgWordCount              | port      |
+| regBasePort      | regBasePort               | port      |
+| usePort          | usePort                   | port      |
+| expectedRespInKB | expectedRespInKB          | port      |
+| finishExperiment | finishExperiment          | port      |
+| clientPkgNum     | clientPkgNum              | port      |
+| regIpAddress0    | regIpAddress0             | port      |
+| regIpAddress1    | regIpAddress1             | port      |
+| regIpAddress2    | regIpAddress2             | port      |
+| regIpAddress3    | regIpAddress3             | port      |
+| regIpAddress4    | regIpAddress4             | port      |
+| regIpAddress5    | regIpAddress5             | port      |
+| regIpAddress6    | regIpAddress6             | port      |
+| regIpAddress7    | regIpAddress7             | port      |
+| regIpAddress8    | regIpAddress8             | port      |
+| regIpAddress9    | regIpAddress9             | port      |
+| regIpAddress10   | regIpAddress10            | port      |
++------------------+---------------------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                      | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++---------------------------+-----+--------+-------------+-----+--------+---------+
+| + scatter                 | 0   |        |             |     |        |         |
+|  + client_512_s           | 0   |        |             |     |        |         |
+|    add_ln885_fu_885_p2    | -   |        | add_ln885   | add | fabric | 0       |
+|    ret_fu_901_p2          | -   |        | ret         | add | fabric | 0       |
+|    add_ln885_4_fu_928_p2  | -   |        | add_ln885_4 | add | fabric | 0       |
+|    add_ln886_fu_982_p2    | -   |        | add_ln886   | add | fabric | 0       |
+|    add_ln885_3_fu_1026_p2 | -   |        | add_ln885_3 | add | fabric | 0       |
+|    grp_fu_836_p2          | -   |        | add_ln885_7 | add | fabric | 0       |
+|    add_ln885_5_fu_1049_p2 | -   |        | add_ln885_5 | add | fabric | 0       |
+|    add_ln885_6_fu_1061_p2 | -   |        | add_ln885_6 | add | fabric | 0       |
+|    grp_fu_836_p2          | -   |        | add_ln885_8 | add | fabric | 0       |
+|    add_ln885_2_fu_1089_p2 | -   |        | add_ln885_2 | add | fabric | 0       |
+|  + server_512_s           | 0   |        |             |     |        |         |
+|    add_ln885_fu_283_p2    | -   |        | add_ln885   | add | fabric | 0       |
+|    add_ln885_1_fu_289_p2  | -   |        | add_ln885_1 | add | fabric | 0       |
++---------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++------------------------+------+------+--------+--------------------+---------+------+---------+
+| Name                   | BRAM | URAM | Pragma | Variable           | Storage | Impl | Latency |
++------------------------+------+------+--------+--------------------+---------+------+---------+
+| + scatter              | 68   | 0    |        |                    |         |      |         |
+|   regIpAddress10_c_U   | -    | -    |        | regIpAddress10_c   | fifo    | srl  | 0       |
+|   regIpAddress9_c_U    | -    | -    |        | regIpAddress9_c    | fifo    | srl  | 0       |
+|   regIpAddress8_c_U    | -    | -    |        | regIpAddress8_c    | fifo    | srl  | 0       |
+|   regIpAddress7_c_U    | -    | -    |        | regIpAddress7_c    | fifo    | srl  | 0       |
+|   regIpAddress6_c_U    | -    | -    |        | regIpAddress6_c    | fifo    | srl  | 0       |
+|   regIpAddress5_c_U    | -    | -    |        | regIpAddress5_c    | fifo    | srl  | 0       |
+|   regIpAddress4_c_U    | -    | -    |        | regIpAddress4_c    | fifo    | srl  | 0       |
+|   regIpAddress3_c_U    | -    | -    |        | regIpAddress3_c    | fifo    | srl  | 0       |
+|   regIpAddress2_c_U    | -    | -    |        | regIpAddress2_c    | fifo    | srl  | 0       |
+|   regIpAddress1_c_U    | -    | -    |        | regIpAddress1_c    | fifo    | srl  | 0       |
+|   regIpAddress0_c_U    | -    | -    |        | regIpAddress0_c    | fifo    | srl  | 0       |
+|   clientPkgNum_c_U     | -    | -    |        | clientPkgNum_c     | fifo    | srl  | 0       |
+|   expectedRespInKB_c_U | -    | -    |        | expectedRespInKB_c | fifo    | srl  | 0       |
+|   usePort_c_U          | -    | -    |        | usePort_c          | fifo    | srl  | 0       |
+|   regBasePort_c41_U    | -    | -    |        | regBasePort_c41    | fifo    | srl  | 0       |
+|   regBasePort_c_U      | -    | -    |        | regBasePort_c      | fifo    | srl  | 0       |
+|   pkgWordCount_c_U     | -    | -    |        | pkgWordCount_c     | fifo    | srl  | 0       |
+|   useIpAddr_c_U        | -    | -    |        | useIpAddr_c        | fifo    | srl  | 0       |
+|   useConn_c_U          | -    | -    |        | useConn_c          | fifo    | srl  | 0       |
+|   runExperiment_c40_U  | -    | -    |        | runExperiment_c40  | fifo    | srl  | 0       |
+|   runExperiment_c_U    | -    | -    |        | runExperiment_c    | fifo    | srl  | 0       |
++------------------------+------+------+--------+--------------------+---------+------+---------+
+
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type      | Options                                                            | Location                                                                                                                                                               |
++-----------+--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| unroll    |                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/../../../../common/include/axi_utils.hpp:110 in reverse                    |
+| unroll    |                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/../../../../common/include/axi_utils.hpp:122 in reverse_bits               |
+| pipeline  | II=1                                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/../../../../common/include/axi_utils.hpp:266 in convertstreamtodoublewidth |
+| inline    | off                                                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/../../../../common/include/axi_utils.hpp:267 in convertstreamtodoublewidth |
+| pipeline  | II=1                                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/../../../../common/include/axi_utils.hpp:331 in convertstreamtohalfwidth   |
+| inline    | off                                                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/../../../../common/include/axi_utils.hpp:332 in convertstreamtohalfwidth   |
+| inline    | off                                                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/../../../../common/include/axi_utils.hpp:380 in rshiftwordbyoctet          |
+| pipeline  | II=1                                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/../../../../common/include/axi_utils.hpp:381 in rshiftwordbyoctet          |
+| inline    | off                                                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/../../../../common/include/axi_utils.hpp:455 in lshiftwordbyoctet          |
+| pipeline  | II=1                                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/../../../../common/include/axi_utils.hpp:456 in lshiftwordbyoctet          |
+| pipeline  | II=1                                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/../../../../common/include/axi_utils.hpp:534 in stream_merger              |
+| inline    | off                                                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/../../../../common/include/axi_utils.hpp:535 in stream_merger              |
+| pipeline  | II=1                                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/../../../../common/include/axi_utils.hpp:550 in fair_merger                |
+| inline    | off                                                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/../../../../common/include/axi_utils.hpp:551 in fair_merger                |
+| pipeline  | II=1                                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/../../../../common/include/axi_utils.hpp:584 in fair_pkg_merger            |
+| inline    | off                                                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/../../../../common/include/axi_utils.hpp:585 in fair_pkg_merger            |
+| pipeline  | II=1                                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/../../../../common/include/packet.hpp:158 in clear                         |
+| pipeline  | II=1                                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:37 in openstatus_handler                                       |
+| inline    | off                                                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:38 in openstatus_handler                                       |
+| pipeline  | II=1                                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:50 in txmetadata_handler                                       |
+| inline    | off                                                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:51 in txmetadata_handler                                       |
+| pipeline  | II=1                                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:64 in txstatus_handler                                         |
+| inline    | off                                                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:65 in txstatus_handler                                         |
+| pipeline  | II=1                                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:81 in closeconnection_handler                                  |
+| inline    | off                                                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:82 in closeconnection_handler                                  |
+| pipeline  | II=1                                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:118 in txdatabuffer_handler                                    |
+| inline    | off                                                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:119 in txdatabuffer_handler                                    |
+| pipeline  | II=1                                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:136 in rxdatabuffer_handler                                    |
+| inline    | off                                                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:137 in rxdatabuffer_handler                                    |
+| pipeline  | II=1                                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:178 in client                                                  |
+| inline    | off                                                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:179 in client                                                  |
+| unroll    |                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:334 in client                                                  |
+| pipeline  | II=1                                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:390 in server                                                  |
+| inline    | off                                                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:391 in server                                                  |
+| reset     | variable=listenState                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:397 in server, listenState                                     |
+| dataflow  | disable_start_propagation                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:522 in scatter                                                 |
+| interface | ap_ctrl_none port=return                                           | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:523 in scatter, return                                         |
+| interface | axis register port=listenPort name=m_axis_listen_port              | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:525 in scatter, listenPort                                     |
+| interface | axis register port=listenPortStatus name=s_axis_listen_port_status | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:526 in scatter, listenPortStatus                               |
+| interface | axis register port=notifications name=s_axis_notifications         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:528 in scatter, notifications                                  |
+| interface | axis register port=readRequest name=m_axis_read_package            | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:529 in scatter, readRequest                                    |
+| aggregate | compact=bit variable=notifications                                 | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:530 in scatter, notifications                                  |
+| aggregate | compact=bit variable=readRequest                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:531 in scatter, readRequest                                    |
+| interface | axis register port=rxMetaData name=s_axis_rx_metadata              | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:533 in scatter, rxMetaData                                     |
+| interface | axis register port=rxData name=s_axis_rx_data                      | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:534 in scatter, rxData                                         |
+| interface | axis register port=openConnection name=m_axis_open_connection      | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:536 in scatter, openConnection                                 |
+| interface | axis register port=openConStatus name=s_axis_open_status           | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:537 in scatter, openConStatus                                  |
+| aggregate | compact=bit variable=openConnection                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:538 in scatter, openConnection                                 |
+| aggregate | compact=bit variable=openConStatus                                 | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:539 in scatter, openConStatus                                  |
+| interface | axis register port=closeConnection name=m_axis_close_connection    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:541 in scatter, closeConnection                                |
+| interface | axis register port=txMetaData name=m_axis_tx_metadata              | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:543 in scatter, txMetaData                                     |
+| interface | axis register port=txData name=m_axis_tx_data                      | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:544 in scatter, txData                                         |
+| interface | axis register port=txStatus name=s_axis_tx_status                  | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:545 in scatter, txStatus                                       |
+| aggregate | compact=bit variable=txMetaData                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:546 in scatter, txMetaData                                     |
+| aggregate | compact=bit variable=txStatus                                      | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:547 in scatter, txStatus                                       |
+| interface | ap_none register port=runExperiment                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:551 in scatter, runExperiment                                  |
+| interface | ap_none register port=useConn                                      | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:552 in scatter, useConn                                        |
+| interface | ap_none register port=pkgWordCount                                 | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:553 in scatter, pkgWordCount                                   |
+| interface | ap_none register port=useIpAddr                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:554 in scatter, useIpAddr                                      |
+| interface | ap_none register port=regBasePort                                  | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:555 in scatter, regBasePort                                    |
+| interface | ap_none register port=usePort                                      | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:556 in scatter, usePort                                        |
+| interface | ap_none register port=expectedRespInKB                             | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:557 in scatter, expectedRespInKB                               |
+| interface | ap_none register port=finishExperiment                             | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:558 in scatter, finishExperiment                               |
+| interface | ap_none register port=clientPkgNum                                 | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:560 in scatter, clientPkgNum                                   |
+| interface | ap_none register port=regIpAddress0                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:561 in scatter, regIpAddress0                                  |
+| interface | ap_none register port=regIpAddress1                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:562 in scatter, regIpAddress1                                  |
+| interface | ap_none register port=regIpAddress2                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:563 in scatter, regIpAddress2                                  |
+| interface | ap_none register port=regIpAddress3                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:564 in scatter, regIpAddress3                                  |
+| interface | ap_none register port=regIpAddress4                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:565 in scatter, regIpAddress4                                  |
+| interface | ap_none register port=regIpAddress5                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:566 in scatter, regIpAddress5                                  |
+| interface | ap_none register port=regIpAddress6                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:567 in scatter, regIpAddress6                                  |
+| interface | ap_none register port=regIpAddress7                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:568 in scatter, regIpAddress7                                  |
+| interface | ap_none register port=regIpAddress8                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:569 in scatter, regIpAddress8                                  |
+| interface | ap_none register port=regIpAddress9                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:570 in scatter, regIpAddress9                                  |
+| interface | ap_none register port=regIpAddress10                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:571 in scatter, regIpAddress10                                 |
+| stream    | variable=openConStatusBuffer depth=512                             | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:574 in scatter, openConStatusBuffer                            |
+| stream    | variable=txMetaDataBuffer depth=512                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:577 in scatter, txMetaDataBuffer                               |
+| stream    | variable=txStatusBuffer depth=512                                  | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:580 in scatter, txStatusBuffer                                 |
+| stream    | variable=closeConnectionBuffer depth=512                           | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:583 in scatter, closeConnectionBuffer                          |
+| stream    | variable=txDataBuffer depth=512                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:587 in scatter, txDataBuffer                                   |
+| stream    | variable=rxDataBuffer depth=512                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/kernel/user_krnl/scatter_krnl/src/hls/scatter.cpp:591 in scatter, rxDataBuffer                                   |
++-----------+--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+

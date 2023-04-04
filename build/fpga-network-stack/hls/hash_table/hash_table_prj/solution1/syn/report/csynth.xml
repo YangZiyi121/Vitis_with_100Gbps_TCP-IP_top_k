@@ -1,0 +1,699 @@
+<profile>
+    <ReportVersion>
+        <Version>2021.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplus</ProductFamily>
+        <Part>xcu280-fsvh2892-2L-e</Part>
+        <TopModelName>hash_table_top</TopModelName>
+        <TargetClockPeriod>3.20</TargetClockPeriod>
+        <ClockUncertainty>0.86</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>2.319</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>1</Best-caseLatency>
+            <Average-caseLatency>10</Average-caseLatency>
+            <Worst-caseLatency>86</Worst-caseLatency>
+            <Best-caseRealTimeLatency>3.200 ns</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>32.000 ns</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.275 us</Worst-caseRealTimeLatency>
+            <Interval-min>2</Interval-min>
+            <Interval-max>87</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>36</BRAM_18K>
+            <FF>6057</FF>
+            <LUT>19947</LUT>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>4032</BRAM_18K>
+            <DSP>9024</DSP>
+            <FF>2607360</FF>
+            <LUT>1303680</LUT>
+            <URAM>960</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_local_block</name>
+            <Object>hash_table_top</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_local_deadlock</name>
+            <Object>hash_table_top</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>hash_table_top</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>hash_table_top</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_lup_req_TDATA</name>
+            <Object>s_axis_lup_req</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>96</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_lup_req_TVALID</name>
+            <Object>s_axis_lup_req</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_lup_req_TREADY</name>
+            <Object>s_axis_lup_req</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_upd_req_TDATA</name>
+            <Object>s_axis_upd_req</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>144</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_upd_req_TVALID</name>
+            <Object>s_axis_upd_req</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_upd_req_TREADY</name>
+            <Object>s_axis_upd_req</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_lup_rsp_TDATA</name>
+            <Object>m_axis_lup_rsp</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>120</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_lup_rsp_TVALID</name>
+            <Object>m_axis_lup_rsp</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_lup_rsp_TREADY</name>
+            <Object>m_axis_lup_rsp</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_upd_rsp_TDATA</name>
+            <Object>m_axis_upd_rsp</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>152</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_upd_rsp_TVALID</name>
+            <Object>m_axis_upd_rsp</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_upd_rsp_TREADY</name>
+            <Object>m_axis_upd_rsp</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>regInsertFailureCount</name>
+            <Object>regInsertFailureCount</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="3">
+            <ModuleName>hash_table_top</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_hash_table_top_Pipeline_insertLoop_fu_781</InstName>
+                    <ModuleName>hash_table_top_Pipeline_insertLoop</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>781</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>call_ret2_calculate_hashes_fu_1647</InstName>
+                            <ModuleName>calculate_hashes</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>1647</ID>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>j_2_fu_1956_p2 ret_fu_2681_p2 add_ln885_fu_2765_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_calculate_hashes_fu_844</InstName>
+                    <ModuleName>calculate_hashes</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>844</ID>
+                </Instance>
+            </InstancesList>
+            <BindInstances>add_ln162_fu_1304_p2 cuckooTables_U cuckooTables_9_U cuckooTables_18_U cuckooTables_1_U cuckooTables_10_U cuckooTables_19_U cuckooTables_2_U cuckooTables_11_U cuckooTables_20_U cuckooTables_3_U cuckooTables_12_U cuckooTables_21_U cuckooTables_4_U cuckooTables_13_U cuckooTables_22_U cuckooTables_5_U cuckooTables_14_U cuckooTables_23_U cuckooTables_6_U cuckooTables_15_U cuckooTables_24_U cuckooTables_7_U cuckooTables_16_U cuckooTables_25_U cuckooTables_8_U cuckooTables_17_U cuckooTables_26_U</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>calculate_hashes</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.20</TargetClockPeriod>
+                    <ClockUncertainty>0.86</ClockUncertainty>
+                    <TargetInitiationInterval>4294967295</TargetInitiationInterval>
+                    <EstimatedClockPeriod>1.759</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>1</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>0</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>0</UTIL_FF>
+                    <LUT>6310</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>hash_table_top_Pipeline_insertLoop</Name>
+            <Loops>
+                <insertLoop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.20</TargetClockPeriod>
+                    <ClockUncertainty>0.86</ClockUncertainty>
+                    <EstimatedClockPeriod>2.312</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>14</Best-caseLatency>
+                    <Average-caseLatency>45</Average-caseLatency>
+                    <Worst-caseLatency>81</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>44.800 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.144 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.259 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>14 ~ 81</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <insertLoop>
+                        <Name>insertLoop</Name>
+                        <TripCount>
+                            <range>
+                                <min>1</min>
+                                <max>12</max>
+                            </range>
+                        </TripCount>
+                        <Latency>12 ~ 78</Latency>
+                        <AbsoluteTimeLatency>38.400 ns ~ 0.250 us</AbsoluteTimeLatency>
+                        <PipelineII>6</PipelineII>
+                        <PipelineDepth>7</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList>
+                            <Instance>call_ret2_calculate_hashes_fu_1647</Instance>
+                        </InstanceList>
+                    </insertLoop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>5263</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>11036</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="insertLoop" OPTYPE="add" PRAGMA="" RTLNAME="j_2_fu_1956_p2" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:116" URAM="0" VARIABLE="j_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="insertLoop" OPTYPE="add" PRAGMA="" RTLNAME="ret_fu_2681_p2" SOURCE="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:1540" URAM="0" VARIABLE="ret"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="insertLoop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln885_fu_2765_p2" SOURCE="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:885" URAM="0" VARIABLE="add_ln885"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>hash_table_top</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.20</TargetClockPeriod>
+                    <ClockUncertainty>0.86</ClockUncertainty>
+                    <EstimatedClockPeriod>2.319</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>1</Best-caseLatency>
+                    <Average-caseLatency>10</Average-caseLatency>
+                    <Worst-caseLatency>86</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>3.200 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>32.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.275 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>2 ~ 87</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>36</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <FF>6057</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>19947</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln162_fu_1304_p2" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:162" URAM="0" VARIABLE="add_ln162"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_9_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_9"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_18_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_18"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_1_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_1"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_10_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_10"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_19_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_19"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_2_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_2"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_11_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_11"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_20_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_20"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_3_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_3"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_12_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_12"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_21_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_21"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_4_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_4"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_13_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_13"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_22_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_22"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_5_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_5"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_14_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_14"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_23_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_23"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_6_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_6"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_15_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_15"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_24_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_24"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_7_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_7"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_16_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_16"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_25_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_25"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_8_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_8"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_17_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_17"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="cuckooTables_26_U" SOURCE="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" URAM="0" VARIABLE="cuckooTables_26"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="s_axis_lup_req" index="0" direction="in" srcType="stream&lt;htLookupReq&lt;64&gt;, 0&gt;&amp;" srcSize="128">
+            <hwRefs>
+                <hwRef type="interface" interface="s_axis_lup_req" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="s_axis_upd_req" index="1" direction="in" srcType="stream&lt;htUpdateReq&lt;64, 16&gt;, 0&gt;&amp;" srcSize="192">
+            <hwRefs>
+                <hwRef type="interface" interface="s_axis_upd_req" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="m_axis_lup_rsp" index="2" direction="out" srcType="stream&lt;htLookupResp&lt;64, 16&gt;, 0&gt;&amp;" srcSize="128">
+            <hwRefs>
+                <hwRef type="interface" interface="m_axis_lup_rsp" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="m_axis_upd_rsp" index="3" direction="out" srcType="stream&lt;htUpdateResp&lt;64, 16&gt;, 0&gt;&amp;" srcSize="192">
+            <hwRefs>
+                <hwRef type="interface" interface="m_axis_upd_rsp" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="regInsertFailureCount" index="4" direction="out" srcType="ap_uint&lt;16&gt;&amp;" srcSize="16">
+            <hwRefs>
+                <hwRef type="port" interface="regInsertFailureCount" name="regInsertFailureCount" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">s_axis_lup_req:s_axis_upd_req:m_axis_lup_rsp:m_axis_upd_rsp</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="s_axis_lup_req" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="96" portPrefix="s_axis_lup_req_">
+            <ports>
+                <port>s_axis_lup_req_TDATA</port>
+                <port>s_axis_lup_req_TREADY</port>
+                <port>s_axis_lup_req_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="s_axis_lup_req"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="s_axis_upd_req" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="144" portPrefix="s_axis_upd_req_">
+            <ports>
+                <port>s_axis_upd_req_TDATA</port>
+                <port>s_axis_upd_req_TREADY</port>
+                <port>s_axis_upd_req_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="s_axis_upd_req"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="m_axis_lup_rsp" type="axi4stream" busTypeName="axis" mode="master" dataWidth="120" portPrefix="m_axis_lup_rsp_">
+            <ports>
+                <port>m_axis_lup_rsp_TDATA</port>
+                <port>m_axis_lup_rsp_TREADY</port>
+                <port>m_axis_lup_rsp_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="m_axis_lup_rsp"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="m_axis_upd_rsp" type="axi4stream" busTypeName="axis" mode="master" dataWidth="152" portPrefix="m_axis_upd_rsp_">
+            <ports>
+                <port>m_axis_upd_rsp_TDATA</port>
+                <port>m_axis_upd_rsp_TREADY</port>
+                <port>m_axis_upd_rsp_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="m_axis_upd_rsp"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="regInsertFailureCount" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="regInsertFailureCount">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>regInsertFailureCount</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="regInsertFailureCount"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AXIS">
+                <table isCollapsed="0">
+                    <keys size="5">Interface, Register Mode, TDATA, TREADY, TVALID</keys>
+                    <column name="m_axis_lup_rsp">both, 120, 1, 1</column>
+                    <column name="m_axis_upd_rsp">both, 152, 1, 1</column>
+                    <column name="s_axis_lup_req">both, 96, 1, 1</column>
+                    <column name="s_axis_upd_req">both, 144, 1, 1</column>
+                </table>
+            </item>
+            <item name="REGISTER">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Mode, Bitwidth</keys>
+                    <column name="regInsertFailureCount">ap_none, 16</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst_n">reset, ap_rst_n</column>
+                    <column name="ap_ctrl">ap_ctrl_none</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="s_axis_lup_req">in, stream&lt;htLookupReq&lt;64&gt; 0&gt;&amp;</column>
+                    <column name="s_axis_upd_req">in, stream&lt;htUpdateReq&lt;64 16&gt; 0&gt;&amp;</column>
+                    <column name="m_axis_lup_rsp">out, stream&lt;htLookupResp&lt;64 16&gt; 0&gt;&amp;</column>
+                    <column name="m_axis_upd_rsp">out, stream&lt;htUpdateResp&lt;64 16&gt; 0&gt;&amp;</column>
+                    <column name="regInsertFailureCount">out, ap_uint&lt;16&gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="s_axis_lup_req">s_axis_lup_req, interface</column>
+                    <column name="s_axis_upd_req">s_axis_upd_req, interface</column>
+                    <column name="m_axis_lup_rsp">m_axis_lup_rsp, interface</column>
+                    <column name="m_axis_upd_rsp">m_axis_upd_rsp, interface</column>
+                    <column name="regInsertFailureCount">regInsertFailureCount, port</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:76" status="valid" parentFunction="convert_net_axis_to_axis" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:96" status="valid" parentFunction="convert_axis_to_net_axis" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:115" status="valid" parentFunction="convert_routed_net_axis_to_axis" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:137" status="valid" parentFunction="reverse" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:149" status="valid" parentFunction="reverse_bits" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:318" status="valid" parentFunction="increasestreamwidth" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:348" status="valid" parentFunction="reducestreamwidth" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:411" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:412" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:423" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:424" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:432" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:433" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:441" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:442" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:450" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:451" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:459" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:460" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:468" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:469" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:493" status="valid" parentFunction="rshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:494" status="valid" parentFunction="rshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:568" status="valid" parentFunction="lshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:569" status="valid" parentFunction="lshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:637" status="valid" parentFunction="stream_merger" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:638" status="valid" parentFunction="stream_merger" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:656" status="valid" parentFunction="stream_merger" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:657" status="valid" parentFunction="stream_merger" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:718" status="valid" parentFunction="fair_merger" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:719" status="valid" parentFunction="fair_merger" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:752" status="valid" parentFunction="fair_pkg_merger" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:753" status="valid" parentFunction="fair_pkg_merger" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:834" status="valid" parentFunction="stream_pkg_merger" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:835" status="valid" parentFunction="stream_pkg_merger" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:913" status="valid" parentFunction="stream_pkg_splitter" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:914" status="valid" parentFunction="stream_pkg_splitter" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:978" status="valid" parentFunction="pass_valid_pkg" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:979" status="valid" parentFunction="pass_valid_pkg" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:1040" status="valid" parentFunction="toe_duplicate_stream" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:1041" status="valid" parentFunction="toe_duplicate_stream" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:1056" status="valid" parentFunction="ip_handler_duplicate_stream" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:1057" status="valid" parentFunction="ip_handler_duplicate_stream" variable="" isDirective="0" options="off"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:1095" status="valid" parentFunction="udp_lshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:1096" status="valid" parentFunction="udp_lshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:1166" status="valid" parentFunction="mac_lshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:1167" status="valid" parentFunction="mac_lshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:1237" status="valid" parentFunction="ipv4_lshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:1238" status="valid" parentFunction="ipv4_lshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:1308" status="valid" parentFunction="ip_handler_rshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:1309" status="valid" parentFunction="ip_handler_rshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:1383" status="valid" parentFunction="udp_rshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/../axi_utils.hpp:1384" status="valid" parentFunction="udp_rshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="array_partition" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:39" status="valid" parentFunction="calculate_hashes" variable="hashes" isDirective="0" options="variable=hashes complete dim=1"/>
+        <Pragma type="unroll" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:43" status="valid" parentFunction="calculate_hashes" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:48" status="valid" parentFunction="calculate_hashes" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:59" status="valid" parentFunction="lookup" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:62" status="valid" parentFunction="lookup" variable="currentEntries" isDirective="0" options="variable=currentEntries complete"/>
+        <Pragma type="unroll" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:74" status="valid" parentFunction="lookup" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:96" status="valid" parentFunction="insert" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:99" status="valid" parentFunction="insert" variable="currentEntries" isDirective="0" options="variable=currentEntries complete"/>
+        <Pragma type="unroll" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:123" status="valid" parentFunction="insert" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:151" status="valid" parentFunction="insert" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:170" status="valid" parentFunction="remove" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:173" status="valid" parentFunction="remove" variable="currentEntries" isDirective="0" options="variable=currentEntries complete"/>
+        <Pragma type="unroll" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:186" status="valid" parentFunction="remove" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:207" status="valid" parentFunction="hash_table" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:210" status="valid" parentFunction="hash_table" variable="tabulation_table" isDirective="0" options="variable=tabulation_table complete dim=1"/>
+        <Pragma type="bind_storage" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:211" status="valid" parentFunction="hash_table" variable="cuckooTables" isDirective="0" options="variable=cuckooTables type=RAM_2P impl=BRAM"/>
+        <Pragma type="array_partition" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:212" status="valid" parentFunction="hash_table" variable="cuckooTables" isDirective="0" options="variable=cuckooTables complete dim=1"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:242" status="valid" parentFunction="hash_table_top" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:244" status="valid" parentFunction="hash_table_top" variable="s_axis_lup_req" isDirective="0" options="axis register port=s_axis_lup_req"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:245" status="valid" parentFunction="hash_table_top" variable="s_axis_upd_req" isDirective="0" options="axis register port=s_axis_upd_req"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:246" status="valid" parentFunction="hash_table_top" variable="m_axis_lup_rsp" isDirective="0" options="axis register port=m_axis_lup_rsp"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:247" status="valid" parentFunction="hash_table_top" variable="m_axis_upd_rsp" isDirective="0" options="axis register port=m_axis_upd_rsp"/>
+        <Pragma type="aggregate" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:248" status="valid" parentFunction="hash_table_top" variable="s_axis_lup_req" isDirective="0" options="compact=bit variable=s_axis_lup_req"/>
+        <Pragma type="aggregate" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:249" status="valid" parentFunction="hash_table_top" variable="s_axis_upd_req" isDirective="0" options="compact=bit variable=s_axis_upd_req"/>
+        <Pragma type="aggregate" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:250" status="valid" parentFunction="hash_table_top" variable="m_axis_lup_rsp" isDirective="0" options="compact=bit variable=m_axis_lup_rsp"/>
+        <Pragma type="aggregate" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:251" status="valid" parentFunction="hash_table_top" variable="m_axis_upd_rsp" isDirective="0" options="compact=bit variable=m_axis_upd_rsp"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/hash_table/hash_table.cpp:252" status="valid" parentFunction="hash_table_top" variable="regInsertFailureCount" isDirective="0" options="ap_none port=regInsertFailureCount"/>
+    </PragmaReport>
+</profile>
+

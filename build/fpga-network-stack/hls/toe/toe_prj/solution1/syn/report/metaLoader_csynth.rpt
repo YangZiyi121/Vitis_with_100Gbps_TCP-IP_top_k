@@ -1,0 +1,424 @@
+
+
+================================================================
+== Vitis HLS Report for 'metaLoader'
+================================================================
+* Date:           Sat Mar 18 14:39:08 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        toe_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  2.822 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        2|        2|  6.400 ns|  6.400 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|     1260|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|      731|    -|
+|Register             |        -|     -|     1680|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|     1680|     1991|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |add_ln229_184_fu_1254_p2          |         +|   0|  0|   39|          32|           2|
+    |add_ln229_fu_1471_p2              |         +|   0|  0|   39|          32|           1|
+    |add_ln885_160_fu_1111_p2          |         +|   0|  0|    9|           2|           1|
+    |add_ln885_fu_1242_p2              |         +|   0|  0|   39|          32|           1|
+    |tmp_not_ackd_V_1_fu_1785_p2       |         +|   0|  0|   39|          32|          32|
+    |tmp_not_ackd_V_3_fu_1266_p2       |         +|   0|  0|   39|          32|           2|
+    |txSar_ackd_V_5_fu_1085_p2         |         +|   0|  0|   39|          32|          13|
+    |txSar_not_ackd_V_fu_1296_p2       |         +|   0|  0|   39|          32|           2|
+    |txSar_usedLength_V_3_fu_1092_p2   |         +|   0|  0|   25|          18|          14|
+    |and_ln365_fu_1320_p2              |       and|   0|  0|    2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_1030                 |       and|   0|  0|    2|           1|           1|
+    |ap_condition_1036                 |       and|   0|  0|    2|           1|           1|
+    |ap_condition_108                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_1102                 |       and|   0|  0|    2|           1|           1|
+    |ap_condition_1103                 |       and|   0|  0|    2|           1|           1|
+    |ap_condition_1143                 |       and|   0|  0|    2|           1|           1|
+    |ap_condition_137                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_149                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_2022                 |       and|   0|  0|    2|           1|           1|
+    |ap_condition_407                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_82                   |       and|   0|  0|    2|           1|           1|
+    |ap_condition_863                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_95                   |       and|   0|  0|    2|           1|           1|
+    |ap_condition_976                  |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op13_read_state1     |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op199_write_state2   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op297_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op304_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op306_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op310_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op314_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op318_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op324_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op332_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op365_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op387_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op429_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op434_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op435_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op45_read_state1     |       and|   0|  0|    2|           1|           1|
+    |grp_nbreadreq_fu_316_p3           |       and|   0|  0|    2|           1|           0|
+    |grp_nbreadreq_fu_330_p3           |       and|   0|  0|    2|           1|           0|
+    |tmp_i_nbreadreq_fu_302_p3         |       and|   0|  0|  101|           1|           0|
+    |grp_fu_632_p2                     |      icmp|   0|  0|    8|           3|           1|
+    |icmp_ln1064_77_fu_1099_p2         |      icmp|   0|  0|    8|           2|           2|
+    |icmp_ln1064_fu_1057_p2            |      icmp|   0|  0|    8|           3|           1|
+    |icmp_ln1068_7_fu_1207_p2          |      icmp|   0|  0|   13|          16|           1|
+    |icmp_ln1068_8_fu_1554_p2          |      icmp|   0|  0|    9|           4|           1|
+    |icmp_ln1068_9_fu_1349_p2          |      icmp|   0|  0|   12|          13|           1|
+    |icmp_ln1068_fu_689_p2             |      icmp|   0|  0|    8|           3|           1|
+    |icmp_ln1080_5_fu_1063_p2          |      icmp|   0|  0|   13|          18|          13|
+    |icmp_ln1080_fu_1325_p2            |      icmp|   0|  0|   13|          18|          15|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|    2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|    2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2  |        or|   0|  0|    2|           1|           1|
+    |ap_condition_1019                 |        or|   0|  0|    2|           1|           1|
+    |ap_condition_1093                 |        or|   0|  0|    2|           1|           1|
+    |ap_condition_1132                 |        or|   0|  0|    2|           1|           1|
+    |ap_condition_1204                 |        or|   0|  0|    2|           1|           1|
+    |ap_condition_123                  |        or|   0|  0|    2|           1|           1|
+    |ap_condition_439                  |        or|   0|  0|    2|           1|           1|
+    |ap_condition_977                  |        or|   0|  0|    2|           1|           1|
+    |ap_condition_989                  |        or|   0|  0|    2|           1|           1|
+    |ap_predicate_op299_write_state3   |        or|   0|  0|    2|           1|           1|
+    |ap_predicate_op349_write_state3   |        or|   0|  0|    2|           1|           1|
+    |ap_predicate_op351_write_state3   |        or|   0|  0|    2|           1|           1|
+    |ap_predicate_op401_write_state3   |        or|   0|  0|    2|           1|           1|
+    |ap_predicate_op410_write_state3   |        or|   0|  0|    2|           1|           1|
+    |ap_predicate_op416_write_state3   |        or|   0|  0|    2|           1|           1|
+    |or_ln173_32_fu_1593_p2            |        or|   0|  0|   88|          88|          80|
+    |or_ln173_33_fu_1820_p2            |        or|   0|  0|  104|         104|         101|
+    |or_ln173_35_fu_1510_p2            |        or|   0|  0|  104|         104|         104|
+    |or_ln173_37_fu_1735_p2            |        or|   0|  0|   62|          62|          32|
+    |or_ln173_38_fu_1762_p2            |        or|   0|  0|  104|         104|         101|
+    |or_ln173_fu_1698_p2               |        or|   0|  0|  104|         104|         101|
+    |select_ln173_fu_1573_p3           |    select|   0|  0|    5|           1|           5|
+    |select_ln561_fu_1559_p3           |    select|   0|  0|    4|           1|           4|
+    |slowstart_threshold_fu_1341_p3    |    select|   0|  0|   17|           1|          17|
+    |ap_enable_pp0                     |       xor|   0|  0|    2|           1|           2|
+    |xor_ln229_1_fu_1278_p2            |       xor|   0|  0|   32|          32|          32|
+    |xor_ln229_fu_1308_p2              |       xor|   0|  0|   32|          32|          32|
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |Total                             |          |   0|  0| 1260|        1010|         764|
+    +----------------------------------+----------+----+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |                                                                                                                                       Name                                                                                                                                       | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_done                                                                                                                                                                                                                                                                           |   9|          2|    1|          2|
+    |ap_phi_mux_txSar_ackd_V_6_phi_fu_512_p4                                                                                                                                                                                                                                           |  14|          3|   32|         96|
+    |ap_phi_mux_txSar_ackd_V_7_phi_fu_438_p4                                                                                                                                                                                                                                           |  14|          3|   32|         96|
+    |ap_phi_mux_txSar_app_V_2_phi_fu_466_p4                                                                                                                                                                                                                                            |  14|          3|   18|         54|
+    |ap_phi_mux_txSar_finReady_2_phi_fu_485_p4                                                                                                                                                                                                                                         |  14|          3|    1|          3|
+    |ap_phi_mux_txSar_finSent_2_phi_fu_494_p4                                                                                                                                                                                                                                          |  14|          3|    1|          3|
+    |ap_phi_mux_txSar_not_ackd_V_7_phi_fu_448_p4                                                                                                                                                                                                                                       |  14|          3|   32|         96|
+    |ap_phi_mux_txSar_usableWindow_V_2_phi_fu_457_p4                                                                                                                                                                                                                                   |  14|          3|   18|         54|
+    |ap_phi_mux_txSar_usedLength_V_4_phi_fu_522_p4                                                                                                                                                                                                                                     |  14|          3|   18|         54|
+    |ap_phi_mux_txSar_usedLength_V_5_phi_fu_475_p4                                                                                                                                                                                                                                     |  14|          3|   18|         54|
+    |ap_phi_mux_txSar_win_shift_V_2_phi_fu_503_p4                                                                                                                                                                                                                                      |  14|          3|    4|         12|
+    |ap_phi_reg_pp0_iter1_len_V_reg_592                                                                                                                                                                                                                                                |  14|          3|   13|         39|
+    |ap_phi_reg_pp0_iter1_p_ZZ10metaLoaderRN3hls6streamI13extendedEventLi0EEERNS0_I10rxSarReplyLi0EEERNS0_I12txTxSarReplyLi0EEERNS0_I7ap_uintILi16EELi0EEERNS0_I12txTxSarQueryLi0EEERNS0_I20txRetransmitTimerSetLi0EEESD_SD_RNS0_I14tx_engine_metaLi0EEERNS0_I5mmCmdLi0EEES_1_reg_614  |   9|          2|   32|         64|
+    |ap_phi_reg_pp0_iter1_p_ZZ10metaLoaderRN3hls6streamI13extendedEventLi0EEERNS0_I10rxSarReplyLi0EEERNS0_I12txTxSarReplyLi0EEERNS0_I7ap_uintILi16EELi0EEERNS0_I12txTxSarQueryLi0EEERNS0_I20txRetransmitTimerSetLi0EEESD_SD_RNS0_I14tx_engine_metaLi0EEERNS0_I5mmCmdLi0EEES_reg_623    |   9|          2|   32|         64|
+    |ap_phi_reg_pp0_iter1_phi_ln365_reg_579                                                                                                                                                                                                                                            |  14|          3|    1|          3|
+    |ap_phi_reg_pp0_iter1_rxSar_recvd_V_loc_0_i_reg_559                                                                                                                                                                                                                                |  14|          3|   32|         96|
+    |ap_phi_reg_pp0_iter1_rxSar_recvd_V_loc_1_i_reg_529                                                                                                                                                                                                                                |  14|          3|   32|         96|
+    |ap_phi_reg_pp0_iter1_rxSar_windowSize_V_loc_0_i_reg_569                                                                                                                                                                                                                           |  14|          3|   16|         48|
+    |ap_phi_reg_pp0_iter1_rxSar_windowSize_V_loc_1_i_reg_539                                                                                                                                                                                                                           |  14|          3|   16|         48|
+    |ap_phi_reg_pp0_iter1_txSar_not_ackd_V_10_reg_549                                                                                                                                                                                                                                  |  14|          3|   32|         96|
+    |ap_phi_reg_pp0_iter2_p_ZZ10metaLoaderRN3hls6streamI13extendedEventLi0EEERNS0_I10rxSarReplyLi0EEERNS0_I12txTxSarReplyLi0EEERNS0_I7ap_uintILi16EELi0EEERNS0_I12txTxSarQueryLi0EEERNS0_I20txRetransmitTimerSetLi0EEESD_SD_RNS0_I14tx_engine_metaLi0EEERNS0_I5mmCmdLi0EEES_1_reg_614  |   9|          2|   32|         64|
+    |ap_phi_reg_pp0_iter2_p_ZZ10metaLoaderRN3hls6streamI13extendedEventLi0EEERNS0_I10rxSarReplyLi0EEERNS0_I12txTxSarReplyLi0EEERNS0_I7ap_uintILi16EELi0EEERNS0_I12txTxSarQueryLi0EEERNS0_I20txRetransmitTimerSetLi0EEESD_SD_RNS0_I14tx_engine_metaLi0EEERNS0_I5mmCmdLi0EEES_2_reg_604  |  14|          3|   32|         96|
+    |ap_phi_reg_pp0_iter2_p_ZZ10metaLoaderRN3hls6streamI13extendedEventLi0EEERNS0_I10rxSarReplyLi0EEERNS0_I12txTxSarReplyLi0EEERNS0_I7ap_uintILi16EELi0EEERNS0_I12txTxSarQueryLi0EEERNS0_I20txRetransmitTimerSetLi0EEESD_SD_RNS0_I14tx_engine_metaLi0EEERNS0_I5mmCmdLi0EEES_reg_623    |   9|          2|   32|         64|
+    |eventEng2txEng_event_blk_n                                                                                                                                                                                                                                                        |   9|          2|    1|          2|
+    |meta_win_shift_V                                                                                                                                                                                                                                                                  |   9|          2|    4|          8|
+    |ml_curEvent_type                                                                                                                                                                                                                                                                  |   9|          2|   32|         64|
+    |ml_randomValue_V                                                                                                                                                                                                                                                                  |  14|          3|   32|         96|
+    |ml_segmentCount_V                                                                                                                                                                                                                                                                 |   9|          2|    2|          4|
+    |rxSar2txEng_rsp_blk_n                                                                                                                                                                                                                                                             |   9|          2|    1|          2|
+    |rxSar_recvd_V                                                                                                                                                                                                                                                                     |  26|          5|   32|        160|
+    |txEng2rxSar_req_blk_n                                                                                                                                                                                                                                                             |   9|          2|    1|          2|
+    |txEng2sLookup_rev_req_blk_n                                                                                                                                                                                                                                                       |   9|          2|    1|          2|
+    |txEng2timer_setProbeTimer_blk_n                                                                                                                                                                                                                                                   |   9|          2|    1|          2|
+    |txEng2timer_setRetransmitTimer_blk_n                                                                                                                                                                                                                                              |   9|          2|    1|          2|
+    |txEng2timer_setRetransmitTimer_din                                                                                                                                                                                                                                                |  31|          6|   48|        288|
+    |txEng2txSar_upd_req_blk_n                                                                                                                                                                                                                                                         |   9|          2|    1|          2|
+    |txEng2txSar_upd_req_din                                                                                                                                                                                                                                                           |  65|         13|   53|        689|
+    |txEngFifoReadCount_blk_n                                                                                                                                                                                                                                                          |   9|          2|    1|          2|
+    |txEng_ipMetaFifo_blk_n                                                                                                                                                                                                                                                            |   9|          2|    1|          2|
+    |txEng_ipMetaFifo_din                                                                                                                                                                                                                                                              |  31|          6|   16|         96|
+    |txEng_isDDRbypass_blk_n                                                                                                                                                                                                                                                           |   9|          2|    1|          2|
+    |txEng_isDDRbypass_din                                                                                                                                                                                                                                                             |  14|          3|    1|          3|
+    |txEng_isLookUpFifo_blk_n                                                                                                                                                                                                                                                          |   9|          2|    1|          2|
+    |txEng_isLookUpFifo_din                                                                                                                                                                                                                                                            |  14|          3|    1|          3|
+    |txEng_tcpMetaFifo_blk_n                                                                                                                                                                                                                                                           |   9|          2|    1|          2|
+    |txEng_tcpMetaFifo_din                                                                                                                                                                                                                                                             |  49|          9|  104|        936|
+    |txEng_tupleShortCutFifo_blk_n                                                                                                                                                                                                                                                     |   9|          2|    1|          2|
+    |txMetaloader2memAccessBreakdown_blk_n                                                                                                                                                                                                                                             |   9|          2|    1|          2|
+    |txSar2txEng_upd_rsp_blk_n                                                                                                                                                                                                                                                         |   9|          2|    1|          2|
+    |txSar_ackd_V_7_reg_435                                                                                                                                                                                                                                                            |  14|          3|   32|         96|
+    |txSar_usedLength_V_5_reg_472                                                                                                                                                                                                                                                      |  14|          3|   18|         54|
+    +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                                                                                                                                                                                                                                             | 731|        154|  867|       3829|
+    +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                                                                                                                       Name                                                                                                                                       | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |and_ln365_reg_2076                                                                                                                                                                                                                                                                |   1|   0|    1|          0|
+    |ap_CS_fsm                                                                                                                                                                                                                                                                         |   1|   0|    1|          0|
+    |ap_done_reg                                                                                                                                                                                                                                                                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                                                                                                                                                                                                                                                           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                                                                                                                                                                                                                                                           |   1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter1_len_V_reg_592                                                                                                                                                                                                                                                |  13|   0|   13|          0|
+    |ap_phi_reg_pp0_iter1_p_ZZ10metaLoaderRN3hls6streamI13extendedEventLi0EEERNS0_I10rxSarReplyLi0EEERNS0_I12txTxSarReplyLi0EEERNS0_I7ap_uintILi16EELi0EEERNS0_I12txTxSarQueryLi0EEERNS0_I20txRetransmitTimerSetLi0EEESD_SD_RNS0_I14tx_engine_metaLi0EEERNS0_I5mmCmdLi0EEES_1_reg_614  |  32|   0|   32|          0|
+    |ap_phi_reg_pp0_iter1_p_ZZ10metaLoaderRN3hls6streamI13extendedEventLi0EEERNS0_I10rxSarReplyLi0EEERNS0_I12txTxSarReplyLi0EEERNS0_I7ap_uintILi16EELi0EEERNS0_I12txTxSarQueryLi0EEERNS0_I20txRetransmitTimerSetLi0EEESD_SD_RNS0_I14tx_engine_metaLi0EEERNS0_I5mmCmdLi0EEES_2_reg_604  |  32|   0|   32|          0|
+    |ap_phi_reg_pp0_iter1_p_ZZ10metaLoaderRN3hls6streamI13extendedEventLi0EEERNS0_I10rxSarReplyLi0EEERNS0_I12txTxSarReplyLi0EEERNS0_I7ap_uintILi16EELi0EEERNS0_I12txTxSarQueryLi0EEERNS0_I20txRetransmitTimerSetLi0EEESD_SD_RNS0_I14tx_engine_metaLi0EEERNS0_I5mmCmdLi0EEES_reg_623    |  32|   0|   32|          0|
+    |ap_phi_reg_pp0_iter1_phi_ln365_reg_579                                                                                                                                                                                                                                            |   1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter1_rxSar_recvd_V_loc_0_i_reg_559                                                                                                                                                                                                                                |  32|   0|   32|          0|
+    |ap_phi_reg_pp0_iter1_rxSar_recvd_V_loc_1_i_reg_529                                                                                                                                                                                                                                |  32|   0|   32|          0|
+    |ap_phi_reg_pp0_iter1_rxSar_windowSize_V_loc_0_i_reg_569                                                                                                                                                                                                                           |  16|   0|   16|          0|
+    |ap_phi_reg_pp0_iter1_rxSar_windowSize_V_loc_1_i_reg_539                                                                                                                                                                                                                           |  16|   0|   16|          0|
+    |ap_phi_reg_pp0_iter1_txSar_not_ackd_V_10_reg_549                                                                                                                                                                                                                                  |  32|   0|   32|          0|
+    |ap_phi_reg_pp0_iter2_p_ZZ10metaLoaderRN3hls6streamI13extendedEventLi0EEERNS0_I10rxSarReplyLi0EEERNS0_I12txTxSarReplyLi0EEERNS0_I7ap_uintILi16EELi0EEERNS0_I12txTxSarQueryLi0EEERNS0_I20txRetransmitTimerSetLi0EEESD_SD_RNS0_I14tx_engine_metaLi0EEERNS0_I5mmCmdLi0EEES_1_reg_614  |  32|   0|   32|          0|
+    |ap_phi_reg_pp0_iter2_p_ZZ10metaLoaderRN3hls6streamI13extendedEventLi0EEERNS0_I10rxSarReplyLi0EEERNS0_I12txTxSarReplyLi0EEERNS0_I7ap_uintILi16EELi0EEERNS0_I12txTxSarQueryLi0EEERNS0_I20txRetransmitTimerSetLi0EEESD_SD_RNS0_I14tx_engine_metaLi0EEERNS0_I5mmCmdLi0EEES_2_reg_604  |  32|   0|   32|          0|
+    |ap_phi_reg_pp0_iter2_p_ZZ10metaLoaderRN3hls6streamI13extendedEventLi0EEERNS0_I10rxSarReplyLi0EEERNS0_I12txTxSarReplyLi0EEERNS0_I7ap_uintILi16EELi0EEERNS0_I12txTxSarQueryLi0EEERNS0_I20txRetransmitTimerSetLi0EEESD_SD_RNS0_I14tx_engine_metaLi0EEERNS0_I5mmCmdLi0EEES_reg_623    |  32|   0|   32|          0|
+    |icmp_ln1064_reg_2018                                                                                                                                                                                                                                                              |   1|   0|    1|          0|
+    |icmp_ln1068_5_reg_1911                                                                                                                                                                                                                                                            |   1|   0|    1|          0|
+    |icmp_ln1068_5_reg_1911_pp0_iter1_reg                                                                                                                                                                                                                                              |   1|   0|    1|          0|
+    |icmp_ln1068_6_reg_1907                                                                                                                                                                                                                                                            |   1|   0|    1|          0|
+    |icmp_ln1068_6_reg_1907_pp0_iter1_reg                                                                                                                                                                                                                                              |   1|   0|    1|          0|
+    |icmp_ln1068_7_reg_2051                                                                                                                                                                                                                                                            |   1|   0|    1|          0|
+    |icmp_ln1068_7_reg_2051_pp0_iter1_reg                                                                                                                                                                                                                                              |   1|   0|    1|          0|
+    |icmp_ln1068_9_reg_2085                                                                                                                                                                                                                                                            |   1|   0|    1|          0|
+    |icmp_ln1068_reg_1857                                                                                                                                                                                                                                                              |   1|   0|    1|          0|
+    |icmp_ln1068_reg_1857_pp0_iter1_reg                                                                                                                                                                                                                                                |   1|   0|    1|          0|
+    |len_V_reg_592                                                                                                                                                                                                                                                                     |  13|   0|   13|          0|
+    |meta_win_shift_V                                                                                                                                                                                                                                                                  |   4|   0|    4|          0|
+    |ml_FsmState_V                                                                                                                                                                                                                                                                     |   1|   0|    1|          0|
+    |ml_FsmState_V_load_reg_1840                                                                                                                                                                                                                                                       |   1|   0|    1|          0|
+    |ml_FsmState_V_load_reg_1840_pp0_iter1_reg                                                                                                                                                                                                                                         |   1|   0|    1|          0|
+    |ml_curEvent_address_V                                                                                                                                                                                                                                                             |  16|   0|   16|          0|
+    |ml_curEvent_length_V                                                                                                                                                                                                                                                              |  16|   0|   16|          0|
+    |ml_curEvent_rt_count_V                                                                                                                                                                                                                                                            |   3|   0|    3|          0|
+    |ml_curEvent_sessionID_V                                                                                                                                                                                                                                                           |  16|   0|   16|          0|
+    |ml_curEvent_tuple_dstIp_V                                                                                                                                                                                                                                                         |  32|   0|   32|          0|
+    |ml_curEvent_tuple_dstPort_V                                                                                                                                                                                                                                                       |  16|   0|   16|          0|
+    |ml_curEvent_tuple_srcIp_V                                                                                                                                                                                                                                                         |  32|   0|   32|          0|
+    |ml_curEvent_tuple_srcPort_V                                                                                                                                                                                                                                                       |  16|   0|   16|          0|
+    |ml_curEvent_type                                                                                                                                                                                                                                                                  |  32|   0|   32|          0|
+    |ml_curEvent_type_load_reg_1915                                                                                                                                                                                                                                                    |  32|   0|   32|          0|
+    |ml_curEvent_type_load_reg_1915_pp0_iter1_reg                                                                                                                                                                                                                                      |  32|   0|   32|          0|
+    |ml_randomValue_V                                                                                                                                                                                                                                                                  |  32|   0|   32|          0|
+    |ml_randomValue_V_load_reg_2055                                                                                                                                                                                                                                                    |  32|   0|   32|          0|
+    |ml_sarLoaded                                                                                                                                                                                                                                                                      |   1|   0|    1|          0|
+    |ml_sarLoaded_load_reg_1853                                                                                                                                                                                                                                                        |   1|   0|    1|          0|
+    |ml_sarLoaded_load_reg_1853_pp0_iter1_reg                                                                                                                                                                                                                                          |   1|   0|    1|          0|
+    |ml_segmentCount_V                                                                                                                                                                                                                                                                 |   2|   0|    2|          0|
+    |p_s_reg_1869                                                                                                                                                                                                                                                                      |  16|   0|   16|          0|
+    |p_s_reg_1869_pp0_iter1_reg                                                                                                                                                                                                                                                        |  16|   0|   16|          0|
+    |reg_658                                                                                                                                                                                                                                                                           |  32|   0|   32|          0|
+    |reg_658_pp0_iter1_reg                                                                                                                                                                                                                                                             |  32|   0|   32|          0|
+    |reg_663                                                                                                                                                                                                                                                                           |  16|   0|   16|          0|
+    |reg_663_pp0_iter1_reg                                                                                                                                                                                                                                                             |  16|   0|   16|          0|
+    |resetEvent_length_V_reg_1844                                                                                                                                                                                                                                                      |  16|   0|   16|          0|
+    |resetEvent_length_V_reg_1844_pp0_iter1_reg                                                                                                                                                                                                                                        |  16|   0|   16|          0|
+    |rxSar_recvd_V                                                                                                                                                                                                                                                                     |  32|   0|   32|          0|
+    |rxSar_recvd_V_loc_0_i_reg_559                                                                                                                                                                                                                                                     |  32|   0|   32|          0|
+    |rxSar_recvd_V_loc_1_i_reg_529                                                                                                                                                                                                                                                     |  32|   0|   32|          0|
+    |rxSar_windowSize_V                                                                                                                                                                                                                                                                |  16|   0|   16|          0|
+    |rxSar_windowSize_V_loc_0_i_reg_569                                                                                                                                                                                                                                                |  16|   0|   16|          0|
+    |rxSar_windowSize_V_loc_1_i_reg_539                                                                                                                                                                                                                                                |  16|   0|   16|          0|
+    |slowstart_threshold_reg_2080                                                                                                                                                                                                                                                      |  17|   0|   17|          0|
+    |tmp_31_i_reg_2000                                                                                                                                                                                                                                                                 |   1|   0|    1|          0|
+    |tmp_31_i_reg_2000_pp0_iter1_reg                                                                                                                                                                                                                                                   |   1|   0|    1|          0|
+    |tmp_32_i_reg_1987                                                                                                                                                                                                                                                                 |   1|   0|    1|          0|
+    |tmp_32_i_reg_1987_pp0_iter1_reg                                                                                                                                                                                                                                                   |   1|   0|    1|          0|
+    |tmp_33_i_reg_1953                                                                                                                                                                                                                                                                 |   1|   0|    1|          0|
+    |tmp_33_i_reg_1953_pp0_iter1_reg                                                                                                                                                                                                                                                   |   1|   0|    1|          0|
+    |tmp_34_i_reg_1940                                                                                                                                                                                                                                                                 |   1|   0|    1|          0|
+    |tmp_34_i_reg_1940_pp0_iter1_reg                                                                                                                                                                                                                                                   |   1|   0|    1|          0|
+    |tmp_35_i_reg_2038                                                                                                                                                                                                                                                                 |   1|   0|    1|          0|
+    |tmp_35_i_reg_2038_pp0_iter1_reg                                                                                                                                                                                                                                                   |   1|   0|    1|          0|
+    |tmp_36_i_reg_2004                                                                                                                                                                                                                                                                 |   1|   0|    1|          0|
+    |tmp_36_i_reg_2004_pp0_iter1_reg                                                                                                                                                                                                                                                   |   1|   0|    1|          0|
+    |tmp_37_i_reg_1991                                                                                                                                                                                                                                                                 |   1|   0|    1|          0|
+    |tmp_37_i_reg_1991_pp0_iter1_reg                                                                                                                                                                                                                                                   |   1|   0|    1|          0|
+    |tmp_38_i_reg_1978                                                                                                                                                                                                                                                                 |   1|   0|    1|          0|
+    |tmp_38_i_reg_1978_pp0_iter1_reg                                                                                                                                                                                                                                                   |   1|   0|    1|          0|
+    |tmp_39_i_reg_1957                                                                                                                                                                                                                                                                 |   1|   0|    1|          0|
+    |tmp_39_i_reg_1957_pp0_iter1_reg                                                                                                                                                                                                                                                   |   1|   0|    1|          0|
+    |tmp_40_i_reg_1944                                                                                                                                                                                                                                                                 |   1|   0|    1|          0|
+    |tmp_40_i_reg_1944_pp0_iter1_reg                                                                                                                                                                                                                                                   |   1|   0|    1|          0|
+    |tmp_41_i_reg_1936                                                                                                                                                                                                                                                                 |   1|   0|    1|          0|
+    |tmp_41_i_reg_1936_pp0_iter1_reg                                                                                                                                                                                                                                                   |   1|   0|    1|          0|
+    |tmp_i_329_reg_2034                                                                                                                                                                                                                                                                |   1|   0|    1|          0|
+    |tmp_i_329_reg_2034_pp0_iter1_reg                                                                                                                                                                                                                                                  |   1|   0|    1|          0|
+    |tmp_i_reg_1861                                                                                                                                                                                                                                                                    |   1|   0|    1|          0|
+    |tmp_i_reg_1861_pp0_iter1_reg                                                                                                                                                                                                                                                      |   1|   0|    1|          0|
+    |tmp_reg_2047                                                                                                                                                                                                                                                                      |   1|   0|    1|          0|
+    |tmp_reg_2047_pp0_iter1_reg                                                                                                                                                                                                                                                        |   1|   0|    1|          0|
+    |trunc_ln144_14_reg_2042                                                                                                                                                                                                                                                           |  32|   0|   32|          0|
+    |trunc_ln144_14_reg_2042_pp0_iter1_reg                                                                                                                                                                                                                                             |  32|   0|   32|          0|
+    |trunc_ln144_15_reg_1995                                                                                                                                                                                                                                                           |  32|   0|   32|          0|
+    |trunc_ln144_15_reg_1995_pp0_iter1_reg                                                                                                                                                                                                                                             |  32|   0|   32|          0|
+    |trunc_ln144_17_reg_1961                                                                                                                                                                                                                                                           |  32|   0|   32|          0|
+    |trunc_ln144_17_reg_1961_pp0_iter1_reg                                                                                                                                                                                                                                             |  32|   0|   32|          0|
+    |trunc_ln144_43_reg_1887                                                                                                                                                                                                                                                           |  32|   0|   32|          0|
+    |trunc_ln144_44_reg_1892                                                                                                                                                                                                                                                           |  32|   0|   32|          0|
+    |trunc_ln144_45_reg_1897                                                                                                                                                                                                                                                           |  16|   0|   16|          0|
+    |trunc_ln144_46_reg_1902                                                                                                                                                                                                                                                           |  16|   0|   16|          0|
+    |trunc_ln144_49_reg_1966                                                                                                                                                                                                                                                           |   4|   0|    4|          0|
+    |trunc_ln144_49_reg_1966_pp0_iter1_reg                                                                                                                                                                                                                                             |   4|   0|    4|          0|
+    |trunc_ln144_reg_1865                                                                                                                                                                                                                                                              |  32|   0|   32|          0|
+    |trunc_ln144_reg_1865_pp0_iter1_reg                                                                                                                                                                                                                                                |  32|   0|   32|          0|
+    |trunc_ln144_s_reg_1882                                                                                                                                                                                                                                                            |  16|   0|   16|          0|
+    |trunc_ln674_reg_2013                                                                                                                                                                                                                                                              |  18|   0|   18|          0|
+    |trunc_ln674_reg_2013_pp0_iter1_reg                                                                                                                                                                                                                                                |  18|   0|   18|          0|
+    |txSarReg_ackd_V                                                                                                                                                                                                                                                                   |  32|   0|   32|          0|
+    |txSarReg_app_V                                                                                                                                                                                                                                                                    |  18|   0|   18|          0|
+    |txSarReg_finReady                                                                                                                                                                                                                                                                 |   1|   0|    1|          0|
+    |txSarReg_finSent                                                                                                                                                                                                                                                                  |   1|   0|    1|          0|
+    |txSarReg_not_ackd_V                                                                                                                                                                                                                                                               |  32|   0|   32|          0|
+    |txSarReg_usableWindow_V                                                                                                                                                                                                                                                           |  18|   0|   18|          0|
+    |txSarReg_usedLength_V                                                                                                                                                                                                                                                             |  18|   0|   18|          0|
+    |txSarReg_win_shift_V                                                                                                                                                                                                                                                              |   4|   0|    4|          0|
+    |txSar_ackd_V_7_reg_435                                                                                                                                                                                                                                                            |  32|   0|   32|          0|
+    |txSar_ackd_V_7_reg_435_pp0_iter1_reg                                                                                                                                                                                                                                              |  32|   0|   32|          0|
+    |txSar_not_ackd_V_10_reg_549                                                                                                                                                                                                                                                       |  32|   0|   32|          0|
+    |txSar_usedLength_V_5_reg_472                                                                                                                                                                                                                                                      |  18|   0|   18|          0|
+    +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                                                                                                                                                                                                             |1680|   0| 1680|          0|
+    +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------------+-----+-----+------------+---------------------------------+--------------+
+|                RTL Ports               | Dir | Bits|  Protocol  |          Source Object          |    C Type    |
++----------------------------------------+-----+-----+------------+---------------------------------+--------------+
+|ap_clk                                  |   in|    1|  ap_ctrl_hs|                       metaLoader|  return value|
+|ap_rst                                  |   in|    1|  ap_ctrl_hs|                       metaLoader|  return value|
+|ap_start                                |   in|    1|  ap_ctrl_hs|                       metaLoader|  return value|
+|ap_done                                 |  out|    1|  ap_ctrl_hs|                       metaLoader|  return value|
+|ap_continue                             |   in|    1|  ap_ctrl_hs|                       metaLoader|  return value|
+|ap_idle                                 |  out|    1|  ap_ctrl_hs|                       metaLoader|  return value|
+|ap_ready                                |  out|    1|  ap_ctrl_hs|                       metaLoader|  return value|
+|eventEng2txEng_event_dout               |   in|  181|     ap_fifo|             eventEng2txEng_event|       pointer|
+|eventEng2txEng_event_empty_n            |   in|    1|     ap_fifo|             eventEng2txEng_event|       pointer|
+|eventEng2txEng_event_read               |  out|    1|     ap_fifo|             eventEng2txEng_event|       pointer|
+|txSar2txEng_upd_rsp_dout                |   in|  124|     ap_fifo|              txSar2txEng_upd_rsp|       pointer|
+|txSar2txEng_upd_rsp_empty_n             |   in|    1|     ap_fifo|              txSar2txEng_upd_rsp|       pointer|
+|txSar2txEng_upd_rsp_read                |  out|    1|     ap_fifo|              txSar2txEng_upd_rsp|       pointer|
+|rxSar2txEng_rsp_dout                    |   in|   70|     ap_fifo|                  rxSar2txEng_rsp|       pointer|
+|rxSar2txEng_rsp_empty_n                 |   in|    1|     ap_fifo|                  rxSar2txEng_rsp|       pointer|
+|rxSar2txEng_rsp_read                    |  out|    1|     ap_fifo|                  rxSar2txEng_rsp|       pointer|
+|txEngFifoReadCount_din                  |  out|    1|     ap_fifo|               txEngFifoReadCount|       pointer|
+|txEngFifoReadCount_full_n               |   in|    1|     ap_fifo|               txEngFifoReadCount|       pointer|
+|txEngFifoReadCount_write                |  out|    1|     ap_fifo|               txEngFifoReadCount|       pointer|
+|txEng2txSar_upd_req_din                 |  out|   53|     ap_fifo|              txEng2txSar_upd_req|       pointer|
+|txEng2txSar_upd_req_full_n              |   in|    1|     ap_fifo|              txEng2txSar_upd_req|       pointer|
+|txEng2txSar_upd_req_write               |  out|    1|     ap_fifo|              txEng2txSar_upd_req|       pointer|
+|txEng2rxSar_req_din                     |  out|   16|     ap_fifo|                  txEng2rxSar_req|       pointer|
+|txEng2rxSar_req_full_n                  |   in|    1|     ap_fifo|                  txEng2rxSar_req|       pointer|
+|txEng2rxSar_req_write                   |  out|    1|     ap_fifo|                  txEng2rxSar_req|       pointer|
+|txEng_ipMetaFifo_din                    |  out|   16|     ap_fifo|                 txEng_ipMetaFifo|       pointer|
+|txEng_ipMetaFifo_full_n                 |   in|    1|     ap_fifo|                 txEng_ipMetaFifo|       pointer|
+|txEng_ipMetaFifo_write                  |  out|    1|     ap_fifo|                 txEng_ipMetaFifo|       pointer|
+|txEng_isLookUpFifo_din                  |  out|    1|     ap_fifo|               txEng_isLookUpFifo|       pointer|
+|txEng_isLookUpFifo_full_n               |   in|    1|     ap_fifo|               txEng_isLookUpFifo|       pointer|
+|txEng_isLookUpFifo_write                |  out|    1|     ap_fifo|               txEng_isLookUpFifo|       pointer|
+|txEng2sLookup_rev_req_din               |  out|   16|     ap_fifo|            txEng2sLookup_rev_req|       pointer|
+|txEng2sLookup_rev_req_full_n            |   in|    1|     ap_fifo|            txEng2sLookup_rev_req|       pointer|
+|txEng2sLookup_rev_req_write             |  out|    1|     ap_fifo|            txEng2sLookup_rev_req|       pointer|
+|txEng_tcpMetaFifo_din                   |  out|  104|     ap_fifo|                txEng_tcpMetaFifo|       pointer|
+|txEng_tcpMetaFifo_full_n                |   in|    1|     ap_fifo|                txEng_tcpMetaFifo|       pointer|
+|txEng_tcpMetaFifo_write                 |  out|    1|     ap_fifo|                txEng_tcpMetaFifo|       pointer|
+|txEng_tupleShortCutFifo_din             |  out|   96|     ap_fifo|          txEng_tupleShortCutFifo|       pointer|
+|txEng_tupleShortCutFifo_full_n          |   in|    1|     ap_fifo|          txEng_tupleShortCutFifo|       pointer|
+|txEng_tupleShortCutFifo_write           |  out|    1|     ap_fifo|          txEng_tupleShortCutFifo|       pointer|
+|txEng2timer_setRetransmitTimer_din      |  out|   48|     ap_fifo|   txEng2timer_setRetransmitTimer|       pointer|
+|txEng2timer_setRetransmitTimer_full_n   |   in|    1|     ap_fifo|   txEng2timer_setRetransmitTimer|       pointer|
+|txEng2timer_setRetransmitTimer_write    |  out|    1|     ap_fifo|   txEng2timer_setRetransmitTimer|       pointer|
+|txMetaloader2memAccessBreakdown_din     |  out|   72|     ap_fifo|  txMetaloader2memAccessBreakdown|       pointer|
+|txMetaloader2memAccessBreakdown_full_n  |   in|    1|     ap_fifo|  txMetaloader2memAccessBreakdown|       pointer|
+|txMetaloader2memAccessBreakdown_write   |  out|    1|     ap_fifo|  txMetaloader2memAccessBreakdown|       pointer|
+|txEng_isDDRbypass_din                   |  out|    1|     ap_fifo|                txEng_isDDRbypass|       pointer|
+|txEng_isDDRbypass_full_n                |   in|    1|     ap_fifo|                txEng_isDDRbypass|       pointer|
+|txEng_isDDRbypass_write                 |  out|    1|     ap_fifo|                txEng_isDDRbypass|       pointer|
+|txEng2timer_setProbeTimer_din           |  out|   16|     ap_fifo|        txEng2timer_setProbeTimer|       pointer|
+|txEng2timer_setProbeTimer_full_n        |   in|    1|     ap_fifo|        txEng2timer_setProbeTimer|       pointer|
+|txEng2timer_setProbeTimer_write         |  out|    1|     ap_fifo|        txEng2timer_setProbeTimer|       pointer|
++----------------------------------------+-----+-----+------------+---------------------------------+--------------+
+

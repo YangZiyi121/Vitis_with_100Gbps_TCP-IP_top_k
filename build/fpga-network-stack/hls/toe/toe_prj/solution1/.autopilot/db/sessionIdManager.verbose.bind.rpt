@@ -1,0 +1,568 @@
+
+
+================================================================
+== Vitis HLS Report for 'sessionIdManager'
+================================================================
+* Date:           Sat Mar 18 14:38:25 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        toe_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  1.168 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.16>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i14 %slc_sessionIdFinFifo, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 3 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i14 %slc_sessionIdFinFifo, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 4 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i14 %slc_sessionIdFinFifo, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i14 %slc_sessionIdFreeList, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i14 %slc_sessionIdFreeList, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i14 %slc_sessionIdFreeList, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i14 %slc_sessionIdFinFifo, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i14 %slc_sessionIdFreeList, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specpipeline_ln38 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_3" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:38]   --->   Operation 11 'specpipeline' 'specpipeline_ln38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specreset_ln44 = specreset void @_ssdm_op_SpecReset, i10 %counter_V, i64 1, void @empty_3" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:44]   --->   Operation 12 'specreset' 'specreset_ln44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tmp_i = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i14P0A, i14 %slc_sessionIdFinFifo, i32 1" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:135]   --->   Operation 13 'nbreadreq' 'tmp_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.34> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 14> <Depth = 2> <FIFO>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln48 = br i1 %tmp_i, void, void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:48]   --->   Operation 14 'br' 'br_ln48' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%counter_V_load = load i10 %counter_V"   --->   Operation 15 'load' 'counter_V_load' <Predicate = (!tmp_i)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.60ns)   --->   "%icmp_ln1072 = icmp_ult  i10 %counter_V_load, i10 1000"   --->   Operation 16 'icmp' 'icmp_ln1072' <Predicate = (!tmp_i)> <Delay = 0.60> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln53 = br i1 %icmp_ln1072, void %._crit_edge.i, void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:53]   --->   Operation 17 'br' 'br_ln53' <Predicate = (!tmp_i)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.72ns)   --->   "%add_ln885 = add i10 %counter_V_load, i10 1"   --->   Operation 18 'add' 'add_ln885' <Predicate = (!tmp_i & icmp_ln1072)> <Delay = 0.72> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%store_ln885 = store i10 %add_ln885, i10 %counter_V"   --->   Operation 19 'store' 'store_ln885' <Predicate = (!tmp_i & icmp_ln1072)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln0 = br void %sessionIdManager.exit"   --->   Operation 20 'br' 'br_ln0' <Predicate = (!tmp_i)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (1.16ns)   --->   "%sessionID = read i14 @_ssdm_op_Read.ap_fifo.volatile.i14P0A, i14 %slc_sessionIdFinFifo" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 21 'read' 'sessionID' <Predicate = (tmp_i)> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.34> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 14> <Depth = 2> <FIFO>
+
+State 2 <SV = 1> <Delay = 1.16>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln1072 = zext i10 %counter_V_load"   --->   Operation 22 'zext' 'zext_ln1072' <Predicate = (!tmp_i)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (1.16ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i14P0A, i14 %slc_sessionIdFreeList, i14 %zext_ln1072" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 23 'write' 'write_ln173' <Predicate = (!tmp_i & icmp_ln1072)> <Delay = 1.16> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 14> <Depth = 16384> <FIFO>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln57 = br void %._crit_edge.i" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:57]   --->   Operation 24 'br' 'br_ln57' <Predicate = (!tmp_i & icmp_ln1072)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (1.16ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i14P0A, i14 %slc_sessionIdFreeList, i14 %sessionID" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 25 'write' 'write_ln173' <Predicate = (tmp_i)> <Delay = 1.16> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 14> <Depth = 16384> <FIFO>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln52 = br void %sessionIdManager.exit" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:52]   --->   Operation 26 'br' 'br_ln52' <Predicate = (tmp_i)> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 27 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 1
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ slc_sessionIdFinFifo]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ slc_sessionIdFreeList]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ counter_V]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; IO mode=ap_ovld:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specpipeline_ln38 (specpipeline ) [ 000]
+specreset_ln44    (specreset    ) [ 000]
+tmp_i             (nbreadreq    ) [ 011]
+br_ln48           (br           ) [ 000]
+counter_V_load    (load         ) [ 011]
+icmp_ln1072       (icmp         ) [ 011]
+br_ln53           (br           ) [ 000]
+add_ln885         (add          ) [ 000]
+store_ln885       (store        ) [ 000]
+br_ln0            (br           ) [ 000]
+sessionID         (read         ) [ 011]
+zext_ln1072       (zext         ) [ 000]
+write_ln173       (write        ) [ 000]
+br_ln57           (br           ) [ 000]
+write_ln173       (write        ) [ 000]
+br_ln52           (br           ) [ 000]
+ret_ln0           (ret          ) [ 000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="slc_sessionIdFinFifo">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="slc_sessionIdFinFifo"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="slc_sessionIdFreeList">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="slc_sessionIdFreeList"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="counter_V">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="counter_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecReset"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_NbReadReq.ap_fifo.i14P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i14P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i14P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1004" name="tmp_i_nbreadreq_fu_32">
+<pin_list>
+<pin id="33" dir="0" index="0" bw="1" slack="0"/>
+<pin id="34" dir="0" index="1" bw="14" slack="0"/>
+<pin id="35" dir="0" index="2" bw="1" slack="0"/>
+<pin id="36" dir="1" index="3" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="nbreadreq(1156) " fcode="nbreadreq"/>
+<opset="tmp_i/1 "/>
+</bind>
+</comp>
+
+<comp id="40" class="1004" name="sessionID_read_fu_40">
+<pin_list>
+<pin id="41" dir="0" index="0" bw="14" slack="0"/>
+<pin id="42" dir="0" index="1" bw="14" slack="0"/>
+<pin id="43" dir="1" index="2" bw="14" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="sessionID/1 "/>
+</bind>
+</comp>
+
+<comp id="46" class="1004" name="grp_write_fu_46">
+<pin_list>
+<pin id="47" dir="0" index="0" bw="0" slack="0"/>
+<pin id="48" dir="0" index="1" bw="14" slack="0"/>
+<pin id="49" dir="0" index="2" bw="14" slack="0"/>
+<pin id="50" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln173/2 write_ln173/2 "/>
+</bind>
+</comp>
+
+<comp id="53" class="1004" name="counter_V_load_load_fu_53">
+<pin_list>
+<pin id="54" dir="0" index="0" bw="10" slack="0"/>
+<pin id="55" dir="1" index="1" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="counter_V_load/1 "/>
+</bind>
+</comp>
+
+<comp id="57" class="1004" name="icmp_ln1072_fu_57">
+<pin_list>
+<pin id="58" dir="0" index="0" bw="10" slack="0"/>
+<pin id="59" dir="0" index="1" bw="10" slack="0"/>
+<pin id="60" dir="1" index="2" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln1072/1 "/>
+</bind>
+</comp>
+
+<comp id="63" class="1004" name="add_ln885_fu_63">
+<pin_list>
+<pin id="64" dir="0" index="0" bw="10" slack="0"/>
+<pin id="65" dir="0" index="1" bw="1" slack="0"/>
+<pin id="66" dir="1" index="2" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln885/1 "/>
+</bind>
+</comp>
+
+<comp id="69" class="1004" name="store_ln885_store_fu_69">
+<pin_list>
+<pin id="70" dir="0" index="0" bw="10" slack="0"/>
+<pin id="71" dir="0" index="1" bw="10" slack="0"/>
+<pin id="72" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln885/1 "/>
+</bind>
+</comp>
+
+<comp id="75" class="1004" name="zext_ln1072_fu_75">
+<pin_list>
+<pin id="76" dir="0" index="0" bw="10" slack="1"/>
+<pin id="77" dir="1" index="1" bw="14" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln1072/2 "/>
+</bind>
+</comp>
+
+<comp id="79" class="1005" name="tmp_i_reg_79">
+<pin_list>
+<pin id="80" dir="0" index="0" bw="1" slack="1"/>
+<pin id="81" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="tmp_i "/>
+</bind>
+</comp>
+
+<comp id="83" class="1005" name="counter_V_load_reg_83">
+<pin_list>
+<pin id="84" dir="0" index="0" bw="10" slack="1"/>
+<pin id="85" dir="1" index="1" bw="10" slack="1"/>
+</pin_list>
+<bind>
+<opset="counter_V_load "/>
+</bind>
+</comp>
+
+<comp id="88" class="1005" name="icmp_ln1072_reg_88">
+<pin_list>
+<pin id="89" dir="0" index="0" bw="1" slack="1"/>
+<pin id="90" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="icmp_ln1072 "/>
+</bind>
+</comp>
+
+<comp id="92" class="1005" name="sessionID_reg_92">
+<pin_list>
+<pin id="93" dir="0" index="0" bw="14" slack="1"/>
+<pin id="94" dir="1" index="1" bw="14" slack="1"/>
+</pin_list>
+<bind>
+<opset="sessionID "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="37"><net_src comp="22" pin="0"/><net_sink comp="32" pin=0"/></net>
+
+<net id="38"><net_src comp="0" pin="0"/><net_sink comp="32" pin=1"/></net>
+
+<net id="39"><net_src comp="16" pin="0"/><net_sink comp="32" pin=2"/></net>
+
+<net id="44"><net_src comp="28" pin="0"/><net_sink comp="40" pin=0"/></net>
+
+<net id="45"><net_src comp="0" pin="0"/><net_sink comp="40" pin=1"/></net>
+
+<net id="51"><net_src comp="30" pin="0"/><net_sink comp="46" pin=0"/></net>
+
+<net id="52"><net_src comp="2" pin="0"/><net_sink comp="46" pin=1"/></net>
+
+<net id="56"><net_src comp="4" pin="0"/><net_sink comp="53" pin=0"/></net>
+
+<net id="61"><net_src comp="53" pin="1"/><net_sink comp="57" pin=0"/></net>
+
+<net id="62"><net_src comp="24" pin="0"/><net_sink comp="57" pin=1"/></net>
+
+<net id="67"><net_src comp="53" pin="1"/><net_sink comp="63" pin=0"/></net>
+
+<net id="68"><net_src comp="26" pin="0"/><net_sink comp="63" pin=1"/></net>
+
+<net id="73"><net_src comp="63" pin="2"/><net_sink comp="69" pin=0"/></net>
+
+<net id="74"><net_src comp="4" pin="0"/><net_sink comp="69" pin=1"/></net>
+
+<net id="78"><net_src comp="75" pin="1"/><net_sink comp="46" pin=2"/></net>
+
+<net id="82"><net_src comp="32" pin="3"/><net_sink comp="79" pin=0"/></net>
+
+<net id="86"><net_src comp="53" pin="1"/><net_sink comp="83" pin=0"/></net>
+
+<net id="87"><net_src comp="83" pin="1"/><net_sink comp="75" pin=0"/></net>
+
+<net id="91"><net_src comp="57" pin="2"/><net_sink comp="88" pin=0"/></net>
+
+<net id="95"><net_src comp="40" pin="2"/><net_sink comp="92" pin=0"/></net>
+
+<net id="96"><net_src comp="92" pin="1"/><net_sink comp="46" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: slc_sessionIdFreeList | {2 }
+	Port: counter_V | {1 }
+ - Input state : 
+	Port: sessionIdManager : slc_sessionIdFinFifo | {1 }
+	Port: sessionIdManager : counter_V | {1 }
+  - Chain level:
+	State 1
+		icmp_ln1072 : 1
+		br_ln53 : 2
+		add_ln885 : 1
+		store_ln885 : 2
+	State 2
+		write_ln173 : 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-----------------------|---------|---------|
+| Operation|    Functional Unit    |    FF   |   LUT   |
+|----------|-----------------------|---------|---------|
+|    add   |    add_ln885_fu_63    |    0    |    17   |
+|----------|-----------------------|---------|---------|
+|   icmp   |   icmp_ln1072_fu_57   |    0    |    11   |
+|----------|-----------------------|---------|---------|
+| nbreadreq| tmp_i_nbreadreq_fu_32 |    0    |    0    |
+|----------|-----------------------|---------|---------|
+|   read   |  sessionID_read_fu_40 |    0    |    0    |
+|----------|-----------------------|---------|---------|
+|   write  |    grp_write_fu_46    |    0    |    0    |
+|----------|-----------------------|---------|---------|
+|   zext   |   zext_ln1072_fu_75   |    0    |    0    |
+|----------|-----------------------|---------|---------|
+|   Total  |                       |    0    |    28   |
+|----------|-----------------------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++---------------------+--------+
+|                     |   FF   |
++---------------------+--------+
+|counter_V_load_reg_83|   10   |
+|  icmp_ln1072_reg_88 |    1   |
+|   sessionID_reg_92  |   14   |
+|     tmp_i_reg_79    |    1   |
++---------------------+--------+
+|        Total        |   26   |
++---------------------+--------+
+
+* Multiplexer (MUX) list: 
+|-----------------|------|------|------|--------||---------||---------|
+|       Comp      |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-----------------|------|------|------|--------||---------||---------|
+| grp_write_fu_46 |  p2  |   2  |  14  |   28   ||    9    |
+|-----------------|------|------|------|--------||---------||---------|
+|      Total      |      |      |      |   28   ||  0.387  ||    9    |
+|-----------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    -   |    0   |   28   |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|    0   |    -   |    9   |
+|  Register |    -   |   26   |    -   |
++-----------+--------+--------+--------+
+|   Total   |    0   |   26   |   37   |
++-----------+--------+--------+--------+

@@ -1,0 +1,191 @@
+
+
+================================================================
+== Vitis HLS Report for 'listening_port_table'
+================================================================
+* Date:           Sat Mar 18 14:38:55 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        toe_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  1.333 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        4|        4|  12.800 ns|  12.800 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       44|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        1|     -|        0|        0|    -|
+|Multiplexer          |        -|     -|        -|       73|    -|
+|Register             |        -|     -|      329|      128|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        1|     0|      329|      245|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |       ~0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |       ~0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +----------------------+-----------------------------------------------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |        Memory        |                           Module                          | BRAM_18K| FF| LUT| URAM| Words | Bits| Banks| W*Bits*Banks|
+    +----------------------+-----------------------------------------------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |listeningPortTable_U  |listening_port_table_listeningPortTable_RAM_T2P_BRAM_1R1W  |        1|  0|   0|    0|  32768|    1|     1|        32768|
+    +----------------------+-----------------------------------------------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |Total                 |                                                           |        1|  0|   0|    0|  32768|    1|     1|        32768|
+    +----------------------+-----------------------------------------------------------+---------+---+----+-----+-------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |and_ln63_fu_153_p2                 |       and|   0|  0|   2|           1|           1|
+    |and_ln67_fu_165_p2                 |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0                       |       and|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1   |       and|   0|  0|   2|           1|           1|
+    |ap_enable_state3_pp0_iter2_stage0  |       and|   0|  0|   2|           1|           1|
+    |ap_enable_state4_pp0_iter3_stage0  |       and|   0|  0|   2|           1|           1|
+    |ap_enable_state5_pp0_iter4_stage0  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op33_read_state2      |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op36_load_state3      |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op40_load_state4      |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op49_write_state5     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op51_write_state5     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op55_store_state5     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op58_write_state5     |       and|   0|  0|   2|           1|           1|
+    |tmp_i_336_nbreadreq_fu_64_p3       |       and|   0|  0|   2|           1|           0|
+    |tmp_i_nbreadreq_fu_50_p3           |       and|   0|  0|   2|           1|           0|
+    |ap_block_pp0_stage0_01001          |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0   |        or|   0|  0|   2|           1|           1|
+    |ap_block_state5_pp0_stage0_iter4   |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                      |       xor|   0|  0|   2|           1|           2|
+    |xor_ln1072_fu_148_p2               |       xor|   0|  0|   2|           1|           2|
+    |xor_ln67_fu_159_p2                 |       xor|   0|  0|   2|           1|           2|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |Total                              |          |   0|  0|  44|          22|          23|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------+----+-----------+-----+-----------+
+    |                 Name                 | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |ap_done                               |   9|          2|    1|          2|
+    |listeningPortTable_address1           |  14|          3|   15|         45|
+    |portTable2rxApp_listen_rsp_blk_n      |   9|          2|    1|          2|
+    |portTable2rxApp_listen_rsp_din        |  14|          3|    1|          3|
+    |pt_portCheckListening_req_fifo_blk_n  |   9|          2|    1|          2|
+    |pt_portCheckListening_rsp_fifo_blk_n  |   9|          2|    1|          2|
+    |rxApp2portTable_listen_req_blk_n      |   9|          2|    1|          2|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |Total                                 |  73|         16|   21|         58|
+    +--------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------+----+----+-----+-----------+
+    |                Name               | FF | LUT| Bits| Const Bits|
+    +-----------------------------------+----+----+-----+-----------+
+    |and_ln63_reg_218                   |   1|   0|    1|          0|
+    |and_ln67_reg_222                   |   1|   0|    1|          0|
+    |ap_CS_fsm                          |   1|   0|    1|          0|
+    |ap_done_reg                        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4            |   1|   0|    1|          0|
+    |currPort_V_reg_179                 |  16|   0|   16|          0|
+    |listeningPortTable_load_1_reg_213  |   1|   0|    1|          0|
+    |tmp_V_reg_198                      |  15|   0|   15|          0|
+    |tmp_i_336_reg_194                  |   1|   0|    1|          0|
+    |tmp_i_reg_175                      |   1|   0|    1|          0|
+    |tmp_reg_189                        |   1|   0|    1|          0|
+    |trunc_ln708_reg_184                |  15|   0|   15|          0|
+    |trunc_ln708_reg_184_pp0_iter1_reg  |  15|   0|   15|          0|
+    |currPort_V_reg_179                 |  64|  32|   16|          0|
+    |tmp_i_336_reg_194                  |  64|  32|    1|          0|
+    |tmp_i_reg_175                      |  64|  32|    1|          0|
+    |tmp_reg_189                        |  64|  32|    1|          0|
+    +-----------------------------------+----+----+-----+-----------+
+    |Total                              | 329| 128|   92|          0|
+    +-----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------------+-----+-----+------------+--------------------------------+--------------+
+|                RTL Ports               | Dir | Bits|  Protocol  |          Source Object         |    C Type    |
++----------------------------------------+-----+-----+------------+--------------------------------+--------------+
+|ap_clk                                  |   in|    1|  ap_ctrl_hs|            listening_port_table|  return value|
+|ap_rst                                  |   in|    1|  ap_ctrl_hs|            listening_port_table|  return value|
+|ap_start                                |   in|    1|  ap_ctrl_hs|            listening_port_table|  return value|
+|ap_done                                 |  out|    1|  ap_ctrl_hs|            listening_port_table|  return value|
+|ap_continue                             |   in|    1|  ap_ctrl_hs|            listening_port_table|  return value|
+|ap_idle                                 |  out|    1|  ap_ctrl_hs|            listening_port_table|  return value|
+|ap_ready                                |  out|    1|  ap_ctrl_hs|            listening_port_table|  return value|
+|rxApp2portTable_listen_req_dout         |   in|   16|     ap_fifo|      rxApp2portTable_listen_req|       pointer|
+|rxApp2portTable_listen_req_empty_n      |   in|    1|     ap_fifo|      rxApp2portTable_listen_req|       pointer|
+|rxApp2portTable_listen_req_read         |  out|    1|     ap_fifo|      rxApp2portTable_listen_req|       pointer|
+|pt_portCheckListening_req_fifo_dout     |   in|   15|     ap_fifo|  pt_portCheckListening_req_fifo|       pointer|
+|pt_portCheckListening_req_fifo_empty_n  |   in|    1|     ap_fifo|  pt_portCheckListening_req_fifo|       pointer|
+|pt_portCheckListening_req_fifo_read     |  out|    1|     ap_fifo|  pt_portCheckListening_req_fifo|       pointer|
+|pt_portCheckListening_rsp_fifo_din      |  out|    1|     ap_fifo|  pt_portCheckListening_rsp_fifo|       pointer|
+|pt_portCheckListening_rsp_fifo_full_n   |   in|    1|     ap_fifo|  pt_portCheckListening_rsp_fifo|       pointer|
+|pt_portCheckListening_rsp_fifo_write    |  out|    1|     ap_fifo|  pt_portCheckListening_rsp_fifo|       pointer|
+|portTable2rxApp_listen_rsp_din          |  out|    1|     ap_fifo|      portTable2rxApp_listen_rsp|       pointer|
+|portTable2rxApp_listen_rsp_full_n       |   in|    1|     ap_fifo|      portTable2rxApp_listen_rsp|       pointer|
+|portTable2rxApp_listen_rsp_write        |  out|    1|     ap_fifo|      portTable2rxApp_listen_rsp|       pointer|
++----------------------------------------+-----+-----+------------+--------------------------------+--------------+
+

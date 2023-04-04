@@ -1,0 +1,208 @@
+
+
+================================================================
+== Vitis HLS Report for 'server_512_s'
+================================================================
+* Date:           Sat Mar 18 14:42:54 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        scatter_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  2.507 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        2|        2|  6.400 ns|  6.400 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|      146|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|      158|    -|
+|Register             |        -|     -|       95|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|       95|      304|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln885_1_fu_289_p2             |         +|   0|  0|  23|          16|           1|
+    |add_ln885_fu_283_p2               |         +|   0|  0|  23|          16|           1|
+    |and_ln144_fu_319_p2               |       and|   0|  0|   2|           1|           1|
+    |ap_condition_241                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_480                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_481                  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op27_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op65_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op75_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op83_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op85_write_state3    |       and|   0|  0|   2|           1|           1|
+    |grp_nbreadreq_fu_158_p3           |       and|   0|  0|   2|           1|           0|
+    |tmp_7_i_nbreadreq_fu_136_p3       |       and|   0|  0|   2|           1|           0|
+    |tmp_9_i_nbreadreq_fu_150_p3       |       and|   0|  0|   2|           1|           0|
+    |tmp_i_nbreadreq_fu_122_p3         |       and|   0|  0|   2|           1|           0|
+    |icmp_ln1064_fu_295_p2             |      icmp|   0|  0|  13|          16|          16|
+    |icmp_ln1068_fu_375_p2             |      icmp|   0|  0|  13|          16|           1|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_io                |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3_io                |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2  |        or|   0|  0|   2|           1|           1|
+    |select_ln435_1_fu_310_p3          |    select|   0|  0|  16|           1|           1|
+    |select_ln435_fu_301_p3            |    select|   0|  0|  16|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    |xor_ln144_fu_325_p2               |       xor|   0|  0|   2|           2|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 146|          88|          39|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------------------+----+-----------+-----+-----------+
+    |                       Name                       | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------------------+----+-----------+-----+-----------+
+    |ap_done                                           |   9|          2|    1|          2|
+    |ap_phi_mux_currentPort_V_flag_4_i_phi_fu_195_p12  |  20|          4|    1|          4|
+    |ap_phi_mux_currentPort_V_new_4_i_phi_fu_217_p12   |  20|          4|   16|         64|
+    |ap_phi_mux_openedPort_V_new_3_i_phi_fu_239_p12    |  14|          3|   16|         48|
+    |listenState                                       |  14|          3|    2|          6|
+    |m_axis_listen_port_TDATA_blk_n                    |   9|          2|    1|          2|
+    |m_axis_read_package_TDATA_blk_n                   |   9|          2|    1|          2|
+    |regBasePort_blk_n                                 |   9|          2|    1|          2|
+    |runExperiment_blk_n                               |   9|          2|    1|          2|
+    |rxDataBuffer_blk_n                                |   9|          2|    1|          2|
+    |s_axis_listen_port_status_TDATA_blk_n             |   9|          2|    1|          2|
+    |s_axis_notifications_TDATA_blk_n                  |   9|          2|    1|          2|
+    |s_axis_rx_metadata_TDATA_blk_n                    |   9|          2|    1|          2|
+    |usePort_blk_n                                     |   9|          2|    1|          2|
+    +--------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                             | 158|         34|   45|        142|
+    +--------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------+----+----+-----+-----------+
+    |                  Name                  | FF | LUT| Bits| Const Bits|
+    +----------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                               |   1|   0|    1|          0|
+    |ap_done_reg                             |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                 |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                 |   1|   0|    1|          0|
+    |currentPort_V                           |  16|   0|   16|          0|
+    |currentPort_V_load_reg_408              |  16|   0|   16|          0|
+    |icmp_ln1068_reg_420                     |   1|   0|    1|          0|
+    |icmp_ln1068_reg_420_pp0_iter1_reg       |   1|   0|    1|          0|
+    |listenState                             |   2|   0|    2|          0|
+    |listenState_load_reg_404                |   2|   0|    2|          0|
+    |listenState_load_reg_404_pp0_iter1_reg  |   2|   0|    2|          0|
+    |openedPort_V                            |  16|   0|   16|          0|
+    |serverFsmState                          |   1|   0|    1|          0|
+    |tmp_7_i_reg_416                         |   1|   0|    1|          0|
+    |tmp_7_i_reg_416_pp0_iter1_reg           |   1|   0|    1|          0|
+    |trunc_ln173_reg_424                     |  32|   0|   32|          0|
+    +----------------------------------------+----+----+-----+-----------+
+    |Total                                   |  95|   0|   95|          0|
+    +----------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+------+------------+---------------------------+--------------+
+|             RTL Ports            | Dir | Bits |  Protocol  |       Source Object       |    C Type    |
++----------------------------------+-----+------+------------+---------------------------+--------------+
+|ap_clk                            |   in|     1|  ap_ctrl_hs|                server<512>|  return value|
+|ap_rst                            |   in|     1|  ap_ctrl_hs|                server<512>|  return value|
+|ap_start                          |   in|     1|  ap_ctrl_hs|                server<512>|  return value|
+|ap_done                           |  out|     1|  ap_ctrl_hs|                server<512>|  return value|
+|ap_continue                       |   in|     1|  ap_ctrl_hs|                server<512>|  return value|
+|ap_idle                           |  out|     1|  ap_ctrl_hs|                server<512>|  return value|
+|ap_ready                          |  out|     1|  ap_ctrl_hs|                server<512>|  return value|
+|usePort_dout                      |   in|    16|     ap_fifo|                    usePort|       pointer|
+|usePort_empty_n                   |   in|     1|     ap_fifo|                    usePort|       pointer|
+|usePort_read                      |  out|     1|     ap_fifo|                    usePort|       pointer|
+|regBasePort_dout                  |   in|    16|     ap_fifo|                regBasePort|       pointer|
+|regBasePort_empty_n               |   in|     1|     ap_fifo|                regBasePort|       pointer|
+|regBasePort_read                  |  out|     1|     ap_fifo|                regBasePort|       pointer|
+|runExperiment_dout                |   in|     1|     ap_fifo|              runExperiment|       pointer|
+|runExperiment_empty_n             |   in|     1|     ap_fifo|              runExperiment|       pointer|
+|runExperiment_read                |  out|     1|     ap_fifo|              runExperiment|       pointer|
+|s_axis_listen_port_status_TVALID  |   in|     1|        axis|  s_axis_listen_port_status|       pointer|
+|s_axis_listen_port_status_TDATA   |   in|     8|        axis|  s_axis_listen_port_status|       pointer|
+|s_axis_listen_port_status_TREADY  |  out|     1|        axis|  s_axis_listen_port_status|       pointer|
+|s_axis_notifications_TVALID       |   in|     1|        axis|       s_axis_notifications|       pointer|
+|s_axis_notifications_TDATA        |   in|    88|        axis|       s_axis_notifications|       pointer|
+|s_axis_notifications_TREADY       |  out|     1|        axis|       s_axis_notifications|       pointer|
+|s_axis_rx_metadata_TVALID         |   in|     1|        axis|         s_axis_rx_metadata|       pointer|
+|s_axis_rx_metadata_TDATA          |   in|    16|        axis|         s_axis_rx_metadata|       pointer|
+|s_axis_rx_metadata_TREADY         |  out|     1|        axis|         s_axis_rx_metadata|       pointer|
+|rxDataBuffer_dout                 |   in|  1024|     ap_fifo|               rxDataBuffer|       pointer|
+|rxDataBuffer_empty_n              |   in|     1|     ap_fifo|               rxDataBuffer|       pointer|
+|rxDataBuffer_read                 |  out|     1|     ap_fifo|               rxDataBuffer|       pointer|
+|m_axis_listen_port_TREADY         |   in|     1|        axis|         m_axis_listen_port|       pointer|
+|m_axis_listen_port_TDATA          |  out|    16|        axis|         m_axis_listen_port|       pointer|
+|m_axis_listen_port_TVALID         |  out|     1|        axis|         m_axis_listen_port|       pointer|
+|m_axis_read_package_TREADY        |   in|     1|        axis|        m_axis_read_package|       pointer|
+|m_axis_read_package_TDATA         |  out|    32|        axis|        m_axis_read_package|       pointer|
+|m_axis_read_package_TVALID        |  out|     1|        axis|        m_axis_read_package|       pointer|
++----------------------------------+-----+------+------------+---------------------------+--------------+
+

@@ -1,0 +1,1487 @@
+
+
+================================================================
+== Vitis HLS Report for 'dhcp_client'
+================================================================
+* Date:           Sat Mar 18 14:32:21 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        dhcp_client_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  2.690 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        7|        7|  22.400 ns|  22.400 ns|    2|    2|  dataflow|
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------+-----------------+---------+---------+----------+----------+-----+-----+---------+
+        |                    |                 |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |      Instance      |      Module     |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +--------------------+-----------------+---------+---------+----------+----------+-----+-----+---------+
+        |open_dhcp_port_U0   |open_dhcp_port   |        2|        2|  6.400 ns|  6.400 ns|    2|    2|      yes|
+        |receive_message_U0  |receive_message  |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+        |entry_proc_U0       |entry_proc       |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+        |dhcp_fsm_U0         |dhcp_fsm         |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+        |send_message_U0     |send_message     |        2|        2|  6.400 ns|  6.400 ns|    1|    1|      yes|
+        +--------------------+-----------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        -|        -|    -|
+|FIFO                 |        -|     -|       33|      243|    -|
+|Instance             |        -|     -|      638|     1260|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|        -|    -|
+|Register             |        -|     -|        -|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|      671|     1503|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------+-----------------+---------+----+-----+-----+-----+
+    |      Instance      |      Module     | BRAM_18K| DSP|  FF | LUT | URAM|
+    +--------------------+-----------------+---------+----+-----+-----+-----+
+    |dhcp_fsm_U0         |dhcp_fsm         |        0|   0|  337|  513|    0|
+    |entry_proc_U0       |entry_proc       |        0|   0|    2|   29|    0|
+    |open_dhcp_port_U0   |open_dhcp_port   |        0|   0|   44|  159|    0|
+    |receive_message_U0  |receive_message  |        0|   0|  119|  241|    0|
+    |send_message_U0     |send_message     |        0|   0|  136|  318|    0|
+    +--------------------+-----------------+---------+----+-----+-----+-----+
+    |Total               |                 |        0|   0|  638| 1260|    0|
+    +--------------------+-----------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |          Name          | BRAM_18K| FF| LUT| URAM| Depth| Bits| Size:D*B|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |dhcpEnable_c_U          |        0|  5|   0|    -|     3|    1|        3|
+    |dhcp_replyMetaFifo_U    |        0|  5|   0|    -|     4|  104|      416|
+    |dhcp_requestMetaFifo_U  |        0|  5|   0|    -|     4|   72|      288|
+    |inputIpAddress_c_U      |        0|  5|   0|    -|     3|   32|       96|
+    |myMacAddress_c_U        |        0|  5|   0|    -|     3|   48|      144|
+    |portOpen_U              |        0|  8|   0|    -|     2|    1|        2|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |Total                   |        0| 33|   0|    0|    19|  258|      949|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------+-----+-----+--------------+-------------------------+--------------+
+|            RTL Ports           | Dir | Bits|   Protocol   |      Source Object      |    C Type    |
++--------------------------------+-----+-----+--------------+-------------------------+--------------+
+|ap_local_block                  |  out|    1|  ap_ctrl_none|              dhcp_client|  return value|
+|ap_local_deadlock               |  out|    1|  ap_ctrl_none|              dhcp_client|  return value|
+|ap_clk                          |   in|    1|  ap_ctrl_none|              dhcp_client|  return value|
+|ap_rst_n                        |   in|    1|  ap_ctrl_none|              dhcp_client|  return value|
+|m_axis_open_port_TDATA          |  out|   16|          axis|         m_axis_open_port|       pointer|
+|m_axis_open_port_TVALID         |  out|    1|          axis|         m_axis_open_port|       pointer|
+|m_axis_open_port_TREADY         |   in|    1|          axis|         m_axis_open_port|       pointer|
+|s_axis_open_port_status_TDATA   |   in|    8|          axis|  s_axis_open_port_status|       pointer|
+|s_axis_open_port_status_TVALID  |   in|    1|          axis|  s_axis_open_port_status|       pointer|
+|s_axis_open_port_status_TREADY  |  out|    1|          axis|  s_axis_open_port_status|       pointer|
+|s_axis_rx_metadata_TDATA        |   in|  128|          axis|       s_axis_rx_metadata|       pointer|
+|s_axis_rx_metadata_TVALID       |   in|    1|          axis|       s_axis_rx_metadata|       pointer|
+|s_axis_rx_metadata_TREADY       |  out|    1|          axis|       s_axis_rx_metadata|       pointer|
+|s_axis_rx_data_TDATA            |   in|   64|          axis|  s_axis_rx_data_V_data_V|       pointer|
+|s_axis_rx_data_TKEEP            |   in|    8|          axis|  s_axis_rx_data_V_keep_V|       pointer|
+|s_axis_rx_data_TSTRB            |   in|    8|          axis|  s_axis_rx_data_V_strb_V|       pointer|
+|s_axis_rx_data_TLAST            |   in|    1|          axis|  s_axis_rx_data_V_last_V|       pointer|
+|s_axis_rx_data_TVALID           |   in|    1|          axis|  s_axis_rx_data_V_last_V|       pointer|
+|s_axis_rx_data_TREADY           |  out|    1|          axis|  s_axis_rx_data_V_last_V|       pointer|
+|m_axis_tx_metadata_TDATA        |  out|   96|          axis|       m_axis_tx_metadata|       pointer|
+|m_axis_tx_metadata_TVALID       |  out|    1|          axis|       m_axis_tx_metadata|       pointer|
+|m_axis_tx_metadata_TREADY       |   in|    1|          axis|       m_axis_tx_metadata|       pointer|
+|m_axis_tx_length_TDATA          |  out|   16|          axis|         m_axis_tx_length|       pointer|
+|m_axis_tx_length_TVALID         |  out|    1|          axis|         m_axis_tx_length|       pointer|
+|m_axis_tx_length_TREADY         |   in|    1|          axis|         m_axis_tx_length|       pointer|
+|m_axis_tx_data_TDATA            |  out|   64|          axis|  m_axis_tx_data_V_data_V|       pointer|
+|m_axis_tx_data_TKEEP            |  out|    8|          axis|  m_axis_tx_data_V_keep_V|       pointer|
+|m_axis_tx_data_TSTRB            |  out|    8|          axis|  m_axis_tx_data_V_strb_V|       pointer|
+|m_axis_tx_data_TLAST            |  out|    1|          axis|  m_axis_tx_data_V_last_V|       pointer|
+|m_axis_tx_data_TVALID           |  out|    1|          axis|  m_axis_tx_data_V_last_V|       pointer|
+|m_axis_tx_data_TREADY           |   in|    1|          axis|  m_axis_tx_data_V_last_V|       pointer|
+|dhcpEnable                      |   in|    1|       ap_none|               dhcpEnable|       pointer|
+|inputIpAddress                  |   in|   32|       ap_none|           inputIpAddress|       pointer|
+|dhcpIpAddressOut                |  out|   32|       ap_none|         dhcpIpAddressOut|       pointer|
+|myMacAddress                    |   in|   48|       ap_none|             myMacAddress|       pointer|
++--------------------------------+-----+-----+--------------+-------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 10, States = { 1 2 3 4 5 6 7 8 9 10 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%myMacAddress_c = alloca i64 1"   --->   Operation 11 'alloca' 'myMacAddress_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.41> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 48> <Depth = 3> <FIFO>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%inputIpAddress_c = alloca i64 1"   --->   Operation 12 'alloca' 'inputIpAddress_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.46> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%dhcpEnable_c = alloca i64 1"   --->   Operation 13 'alloca' 'dhcpEnable_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 3> <FIFO>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 14 [3/3] (0.00ns)   --->   "%call_ln371 = call void @open_dhcp_port, i16 %m_axis_open_port, i8 %s_axis_open_port_status, i32 %openPortWaitTime_V, i1 %odp_listenDone, i1 %odp_waitListenStatus, i1 %portOpen" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:371]   --->   Operation 14 'call' 'call_ln371' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 1.55>
+ST_3 : Operation 15 [2/3] (0.00ns)   --->   "%call_ln371 = call void @open_dhcp_port, i16 %m_axis_open_port, i8 %s_axis_open_port_status, i32 %openPortWaitTime_V, i1 %odp_listenDone, i1 %odp_waitListenStatus, i1 %portOpen" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:371]   --->   Operation 15 'call' 'call_ln371' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 16 [2/2] (1.55ns)   --->   "%call_ln373 = call void @receive_message, i128 %s_axis_rx_metadata, i64 %s_axis_rx_data_V_data_V, i8 %s_axis_rx_data_V_keep_V, i8 %s_axis_rx_data_V_strb_V, i1 %s_axis_rx_data_V_last_V, i48 %myMacAddress, i48 %myMacAddress_c, i6 %rm_wordCount_V, i1 %rm_isReply, i1 %rm_correctMac, i1 %rm_isDHCP, i32 %meta_identifier_V, i32 %meta_assignedIpAddress_V, i32 %meta_serverAddress_V, i8 %meta_type_V_1, i104 %dhcp_replyMetaFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:373]   --->   Operation 16 'call' 'call_ln373' <Predicate = true> <Delay = 1.55> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 1.16>
+ST_4 : Operation 17 [1/1] (1.16ns)   --->   "%call_ln0 = call void @entry_proc, i1 %dhcpEnable, i1 %dhcpEnable_c, i32 %inputIpAddress, i32 %inputIpAddress_c"   --->   Operation 17 'call' 'call_ln0' <Predicate = true> <Delay = 1.16> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 18 [1/3] (0.00ns)   --->   "%call_ln371 = call void @open_dhcp_port, i16 %m_axis_open_port, i8 %s_axis_open_port_status, i32 %openPortWaitTime_V, i1 %odp_listenDone, i1 %odp_waitListenStatus, i1 %portOpen" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:371]   --->   Operation 18 'call' 'call_ln371' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 19 [1/2] (0.00ns)   --->   "%call_ln373 = call void @receive_message, i128 %s_axis_rx_metadata, i64 %s_axis_rx_data_V_data_V, i8 %s_axis_rx_data_V_keep_V, i8 %s_axis_rx_data_V_strb_V, i1 %s_axis_rx_data_V_last_V, i48 %myMacAddress, i48 %myMacAddress_c, i6 %rm_wordCount_V, i1 %rm_isReply, i1 %rm_correctMac, i1 %rm_isDHCP, i32 %meta_identifier_V, i32 %meta_assignedIpAddress_V, i32 %meta_serverAddress_V, i8 %meta_type_V_1, i104 %dhcp_replyMetaFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:373]   --->   Operation 19 'call' 'call_ln373' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 20 [2/2] (0.00ns)   --->   "%call_ln375 = call void @dhcp_fsm, i32 %dhcpIpAddressOut, i1 %dhcpEnable_c, i32 %inputIpAddress_c, i32 %myIpAddress_V, i3 %state, i32 %time_V, i32 %randomValue_V, i32 %myIdentity_V, i32 %IpAddressBuffer_V, i1 %portOpen, i72 %dhcp_requestMetaFifo, i104 %dhcp_replyMetaFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:375]   --->   Operation 20 'call' 'call_ln375' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 21 [1/2] (0.00ns)   --->   "%call_ln375 = call void @dhcp_fsm, i32 %dhcpIpAddressOut, i1 %dhcpEnable_c, i32 %inputIpAddress_c, i32 %myIpAddress_V, i3 %state, i32 %time_V, i32 %randomValue_V, i32 %myIdentity_V, i32 %IpAddressBuffer_V, i1 %portOpen, i72 %dhcp_requestMetaFifo, i104 %dhcp_replyMetaFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:375]   --->   Operation 21 'call' 'call_ln375' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 22 [3/3] (0.00ns)   --->   "%call_ln377 = call void @send_message, i96 %m_axis_tx_metadata, i16 %m_axis_tx_length, i64 %m_axis_tx_data_V_data_V, i8 %m_axis_tx_data_V_keep_V, i8 %m_axis_tx_data_V_strb_V, i1 %m_axis_tx_data_V_last_V, i48 %myMacAddress_c, i6 %sm_wordCount_V, i8 %meta_type_V, i32 %meta_requestedIpAddress_V, i72 %dhcp_requestMetaFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:377]   --->   Operation 22 'call' 'call_ln377' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 1.37>
+ST_8 : Operation 23 [2/3] (1.37ns)   --->   "%call_ln377 = call void @send_message, i96 %m_axis_tx_metadata, i16 %m_axis_tx_length, i64 %m_axis_tx_data_V_data_V, i8 %m_axis_tx_data_V_keep_V, i8 %m_axis_tx_data_V_strb_V, i1 %m_axis_tx_data_V_last_V, i48 %myMacAddress_c, i6 %sm_wordCount_V, i8 %meta_type_V, i32 %meta_requestedIpAddress_V, i72 %dhcp_requestMetaFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:377]   --->   Operation 23 'call' 'call_ln377' <Predicate = true> <Delay = 1.37> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 24 [1/3] (0.00ns)   --->   "%call_ln377 = call void @send_message, i96 %m_axis_tx_metadata, i16 %m_axis_tx_length, i64 %m_axis_tx_data_V_data_V, i8 %m_axis_tx_data_V_keep_V, i8 %m_axis_tx_data_V_strb_V, i1 %m_axis_tx_data_V_last_V, i48 %myMacAddress_c, i6 %sm_wordCount_V, i8 %meta_type_V, i32 %meta_requestedIpAddress_V, i72 %dhcp_requestMetaFifo" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:377]   --->   Operation 24 'call' 'call_ln377' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 25 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @myMacAddress_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i48 %myMacAddress_c, i48 %myMacAddress_c"   --->   Operation 25 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i48 %myMacAddress_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 27 [1/1] (0.00ns)   --->   "%empty_25 = specchannel i32 @_ssdm_op_SpecChannel, void @inputIpAddress_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i32 %inputIpAddress_c, i32 %inputIpAddress_c"   --->   Operation 27 'specchannel' 'empty_25' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %inputIpAddress_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 29 [1/1] (0.00ns)   --->   "%empty_26 = specchannel i32 @_ssdm_op_SpecChannel, void @dhcpEnable_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i1 %dhcpEnable_c, i1 %dhcpEnable_c"   --->   Operation 29 'specchannel' 'empty_26' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %dhcpEnable_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 31 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln0 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 1, void @empty_3"   --->   Operation 31 'specdataflowpipeline' 'specdataflowpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 32 [1/1] (0.00ns)   --->   "%empty_27 = specchannel i32 @_ssdm_op_SpecChannel, void @dhcp_replyMetaFifo_str, i32 1, void @p_str, void @p_str, i32 4, i32 4, i104 %dhcp_replyMetaFifo, i104 %dhcp_replyMetaFifo"   --->   Operation 32 'specchannel' 'empty_27' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 33 [1/1] (0.00ns)   --->   "%empty_28 = specchannel i32 @_ssdm_op_SpecChannel, void @dhcp_requestMetaFifo_str, i32 1, void @p_str, void @p_str, i32 4, i32 4, i72 %dhcp_requestMetaFifo, i72 %dhcp_requestMetaFifo"   --->   Operation 33 'specchannel' 'empty_28' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 34 [1/1] (0.00ns)   --->   "%empty_29 = specchannel i32 @_ssdm_op_SpecChannel, void @portOpen_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i1 %portOpen, i1 %portOpen"   --->   Operation 34 'specchannel' 'empty_29' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 35 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1"   --->   Operation 35 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_2, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %m_axis_open_port, void @empty_5, i32 1, i32 1, void @empty_4, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 38 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %m_axis_open_port"   --->   Operation 38 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %s_axis_open_port_status, void @empty_5, i32 1, i32 1, void @empty_4, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 40 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %s_axis_open_port_status"   --->   Operation 40 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %s_axis_rx_metadata, void @empty_5, i32 1, i32 1, void @empty_4, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 42 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i128 %s_axis_rx_metadata"   --->   Operation 42 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %s_axis_rx_data_V_data_V, i8 %s_axis_rx_data_V_keep_V, i8 %s_axis_rx_data_V_strb_V, i1 %s_axis_rx_data_V_last_V, void @empty_5, i32 1, i32 1, void @empty_4, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 44 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %s_axis_rx_data_V_data_V"   --->   Operation 44 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 45 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %s_axis_rx_data_V_keep_V"   --->   Operation 45 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 46 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %s_axis_rx_data_V_strb_V"   --->   Operation 46 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 47 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %s_axis_rx_data_V_last_V"   --->   Operation 47 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i96 %m_axis_tx_metadata, void @empty_5, i32 1, i32 1, void @empty_4, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 49 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i96 %m_axis_tx_metadata"   --->   Operation 49 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 50 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %m_axis_tx_length, void @empty_5, i32 1, i32 1, void @empty_4, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 50 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 51 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %m_axis_tx_length"   --->   Operation 51 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 52 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %m_axis_tx_data_V_data_V, i8 %m_axis_tx_data_V_keep_V, i8 %m_axis_tx_data_V_strb_V, i1 %m_axis_tx_data_V_last_V, void @empty_5, i32 1, i32 1, void @empty_4, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 52 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 53 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %m_axis_tx_data_V_data_V"   --->   Operation 53 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 54 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %m_axis_tx_data_V_keep_V"   --->   Operation 54 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 55 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %m_axis_tx_data_V_strb_V"   --->   Operation 55 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 56 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %m_axis_tx_data_V_last_V"   --->   Operation 56 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 57 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %dhcpEnable"   --->   Operation 57 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 58 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %dhcpEnable, void @empty, i32 1, i32 1, void @empty_4, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 58 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 59 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %inputIpAddress"   --->   Operation 59 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 60 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %inputIpAddress, void @empty, i32 1, i32 1, void @empty_4, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 60 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 61 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %dhcpIpAddressOut"   --->   Operation 61 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %dhcpIpAddressOut, void @empty, i32 1, i32 1, void @empty_4, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 63 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i48 %myMacAddress"   --->   Operation 63 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 64 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i48 %myMacAddress, void @empty, i32 1, i32 1, void @empty_4, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 64 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 65 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %portOpen, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 65 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 66 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i104 %dhcp_replyMetaFifo, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 66 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 67 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i72 %dhcp_requestMetaFifo, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 67 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 68 [1/1] (0.00ns)   --->   "%ret_ln381 = ret" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:381]   --->   Operation 68 'ret' 'ret_ln381' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_none:ce=0
+Port [ m_axis_open_port]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axis_open_port_status]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axis_rx_metadata]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axis_rx_data_V_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axis_rx_data_V_keep_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axis_rx_data_V_strb_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axis_rx_data_V_last_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ m_axis_tx_metadata]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ m_axis_tx_length]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ m_axis_tx_data_V_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ m_axis_tx_data_V_keep_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ m_axis_tx_data_V_strb_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ m_axis_tx_data_V_last_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ dhcpEnable]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ inputIpAddress]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ dhcpIpAddressOut]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ myMacAddress]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ openPortWaitTime_V]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ odp_listenDone]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ odp_waitListenStatus]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ portOpen]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=3; pingpong=0; private_global=1; IO mode=ap_fifo:ce=0
+Port [ rm_wordCount_V]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ rm_isReply]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ rm_correctMac]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ rm_isDHCP]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ meta_identifier_V]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ meta_assignedIpAddress_V]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ meta_serverAddress_V]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ meta_type_V_1]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ dhcp_replyMetaFifo]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=3; pingpong=0; private_global=1; IO mode=ap_fifo:ce=0
+Port [ myIpAddress_V]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ state]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ time_V]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ randomValue_V]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ myIdentity_V]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ IpAddressBuffer_V]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ dhcp_requestMetaFifo]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=3; pingpong=0; private_global=1; IO mode=ap_fifo:ce=0
+Port [ sm_wordCount_V]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ meta_type_V]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ meta_requestedIpAddress_V]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+myMacAddress_c           (alloca              ) [ 00111111111]
+inputIpAddress_c         (alloca              ) [ 00111111111]
+dhcpEnable_c             (alloca              ) [ 00111111111]
+call_ln0                 (call                ) [ 00000000000]
+call_ln371               (call                ) [ 00000000000]
+call_ln373               (call                ) [ 00000000000]
+call_ln375               (call                ) [ 00000000000]
+call_ln377               (call                ) [ 00000000000]
+empty                    (specchannel         ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+empty_25                 (specchannel         ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+empty_26                 (specchannel         ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+specdataflowpipeline_ln0 (specdataflowpipeline) [ 00000000000]
+empty_27                 (specchannel         ) [ 00000000000]
+empty_28                 (specchannel         ) [ 00000000000]
+empty_29                 (specchannel         ) [ 00000000000]
+spectopmodule_ln0        (spectopmodule       ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap         ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap         ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap         ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap         ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap         ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap         ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap         ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap         ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap         ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+specbitsmap_ln0          (specbitsmap         ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+specinterface_ln0        (specinterface       ) [ 00000000000]
+ret_ln381                (ret                 ) [ 00000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="m_axis_open_port">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="m_axis_open_port"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="s_axis_open_port_status">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="s_axis_open_port_status"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="s_axis_rx_metadata">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="s_axis_rx_metadata"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="s_axis_rx_data_V_data_V">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="s_axis_rx_data_V_data_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="s_axis_rx_data_V_keep_V">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="s_axis_rx_data_V_keep_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="s_axis_rx_data_V_strb_V">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="s_axis_rx_data_V_strb_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="s_axis_rx_data_V_last_V">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="s_axis_rx_data_V_last_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="m_axis_tx_metadata">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="m_axis_tx_metadata"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="m_axis_tx_length">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="m_axis_tx_length"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="m_axis_tx_data_V_data_V">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="m_axis_tx_data_V_data_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="m_axis_tx_data_V_keep_V">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="m_axis_tx_data_V_keep_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1000" name="m_axis_tx_data_V_strb_V">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="m_axis_tx_data_V_strb_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1000" name="m_axis_tx_data_V_last_V">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="m_axis_tx_data_V_last_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1000" name="dhcpEnable">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dhcpEnable"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1000" name="inputIpAddress">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="inputIpAddress"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1000" name="dhcpIpAddressOut">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dhcpIpAddressOut"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1000" name="myMacAddress">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="myMacAddress"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1000" name="openPortWaitTime_V">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="openPortWaitTime_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1000" name="odp_listenDone">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="odp_listenDone"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1000" name="odp_waitListenStatus">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="odp_waitListenStatus"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1000" name="portOpen">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="portOpen"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1000" name="rm_wordCount_V">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rm_wordCount_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1000" name="rm_isReply">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rm_isReply"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1000" name="rm_correctMac">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rm_correctMac"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1000" name="rm_isDHCP">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rm_isDHCP"/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1000" name="meta_identifier_V">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="meta_identifier_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1000" name="meta_assignedIpAddress_V">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="meta_assignedIpAddress_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1000" name="meta_serverAddress_V">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="meta_serverAddress_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1000" name="meta_type_V_1">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="meta_type_V_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1000" name="dhcp_replyMetaFifo">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dhcp_replyMetaFifo"/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1000" name="myIpAddress_V">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="myIpAddress_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1000" name="state">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="state"/></StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1000" name="time_V">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="time_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1000" name="randomValue_V">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="randomValue_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1000" name="myIdentity_V">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="myIdentity_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1000" name="IpAddressBuffer_V">
+<pin_list>
+<pin id="71" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="IpAddressBuffer_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="72" class="1000" name="dhcp_requestMetaFifo">
+<pin_list>
+<pin id="73" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dhcp_requestMetaFifo"/></StgValue>
+</bind>
+</comp>
+
+<comp id="74" class="1000" name="sm_wordCount_V">
+<pin_list>
+<pin id="75" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="sm_wordCount_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="76" class="1000" name="meta_type_V">
+<pin_list>
+<pin id="77" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="meta_type_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="78" class="1000" name="meta_requestedIpAddress_V">
+<pin_list>
+<pin id="79" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="meta_requestedIpAddress_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="80" class="1001" name="const_80">
+<pin_list>
+<pin id="81" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="82" class="1001" name="const_82">
+<pin_list>
+<pin id="83" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="open_dhcp_port"/></StgValue>
+</bind>
+</comp>
+
+<comp id="84" class="1001" name="const_84">
+<pin_list>
+<pin id="85" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="receive_message"/></StgValue>
+</bind>
+</comp>
+
+<comp id="86" class="1001" name="const_86">
+<pin_list>
+<pin id="87" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="entry_proc"/></StgValue>
+</bind>
+</comp>
+
+<comp id="88" class="1001" name="const_88">
+<pin_list>
+<pin id="89" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dhcp_fsm"/></StgValue>
+</bind>
+</comp>
+
+<comp id="90" class="1001" name="const_90">
+<pin_list>
+<pin id="91" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="send_message"/></StgValue>
+</bind>
+</comp>
+
+<comp id="92" class="1001" name="const_92">
+<pin_list>
+<pin id="93" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecChannel"/></StgValue>
+</bind>
+</comp>
+
+<comp id="94" class="1001" name="const_94">
+<pin_list>
+<pin id="95" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="myMacAddress_c_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="96" class="1001" name="const_96">
+<pin_list>
+<pin id="97" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="98" class="1001" name="const_98">
+<pin_list>
+<pin id="99" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="100" class="1001" name="const_100">
+<pin_list>
+<pin id="101" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="102" class="1001" name="const_102">
+<pin_list>
+<pin id="103" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="104" class="1001" name="const_104">
+<pin_list>
+<pin id="105" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="106" class="1001" name="const_106">
+<pin_list>
+<pin id="107" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ap_fifo_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="108" class="1001" name="const_108">
+<pin_list>
+<pin id="109" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="110" class="1001" name="const_110">
+<pin_list>
+<pin id="111" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="112" class="1001" name="const_112">
+<pin_list>
+<pin id="113" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="inputIpAddress_c_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="114" class="1001" name="const_114">
+<pin_list>
+<pin id="115" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dhcpEnable_c_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="116" class="1001" name="const_116">
+<pin_list>
+<pin id="117" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecDataflowPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="118" class="1001" name="const_118">
+<pin_list>
+<pin id="119" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="120" class="1001" name="const_120">
+<pin_list>
+<pin id="121" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="122" class="1001" name="const_122">
+<pin_list>
+<pin id="123" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dhcp_replyMetaFifo_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="124" class="1001" name="const_124">
+<pin_list>
+<pin id="125" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="126" class="1001" name="const_126">
+<pin_list>
+<pin id="127" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dhcp_requestMetaFifo_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="128" class="1001" name="const_128">
+<pin_list>
+<pin id="129" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="portOpen_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="130" class="1001" name="const_130">
+<pin_list>
+<pin id="131" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="132" class="1001" name="const_132">
+<pin_list>
+<pin id="133" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="134" class="1001" name="const_134">
+<pin_list>
+<pin id="135" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="136" class="1001" name="const_136">
+<pin_list>
+<pin id="137" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_5"/></StgValue>
+</bind>
+</comp>
+
+<comp id="138" class="1001" name="const_138">
+<pin_list>
+<pin id="139" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_4"/></StgValue>
+</bind>
+</comp>
+
+<comp id="140" class="1001" name="const_140">
+<pin_list>
+<pin id="141" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="142" class="1001" name="const_142">
+<pin_list>
+<pin id="143" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty"/></StgValue>
+</bind>
+</comp>
+
+<comp id="144" class="1001" name="const_144">
+<pin_list>
+<pin id="145" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="146" class="1004" name="myMacAddress_c_fu_146">
+<pin_list>
+<pin id="147" dir="0" index="0" bw="1" slack="0"/>
+<pin id="148" dir="1" index="1" bw="48" slack="2"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="myMacAddress_c/1 "/>
+</bind>
+</comp>
+
+<comp id="150" class="1004" name="inputIpAddress_c_fu_150">
+<pin_list>
+<pin id="151" dir="0" index="0" bw="1" slack="0"/>
+<pin id="152" dir="1" index="1" bw="32" slack="3"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="inputIpAddress_c/1 "/>
+</bind>
+</comp>
+
+<comp id="154" class="1004" name="dhcpEnable_c_fu_154">
+<pin_list>
+<pin id="155" dir="0" index="0" bw="1" slack="0"/>
+<pin id="156" dir="1" index="1" bw="1" slack="3"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="dhcpEnable_c/1 "/>
+</bind>
+</comp>
+
+<comp id="158" class="1004" name="grp_open_dhcp_port_fu_158">
+<pin_list>
+<pin id="159" dir="0" index="0" bw="0" slack="0"/>
+<pin id="160" dir="0" index="1" bw="16" slack="0"/>
+<pin id="161" dir="0" index="2" bw="8" slack="0"/>
+<pin id="162" dir="0" index="3" bw="32" slack="0"/>
+<pin id="163" dir="0" index="4" bw="1" slack="0"/>
+<pin id="164" dir="0" index="5" bw="1" slack="0"/>
+<pin id="165" dir="0" index="6" bw="1" slack="0"/>
+<pin id="166" dir="1" index="7" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln371/2 "/>
+</bind>
+</comp>
+
+<comp id="174" class="1004" name="grp_receive_message_fu_174">
+<pin_list>
+<pin id="175" dir="0" index="0" bw="0" slack="0"/>
+<pin id="176" dir="0" index="1" bw="128" slack="0"/>
+<pin id="177" dir="0" index="2" bw="64" slack="0"/>
+<pin id="178" dir="0" index="3" bw="8" slack="0"/>
+<pin id="179" dir="0" index="4" bw="8" slack="0"/>
+<pin id="180" dir="0" index="5" bw="1" slack="0"/>
+<pin id="181" dir="0" index="6" bw="48" slack="0"/>
+<pin id="182" dir="0" index="7" bw="48" slack="2"/>
+<pin id="183" dir="0" index="8" bw="6" slack="0"/>
+<pin id="184" dir="0" index="9" bw="1" slack="0"/>
+<pin id="185" dir="0" index="10" bw="1" slack="0"/>
+<pin id="186" dir="0" index="11" bw="1" slack="0"/>
+<pin id="187" dir="0" index="12" bw="32" slack="0"/>
+<pin id="188" dir="0" index="13" bw="32" slack="0"/>
+<pin id="189" dir="0" index="14" bw="32" slack="0"/>
+<pin id="190" dir="0" index="15" bw="8" slack="0"/>
+<pin id="191" dir="0" index="16" bw="104" slack="0"/>
+<pin id="192" dir="1" index="17" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln373/3 "/>
+</bind>
+</comp>
+
+<comp id="209" class="1004" name="call_ln0_entry_proc_fu_209">
+<pin_list>
+<pin id="210" dir="0" index="0" bw="0" slack="0"/>
+<pin id="211" dir="0" index="1" bw="1" slack="0"/>
+<pin id="212" dir="0" index="2" bw="1" slack="3"/>
+<pin id="213" dir="0" index="3" bw="32" slack="0"/>
+<pin id="214" dir="0" index="4" bw="32" slack="3"/>
+<pin id="215" dir="1" index="5" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/4 "/>
+</bind>
+</comp>
+
+<comp id="219" class="1004" name="grp_dhcp_fsm_fu_219">
+<pin_list>
+<pin id="220" dir="0" index="0" bw="0" slack="0"/>
+<pin id="221" dir="0" index="1" bw="32" slack="0"/>
+<pin id="222" dir="0" index="2" bw="1" slack="4"/>
+<pin id="223" dir="0" index="3" bw="32" slack="4"/>
+<pin id="224" dir="0" index="4" bw="32" slack="0"/>
+<pin id="225" dir="0" index="5" bw="3" slack="0"/>
+<pin id="226" dir="0" index="6" bw="32" slack="0"/>
+<pin id="227" dir="0" index="7" bw="32" slack="0"/>
+<pin id="228" dir="0" index="8" bw="32" slack="0"/>
+<pin id="229" dir="0" index="9" bw="32" slack="0"/>
+<pin id="230" dir="0" index="10" bw="1" slack="0"/>
+<pin id="231" dir="0" index="11" bw="72" slack="0"/>
+<pin id="232" dir="0" index="12" bw="104" slack="0"/>
+<pin id="233" dir="1" index="13" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln375/5 "/>
+</bind>
+</comp>
+
+<comp id="245" class="1004" name="grp_send_message_fu_245">
+<pin_list>
+<pin id="246" dir="0" index="0" bw="0" slack="0"/>
+<pin id="247" dir="0" index="1" bw="96" slack="0"/>
+<pin id="248" dir="0" index="2" bw="16" slack="0"/>
+<pin id="249" dir="0" index="3" bw="64" slack="0"/>
+<pin id="250" dir="0" index="4" bw="8" slack="0"/>
+<pin id="251" dir="0" index="5" bw="8" slack="0"/>
+<pin id="252" dir="0" index="6" bw="1" slack="0"/>
+<pin id="253" dir="0" index="7" bw="48" slack="6"/>
+<pin id="254" dir="0" index="8" bw="6" slack="0"/>
+<pin id="255" dir="0" index="9" bw="8" slack="0"/>
+<pin id="256" dir="0" index="10" bw="32" slack="0"/>
+<pin id="257" dir="0" index="11" bw="72" slack="0"/>
+<pin id="258" dir="1" index="12" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln377/7 "/>
+</bind>
+</comp>
+
+<comp id="270" class="1005" name="myMacAddress_c_reg_270">
+<pin_list>
+<pin id="271" dir="0" index="0" bw="48" slack="2"/>
+<pin id="272" dir="1" index="1" bw="48" slack="2"/>
+</pin_list>
+<bind>
+<opset="myMacAddress_c "/>
+</bind>
+</comp>
+
+<comp id="276" class="1005" name="inputIpAddress_c_reg_276">
+<pin_list>
+<pin id="277" dir="0" index="0" bw="32" slack="3"/>
+<pin id="278" dir="1" index="1" bw="32" slack="3"/>
+</pin_list>
+<bind>
+<opset="inputIpAddress_c "/>
+</bind>
+</comp>
+
+<comp id="282" class="1005" name="dhcpEnable_c_reg_282">
+<pin_list>
+<pin id="283" dir="0" index="0" bw="1" slack="3"/>
+<pin id="284" dir="1" index="1" bw="1" slack="3"/>
+</pin_list>
+<bind>
+<opset="dhcpEnable_c "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="149"><net_src comp="80" pin="0"/><net_sink comp="146" pin=0"/></net>
+
+<net id="153"><net_src comp="80" pin="0"/><net_sink comp="150" pin=0"/></net>
+
+<net id="157"><net_src comp="80" pin="0"/><net_sink comp="154" pin=0"/></net>
+
+<net id="167"><net_src comp="82" pin="0"/><net_sink comp="158" pin=0"/></net>
+
+<net id="168"><net_src comp="0" pin="0"/><net_sink comp="158" pin=1"/></net>
+
+<net id="169"><net_src comp="2" pin="0"/><net_sink comp="158" pin=2"/></net>
+
+<net id="170"><net_src comp="34" pin="0"/><net_sink comp="158" pin=3"/></net>
+
+<net id="171"><net_src comp="36" pin="0"/><net_sink comp="158" pin=4"/></net>
+
+<net id="172"><net_src comp="38" pin="0"/><net_sink comp="158" pin=5"/></net>
+
+<net id="173"><net_src comp="40" pin="0"/><net_sink comp="158" pin=6"/></net>
+
+<net id="193"><net_src comp="84" pin="0"/><net_sink comp="174" pin=0"/></net>
+
+<net id="194"><net_src comp="4" pin="0"/><net_sink comp="174" pin=1"/></net>
+
+<net id="195"><net_src comp="6" pin="0"/><net_sink comp="174" pin=2"/></net>
+
+<net id="196"><net_src comp="8" pin="0"/><net_sink comp="174" pin=3"/></net>
+
+<net id="197"><net_src comp="10" pin="0"/><net_sink comp="174" pin=4"/></net>
+
+<net id="198"><net_src comp="12" pin="0"/><net_sink comp="174" pin=5"/></net>
+
+<net id="199"><net_src comp="32" pin="0"/><net_sink comp="174" pin=6"/></net>
+
+<net id="200"><net_src comp="42" pin="0"/><net_sink comp="174" pin=8"/></net>
+
+<net id="201"><net_src comp="44" pin="0"/><net_sink comp="174" pin=9"/></net>
+
+<net id="202"><net_src comp="46" pin="0"/><net_sink comp="174" pin=10"/></net>
+
+<net id="203"><net_src comp="48" pin="0"/><net_sink comp="174" pin=11"/></net>
+
+<net id="204"><net_src comp="50" pin="0"/><net_sink comp="174" pin=12"/></net>
+
+<net id="205"><net_src comp="52" pin="0"/><net_sink comp="174" pin=13"/></net>
+
+<net id="206"><net_src comp="54" pin="0"/><net_sink comp="174" pin=14"/></net>
+
+<net id="207"><net_src comp="56" pin="0"/><net_sink comp="174" pin=15"/></net>
+
+<net id="208"><net_src comp="58" pin="0"/><net_sink comp="174" pin=16"/></net>
+
+<net id="216"><net_src comp="86" pin="0"/><net_sink comp="209" pin=0"/></net>
+
+<net id="217"><net_src comp="26" pin="0"/><net_sink comp="209" pin=1"/></net>
+
+<net id="218"><net_src comp="28" pin="0"/><net_sink comp="209" pin=3"/></net>
+
+<net id="234"><net_src comp="88" pin="0"/><net_sink comp="219" pin=0"/></net>
+
+<net id="235"><net_src comp="30" pin="0"/><net_sink comp="219" pin=1"/></net>
+
+<net id="236"><net_src comp="60" pin="0"/><net_sink comp="219" pin=4"/></net>
+
+<net id="237"><net_src comp="62" pin="0"/><net_sink comp="219" pin=5"/></net>
+
+<net id="238"><net_src comp="64" pin="0"/><net_sink comp="219" pin=6"/></net>
+
+<net id="239"><net_src comp="66" pin="0"/><net_sink comp="219" pin=7"/></net>
+
+<net id="240"><net_src comp="68" pin="0"/><net_sink comp="219" pin=8"/></net>
+
+<net id="241"><net_src comp="70" pin="0"/><net_sink comp="219" pin=9"/></net>
+
+<net id="242"><net_src comp="40" pin="0"/><net_sink comp="219" pin=10"/></net>
+
+<net id="243"><net_src comp="72" pin="0"/><net_sink comp="219" pin=11"/></net>
+
+<net id="244"><net_src comp="58" pin="0"/><net_sink comp="219" pin=12"/></net>
+
+<net id="259"><net_src comp="90" pin="0"/><net_sink comp="245" pin=0"/></net>
+
+<net id="260"><net_src comp="14" pin="0"/><net_sink comp="245" pin=1"/></net>
+
+<net id="261"><net_src comp="16" pin="0"/><net_sink comp="245" pin=2"/></net>
+
+<net id="262"><net_src comp="18" pin="0"/><net_sink comp="245" pin=3"/></net>
+
+<net id="263"><net_src comp="20" pin="0"/><net_sink comp="245" pin=4"/></net>
+
+<net id="264"><net_src comp="22" pin="0"/><net_sink comp="245" pin=5"/></net>
+
+<net id="265"><net_src comp="24" pin="0"/><net_sink comp="245" pin=6"/></net>
+
+<net id="266"><net_src comp="74" pin="0"/><net_sink comp="245" pin=8"/></net>
+
+<net id="267"><net_src comp="76" pin="0"/><net_sink comp="245" pin=9"/></net>
+
+<net id="268"><net_src comp="78" pin="0"/><net_sink comp="245" pin=10"/></net>
+
+<net id="269"><net_src comp="72" pin="0"/><net_sink comp="245" pin=11"/></net>
+
+<net id="273"><net_src comp="146" pin="1"/><net_sink comp="270" pin=0"/></net>
+
+<net id="274"><net_src comp="270" pin="1"/><net_sink comp="174" pin=7"/></net>
+
+<net id="275"><net_src comp="270" pin="1"/><net_sink comp="245" pin=7"/></net>
+
+<net id="279"><net_src comp="150" pin="1"/><net_sink comp="276" pin=0"/></net>
+
+<net id="280"><net_src comp="276" pin="1"/><net_sink comp="209" pin=4"/></net>
+
+<net id="281"><net_src comp="276" pin="1"/><net_sink comp="219" pin=3"/></net>
+
+<net id="285"><net_src comp="154" pin="1"/><net_sink comp="282" pin=0"/></net>
+
+<net id="286"><net_src comp="282" pin="1"/><net_sink comp="209" pin=2"/></net>
+
+<net id="287"><net_src comp="282" pin="1"/><net_sink comp="219" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: m_axis_open_port | {2 3 4 }
+	Port: m_axis_tx_metadata | {9 }
+	Port: m_axis_tx_length | {9 }
+	Port: m_axis_tx_data_V_data_V | {9 }
+	Port: m_axis_tx_data_V_keep_V | {9 }
+	Port: m_axis_tx_data_V_strb_V | {9 }
+	Port: m_axis_tx_data_V_last_V | {9 }
+	Port: dhcpIpAddressOut | {6 }
+	Port: openPortWaitTime_V | {2 }
+	Port: odp_listenDone | {3 }
+	Port: odp_waitListenStatus | {3 }
+	Port: portOpen | {4 }
+	Port: rm_wordCount_V | {3 }
+	Port: rm_isReply | {3 }
+	Port: rm_correctMac | {3 }
+	Port: rm_isDHCP | {3 }
+	Port: meta_identifier_V | {3 }
+	Port: meta_assignedIpAddress_V | {3 }
+	Port: meta_serverAddress_V | {3 }
+	Port: meta_type_V_1 | {3 }
+	Port: dhcp_replyMetaFifo | {4 }
+	Port: myIpAddress_V | {6 }
+	Port: state | {5 }
+	Port: time_V | {5 }
+	Port: randomValue_V | {5 }
+	Port: myIdentity_V | {5 }
+	Port: IpAddressBuffer_V | {6 }
+	Port: dhcp_requestMetaFifo | {6 }
+	Port: sm_wordCount_V | {7 }
+	Port: meta_type_V | {7 }
+	Port: meta_requestedIpAddress_V | {7 }
+ - Input state : 
+	Port: dhcp_client : s_axis_open_port_status | {3 }
+	Port: dhcp_client : s_axis_rx_metadata | {3 }
+	Port: dhcp_client : s_axis_rx_data_V_data_V | {3 }
+	Port: dhcp_client : s_axis_rx_data_V_keep_V | {3 }
+	Port: dhcp_client : s_axis_rx_data_V_strb_V | {3 }
+	Port: dhcp_client : s_axis_rx_data_V_last_V | {3 }
+	Port: dhcp_client : dhcpEnable | {4 }
+	Port: dhcp_client : inputIpAddress | {4 }
+	Port: dhcp_client : myMacAddress | {3 }
+	Port: dhcp_client : openPortWaitTime_V | {2 }
+	Port: dhcp_client : odp_listenDone | {2 }
+	Port: dhcp_client : odp_waitListenStatus | {2 }
+	Port: dhcp_client : portOpen | {5 }
+	Port: dhcp_client : rm_wordCount_V | {3 }
+	Port: dhcp_client : rm_isReply | {3 }
+	Port: dhcp_client : rm_correctMac | {3 }
+	Port: dhcp_client : rm_isDHCP | {3 }
+	Port: dhcp_client : meta_identifier_V | {4 }
+	Port: dhcp_client : meta_assignedIpAddress_V | {4 }
+	Port: dhcp_client : meta_serverAddress_V | {4 }
+	Port: dhcp_client : meta_type_V_1 | {4 }
+	Port: dhcp_client : dhcp_replyMetaFifo | {5 }
+	Port: dhcp_client : myIpAddress_V | {6 }
+	Port: dhcp_client : state | {5 }
+	Port: dhcp_client : time_V | {5 }
+	Port: dhcp_client : randomValue_V | {5 }
+	Port: dhcp_client : myIdentity_V | {5 }
+	Port: dhcp_client : IpAddressBuffer_V | {6 }
+	Port: dhcp_client : dhcp_requestMetaFifo | {7 }
+	Port: dhcp_client : sm_wordCount_V | {7 }
+	Port: dhcp_client : meta_type_V | {7 }
+	Port: dhcp_client : meta_requestedIpAddress_V | {7 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|----------------------------|---------|---------|---------|
+| Operation|       Functional Unit      |  Delay  |    FF   |   LUT   |
+|----------|----------------------------|---------|---------|---------|
+|          |  grp_open_dhcp_port_fu_158 |    0    |    5    |    63   |
+|          | grp_receive_message_fu_174 |    0    |    12   |    98   |
+|   call   | call_ln0_entry_proc_fu_209 |    0    |    0    |    0    |
+|          |     grp_dhcp_fsm_fu_219    |  0.387  |   176   |   201   |
+|          |   grp_send_message_fu_245  | 1.36075 |   399   |   165   |
+|----------|----------------------------|---------|---------|---------|
+|   Total  |                            | 1.74775 |   592   |   527   |
+|----------|----------------------------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++------------------------+--------+
+|                        |   FF   |
++------------------------+--------+
+|  dhcpEnable_c_reg_282  |    1   |
+|inputIpAddress_c_reg_276|   32   |
+| myMacAddress_c_reg_270 |   48   |
++------------------------+--------+
+|          Total         |   81   |
++------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    1   |   592  |   527  |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|    -   |    -   |    -   |
+|  Register |    -   |   81   |    -   |
++-----------+--------+--------+--------+
+|   Total   |    1   |   673  |   527  |
++-----------+--------+--------+--------+

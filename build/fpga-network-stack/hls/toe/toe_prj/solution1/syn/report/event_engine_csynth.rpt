@@ -1,0 +1,178 @@
+
+
+================================================================
+== Vitis HLS Report for 'event_engine'
+================================================================
+* Date:           Sat Mar 18 14:38:57 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        toe_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  2.228 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|      106|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       92|    -|
+|Register             |        -|     -|       34|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|       34|      198|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------+----------+----+---+----+------------+------------+
+    |         Variable Name         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------+----------+----+---+----+------------+------------+
+    |add_ln885_193_fu_220_p2        |         +|   0|  0|  15|           8|           1|
+    |add_ln885_194_fu_232_p2        |         +|   0|  0|  15|           8|           1|
+    |add_ln885_195_fu_244_p2        |         +|   0|  0|  15|           8|           1|
+    |grp_fu_152_p2                  |         +|   0|  0|  15|           8|           1|
+    |and_ln83_fu_186_p2             |       and|   0|  0|   2|           1|           1|
+    |ap_condition_152               |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op62_read_state1  |       and|   0|  0|   2|           1|           1|
+    |tmp_53_i_nbreadreq_fu_68_p3    |       and|   0|  0|   2|           1|           0|
+    |tmp_54_i_nbreadreq_fu_76_p3    |       and|   0|  0|   2|           1|           0|
+    |tmp_55_i_nbreadreq_fu_110_p3   |       and|   0|  0|   2|           1|           0|
+    |tmp_56_i_nbreadreq_fu_124_p3   |       and|   0|  0|   2|           1|           0|
+    |tmp_57_i_nbreadreq_fu_138_p3   |       and|   0|  0|   2|           1|           0|
+    |tmp_i_nbreadreq_fu_52_p3       |       and|   0|  0|   2|           1|           0|
+    |icmp_ln1064_78_fu_180_p2       |      icmp|   0|  0|  11|           8|           8|
+    |icmp_ln1064_fu_174_p2          |      icmp|   0|  0|  11|           8|           8|
+    |ap_block_state1                |        or|   0|  0|   2|           1|           1|
+    |ap_predicate_op47_read_state1  |        or|   0|  0|   2|           1|           1|
+    |ap_predicate_op54_read_state1  |        or|   0|  0|   2|           1|           1|
+    +-------------------------------+----------+----+---+----+------------+------------+
+    |Total                          |          |   0|  0| 106|          60|          26|
+    +-------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+----+-----------+-----+-----------+
+    |              Name             | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------+----+-----------+-----+-----------+
+    |ackDelayFifoReadCount_blk_n    |   9|          2|    1|          2|
+    |ackDelayFifoWriteCount_blk_n   |   9|          2|    1|          2|
+    |ap_done                        |   9|          2|    1|          2|
+    |eventEng2ackDelay_event_blk_n  |   9|          2|    1|          2|
+    |eventEng2ackDelay_event_din    |  20|          4|  181|        724|
+    |rxEng2eventEng_setEvent_blk_n  |   9|          2|    1|          2|
+    |timer2eventEng_setEvent_blk_n  |   9|          2|    1|          2|
+    |txApp2eventEng_setEvent_blk_n  |   9|          2|    1|          2|
+    |txEngFifoReadCount_blk_n       |   9|          2|    1|          2|
+    +-------------------------------+----+-----------+-----+-----------+
+    |Total                          |  92|         20|  189|        740|
+    +-------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------+---+----+-----+-----------+
+    |         Name        | FF| LUT| Bits| Const Bits|
+    +---------------------+---+----+-----+-----------+
+    |ap_CS_fsm            |  1|   0|    1|          0|
+    |ap_done_reg          |  1|   0|    1|          0|
+    |ee_adReadCounter     |  8|   0|    8|          0|
+    |ee_adWriteCounter    |  8|   0|    8|          0|
+    |ee_txEngReadCounter  |  8|   0|    8|          0|
+    |ee_writeCounter      |  8|   0|    8|          0|
+    +---------------------+---+----+-----+-----------+
+    |Total                | 34|   0|   34|          0|
+    +---------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------+-----+-----+------------+-------------------------+--------------+
+|            RTL Ports            | Dir | Bits|  Protocol  |      Source Object      |    C Type    |
++---------------------------------+-----+-----+------------+-------------------------+--------------+
+|ap_clk                           |   in|    1|  ap_ctrl_hs|             event_engine|  return value|
+|ap_rst                           |   in|    1|  ap_ctrl_hs|             event_engine|  return value|
+|ap_start                         |   in|    1|  ap_ctrl_hs|             event_engine|  return value|
+|ap_done                          |  out|    1|  ap_ctrl_hs|             event_engine|  return value|
+|ap_continue                      |   in|    1|  ap_ctrl_hs|             event_engine|  return value|
+|ap_idle                          |  out|    1|  ap_ctrl_hs|             event_engine|  return value|
+|ap_ready                         |  out|    1|  ap_ctrl_hs|             event_engine|  return value|
+|rxEng2eventEng_setEvent_dout     |   in|  181|     ap_fifo|  rxEng2eventEng_setEvent|       pointer|
+|rxEng2eventEng_setEvent_empty_n  |   in|    1|     ap_fifo|  rxEng2eventEng_setEvent|       pointer|
+|rxEng2eventEng_setEvent_read     |  out|    1|     ap_fifo|  rxEng2eventEng_setEvent|       pointer|
+|eventEng2ackDelay_event_din      |  out|  181|     ap_fifo|  eventEng2ackDelay_event|       pointer|
+|eventEng2ackDelay_event_full_n   |   in|    1|     ap_fifo|  eventEng2ackDelay_event|       pointer|
+|eventEng2ackDelay_event_write    |  out|    1|     ap_fifo|  eventEng2ackDelay_event|       pointer|
+|timer2eventEng_setEvent_dout     |   in|   85|     ap_fifo|  timer2eventEng_setEvent|       pointer|
+|timer2eventEng_setEvent_empty_n  |   in|    1|     ap_fifo|  timer2eventEng_setEvent|       pointer|
+|timer2eventEng_setEvent_read     |  out|    1|     ap_fifo|  timer2eventEng_setEvent|       pointer|
+|txApp2eventEng_setEvent_dout     |   in|   85|     ap_fifo|  txApp2eventEng_setEvent|       pointer|
+|txApp2eventEng_setEvent_empty_n  |   in|    1|     ap_fifo|  txApp2eventEng_setEvent|       pointer|
+|txApp2eventEng_setEvent_read     |  out|    1|     ap_fifo|  txApp2eventEng_setEvent|       pointer|
+|ackDelayFifoReadCount_dout       |   in|    1|     ap_fifo|    ackDelayFifoReadCount|       pointer|
+|ackDelayFifoReadCount_empty_n    |   in|    1|     ap_fifo|    ackDelayFifoReadCount|       pointer|
+|ackDelayFifoReadCount_read       |  out|    1|     ap_fifo|    ackDelayFifoReadCount|       pointer|
+|ackDelayFifoWriteCount_dout      |   in|    1|     ap_fifo|   ackDelayFifoWriteCount|       pointer|
+|ackDelayFifoWriteCount_empty_n   |   in|    1|     ap_fifo|   ackDelayFifoWriteCount|       pointer|
+|ackDelayFifoWriteCount_read      |  out|    1|     ap_fifo|   ackDelayFifoWriteCount|       pointer|
+|txEngFifoReadCount_dout          |   in|    1|     ap_fifo|       txEngFifoReadCount|       pointer|
+|txEngFifoReadCount_empty_n       |   in|    1|     ap_fifo|       txEngFifoReadCount|       pointer|
+|txEngFifoReadCount_read          |  out|    1|     ap_fifo|       txEngFifoReadCount|       pointer|
++---------------------------------+-----+-----+------------+-------------------------+--------------+
+

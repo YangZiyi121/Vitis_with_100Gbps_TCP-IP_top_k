@@ -1,0 +1,160 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'icmp_server_top'" level="0">
+<item name = "Date">Sat Mar 18 14:31:48 2023
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
+<item name = "Project">icmp_server_prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu280-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.20 ns, 4.392 ns, 0.86 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">8, 8, 35.139 ns, 35.139 ns, 1, 1, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="convert_axis_to_net_axis_64_U0">convert_axis_to_net_axis_64_s, 1, 1, 4.392 ns, 4.392 ns, 1, 1, yes</column>
+<column name="check_icmp_checksum_U0">check_icmp_checksum, 2, 2, 8.785 ns, 8.785 ns, 1, 1, yes</column>
+<column name="convert_axis_to_net_axis_64_1_U0">convert_axis_to_net_axis_64_1, 1, 1, 4.392 ns, 4.392 ns, 1, 1, yes</column>
+<column name="convert_axis_to_net_axis_64_2_U0">convert_axis_to_net_axis_64_2, 1, 1, 4.392 ns, 4.392 ns, 1, 1, yes</column>
+<column name="convert_net_axis_to_axis_64_U0">convert_net_axis_to_axis_64_s, 2, 2, 8.785 ns, 8.785 ns, 1, 1, yes</column>
+<column name="udpPortUnreachable_U0">udpPortUnreachable, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="dropper_U0">dropper, 1, 1, 4.392 ns, 4.392 ns, 1, 1, yes</column>
+<column name="udpAddIpHeader_U0">udpAddIpHeader, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="insertChecksum_U0">insertChecksum, 1, 1, 4.392 ns, 4.392 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, -, -, -</column>
+<column name="FIFO">4, -, 2770, 1706, -</column>
+<column name="Instance">-, -, 1659, 2587, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">~0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
+<specialColumn name="Utilization (%)">~0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="check_icmp_checksum_U0">check_icmp_checksum, 0, 0, 689, 1199, 0</column>
+<column name="convert_axis_to_net_axis_64_1_U0">convert_axis_to_net_axis_64_1, 0, 0, 77, 37, 0</column>
+<column name="convert_axis_to_net_axis_64_2_U0">convert_axis_to_net_axis_64_2, 0, 0, 77, 37, 0</column>
+<column name="convert_axis_to_net_axis_64_U0">convert_axis_to_net_axis_64_s, 0, 0, 77, 37, 0</column>
+<column name="convert_net_axis_to_axis_64_U0">convert_net_axis_to_axis_64_s, 0, 0, 79, 43, 0</column>
+<column name="dropper_U0">dropper, 0, 0, 83, 148, 0</column>
+<column name="insertChecksum_U0">insertChecksum, 0, 0, 440, 335, 0</column>
+<column name="udpAddIpHeader_U0">udpAddIpHeader, 0, 0, 109, 215, 0</column>
+<column name="udpPortUnreachable_U0">udpPortUnreachable, 0, 0, 28, 536, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="dataIn_internal_U">0, 260, 0, -, 2, 128, 256</column>
+<column name="dataOut_internal_U">0, 260, 0, -, 2, 128, 256</column>
+<column name="icmp_server_stream_net_axis_64_0_stream_net_axis_64_0_stream_net_axis_64_0_stream_net_axis_64_0_checksumStreams_1_U">0, 7, 0, -, 16, 16, 256</column>
+<column name="icmp_server_stream_net_axis_64_0_stream_net_axis_64_0_stream_net_axis_64_0_stream_net_axis_64_0_checksumStreams_U">0, 7, 0, -, 16, 16, 256</column>
+<column name="icmp_server_stream_net_axis_64_0_stream_net_axis_64_0_stream_net_axis_64_0_stream_net_axis_64_0_dataStreams_1_U">0, 401, 0, -, 16, 128, 2048</column>
+<column name="icmp_server_stream_net_axis_64_0_stream_net_axis_64_0_stream_net_axis_64_0_stream_net_axis_64_0_dataStreams_U">0, 401, 0, -, 16, 128, 2048</column>
+<column name="packageBuffer1_U">0, 406, 0, -, 64, 73, 4672</column>
+<column name="ttlIn_internal_U">0, 260, 0, -, 2, 128, 256</column>
+<column name="udpIn_internal_U">0, 260, 0, -, 2, 128, 256</column>
+<column name="udpPort2addIpHeader_data_U">4, 284, 0, -, 192, 128, 24576</column>
+<column name="udpPort2addIpHeader_header_U">0, 218, 0, -, 64, 64, 4096</column>
+<column name="validFifo_U">0, 6, 0, -, 8, 1, 8</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_local_block">out, 1, ap_ctrl_none, icmp_server_top, return value</column>
+<column name="ap_local_deadlock">out, 1, ap_ctrl_none, icmp_server_top, return value</column>
+<column name="ap_clk">in, 1, ap_ctrl_none, icmp_server_top, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_none, icmp_server_top, return value</column>
+<column name="s_axis_TDATA">in, 64, axis, s_axis_V_data_V, pointer</column>
+<column name="s_axis_TKEEP">in, 8, axis, s_axis_V_keep_V, pointer</column>
+<column name="s_axis_TSTRB">in, 8, axis, s_axis_V_strb_V, pointer</column>
+<column name="s_axis_TLAST">in, 1, axis, s_axis_V_last_V, pointer</column>
+<column name="s_axis_TVALID">in, 1, axis, s_axis_V_last_V, pointer</column>
+<column name="s_axis_TREADY">out, 1, axis, s_axis_V_last_V, pointer</column>
+<column name="udpIn_TDATA">in, 64, axis, udpIn_V_data_V, pointer</column>
+<column name="udpIn_TKEEP">in, 8, axis, udpIn_V_keep_V, pointer</column>
+<column name="udpIn_TSTRB">in, 8, axis, udpIn_V_strb_V, pointer</column>
+<column name="udpIn_TLAST">in, 1, axis, udpIn_V_last_V, pointer</column>
+<column name="udpIn_TVALID">in, 1, axis, udpIn_V_last_V, pointer</column>
+<column name="udpIn_TREADY">out, 1, axis, udpIn_V_last_V, pointer</column>
+<column name="ttlIn_TDATA">in, 64, axis, ttlIn_V_data_V, pointer</column>
+<column name="ttlIn_TKEEP">in, 8, axis, ttlIn_V_keep_V, pointer</column>
+<column name="ttlIn_TSTRB">in, 8, axis, ttlIn_V_strb_V, pointer</column>
+<column name="ttlIn_TLAST">in, 1, axis, ttlIn_V_last_V, pointer</column>
+<column name="ttlIn_TVALID">in, 1, axis, ttlIn_V_last_V, pointer</column>
+<column name="ttlIn_TREADY">out, 1, axis, ttlIn_V_last_V, pointer</column>
+<column name="m_axis_TDATA">out, 64, axis, m_axis_V_data_V, pointer</column>
+<column name="m_axis_TKEEP">out, 8, axis, m_axis_V_keep_V, pointer</column>
+<column name="m_axis_TSTRB">out, 8, axis, m_axis_V_strb_V, pointer</column>
+<column name="m_axis_TLAST">out, 1, axis, m_axis_V_last_V, pointer</column>
+<column name="m_axis_TVALID">out, 1, axis, m_axis_V_last_V, pointer</column>
+<column name="m_axis_TREADY">in, 1, axis, m_axis_V_last_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

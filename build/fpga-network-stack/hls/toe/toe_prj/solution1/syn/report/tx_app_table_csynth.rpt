@@ -1,0 +1,177 @@
+
+
+================================================================
+== Vitis HLS Report for 'tx_app_table'
+================================================================
+* Date:           Sat Mar 18 14:39:19 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        toe_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  2.619 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        2|        2|  6.400 ns|  6.400 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       51|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        6|     -|        0|        0|    0|
+|Multiplexer          |        -|     -|        -|      106|    -|
+|Register             |        -|     -|       71|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        6|     0|       71|      157|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |       ~0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |       ~0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +--------------------------+---------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |          Memory          |                    Module                   | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +--------------------------+---------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |app_table_ackd_V_U        |tx_app_table_app_table_ackd_V_RAM_AUTO_1R1W  |        2|  0|   0|    0|  1000|   18|     1|        18000|
+    |app_table_mempt_V_U       |tx_app_table_app_table_ackd_V_RAM_AUTO_1R1W  |        2|  0|   0|    0|  1000|   18|     1|        18000|
+    |app_table_min_window_V_U  |tx_app_table_app_table_ackd_V_RAM_AUTO_1R1W  |        2|  0|   0|    0|  1000|   18|     1|        18000|
+    +--------------------------+---------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total                     |                                             |        6|  0|   0|    0|  3000|   54|     3|        54000|
+    +--------------------------+---------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln229_fu_224_p2               |         +|   0|  0|  25|          18|           2|
+    |ap_block_state2_pp0_stage0_iter1  |       and|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_132                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_161                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_171                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_205                  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op28_read_state2     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op59_write_state3    |       and|   0|  0|   2|           1|           1|
+    |tmp_i_162_nbreadreq_fu_72_p3      |       and|   0|  0|   2|           1|           0|
+    |tmp_i_nbreadreq_fu_58_p3          |       and|   0|  0|   2|           1|           0|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  51|          31|          14|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------+----+-----------+-----+-----------+
+    |               Name              | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------+----+-----------+-----+-----------+
+    |ap_done                          |   9|          2|    1|          2|
+    |app_table_ackd_V_address0        |  14|          3|   10|         30|
+    |app_table_ackd_V_d0              |  14|          3|   18|         54|
+    |app_table_mempt_V_address0       |  14|          3|   10|         30|
+    |app_table_mempt_V_d0             |  14|          3|   18|         54|
+    |app_table_min_window_V_address0  |  14|          3|   10|         30|
+    |txApp2txSar_upd_req_blk_n        |   9|          2|    1|          2|
+    |txSar2txApp_ack_push_blk_n       |   9|          2|    1|          2|
+    |txSar2txApp_upd_rsp_blk_n        |   9|          2|    1|          2|
+    +---------------------------------+----+-----------+-----+-----------+
+    |Total                            | 106|         23|   70|        206|
+    +---------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------+----+----+-----+-----------+
+    |               Name              | FF | LUT| Bits| Const Bits|
+    +---------------------------------+----+----+-----+-----------+
+    |ackPush_ackd_V_reg_251           |  18|   0|   18|          0|
+    |ackPush_init_V_reg_263           |   1|   0|    1|          0|
+    |ackPush_min_window_V_reg_258     |  18|   0|   18|          0|
+    |ackPush_sessionID_V_reg_246      |  10|   0|   10|          0|
+    |ap_CS_fsm                        |   1|   0|    1|          0|
+    |ap_done_reg                      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2          |   1|   0|    1|          0|
+    |tmp_i_162_reg_267                |   1|   0|    1|          0|
+    |tmp_i_reg_242                    |   1|   0|    1|          0|
+    |tmp_i_reg_242_pp0_iter1_reg      |   1|   0|    1|          0|
+    |txAppUpdate_sessionID_V_reg_271  |  16|   0|   16|          0|
+    |txAppUpdate_write_reg_276        |   1|   0|    1|          0|
+    +---------------------------------+----+----+-----+-----------+
+    |Total                            |  71|   0|   71|          0|
+    +---------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+----------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++------------------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                        |   in|    1|  ap_ctrl_hs|          tx_app_table|  return value|
+|ap_rst                        |   in|    1|  ap_ctrl_hs|          tx_app_table|  return value|
+|ap_start                      |   in|    1|  ap_ctrl_hs|          tx_app_table|  return value|
+|ap_done                       |  out|    1|  ap_ctrl_hs|          tx_app_table|  return value|
+|ap_continue                   |   in|    1|  ap_ctrl_hs|          tx_app_table|  return value|
+|ap_idle                       |  out|    1|  ap_ctrl_hs|          tx_app_table|  return value|
+|ap_ready                      |  out|    1|  ap_ctrl_hs|          tx_app_table|  return value|
+|txSar2txApp_ack_push_dout     |   in|   53|     ap_fifo|  txSar2txApp_ack_push|       pointer|
+|txSar2txApp_ack_push_empty_n  |   in|    1|     ap_fifo|  txSar2txApp_ack_push|       pointer|
+|txSar2txApp_ack_push_read     |  out|    1|     ap_fifo|  txSar2txApp_ack_push|       pointer|
+|txApp2txSar_upd_req_dout      |   in|   35|     ap_fifo|   txApp2txSar_upd_req|       pointer|
+|txApp2txSar_upd_req_empty_n   |   in|    1|     ap_fifo|   txApp2txSar_upd_req|       pointer|
+|txApp2txSar_upd_req_read      |  out|    1|     ap_fifo|   txApp2txSar_upd_req|       pointer|
+|txSar2txApp_upd_rsp_din       |  out|   70|     ap_fifo|   txSar2txApp_upd_rsp|       pointer|
+|txSar2txApp_upd_rsp_full_n    |   in|    1|     ap_fifo|   txSar2txApp_upd_rsp|       pointer|
+|txSar2txApp_upd_rsp_write     |  out|    1|     ap_fifo|   txSar2txApp_upd_rsp|       pointer|
++------------------------------+-----+-----+------------+----------------------+--------------+
+

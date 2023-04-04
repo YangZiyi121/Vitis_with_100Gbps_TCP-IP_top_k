@@ -1,0 +1,455 @@
+<profile>
+    <ReportVersion>
+        <Version>2021.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplus</ProductFamily>
+        <Part>xcu280-fsvh2892-2L-e</Part>
+        <TopModelName>ethernet_frame_padding_512</TopModelName>
+        <TargetClockPeriod>3.20</TargetClockPeriod>
+        <ClockUncertainty>0.86</ClockUncertainty>
+        <TargetInitiationInterval>1</TargetInitiationInterval>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>yes</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>2.312</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>16</Best-caseLatency>
+            <Average-caseLatency>16</Average-caseLatency>
+            <Worst-caseLatency>16</Worst-caseLatency>
+            <Best-caseRealTimeLatency>51.200 ns</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>51.200 ns</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>51.200 ns</Worst-caseRealTimeLatency>
+            <PipelineInitiationInterval>1</PipelineInitiationInterval>
+            <PipelineDepth>17</PipelineDepth>
+            <Interval-min>1</Interval-min>
+            <Interval-max>1</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <FF>18405</FF>
+            <LUT>31299</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>4032</BRAM_18K>
+            <DSP>9024</DSP>
+            <FF>2607360</FF>
+            <LUT>1303680</LUT>
+            <URAM>960</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_local_block</name>
+            <Object>ethernet_frame_padding_512</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_local_deadlock</name>
+            <Object>ethernet_frame_padding_512</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>ethernet_frame_padding_512</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>ethernet_frame_padding_512</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_TDATA</name>
+            <Object>s_axis_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>512</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_TVALID</name>
+            <Object>s_axis_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_TREADY</name>
+            <Object>s_axis_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_TLAST</name>
+            <Object>s_axis_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_TKEEP</name>
+            <Object>s_axis_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_TSTRB</name>
+            <Object>s_axis_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_TDATA</name>
+            <Object>m_axis_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>512</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_TVALID</name>
+            <Object>m_axis_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_TREADY</name>
+            <Object>m_axis_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_TLAST</name>
+            <Object>m_axis_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_TKEEP</name>
+            <Object>m_axis_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_TSTRB</name>
+            <Object>m_axis_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="1">
+            <ModuleName>ethernet_frame_padding_512</ModuleName>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>ethernet_frame_padding_512</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.20</TargetClockPeriod>
+                    <ClockUncertainty>0.86</ClockUncertainty>
+                    <TargetInitiationInterval>1</TargetInitiationInterval>
+                    <EstimatedClockPeriod>2.312</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>16</Best-caseLatency>
+                    <Average-caseLatency>16</Average-caseLatency>
+                    <Worst-caseLatency>16</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>51.200 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>51.200 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>51.200 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>17</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>18405</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>31299</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>2</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="dataIn" index="0" direction="in" srcType="stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0, 0, 0&gt;, 0&gt;&amp;" srcSize="1024">
+            <hwRefs>
+                <hwRef type="interface" interface="s_axis" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="dataOut" index="1" direction="out" srcType="stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0, 0, 0&gt;, 0&gt;&amp;" srcSize="1024">
+            <hwRefs>
+                <hwRef type="interface" interface="m_axis" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">s_axis:m_axis</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="s_axis" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="512" portPrefix="s_axis_">
+            <ports>
+                <port>s_axis_TDATA</port>
+                <port>s_axis_TKEEP</port>
+                <port>s_axis_TLAST</port>
+                <port>s_axis_TREADY</port>
+                <port>s_axis_TSTRB</port>
+                <port>s_axis_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="dataIn"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="m_axis" type="axi4stream" busTypeName="axis" mode="master" dataWidth="512" portPrefix="m_axis_">
+            <ports>
+                <port>m_axis_TDATA</port>
+                <port>m_axis_TKEEP</port>
+                <port>m_axis_TLAST</port>
+                <port>m_axis_TREADY</port>
+                <port>m_axis_TSTRB</port>
+                <port>m_axis_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="dataOut"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AXIS">
+                <table isCollapsed="0">
+                    <keys size="8">Interface, Register Mode, TDATA, TKEEP, TLAST, TREADY, TSTRB, TVALID</keys>
+                    <column name="m_axis">both, 512, 64, 1, 1, 64, 1</column>
+                    <column name="s_axis">both, 512, 64, 1, 1, 64, 1</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst_n">reset, ap_rst_n</column>
+                    <column name="ap_ctrl">ap_ctrl_none</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="dataIn">in, stream&lt;hls::axis&lt;ap_uint&lt;512&gt; 0 0 0&gt; 0&gt;&amp;</column>
+                    <column name="dataOut">out, stream&lt;hls::axis&lt;ap_uint&lt;512&gt; 0 0 0&gt; 0&gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="dataIn">s_axis, interface</column>
+                    <column name="dataOut">m_axis, interface</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:76" status="valid" parentFunction="convert_net_axis_to_axis" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:96" status="valid" parentFunction="convert_axis_to_net_axis" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:115" status="valid" parentFunction="convert_routed_net_axis_to_axis" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:137" status="valid" parentFunction="reverse" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:149" status="valid" parentFunction="reverse_bits" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:318" status="valid" parentFunction="increasestreamwidth" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:348" status="valid" parentFunction="reducestreamwidth" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:411" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:412" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:423" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:424" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:432" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:433" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:441" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:442" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:450" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:451" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:459" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:460" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:468" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:469" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:493" status="valid" parentFunction="rshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:494" status="valid" parentFunction="rshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:568" status="valid" parentFunction="lshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:569" status="valid" parentFunction="lshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:637" status="valid" parentFunction="stream_merger" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:638" status="valid" parentFunction="stream_merger" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:656" status="valid" parentFunction="stream_merger" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:657" status="valid" parentFunction="stream_merger" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:718" status="valid" parentFunction="fair_merger" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:719" status="valid" parentFunction="fair_merger" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:752" status="valid" parentFunction="fair_pkg_merger" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:753" status="valid" parentFunction="fair_pkg_merger" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:834" status="valid" parentFunction="stream_pkg_merger" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:835" status="valid" parentFunction="stream_pkg_merger" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:913" status="valid" parentFunction="stream_pkg_splitter" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:914" status="valid" parentFunction="stream_pkg_splitter" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:978" status="valid" parentFunction="pass_valid_pkg" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:979" status="valid" parentFunction="pass_valid_pkg" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1040" status="valid" parentFunction="toe_duplicate_stream" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1041" status="valid" parentFunction="toe_duplicate_stream" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1056" status="valid" parentFunction="ip_handler_duplicate_stream" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1057" status="valid" parentFunction="ip_handler_duplicate_stream" variable="" isDirective="0" options="off"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1095" status="valid" parentFunction="udp_lshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1096" status="valid" parentFunction="udp_lshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1166" status="valid" parentFunction="mac_lshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1167" status="valid" parentFunction="mac_lshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1237" status="valid" parentFunction="ipv4_lshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1238" status="valid" parentFunction="ipv4_lshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1308" status="valid" parentFunction="ip_handler_rshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1309" status="valid" parentFunction="ip_handler_rshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1383" status="valid" parentFunction="udp_rshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1384" status="valid" parentFunction="udp_rshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/ethernet_frame_padding_512.cpp:32" status="valid" parentFunction="ethernet_frame_padding_512" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/ethernet_frame_padding_512.cpp:33" status="valid" parentFunction="ethernet_frame_padding_512" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/ethernet_frame_padding_512.cpp:35" status="valid" parentFunction="ethernet_frame_padding_512" variable="dataIn" isDirective="0" options="axis register port=dataIn name=s_axis"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/ethernet_frame_padding_512.cpp:36" status="valid" parentFunction="ethernet_frame_padding_512" variable="dataOut" isDirective="0" options="axis register port=dataOut name=m_axis"/>
+        <Pragma type="unroll" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/ethernet_frame_padding_512.cpp:76" status="valid" parentFunction="ethernet_frame_padding_512" variable="" isDirective="0" options=""/>
+    </PragmaReport>
+</profile>
+

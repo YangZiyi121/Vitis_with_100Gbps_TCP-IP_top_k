@@ -1,0 +1,2099 @@
+
+
+================================================================
+== Vitis HLS Report for 'reverseLookupTableInterface'
+================================================================
+* Date:           Sat Mar 18 14:38:52 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        toe_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  2.336 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        5|        5|  16.000 ns|  16.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|      164|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        4|     -|        2|       36|    0|
+|Multiplexer          |        -|     -|        -|      157|    -|
+|Register             |        -|     -|      793|      288|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        4|     0|      795|      645|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |       ~0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |       ~0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +----------------------------------+------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |              Memory              |                                    Module                                    | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +----------------------------------+------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |reverseLookupTable_myPort_V_U     |reverseLookupTableInterface_reverseLookupTable_myPort_V_RAM_T2P_BRAM_1R1W     |        1|  0|   0|    0|  1000|   16|     1|        16000|
+    |reverseLookupTable_theirIp_V_U    |reverseLookupTableInterface_reverseLookupTable_theirIp_V_RAM_T2P_BRAM_1R1W    |        2|  0|   0|    0|  1000|   32|     1|        32000|
+    |reverseLookupTable_theirPort_V_U  |reverseLookupTableInterface_reverseLookupTable_theirPort_V_RAM_T2P_BRAM_1R1W  |        1|  0|   0|    0|  1000|   16|     1|        16000|
+    |tupleValid_U                      |reverseLookupTableInterface_tupleValid_RAM_AUTO_1R1W                          |        0|  2|  36|    0|  1000|    1|     1|         1000|
+    +----------------------------------+------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total                             |                                                                              |        4|  2|  36|    0|  4000|   65|     4|        65000|
+    +----------------------------------+------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------+----------+----+---+-----+------------+------------+
+    |           Variable Name           | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+----+---+-----+------------+------------+
+    |ap_block_pp0                       |       and|   0|  0|    2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1   |       and|   0|  0|    2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2   |       and|   0|  0|    2|           1|           1|
+    |ap_condition_221                   |       and|   0|  0|    2|           1|           1|
+    |ap_condition_313                   |       and|   0|  0|    2|           1|           1|
+    |ap_enable_state2_pp0_iter1_stage0  |       and|   0|  0|    2|           1|           1|
+    |ap_enable_state3_pp0_iter2_stage0  |       and|   0|  0|    2|           1|           1|
+    |ap_enable_state4_pp0_iter3_stage0  |       and|   0|  0|    2|           1|           1|
+    |ap_enable_state5_pp0_iter4_stage0  |       and|   0|  0|    2|           1|           1|
+    |ap_enable_state6_pp0_iter5_stage0  |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op18_read_state2      |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op29_read_state3      |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op30_load_state3      |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op40_load_state4      |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op48_load_state5      |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op52_load_state5      |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op89_write_state6     |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op91_load_state6      |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op93_write_state6     |       and|   0|  0|    2|           1|           1|
+    |tmp_22_i_nbreadreq_fu_128_p3       |       and|   0|  0|    2|           1|           0|
+    |tmp_i_320_nbreadreq_fu_114_p3      |       and|   0|  0|    2|           1|           0|
+    |tmp_i_nbreadreq_fu_100_p3          |       and|   0|  0|    2|           1|           0|
+    |ap_block_pp0_stage0_01001          |        or|   0|  0|    2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0   |        or|   0|  0|    2|           1|           1|
+    |ap_block_state6_pp0_stage0_iter5   |        or|   0|  0|    2|           1|           1|
+    |or_ln173_fu_373_p2                 |        or|   0|  0|  112|         112|           1|
+    |ap_enable_pp0                      |       xor|   0|  0|    2|           1|           2|
+    +-----------------------------------+----------+----+---+-----+------------+------------+
+    |Total                              |          |   0|  0|  164|         138|          25|
+    +-----------------------------------+----------+----+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |                   Name                  | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |ap_done                                  |   9|          2|    1|          2|
+    |myIpAddress_blk_n                        |   9|          2|    1|          2|
+    |myIpAddress_c_blk_n                      |   9|          2|    1|          2|
+    |reverseLookupTable_myPort_V_address0     |  20|          4|   10|         40|
+    |reverseLookupTable_theirIp_V_address0    |  14|          3|   10|         30|
+    |reverseLookupTable_theirPort_V_address0  |  14|          3|   10|         30|
+    |reverseLupInsertFifo_blk_n               |   9|          2|    1|          2|
+    |sLookup2portTable_releasePort_blk_n      |   9|          2|    1|          2|
+    |sLookup2txEng_rev_rsp_blk_n              |   9|          2|    1|          2|
+    |sessionDelete_req_blk_n                  |   9|          2|    1|          2|
+    |stateTable2sLookup_releaseSession_blk_n  |   9|          2|    1|          2|
+    |tupleValid_address0                      |  14|          3|   10|         30|
+    |tupleValid_d0                            |  14|          3|    1|          3|
+    |txEng2sLookup_rev_req_blk_n              |   9|          2|    1|          2|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |Total                                    | 157|         34|   50|        151|
+    +-----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                         |   1|   0|    1|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5           |   1|   0|    1|          0|
+    |insert_key_V_reg_388              |  10|   0|   10|          0|
+    |insert_value_myPort_V_reg_398     |  16|   0|   16|          0|
+    |insert_value_theirIp_V_reg_393    |  32|   0|   32|          0|
+    |insert_value_theirPort_V_reg_403  |  16|   0|   16|          0|
+    |reg_295                           |  16|   0|   16|          0|
+    |sessionID_V_1_reg_440             |  16|   0|   16|          0|
+    |sessionID_V_reg_412               |  16|   0|   16|          0|
+    |tmp_22_i_reg_436                  |   1|   0|    1|          0|
+    |tmp_i_320_reg_408                 |   1|   0|    1|          0|
+    |tmp_i_reg_384                     |   1|   0|    1|          0|
+    |toeTuple_dstIp_V_reg_469          |  32|   0|   32|          0|
+    |toeTuple_dstPort_V_reg_474        |  16|   0|   16|          0|
+    |tupleValid_load_reg_445           |   1|   0|    1|          0|
+    |zext_ln587_12_reg_417             |  16|   0|   64|         48|
+    |zext_ln587_reg_429                |  10|   0|   64|         54|
+    |zext_ln587_reg_429_pp0_iter2_reg  |  10|   0|   64|         54|
+    |insert_value_myPort_V_reg_398     |  64|  32|   16|          0|
+    |insert_value_theirIp_V_reg_393    |  64|  32|   32|          0|
+    |insert_value_theirPort_V_reg_403  |  64|  32|   16|          0|
+    |sessionID_V_reg_412               |  64|  32|   16|          0|
+    |tmp_22_i_reg_436                  |  64|  32|    1|          0|
+    |tmp_i_320_reg_408                 |  64|  32|    1|          0|
+    |tmp_i_reg_384                     |  64|  32|    1|          0|
+    |tupleValid_load_reg_445           |  64|  32|    1|          0|
+    |zext_ln587_12_reg_417             |  64|  32|   64|         48|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 793| 288|  521|        204|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------------------+-----+-----+------------+-----------------------------------+--------------+
+|                 RTL Ports                 | Dir | Bits|  Protocol  |           Source Object           |    C Type    |
++-------------------------------------------+-----+-----+------------+-----------------------------------+--------------+
+|ap_clk                                     |   in|    1|  ap_ctrl_hs|        reverseLookupTableInterface|  return value|
+|ap_rst                                     |   in|    1|  ap_ctrl_hs|        reverseLookupTableInterface|  return value|
+|ap_start                                   |   in|    1|  ap_ctrl_hs|        reverseLookupTableInterface|  return value|
+|ap_done                                    |  out|    1|  ap_ctrl_hs|        reverseLookupTableInterface|  return value|
+|ap_continue                                |   in|    1|  ap_ctrl_hs|        reverseLookupTableInterface|  return value|
+|ap_idle                                    |  out|    1|  ap_ctrl_hs|        reverseLookupTableInterface|  return value|
+|ap_ready                                   |  out|    1|  ap_ctrl_hs|        reverseLookupTableInterface|  return value|
+|reverseLupInsertFifo_dout                  |   in|   96|     ap_fifo|               reverseLupInsertFifo|       pointer|
+|reverseLupInsertFifo_empty_n               |   in|    1|     ap_fifo|               reverseLupInsertFifo|       pointer|
+|reverseLupInsertFifo_read                  |  out|    1|     ap_fifo|               reverseLupInsertFifo|       pointer|
+|stateTable2sLookup_releaseSession_dout     |   in|   16|     ap_fifo|  stateTable2sLookup_releaseSession|       pointer|
+|stateTable2sLookup_releaseSession_empty_n  |   in|    1|     ap_fifo|  stateTable2sLookup_releaseSession|       pointer|
+|stateTable2sLookup_releaseSession_read     |  out|    1|     ap_fifo|  stateTable2sLookup_releaseSession|       pointer|
+|txEng2sLookup_rev_req_dout                 |   in|   16|     ap_fifo|              txEng2sLookup_rev_req|       pointer|
+|txEng2sLookup_rev_req_empty_n              |   in|    1|     ap_fifo|              txEng2sLookup_rev_req|       pointer|
+|txEng2sLookup_rev_req_read                 |  out|    1|     ap_fifo|              txEng2sLookup_rev_req|       pointer|
+|myIpAddress_dout                           |   in|   32|     ap_fifo|                        myIpAddress|       pointer|
+|myIpAddress_empty_n                        |   in|    1|     ap_fifo|                        myIpAddress|       pointer|
+|myIpAddress_read                           |  out|    1|     ap_fifo|                        myIpAddress|       pointer|
+|myIpAddress_c_din                          |  out|   32|     ap_fifo|                      myIpAddress_c|       pointer|
+|myIpAddress_c_full_n                       |   in|    1|     ap_fifo|                      myIpAddress_c|       pointer|
+|myIpAddress_c_write                        |  out|    1|     ap_fifo|                      myIpAddress_c|       pointer|
+|sLookup2txEng_rev_rsp_din                  |  out|   96|     ap_fifo|              sLookup2txEng_rev_rsp|       pointer|
+|sLookup2txEng_rev_rsp_full_n               |   in|    1|     ap_fifo|              sLookup2txEng_rev_rsp|       pointer|
+|sLookup2txEng_rev_rsp_write                |  out|    1|     ap_fifo|              sLookup2txEng_rev_rsp|       pointer|
+|sLookup2portTable_releasePort_din          |  out|   16|     ap_fifo|      sLookup2portTable_releasePort|       pointer|
+|sLookup2portTable_releasePort_full_n       |   in|    1|     ap_fifo|      sLookup2portTable_releasePort|       pointer|
+|sLookup2portTable_releasePort_write        |  out|    1|     ap_fifo|      sLookup2portTable_releasePort|       pointer|
+|sessionDelete_req_din                      |  out|  160|     ap_fifo|                  sessionDelete_req|       pointer|
+|sessionDelete_req_full_n                   |   in|    1|     ap_fifo|                  sessionDelete_req|       pointer|
+|sessionDelete_req_write                    |  out|    1|     ap_fifo|                  sessionDelete_req|       pointer|
++-------------------------------------------+-----+-----+------------+-----------------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 6
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 6, States = { 1 2 3 4 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.16>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%tmp_i = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i96P0A, i96 %reverseLupInsertFifo, i32 1" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:135]   --->   Operation 7 'nbreadreq' 'tmp_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.41> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 96> <Depth = 4> <FIFO>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln265 = br i1 %tmp_i, void, void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:265]   --->   Operation 8 'br' 'br_ln265' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%br_ln0 = br void %reverseLookupTableInterface.exit"   --->   Operation 9 'br' 'br_ln0' <Predicate = (!tmp_i)> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (1.16ns)   --->   "%reverseLupInsertFifo_read = read i96 @_ssdm_op_Read.ap_fifo.volatile.i96P0A, i96 %reverseLupInsertFifo" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 10 'read' 'reverseLupInsertFifo_read' <Predicate = (tmp_i)> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.41> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 96> <Depth = 4> <FIFO>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%insert_key_V = trunc i96 %reverseLupInsertFifo_read" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 11 'trunc' 'insert_key_V' <Predicate = (tmp_i)> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%insert_value_theirIp_V = partselect i32 @_ssdm_op_PartSelect.i32.i96.i32.i32, i96 %reverseLupInsertFifo_read, i32 32, i32 63" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 12 'partselect' 'insert_value_theirIp_V' <Predicate = (tmp_i)> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%insert_value_myPort_V = partselect i16 @_ssdm_op_PartSelect.i16.i96.i32.i32, i96 %reverseLupInsertFifo_read, i32 64, i32 79" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 13 'partselect' 'insert_value_myPort_V' <Predicate = (tmp_i)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%insert_value_theirPort_V = partselect i16 @_ssdm_op_PartSelect.i16.i96.i32.i32, i96 %reverseLupInsertFifo_read, i32 80, i32 95" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 14 'partselect' 'insert_value_theirPort_V' <Predicate = (tmp_i)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.09>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_i_320 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i16P0A, i16 %stateTable2sLookup_releaseSession, i32 1" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:135]   --->   Operation 15 'nbreadreq' 'tmp_i_320' <Predicate = (!tmp_i)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.34> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln273 = br i1 %tmp_i_320, void, void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:273]   --->   Operation 16 'br' 'br_ln273' <Predicate = (!tmp_i)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 17 'br' 'br_ln0' <Predicate = (!tmp_i & !tmp_i_320)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (1.16ns)   --->   "%sessionID_V = read i16 @_ssdm_op_Read.ap_fifo.volatile.i16P0A, i16 %stateTable2sLookup_releaseSession" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 18 'read' 'sessionID_V' <Predicate = (!tmp_i & tmp_i_320)> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.34> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%zext_ln587_12 = zext i16 %sessionID_V"   --->   Operation 19 'zext' 'zext_ln587_12' <Predicate = (!tmp_i & tmp_i_320)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%tupleValid_addr_1 = getelementptr i1 %tupleValid, i64 0, i64 %zext_ln587_12" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:277]   --->   Operation 20 'getelementptr' 'tupleValid_addr_1' <Predicate = (!tmp_i & tmp_i_320)> <Delay = 0.00>
+ST_2 : Operation 21 [2/2] (0.92ns)   --->   "%tupleValid_load = load i10 %tupleValid_addr_1" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:277]   --->   Operation 21 'load' 'tupleValid_load' <Predicate = (!tmp_i & tmp_i_320)> <Delay = 0.92> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.92> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 1000> <RAM>
+ST_2 : Operation 22 [1/1] (0.92ns)   --->   "%store_ln282 = store i1 0, i10 %tupleValid_addr_1" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:282]   --->   Operation 22 'store' 'store_ln282' <Predicate = (!tmp_i & tmp_i_320)> <Delay = 0.92> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.92> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 1000> <RAM>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln283 = br void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:283]   --->   Operation 23 'br' 'br_ln283' <Predicate = (!tmp_i & tmp_i_320)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%zext_ln587 = zext i10 %insert_key_V"   --->   Operation 24 'zext' 'zext_ln587' <Predicate = (tmp_i)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%tupleValid_addr = getelementptr i1 %tupleValid, i64 0, i64 %zext_ln587" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:269]   --->   Operation 25 'getelementptr' 'tupleValid_addr' <Predicate = (tmp_i)> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.92ns)   --->   "%store_ln269 = store i1 1, i10 %tupleValid_addr" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:269]   --->   Operation 26 'store' 'store_ln269' <Predicate = (tmp_i)> <Delay = 0.92> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.92> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 1000> <RAM>
+
+State 3 <SV = 2> <Delay = 1.16>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_22_i = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i16P0A, i16 %txEng2sLookup_rev_req, i32 1" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:135]   --->   Operation 27 'nbreadreq' 'tmp_22_i' <Predicate = (!tmp_i & !tmp_i_320)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 4> <FIFO>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln284 = br i1 %tmp_22_i, void %._crit_edge1.i, void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:284]   --->   Operation 28 'br' 'br_ln284' <Predicate = (!tmp_i & !tmp_i_320)> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (1.16ns)   --->   "%sessionID_V_1 = read i16 @_ssdm_op_Read.ap_fifo.volatile.i16P0A, i16 %txEng2sLookup_rev_req" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 29 'read' 'sessionID_V_1' <Predicate = (!tmp_i & !tmp_i_320 & tmp_22_i)> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 4> <FIFO>
+ST_3 : Operation 30 [1/2] (0.92ns)   --->   "%tupleValid_load = load i10 %tupleValid_addr_1" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:277]   --->   Operation 30 'load' 'tupleValid_load' <Predicate = (!tmp_i & tmp_i_320)> <Delay = 0.92> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.92> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 1000> <RAM>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln277 = br i1 %tupleValid_load, void %._crit_edge.i, void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:277]   --->   Operation 31 'br' 'br_ln277' <Predicate = (!tmp_i & tmp_i_320)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 1.20>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln587_13 = zext i16 %sessionID_V_1"   --->   Operation 32 'zext' 'zext_ln587_13' <Predicate = (!tmp_i & !tmp_i_320 & tmp_22_i)> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%reverseLookupTable_theirIp_V_addr_2 = getelementptr i32 %reverseLookupTable_theirIp_V, i64 0, i64 %zext_ln587_13" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:288]   --->   Operation 33 'getelementptr' 'reverseLookupTable_theirIp_V_addr_2' <Predicate = (!tmp_i & !tmp_i_320 & tmp_22_i)> <Delay = 0.00>
+ST_4 : Operation 34 [2/2] (1.20ns)   --->   "%toeTuple_dstIp_V = load i10 %reverseLookupTable_theirIp_V_addr_2" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:288]   --->   Operation 34 'load' 'toeTuple_dstIp_V' <Predicate = (!tmp_i & !tmp_i_320 & tmp_22_i)> <Delay = 1.20> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.20> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1000> <RAM>
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "%reverseLookupTable_myPort_V_addr_2 = getelementptr i16 %reverseLookupTable_myPort_V, i64 0, i64 %zext_ln587_13" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:289]   --->   Operation 35 'getelementptr' 'reverseLookupTable_myPort_V_addr_2' <Predicate = (!tmp_i & !tmp_i_320 & tmp_22_i)> <Delay = 0.00>
+ST_4 : Operation 36 [2/2] (1.17ns)   --->   "%toeTuple_srcPort_V = load i10 %reverseLookupTable_myPort_V_addr_2" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:289]   --->   Operation 36 'load' 'toeTuple_srcPort_V' <Predicate = (!tmp_i & !tmp_i_320 & tmp_22_i)> <Delay = 1.17> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1000> <RAM>
+ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%reverseLookupTable_theirPort_V_addr_2 = getelementptr i16 %reverseLookupTable_theirPort_V, i64 0, i64 %zext_ln587_13" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:290]   --->   Operation 37 'getelementptr' 'reverseLookupTable_theirPort_V_addr_2' <Predicate = (!tmp_i & !tmp_i_320 & tmp_22_i)> <Delay = 0.00>
+ST_4 : Operation 38 [2/2] (1.17ns)   --->   "%toeTuple_dstPort_V = load i10 %reverseLookupTable_theirPort_V_addr_2" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:290]   --->   Operation 38 'load' 'toeTuple_dstPort_V' <Predicate = (!tmp_i & !tmp_i_320 & tmp_22_i)> <Delay = 1.17> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1000> <RAM>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%reverseLookupTable_myPort_V_addr_1 = getelementptr i16 %reverseLookupTable_myPort_V, i64 0, i64 %zext_ln587_12" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:276]   --->   Operation 39 'getelementptr' 'reverseLookupTable_myPort_V_addr_1' <Predicate = (!tmp_i & tmp_i_320)> <Delay = 0.00>
+ST_4 : Operation 40 [2/2] (1.17ns)   --->   "%releaseTuple_myPort_V = load i10 %reverseLookupTable_myPort_V_addr_1" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:276]   --->   Operation 40 'load' 'releaseTuple_myPort_V' <Predicate = (!tmp_i & tmp_i_320)> <Delay = 1.17> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1000> <RAM>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%reverseLookupTable_theirIp_V_addr = getelementptr i32 %reverseLookupTable_theirIp_V, i64 0, i64 %zext_ln587" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:268]   --->   Operation 41 'getelementptr' 'reverseLookupTable_theirIp_V_addr' <Predicate = (tmp_i)> <Delay = 0.00>
+ST_4 : Operation 42 [1/1] (1.20ns)   --->   "%store_ln268 = store i32 %insert_value_theirIp_V, i10 %reverseLookupTable_theirIp_V_addr" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:268]   --->   Operation 42 'store' 'store_ln268' <Predicate = (tmp_i)> <Delay = 1.20> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.20> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1000> <RAM>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%reverseLookupTable_myPort_V_addr = getelementptr i16 %reverseLookupTable_myPort_V, i64 0, i64 %zext_ln587" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:268]   --->   Operation 43 'getelementptr' 'reverseLookupTable_myPort_V_addr' <Predicate = (tmp_i)> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] (1.17ns)   --->   "%store_ln268 = store i16 %insert_value_myPort_V, i10 %reverseLookupTable_myPort_V_addr" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:268]   --->   Operation 44 'store' 'store_ln268' <Predicate = (tmp_i)> <Delay = 1.17> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1000> <RAM>
+ST_4 : Operation 45 [1/1] (0.00ns)   --->   "%reverseLookupTable_theirPort_V_addr = getelementptr i16 %reverseLookupTable_theirPort_V, i64 0, i64 %zext_ln587" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:268]   --->   Operation 45 'getelementptr' 'reverseLookupTable_theirPort_V_addr' <Predicate = (tmp_i)> <Delay = 0.00>
+ST_4 : Operation 46 [1/1] (1.17ns)   --->   "%store_ln268 = store i16 %insert_value_theirPort_V, i10 %reverseLookupTable_theirPort_V_addr" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:268]   --->   Operation 46 'store' 'store_ln268' <Predicate = (tmp_i)> <Delay = 1.17> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1000> <RAM>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%br_ln271 = br void %reverseLookupTableInterface.exit" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:271]   --->   Operation 47 'br' 'br_ln271' <Predicate = (tmp_i)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 1.20>
+ST_5 : Operation 48 [1/2] (1.20ns)   --->   "%toeTuple_dstIp_V = load i10 %reverseLookupTable_theirIp_V_addr_2" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:288]   --->   Operation 48 'load' 'toeTuple_dstIp_V' <Predicate = (!tmp_i & !tmp_i_320 & tmp_22_i)> <Delay = 1.20> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.20> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1000> <RAM>
+ST_5 : Operation 49 [1/2] (1.17ns)   --->   "%toeTuple_srcPort_V = load i10 %reverseLookupTable_myPort_V_addr_2" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:289]   --->   Operation 49 'load' 'toeTuple_srcPort_V' <Predicate = (!tmp_i & !tmp_i_320 & tmp_22_i)> <Delay = 1.17> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1000> <RAM>
+ST_5 : Operation 50 [1/2] (1.17ns)   --->   "%toeTuple_dstPort_V = load i10 %reverseLookupTable_theirPort_V_addr_2" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:290]   --->   Operation 50 'load' 'toeTuple_dstPort_V' <Predicate = (!tmp_i & !tmp_i_320 & tmp_22_i)> <Delay = 1.17> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1000> <RAM>
+ST_5 : Operation 51 [1/1] (0.00ns)   --->   "%reverseLookupTable_theirIp_V_addr_1 = getelementptr i32 %reverseLookupTable_theirIp_V, i64 0, i64 %zext_ln587_12" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:276]   --->   Operation 51 'getelementptr' 'reverseLookupTable_theirIp_V_addr_1' <Predicate = (!tmp_i & tmp_i_320)> <Delay = 0.00>
+ST_5 : Operation 52 [2/2] (1.20ns)   --->   "%releaseTuple_theirIp_V = load i10 %reverseLookupTable_theirIp_V_addr_1" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:276]   --->   Operation 52 'load' 'releaseTuple_theirIp_V' <Predicate = (!tmp_i & tmp_i_320)> <Delay = 1.20> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.20> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1000> <RAM>
+ST_5 : Operation 53 [1/2] (1.17ns)   --->   "%releaseTuple_myPort_V = load i10 %reverseLookupTable_myPort_V_addr_1" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:276]   --->   Operation 53 'load' 'releaseTuple_myPort_V' <Predicate = (!tmp_i & tmp_i_320)> <Delay = 1.17> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1000> <RAM>
+ST_5 : Operation 54 [1/1] (0.00ns)   --->   "%reverseLookupTable_theirPort_V_addr_1 = getelementptr i16 %reverseLookupTable_theirPort_V, i64 0, i64 %zext_ln587_12" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:276]   --->   Operation 54 'getelementptr' 'reverseLookupTable_theirPort_V_addr_1' <Predicate = (!tmp_i & tmp_i_320)> <Delay = 0.00>
+ST_5 : Operation 55 [2/2] (1.17ns)   --->   "%releaseTuple_theirPort_V = load i10 %reverseLookupTable_theirPort_V_addr_1" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:276]   --->   Operation 55 'load' 'releaseTuple_theirPort_V' <Predicate = (!tmp_i & tmp_i_320)> <Delay = 1.17> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1000> <RAM>
+
+State 6 <SV = 5> <Delay = 2.33>
+ST_6 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %myIpAddress, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 57 [1/1] (1.16ns)   --->   "%toeTuple_srcIp_V = read i32 @_ssdm_op_Read.ap_fifo.i32P0A, i32 %myIpAddress"   --->   Operation 57 'read' 'toeTuple_srcIp_V' <Predicate = true> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.46> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_6 : Operation 58 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %myIpAddress_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 58 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 59 [1/1] (1.16ns)   --->   "%write_ln243 = write void @_ssdm_op_Write.ap_fifo.i32P0A, i32 %myIpAddress_c, i32 %toeTuple_srcIp_V" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:243]   --->   Operation 59 'write' 'write_ln243' <Predicate = true> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.43> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 14> <FIFO>
+ST_6 : Operation 60 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i96 %reverseLupInsertFifo, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 60 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 61 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i96 %reverseLupInsertFifo, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 61 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i96 %reverseLupInsertFifo, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 63 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %sLookup2portTable_releasePort, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 63 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 64 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %sLookup2portTable_releasePort, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 64 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 65 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %sLookup2portTable_releasePort, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 65 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 66 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i96 %sLookup2txEng_rev_rsp, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 66 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 67 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i96 %sLookup2txEng_rev_rsp, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 67 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 68 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i96 %sLookup2txEng_rev_rsp, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 68 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 69 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i160 %sessionDelete_req, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 69 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 70 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i160 %sessionDelete_req, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 70 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 71 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i160 %sessionDelete_req, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 71 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 72 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stateTable2sLookup_releaseSession, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 72 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 73 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stateTable2sLookup_releaseSession, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 73 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 74 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stateTable2sLookup_releaseSession, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 74 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 75 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %txEng2sLookup_rev_req, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 75 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 76 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %txEng2sLookup_rev_req, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 76 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 77 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %txEng2sLookup_rev_req, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 77 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 78 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i96 %sLookup2txEng_rev_rsp, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 78 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 79 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %txEng2sLookup_rev_req, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 79 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 80 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %sLookup2portTable_releasePort, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 80 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 81 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stateTable2sLookup_releaseSession, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 81 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 82 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i160 %sessionDelete_req, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 82 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 83 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i96 %reverseLupInsertFifo, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 83 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 84 [1/1] (0.00ns)   --->   "%specpipeline_ln243 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_3" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:243]   --->   Operation 84 'specpipeline' 'specpipeline_ln243' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 85 [1/1] (0.00ns)   --->   "%specmemcore_ln254 = specmemcore void @_ssdm_op_SpecMemCore, i32 %reverseLookupTable_theirIp_V, i64 666, i64 30, i64 18446744073709551615" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:254]   --->   Operation 85 'specmemcore' 'specmemcore_ln254' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 86 [1/1] (0.00ns)   --->   "%specmemcore_ln254 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reverseLookupTable_myPort_V, i64 666, i64 30, i64 18446744073709551615" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:254]   --->   Operation 86 'specmemcore' 'specmemcore_ln254' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 87 [1/1] (0.00ns)   --->   "%specmemcore_ln254 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reverseLookupTable_theirPort_V, i64 666, i64 30, i64 18446744073709551615" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:254]   --->   Operation 87 'specmemcore' 'specmemcore_ln254' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 88 [1/1] (0.00ns)   --->   "%p_s = bitconcatenate i96 @_ssdm_op_BitConcatenate.i96.i16.i16.i32.i32, i16 %toeTuple_dstPort_V, i16 %toeTuple_srcPort_V, i32 %toeTuple_dstIp_V, i32 %toeTuple_srcIp_V" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 88 'bitconcatenate' 'p_s' <Predicate = (!tmp_i & !tmp_i_320 & tmp_22_i)> <Delay = 0.00>
+ST_6 : Operation 89 [1/1] (1.16ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i96P0A, i96 %sLookup2txEng_rev_rsp, i96 %p_s" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 89 'write' 'write_ln173' <Predicate = (!tmp_i & !tmp_i_320 & tmp_22_i)> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.41> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 96> <Depth = 4> <FIFO>
+ST_6 : Operation 90 [1/1] (0.00ns)   --->   "%br_ln292 = br void %._crit_edge1.i" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:292]   --->   Operation 90 'br' 'br_ln292' <Predicate = (!tmp_i & !tmp_i_320 & tmp_22_i)> <Delay = 0.00>
+ST_6 : Operation 91 [1/2] (1.20ns)   --->   "%releaseTuple_theirIp_V = load i10 %reverseLookupTable_theirIp_V_addr_1" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:276]   --->   Operation 91 'load' 'releaseTuple_theirIp_V' <Predicate = (!tmp_i & tmp_i_320)> <Delay = 1.20> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.20> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1000> <RAM>
+ST_6 : Operation 92 [1/2] (1.17ns)   --->   "%releaseTuple_theirPort_V = load i10 %reverseLookupTable_theirPort_V_addr_1" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:276]   --->   Operation 92 'load' 'releaseTuple_theirPort_V' <Predicate = (!tmp_i & tmp_i_320)> <Delay = 1.17> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1000> <RAM>
+ST_6 : Operation 93 [1/1] (1.16ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i16P0A, i16 %sLookup2portTable_releasePort, i16 %releaseTuple_myPort_V" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 93 'write' 'write_ln173' <Predicate = (!tmp_i & tmp_i_320 & tupleValid_load)> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.33> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 4> <FIFO>
+ST_6 : Operation 94 [1/1] (0.00ns)   --->   "%or_ln = bitconcatenate i112 @_ssdm_op_BitConcatenate.i112.i16.i16.i16.i32.i32, i16 %sessionID_V, i16 %releaseTuple_theirPort_V, i16 %releaseTuple_myPort_V, i32 %releaseTuple_theirIp_V, i32 0" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 94 'bitconcatenate' 'or_ln' <Predicate = (!tmp_i & tmp_i_320 & tupleValid_load)> <Delay = 0.00>
+ST_6 : Operation 95 [1/1] (0.00ns)   --->   "%or_ln173 = or i112 %or_ln, i112 1" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 95 'or' 'or_ln173' <Predicate = (!tmp_i & tmp_i_320 & tupleValid_load)> <Delay = 0.00>
+ST_6 : Operation 96 [1/1] (0.00ns)   --->   "%zext_ln173 = zext i112 %or_ln173" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 96 'zext' 'zext_ln173' <Predicate = (!tmp_i & tmp_i_320 & tupleValid_load)> <Delay = 0.00>
+ST_6 : Operation 97 [1/1] (0.98ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i160P0A, i160 %sessionDelete_req, i160 %zext_ln173" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 97 'write' 'write_ln173' <Predicate = (!tmp_i & tmp_i_320 & tupleValid_load)> <Delay = 0.98> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.98> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 160> <Depth = 4> <FIFO>
+ST_6 : Operation 98 [1/1] (0.00ns)   --->   "%br_ln281 = br void %._crit_edge.i" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/session_lookup_controller/session_lookup_controller.cpp:281]   --->   Operation 98 'br' 'br_ln281' <Predicate = (!tmp_i & tmp_i_320 & tupleValid_load)> <Delay = 0.00>
+ST_6 : Operation 99 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 99 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 1
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ myIpAddress]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ myIpAddress_c]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ reverseLupInsertFifo]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ reverseLookupTable_theirIp_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; MemPort=[21]; IO mode=ap_memory:ce=0
+Port [ reverseLookupTable_myPort_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ reverseLookupTable_theirPort_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; MemPort=[21]; IO mode=ap_memory:ce=0
+Port [ tupleValid]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ stateTable2sLookup_releaseSession]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ sLookup2portTable_releasePort]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ sessionDelete_req]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ txEng2sLookup_rev_req]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ sLookup2txEng_rev_rsp]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+tmp_i                                 (nbreadreq     ) [ 0111111]
+br_ln265                              (br            ) [ 0000000]
+br_ln0                                (br            ) [ 0000000]
+reverseLupInsertFifo_read             (read          ) [ 0000000]
+insert_key_V                          (trunc         ) [ 0110000]
+insert_value_theirIp_V                (partselect    ) [ 0111100]
+insert_value_myPort_V                 (partselect    ) [ 0111100]
+insert_value_theirPort_V              (partselect    ) [ 0111100]
+tmp_i_320                             (nbreadreq     ) [ 0111111]
+br_ln273                              (br            ) [ 0000000]
+br_ln0                                (br            ) [ 0000000]
+sessionID_V                           (read          ) [ 0101111]
+zext_ln587_12                         (zext          ) [ 0101110]
+tupleValid_addr_1                     (getelementptr ) [ 0101000]
+store_ln282                           (store         ) [ 0000000]
+br_ln283                              (br            ) [ 0000000]
+zext_ln587                            (zext          ) [ 0101100]
+tupleValid_addr                       (getelementptr ) [ 0000000]
+store_ln269                           (store         ) [ 0000000]
+tmp_22_i                              (nbreadreq     ) [ 0101111]
+br_ln284                              (br            ) [ 0000000]
+sessionID_V_1                         (read          ) [ 0100100]
+tupleValid_load                       (load          ) [ 0100111]
+br_ln277                              (br            ) [ 0000000]
+zext_ln587_13                         (zext          ) [ 0000000]
+reverseLookupTable_theirIp_V_addr_2   (getelementptr ) [ 0100010]
+reverseLookupTable_myPort_V_addr_2    (getelementptr ) [ 0100010]
+reverseLookupTable_theirPort_V_addr_2 (getelementptr ) [ 0100010]
+reverseLookupTable_myPort_V_addr_1    (getelementptr ) [ 0100010]
+reverseLookupTable_theirIp_V_addr     (getelementptr ) [ 0000000]
+store_ln268                           (store         ) [ 0000000]
+reverseLookupTable_myPort_V_addr      (getelementptr ) [ 0000000]
+store_ln268                           (store         ) [ 0000000]
+reverseLookupTable_theirPort_V_addr   (getelementptr ) [ 0000000]
+store_ln268                           (store         ) [ 0000000]
+br_ln271                              (br            ) [ 0000000]
+toeTuple_dstIp_V                      (load          ) [ 0100001]
+toeTuple_srcPort_V                    (load          ) [ 0100001]
+toeTuple_dstPort_V                    (load          ) [ 0100001]
+reverseLookupTable_theirIp_V_addr_1   (getelementptr ) [ 0100001]
+releaseTuple_myPort_V                 (load          ) [ 0100001]
+reverseLookupTable_theirPort_V_addr_1 (getelementptr ) [ 0100001]
+specinterface_ln0                     (specinterface ) [ 0000000]
+toeTuple_srcIp_V                      (read          ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+write_ln243                           (write         ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specinterface_ln0                     (specinterface ) [ 0000000]
+specpipeline_ln243                    (specpipeline  ) [ 0000000]
+specmemcore_ln254                     (specmemcore   ) [ 0000000]
+specmemcore_ln254                     (specmemcore   ) [ 0000000]
+specmemcore_ln254                     (specmemcore   ) [ 0000000]
+p_s                                   (bitconcatenate) [ 0000000]
+write_ln173                           (write         ) [ 0000000]
+br_ln292                              (br            ) [ 0000000]
+releaseTuple_theirIp_V                (load          ) [ 0000000]
+releaseTuple_theirPort_V              (load          ) [ 0000000]
+write_ln173                           (write         ) [ 0000000]
+or_ln                                 (bitconcatenate) [ 0000000]
+or_ln173                              (or            ) [ 0000000]
+zext_ln173                            (zext          ) [ 0000000]
+write_ln173                           (write         ) [ 0000000]
+br_ln281                              (br            ) [ 0000000]
+ret_ln0                               (ret           ) [ 0000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="myIpAddress">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="myIpAddress"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="myIpAddress_c">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="myIpAddress_c"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="reverseLupInsertFifo">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverseLupInsertFifo"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="reverseLookupTable_theirIp_V">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverseLookupTable_theirIp_V"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="reverseLookupTable_myPort_V">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverseLookupTable_myPort_V"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="reverseLookupTable_theirPort_V">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverseLookupTable_theirPort_V"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="tupleValid">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="tupleValid"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="stateTable2sLookup_releaseSession">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stateTable2sLookup_releaseSession"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="sLookup2portTable_releasePort">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="sLookup2portTable_releasePort"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="sessionDelete_req">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="sessionDelete_req"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="txEng2sLookup_rev_req">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="txEng2sLookup_rev_req"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1000" name="sLookup2txEng_rev_rsp">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="sLookup2txEng_rev_rsp"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_NbReadReq.ap_fifo.i96P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i96P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i32.i96.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i16.i96.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_NbReadReq.ap_fifo.i16P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i16P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1001" name="const_54">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1001" name="const_56">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1001" name="const_58">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ap_fifo_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1001" name="const_60">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1001" name="const_62">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1001" name="const_64">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1001" name="const_66">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1001" name="const_68">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ScalarProp_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1001" name="const_70">
+<pin_list>
+<pin id="71" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.i32P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="72" class="1001" name="const_72">
+<pin_list>
+<pin id="73" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.i32P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="74" class="1001" name="const_74">
+<pin_list>
+<pin id="75" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="76" class="1001" name="const_76">
+<pin_list>
+<pin id="77" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="78" class="1001" name="const_78">
+<pin_list>
+<pin id="79" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="80" class="1001" name="const_80">
+<pin_list>
+<pin id="81" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecMemCore"/></StgValue>
+</bind>
+</comp>
+
+<comp id="82" class="1001" name="const_82">
+<pin_list>
+<pin id="83" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="84" class="1001" name="const_84">
+<pin_list>
+<pin id="85" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="86" class="1001" name="const_86">
+<pin_list>
+<pin id="87" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="88" class="1001" name="const_88">
+<pin_list>
+<pin id="89" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i96.i16.i16.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="90" class="1001" name="const_90">
+<pin_list>
+<pin id="91" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i96P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="92" class="1001" name="const_92">
+<pin_list>
+<pin id="93" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i16P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="94" class="1001" name="const_94">
+<pin_list>
+<pin id="95" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i112.i16.i16.i16.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="96" class="1001" name="const_96">
+<pin_list>
+<pin id="97" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="98" class="1001" name="const_98">
+<pin_list>
+<pin id="99" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i160P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="100" class="1004" name="tmp_i_nbreadreq_fu_100">
+<pin_list>
+<pin id="101" dir="0" index="0" bw="1" slack="0"/>
+<pin id="102" dir="0" index="1" bw="96" slack="0"/>
+<pin id="103" dir="0" index="2" bw="1" slack="0"/>
+<pin id="104" dir="1" index="3" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="nbreadreq(1156) " fcode="nbreadreq"/>
+<opset="tmp_i/1 "/>
+</bind>
+</comp>
+
+<comp id="108" class="1004" name="reverseLupInsertFifo_read_read_fu_108">
+<pin_list>
+<pin id="109" dir="0" index="0" bw="96" slack="0"/>
+<pin id="110" dir="0" index="1" bw="96" slack="0"/>
+<pin id="111" dir="1" index="2" bw="96" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="reverseLupInsertFifo_read/1 "/>
+</bind>
+</comp>
+
+<comp id="114" class="1004" name="tmp_i_320_nbreadreq_fu_114">
+<pin_list>
+<pin id="115" dir="0" index="0" bw="1" slack="0"/>
+<pin id="116" dir="0" index="1" bw="16" slack="0"/>
+<pin id="117" dir="0" index="2" bw="1" slack="0"/>
+<pin id="118" dir="1" index="3" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="nbreadreq(1156) " fcode="nbreadreq"/>
+<opset="tmp_i_320/2 "/>
+</bind>
+</comp>
+
+<comp id="122" class="1004" name="sessionID_V_read_fu_122">
+<pin_list>
+<pin id="123" dir="0" index="0" bw="16" slack="0"/>
+<pin id="124" dir="0" index="1" bw="16" slack="0"/>
+<pin id="125" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="sessionID_V/2 "/>
+</bind>
+</comp>
+
+<comp id="128" class="1004" name="tmp_22_i_nbreadreq_fu_128">
+<pin_list>
+<pin id="129" dir="0" index="0" bw="1" slack="0"/>
+<pin id="130" dir="0" index="1" bw="16" slack="0"/>
+<pin id="131" dir="0" index="2" bw="1" slack="0"/>
+<pin id="132" dir="1" index="3" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="nbreadreq(1156) " fcode="nbreadreq"/>
+<opset="tmp_22_i/3 "/>
+</bind>
+</comp>
+
+<comp id="136" class="1004" name="sessionID_V_1_read_fu_136">
+<pin_list>
+<pin id="137" dir="0" index="0" bw="16" slack="0"/>
+<pin id="138" dir="0" index="1" bw="16" slack="0"/>
+<pin id="139" dir="1" index="2" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="sessionID_V_1/3 "/>
+</bind>
+</comp>
+
+<comp id="142" class="1004" name="toeTuple_srcIp_V_read_fu_142">
+<pin_list>
+<pin id="143" dir="0" index="0" bw="32" slack="0"/>
+<pin id="144" dir="0" index="1" bw="32" slack="0"/>
+<pin id="145" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="toeTuple_srcIp_V/6 "/>
+</bind>
+</comp>
+
+<comp id="148" class="1004" name="write_ln243_write_fu_148">
+<pin_list>
+<pin id="149" dir="0" index="0" bw="0" slack="0"/>
+<pin id="150" dir="0" index="1" bw="32" slack="0"/>
+<pin id="151" dir="0" index="2" bw="32" slack="0"/>
+<pin id="152" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln243/6 "/>
+</bind>
+</comp>
+
+<comp id="156" class="1004" name="write_ln173_write_fu_156">
+<pin_list>
+<pin id="157" dir="0" index="0" bw="0" slack="0"/>
+<pin id="158" dir="0" index="1" bw="96" slack="0"/>
+<pin id="159" dir="0" index="2" bw="96" slack="0"/>
+<pin id="160" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln173/6 "/>
+</bind>
+</comp>
+
+<comp id="163" class="1004" name="write_ln173_write_fu_163">
+<pin_list>
+<pin id="164" dir="0" index="0" bw="0" slack="0"/>
+<pin id="165" dir="0" index="1" bw="16" slack="0"/>
+<pin id="166" dir="0" index="2" bw="16" slack="1"/>
+<pin id="167" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln173/6 "/>
+</bind>
+</comp>
+
+<comp id="170" class="1004" name="write_ln173_write_fu_170">
+<pin_list>
+<pin id="171" dir="0" index="0" bw="0" slack="0"/>
+<pin id="172" dir="0" index="1" bw="160" slack="0"/>
+<pin id="173" dir="0" index="2" bw="112" slack="0"/>
+<pin id="174" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln173/6 "/>
+</bind>
+</comp>
+
+<comp id="177" class="1004" name="tupleValid_addr_1_gep_fu_177">
+<pin_list>
+<pin id="178" dir="0" index="0" bw="1" slack="0"/>
+<pin id="179" dir="0" index="1" bw="1" slack="0"/>
+<pin id="180" dir="0" index="2" bw="16" slack="0"/>
+<pin id="181" dir="1" index="3" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="tupleValid_addr_1/2 "/>
+</bind>
+</comp>
+
+<comp id="184" class="1004" name="grp_access_fu_184">
+<pin_list>
+<pin id="185" dir="0" index="0" bw="10" slack="0"/>
+<pin id="186" dir="0" index="1" bw="1" slack="0"/>
+<pin id="187" dir="0" index="2" bw="0" slack="2147483647"/>
+<pin id="188" dir="1" index="3" bw="1" slack="3"/>
+</pin_list>
+<bind>
+<opcode="load(27) store(28) " fcode="store"/>
+<opset="tupleValid_load/2 store_ln282/2 store_ln269/2 "/>
+</bind>
+</comp>
+
+<comp id="191" class="1004" name="tupleValid_addr_gep_fu_191">
+<pin_list>
+<pin id="192" dir="0" index="0" bw="1" slack="0"/>
+<pin id="193" dir="0" index="1" bw="1" slack="0"/>
+<pin id="194" dir="0" index="2" bw="10" slack="0"/>
+<pin id="195" dir="1" index="3" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="tupleValid_addr/2 "/>
+</bind>
+</comp>
+
+<comp id="200" class="1004" name="reverseLookupTable_theirIp_V_addr_2_gep_fu_200">
+<pin_list>
+<pin id="201" dir="0" index="0" bw="32" slack="0"/>
+<pin id="202" dir="0" index="1" bw="1" slack="0"/>
+<pin id="203" dir="0" index="2" bw="16" slack="0"/>
+<pin id="204" dir="1" index="3" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="reverseLookupTable_theirIp_V_addr_2/4 "/>
+</bind>
+</comp>
+
+<comp id="207" class="1004" name="grp_access_fu_207">
+<pin_list>
+<pin id="208" dir="0" index="0" bw="10" slack="0"/>
+<pin id="209" dir="0" index="1" bw="32" slack="3"/>
+<pin id="210" dir="0" index="2" bw="0" slack="0"/>
+<pin id="278" dir="0" index="4" bw="10" slack="2147483647"/>
+<pin id="279" dir="0" index="5" bw="32" slack="2147483647"/>
+<pin id="280" dir="0" index="6" bw="0" slack="2147483647"/>
+<pin id="211" dir="1" index="3" bw="32" slack="1"/>
+<pin id="281" dir="1" index="7" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) store(28) " fcode="load"/>
+<opset="toeTuple_dstIp_V/4 store_ln268/4 releaseTuple_theirIp_V/5 "/>
+</bind>
+</comp>
+
+<comp id="213" class="1004" name="reverseLookupTable_myPort_V_addr_2_gep_fu_213">
+<pin_list>
+<pin id="214" dir="0" index="0" bw="16" slack="0"/>
+<pin id="215" dir="0" index="1" bw="1" slack="0"/>
+<pin id="216" dir="0" index="2" bw="16" slack="0"/>
+<pin id="217" dir="1" index="3" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="reverseLookupTable_myPort_V_addr_2/4 "/>
+</bind>
+</comp>
+
+<comp id="220" class="1004" name="grp_access_fu_220">
+<pin_list>
+<pin id="221" dir="0" index="0" bw="10" slack="0"/>
+<pin id="222" dir="0" index="1" bw="16" slack="3"/>
+<pin id="223" dir="0" index="2" bw="0" slack="2147483647"/>
+<pin id="224" dir="1" index="3" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="load(27) store(28) " fcode="store"/>
+<opset="toeTuple_srcPort_V/4 releaseTuple_myPort_V/4 store_ln268/4 "/>
+</bind>
+</comp>
+
+<comp id="226" class="1004" name="reverseLookupTable_theirPort_V_addr_2_gep_fu_226">
+<pin_list>
+<pin id="227" dir="0" index="0" bw="16" slack="0"/>
+<pin id="228" dir="0" index="1" bw="1" slack="0"/>
+<pin id="229" dir="0" index="2" bw="16" slack="0"/>
+<pin id="230" dir="1" index="3" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="reverseLookupTable_theirPort_V_addr_2/4 "/>
+</bind>
+</comp>
+
+<comp id="233" class="1004" name="grp_access_fu_233">
+<pin_list>
+<pin id="234" dir="0" index="0" bw="10" slack="0"/>
+<pin id="235" dir="0" index="1" bw="16" slack="3"/>
+<pin id="236" dir="0" index="2" bw="0" slack="0"/>
+<pin id="290" dir="0" index="4" bw="10" slack="2147483647"/>
+<pin id="291" dir="0" index="5" bw="16" slack="2147483647"/>
+<pin id="292" dir="0" index="6" bw="0" slack="2147483647"/>
+<pin id="237" dir="1" index="3" bw="16" slack="1"/>
+<pin id="293" dir="1" index="7" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) store(28) " fcode="load"/>
+<opset="toeTuple_dstPort_V/4 store_ln268/4 releaseTuple_theirPort_V/5 "/>
+</bind>
+</comp>
+
+<comp id="239" class="1004" name="reverseLookupTable_myPort_V_addr_1_gep_fu_239">
+<pin_list>
+<pin id="240" dir="0" index="0" bw="16" slack="0"/>
+<pin id="241" dir="0" index="1" bw="1" slack="0"/>
+<pin id="242" dir="0" index="2" bw="16" slack="2"/>
+<pin id="243" dir="1" index="3" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="reverseLookupTable_myPort_V_addr_1/4 "/>
+</bind>
+</comp>
+
+<comp id="247" class="1004" name="reverseLookupTable_theirIp_V_addr_gep_fu_247">
+<pin_list>
+<pin id="248" dir="0" index="0" bw="32" slack="0"/>
+<pin id="249" dir="0" index="1" bw="1" slack="0"/>
+<pin id="250" dir="0" index="2" bw="10" slack="2"/>
+<pin id="251" dir="1" index="3" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="reverseLookupTable_theirIp_V_addr/4 "/>
+</bind>
+</comp>
+
+<comp id="255" class="1004" name="reverseLookupTable_myPort_V_addr_gep_fu_255">
+<pin_list>
+<pin id="256" dir="0" index="0" bw="16" slack="0"/>
+<pin id="257" dir="0" index="1" bw="1" slack="0"/>
+<pin id="258" dir="0" index="2" bw="10" slack="2"/>
+<pin id="259" dir="1" index="3" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="reverseLookupTable_myPort_V_addr/4 "/>
+</bind>
+</comp>
+
+<comp id="263" class="1004" name="reverseLookupTable_theirPort_V_addr_gep_fu_263">
+<pin_list>
+<pin id="264" dir="0" index="0" bw="16" slack="0"/>
+<pin id="265" dir="0" index="1" bw="1" slack="0"/>
+<pin id="266" dir="0" index="2" bw="10" slack="2"/>
+<pin id="267" dir="1" index="3" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="reverseLookupTable_theirPort_V_addr/4 "/>
+</bind>
+</comp>
+
+<comp id="271" class="1004" name="reverseLookupTable_theirIp_V_addr_1_gep_fu_271">
+<pin_list>
+<pin id="272" dir="0" index="0" bw="32" slack="0"/>
+<pin id="273" dir="0" index="1" bw="1" slack="0"/>
+<pin id="274" dir="0" index="2" bw="16" slack="3"/>
+<pin id="275" dir="1" index="3" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="reverseLookupTable_theirIp_V_addr_1/5 "/>
+</bind>
+</comp>
+
+<comp id="283" class="1004" name="reverseLookupTable_theirPort_V_addr_1_gep_fu_283">
+<pin_list>
+<pin id="284" dir="0" index="0" bw="16" slack="0"/>
+<pin id="285" dir="0" index="1" bw="1" slack="0"/>
+<pin id="286" dir="0" index="2" bw="16" slack="3"/>
+<pin id="287" dir="1" index="3" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="reverseLookupTable_theirPort_V_addr_1/5 "/>
+</bind>
+</comp>
+
+<comp id="295" class="1005" name="reg_295">
+<pin_list>
+<pin id="296" dir="0" index="0" bw="16" slack="1"/>
+<pin id="297" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="toeTuple_srcPort_V releaseTuple_myPort_V "/>
+</bind>
+</comp>
+
+<comp id="300" class="1004" name="insert_key_V_fu_300">
+<pin_list>
+<pin id="301" dir="0" index="0" bw="96" slack="0"/>
+<pin id="302" dir="1" index="1" bw="10" slack="1"/>
+</pin_list>
+<bind>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="insert_key_V/1 "/>
+</bind>
+</comp>
+
+<comp id="304" class="1004" name="insert_value_theirIp_V_fu_304">
+<pin_list>
+<pin id="305" dir="0" index="0" bw="32" slack="0"/>
+<pin id="306" dir="0" index="1" bw="96" slack="0"/>
+<pin id="307" dir="0" index="2" bw="7" slack="0"/>
+<pin id="308" dir="0" index="3" bw="7" slack="0"/>
+<pin id="309" dir="1" index="4" bw="32" slack="3"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="insert_value_theirIp_V/1 "/>
+</bind>
+</comp>
+
+<comp id="314" class="1004" name="insert_value_myPort_V_fu_314">
+<pin_list>
+<pin id="315" dir="0" index="0" bw="16" slack="0"/>
+<pin id="316" dir="0" index="1" bw="96" slack="0"/>
+<pin id="317" dir="0" index="2" bw="8" slack="0"/>
+<pin id="318" dir="0" index="3" bw="8" slack="0"/>
+<pin id="319" dir="1" index="4" bw="16" slack="3"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="insert_value_myPort_V/1 "/>
+</bind>
+</comp>
+
+<comp id="324" class="1004" name="insert_value_theirPort_V_fu_324">
+<pin_list>
+<pin id="325" dir="0" index="0" bw="16" slack="0"/>
+<pin id="326" dir="0" index="1" bw="96" slack="0"/>
+<pin id="327" dir="0" index="2" bw="8" slack="0"/>
+<pin id="328" dir="0" index="3" bw="8" slack="0"/>
+<pin id="329" dir="1" index="4" bw="16" slack="3"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="insert_value_theirPort_V/1 "/>
+</bind>
+</comp>
+
+<comp id="334" class="1004" name="zext_ln587_12_fu_334">
+<pin_list>
+<pin id="335" dir="0" index="0" bw="16" slack="0"/>
+<pin id="336" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln587_12/2 "/>
+</bind>
+</comp>
+
+<comp id="339" class="1004" name="zext_ln587_fu_339">
+<pin_list>
+<pin id="340" dir="0" index="0" bw="10" slack="1"/>
+<pin id="341" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln587/2 "/>
+</bind>
+</comp>
+
+<comp id="343" class="1004" name="zext_ln587_13_fu_343">
+<pin_list>
+<pin id="344" dir="0" index="0" bw="16" slack="1"/>
+<pin id="345" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln587_13/4 "/>
+</bind>
+</comp>
+
+<comp id="349" class="1004" name="p_s_fu_349">
+<pin_list>
+<pin id="350" dir="0" index="0" bw="96" slack="0"/>
+<pin id="351" dir="0" index="1" bw="16" slack="1"/>
+<pin id="352" dir="0" index="2" bw="16" slack="1"/>
+<pin id="353" dir="0" index="3" bw="32" slack="1"/>
+<pin id="354" dir="0" index="4" bw="32" slack="0"/>
+<pin id="355" dir="1" index="5" bw="96" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="p_s/6 "/>
+</bind>
+</comp>
+
+<comp id="360" class="1004" name="or_ln_fu_360">
+<pin_list>
+<pin id="361" dir="0" index="0" bw="112" slack="0"/>
+<pin id="362" dir="0" index="1" bw="16" slack="4"/>
+<pin id="363" dir="0" index="2" bw="16" slack="0"/>
+<pin id="364" dir="0" index="3" bw="16" slack="1"/>
+<pin id="365" dir="0" index="4" bw="32" slack="0"/>
+<pin id="366" dir="0" index="5" bw="1" slack="0"/>
+<pin id="367" dir="1" index="6" bw="112" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="or_ln/6 "/>
+</bind>
+</comp>
+
+<comp id="373" class="1004" name="or_ln173_fu_373">
+<pin_list>
+<pin id="374" dir="0" index="0" bw="112" slack="0"/>
+<pin id="375" dir="0" index="1" bw="112" slack="0"/>
+<pin id="376" dir="1" index="2" bw="112" slack="0"/>
+</pin_list>
+<bind>
+<opcode="or(24) " fcode="or"/>
+<opset="or_ln173/6 "/>
+</bind>
+</comp>
+
+<comp id="379" class="1004" name="zext_ln173_fu_379">
+<pin_list>
+<pin id="380" dir="0" index="0" bw="112" slack="0"/>
+<pin id="381" dir="1" index="1" bw="160" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln173/6 "/>
+</bind>
+</comp>
+
+<comp id="384" class="1005" name="tmp_i_reg_384">
+<pin_list>
+<pin id="385" dir="0" index="0" bw="1" slack="1"/>
+<pin id="386" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="tmp_i "/>
+</bind>
+</comp>
+
+<comp id="388" class="1005" name="insert_key_V_reg_388">
+<pin_list>
+<pin id="389" dir="0" index="0" bw="10" slack="1"/>
+<pin id="390" dir="1" index="1" bw="10" slack="1"/>
+</pin_list>
+<bind>
+<opset="insert_key_V "/>
+</bind>
+</comp>
+
+<comp id="393" class="1005" name="insert_value_theirIp_V_reg_393">
+<pin_list>
+<pin id="394" dir="0" index="0" bw="32" slack="3"/>
+<pin id="395" dir="1" index="1" bw="32" slack="3"/>
+</pin_list>
+<bind>
+<opset="insert_value_theirIp_V "/>
+</bind>
+</comp>
+
+<comp id="398" class="1005" name="insert_value_myPort_V_reg_398">
+<pin_list>
+<pin id="399" dir="0" index="0" bw="16" slack="3"/>
+<pin id="400" dir="1" index="1" bw="16" slack="3"/>
+</pin_list>
+<bind>
+<opset="insert_value_myPort_V "/>
+</bind>
+</comp>
+
+<comp id="403" class="1005" name="insert_value_theirPort_V_reg_403">
+<pin_list>
+<pin id="404" dir="0" index="0" bw="16" slack="3"/>
+<pin id="405" dir="1" index="1" bw="16" slack="3"/>
+</pin_list>
+<bind>
+<opset="insert_value_theirPort_V "/>
+</bind>
+</comp>
+
+<comp id="408" class="1005" name="tmp_i_320_reg_408">
+<pin_list>
+<pin id="409" dir="0" index="0" bw="1" slack="1"/>
+<pin id="410" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="tmp_i_320 "/>
+</bind>
+</comp>
+
+<comp id="412" class="1005" name="sessionID_V_reg_412">
+<pin_list>
+<pin id="413" dir="0" index="0" bw="16" slack="4"/>
+<pin id="414" dir="1" index="1" bw="16" slack="4"/>
+</pin_list>
+<bind>
+<opset="sessionID_V "/>
+</bind>
+</comp>
+
+<comp id="417" class="1005" name="zext_ln587_12_reg_417">
+<pin_list>
+<pin id="418" dir="0" index="0" bw="64" slack="2"/>
+<pin id="419" dir="1" index="1" bw="64" slack="2"/>
+</pin_list>
+<bind>
+<opset="zext_ln587_12 "/>
+</bind>
+</comp>
+
+<comp id="424" class="1005" name="tupleValid_addr_1_reg_424">
+<pin_list>
+<pin id="425" dir="0" index="0" bw="10" slack="1"/>
+<pin id="426" dir="1" index="1" bw="10" slack="1"/>
+</pin_list>
+<bind>
+<opset="tupleValid_addr_1 "/>
+</bind>
+</comp>
+
+<comp id="429" class="1005" name="zext_ln587_reg_429">
+<pin_list>
+<pin id="430" dir="0" index="0" bw="64" slack="2"/>
+<pin id="431" dir="1" index="1" bw="64" slack="2"/>
+</pin_list>
+<bind>
+<opset="zext_ln587 "/>
+</bind>
+</comp>
+
+<comp id="436" class="1005" name="tmp_22_i_reg_436">
+<pin_list>
+<pin id="437" dir="0" index="0" bw="1" slack="1"/>
+<pin id="438" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="tmp_22_i "/>
+</bind>
+</comp>
+
+<comp id="440" class="1005" name="sessionID_V_1_reg_440">
+<pin_list>
+<pin id="441" dir="0" index="0" bw="16" slack="1"/>
+<pin id="442" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="sessionID_V_1 "/>
+</bind>
+</comp>
+
+<comp id="445" class="1005" name="tupleValid_load_reg_445">
+<pin_list>
+<pin id="446" dir="0" index="0" bw="1" slack="3"/>
+<pin id="447" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="tupleValid_load "/>
+</bind>
+</comp>
+
+<comp id="449" class="1005" name="reverseLookupTable_theirIp_V_addr_2_reg_449">
+<pin_list>
+<pin id="450" dir="0" index="0" bw="10" slack="1"/>
+<pin id="451" dir="1" index="1" bw="10" slack="1"/>
+</pin_list>
+<bind>
+<opset="reverseLookupTable_theirIp_V_addr_2 "/>
+</bind>
+</comp>
+
+<comp id="454" class="1005" name="reverseLookupTable_myPort_V_addr_2_reg_454">
+<pin_list>
+<pin id="455" dir="0" index="0" bw="10" slack="1"/>
+<pin id="456" dir="1" index="1" bw="10" slack="1"/>
+</pin_list>
+<bind>
+<opset="reverseLookupTable_myPort_V_addr_2 "/>
+</bind>
+</comp>
+
+<comp id="459" class="1005" name="reverseLookupTable_theirPort_V_addr_2_reg_459">
+<pin_list>
+<pin id="460" dir="0" index="0" bw="10" slack="1"/>
+<pin id="461" dir="1" index="1" bw="10" slack="1"/>
+</pin_list>
+<bind>
+<opset="reverseLookupTable_theirPort_V_addr_2 "/>
+</bind>
+</comp>
+
+<comp id="464" class="1005" name="reverseLookupTable_myPort_V_addr_1_reg_464">
+<pin_list>
+<pin id="465" dir="0" index="0" bw="10" slack="1"/>
+<pin id="466" dir="1" index="1" bw="10" slack="1"/>
+</pin_list>
+<bind>
+<opset="reverseLookupTable_myPort_V_addr_1 "/>
+</bind>
+</comp>
+
+<comp id="469" class="1005" name="toeTuple_dstIp_V_reg_469">
+<pin_list>
+<pin id="470" dir="0" index="0" bw="32" slack="1"/>
+<pin id="471" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="toeTuple_dstIp_V "/>
+</bind>
+</comp>
+
+<comp id="474" class="1005" name="toeTuple_dstPort_V_reg_474">
+<pin_list>
+<pin id="475" dir="0" index="0" bw="16" slack="1"/>
+<pin id="476" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="toeTuple_dstPort_V "/>
+</bind>
+</comp>
+
+<comp id="479" class="1005" name="reverseLookupTable_theirIp_V_addr_1_reg_479">
+<pin_list>
+<pin id="480" dir="0" index="0" bw="10" slack="1"/>
+<pin id="481" dir="1" index="1" bw="10" slack="1"/>
+</pin_list>
+<bind>
+<opset="reverseLookupTable_theirIp_V_addr_1 "/>
+</bind>
+</comp>
+
+<comp id="484" class="1005" name="reverseLookupTable_theirPort_V_addr_1_reg_484">
+<pin_list>
+<pin id="485" dir="0" index="0" bw="10" slack="1"/>
+<pin id="486" dir="1" index="1" bw="10" slack="1"/>
+</pin_list>
+<bind>
+<opset="reverseLookupTable_theirPort_V_addr_1 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="105"><net_src comp="24" pin="0"/><net_sink comp="100" pin=0"/></net>
+
+<net id="106"><net_src comp="4" pin="0"/><net_sink comp="100" pin=1"/></net>
+
+<net id="107"><net_src comp="26" pin="0"/><net_sink comp="100" pin=2"/></net>
+
+<net id="112"><net_src comp="28" pin="0"/><net_sink comp="108" pin=0"/></net>
+
+<net id="113"><net_src comp="4" pin="0"/><net_sink comp="108" pin=1"/></net>
+
+<net id="119"><net_src comp="46" pin="0"/><net_sink comp="114" pin=0"/></net>
+
+<net id="120"><net_src comp="14" pin="0"/><net_sink comp="114" pin=1"/></net>
+
+<net id="121"><net_src comp="26" pin="0"/><net_sink comp="114" pin=2"/></net>
+
+<net id="126"><net_src comp="48" pin="0"/><net_sink comp="122" pin=0"/></net>
+
+<net id="127"><net_src comp="14" pin="0"/><net_sink comp="122" pin=1"/></net>
+
+<net id="133"><net_src comp="46" pin="0"/><net_sink comp="128" pin=0"/></net>
+
+<net id="134"><net_src comp="20" pin="0"/><net_sink comp="128" pin=1"/></net>
+
+<net id="135"><net_src comp="26" pin="0"/><net_sink comp="128" pin=2"/></net>
+
+<net id="140"><net_src comp="48" pin="0"/><net_sink comp="136" pin=0"/></net>
+
+<net id="141"><net_src comp="20" pin="0"/><net_sink comp="136" pin=1"/></net>
+
+<net id="146"><net_src comp="70" pin="0"/><net_sink comp="142" pin=0"/></net>
+
+<net id="147"><net_src comp="0" pin="0"/><net_sink comp="142" pin=1"/></net>
+
+<net id="153"><net_src comp="72" pin="0"/><net_sink comp="148" pin=0"/></net>
+
+<net id="154"><net_src comp="2" pin="0"/><net_sink comp="148" pin=1"/></net>
+
+<net id="155"><net_src comp="142" pin="2"/><net_sink comp="148" pin=2"/></net>
+
+<net id="161"><net_src comp="90" pin="0"/><net_sink comp="156" pin=0"/></net>
+
+<net id="162"><net_src comp="22" pin="0"/><net_sink comp="156" pin=1"/></net>
+
+<net id="168"><net_src comp="92" pin="0"/><net_sink comp="163" pin=0"/></net>
+
+<net id="169"><net_src comp="16" pin="0"/><net_sink comp="163" pin=1"/></net>
+
+<net id="175"><net_src comp="98" pin="0"/><net_sink comp="170" pin=0"/></net>
+
+<net id="176"><net_src comp="18" pin="0"/><net_sink comp="170" pin=1"/></net>
+
+<net id="182"><net_src comp="12" pin="0"/><net_sink comp="177" pin=0"/></net>
+
+<net id="183"><net_src comp="50" pin="0"/><net_sink comp="177" pin=1"/></net>
+
+<net id="189"><net_src comp="177" pin="3"/><net_sink comp="184" pin=0"/></net>
+
+<net id="190"><net_src comp="52" pin="0"/><net_sink comp="184" pin=1"/></net>
+
+<net id="196"><net_src comp="12" pin="0"/><net_sink comp="191" pin=0"/></net>
+
+<net id="197"><net_src comp="50" pin="0"/><net_sink comp="191" pin=1"/></net>
+
+<net id="198"><net_src comp="54" pin="0"/><net_sink comp="184" pin=1"/></net>
+
+<net id="199"><net_src comp="191" pin="3"/><net_sink comp="184" pin=0"/></net>
+
+<net id="205"><net_src comp="6" pin="0"/><net_sink comp="200" pin=0"/></net>
+
+<net id="206"><net_src comp="50" pin="0"/><net_sink comp="200" pin=1"/></net>
+
+<net id="212"><net_src comp="200" pin="3"/><net_sink comp="207" pin=0"/></net>
+
+<net id="218"><net_src comp="8" pin="0"/><net_sink comp="213" pin=0"/></net>
+
+<net id="219"><net_src comp="50" pin="0"/><net_sink comp="213" pin=1"/></net>
+
+<net id="225"><net_src comp="213" pin="3"/><net_sink comp="220" pin=0"/></net>
+
+<net id="231"><net_src comp="10" pin="0"/><net_sink comp="226" pin=0"/></net>
+
+<net id="232"><net_src comp="50" pin="0"/><net_sink comp="226" pin=1"/></net>
+
+<net id="238"><net_src comp="226" pin="3"/><net_sink comp="233" pin=0"/></net>
+
+<net id="244"><net_src comp="8" pin="0"/><net_sink comp="239" pin=0"/></net>
+
+<net id="245"><net_src comp="50" pin="0"/><net_sink comp="239" pin=1"/></net>
+
+<net id="246"><net_src comp="239" pin="3"/><net_sink comp="220" pin=0"/></net>
+
+<net id="252"><net_src comp="6" pin="0"/><net_sink comp="247" pin=0"/></net>
+
+<net id="253"><net_src comp="50" pin="0"/><net_sink comp="247" pin=1"/></net>
+
+<net id="254"><net_src comp="247" pin="3"/><net_sink comp="207" pin=0"/></net>
+
+<net id="260"><net_src comp="8" pin="0"/><net_sink comp="255" pin=0"/></net>
+
+<net id="261"><net_src comp="50" pin="0"/><net_sink comp="255" pin=1"/></net>
+
+<net id="262"><net_src comp="255" pin="3"/><net_sink comp="220" pin=0"/></net>
+
+<net id="268"><net_src comp="10" pin="0"/><net_sink comp="263" pin=0"/></net>
+
+<net id="269"><net_src comp="50" pin="0"/><net_sink comp="263" pin=1"/></net>
+
+<net id="270"><net_src comp="263" pin="3"/><net_sink comp="233" pin=0"/></net>
+
+<net id="276"><net_src comp="6" pin="0"/><net_sink comp="271" pin=0"/></net>
+
+<net id="277"><net_src comp="50" pin="0"/><net_sink comp="271" pin=1"/></net>
+
+<net id="282"><net_src comp="271" pin="3"/><net_sink comp="207" pin=2"/></net>
+
+<net id="288"><net_src comp="10" pin="0"/><net_sink comp="283" pin=0"/></net>
+
+<net id="289"><net_src comp="50" pin="0"/><net_sink comp="283" pin=1"/></net>
+
+<net id="294"><net_src comp="283" pin="3"/><net_sink comp="233" pin=2"/></net>
+
+<net id="298"><net_src comp="220" pin="3"/><net_sink comp="295" pin=0"/></net>
+
+<net id="299"><net_src comp="295" pin="1"/><net_sink comp="163" pin=2"/></net>
+
+<net id="303"><net_src comp="108" pin="2"/><net_sink comp="300" pin=0"/></net>
+
+<net id="310"><net_src comp="30" pin="0"/><net_sink comp="304" pin=0"/></net>
+
+<net id="311"><net_src comp="108" pin="2"/><net_sink comp="304" pin=1"/></net>
+
+<net id="312"><net_src comp="32" pin="0"/><net_sink comp="304" pin=2"/></net>
+
+<net id="313"><net_src comp="34" pin="0"/><net_sink comp="304" pin=3"/></net>
+
+<net id="320"><net_src comp="36" pin="0"/><net_sink comp="314" pin=0"/></net>
+
+<net id="321"><net_src comp="108" pin="2"/><net_sink comp="314" pin=1"/></net>
+
+<net id="322"><net_src comp="38" pin="0"/><net_sink comp="314" pin=2"/></net>
+
+<net id="323"><net_src comp="40" pin="0"/><net_sink comp="314" pin=3"/></net>
+
+<net id="330"><net_src comp="36" pin="0"/><net_sink comp="324" pin=0"/></net>
+
+<net id="331"><net_src comp="108" pin="2"/><net_sink comp="324" pin=1"/></net>
+
+<net id="332"><net_src comp="42" pin="0"/><net_sink comp="324" pin=2"/></net>
+
+<net id="333"><net_src comp="44" pin="0"/><net_sink comp="324" pin=3"/></net>
+
+<net id="337"><net_src comp="122" pin="2"/><net_sink comp="334" pin=0"/></net>
+
+<net id="338"><net_src comp="334" pin="1"/><net_sink comp="177" pin=2"/></net>
+
+<net id="342"><net_src comp="339" pin="1"/><net_sink comp="191" pin=2"/></net>
+
+<net id="346"><net_src comp="343" pin="1"/><net_sink comp="200" pin=2"/></net>
+
+<net id="347"><net_src comp="343" pin="1"/><net_sink comp="213" pin=2"/></net>
+
+<net id="348"><net_src comp="343" pin="1"/><net_sink comp="226" pin=2"/></net>
+
+<net id="356"><net_src comp="88" pin="0"/><net_sink comp="349" pin=0"/></net>
+
+<net id="357"><net_src comp="295" pin="1"/><net_sink comp="349" pin=2"/></net>
+
+<net id="358"><net_src comp="142" pin="2"/><net_sink comp="349" pin=4"/></net>
+
+<net id="359"><net_src comp="349" pin="5"/><net_sink comp="156" pin=2"/></net>
+
+<net id="368"><net_src comp="94" pin="0"/><net_sink comp="360" pin=0"/></net>
+
+<net id="369"><net_src comp="233" pin="7"/><net_sink comp="360" pin=2"/></net>
+
+<net id="370"><net_src comp="295" pin="1"/><net_sink comp="360" pin=3"/></net>
+
+<net id="371"><net_src comp="207" pin="7"/><net_sink comp="360" pin=4"/></net>
+
+<net id="372"><net_src comp="60" pin="0"/><net_sink comp="360" pin=5"/></net>
+
+<net id="377"><net_src comp="360" pin="6"/><net_sink comp="373" pin=0"/></net>
+
+<net id="378"><net_src comp="96" pin="0"/><net_sink comp="373" pin=1"/></net>
+
+<net id="382"><net_src comp="373" pin="2"/><net_sink comp="379" pin=0"/></net>
+
+<net id="383"><net_src comp="379" pin="1"/><net_sink comp="170" pin=2"/></net>
+
+<net id="387"><net_src comp="100" pin="3"/><net_sink comp="384" pin=0"/></net>
+
+<net id="391"><net_src comp="300" pin="1"/><net_sink comp="388" pin=0"/></net>
+
+<net id="392"><net_src comp="388" pin="1"/><net_sink comp="339" pin=0"/></net>
+
+<net id="396"><net_src comp="304" pin="4"/><net_sink comp="393" pin=0"/></net>
+
+<net id="397"><net_src comp="393" pin="1"/><net_sink comp="207" pin=1"/></net>
+
+<net id="401"><net_src comp="314" pin="4"/><net_sink comp="398" pin=0"/></net>
+
+<net id="402"><net_src comp="398" pin="1"/><net_sink comp="220" pin=1"/></net>
+
+<net id="406"><net_src comp="324" pin="4"/><net_sink comp="403" pin=0"/></net>
+
+<net id="407"><net_src comp="403" pin="1"/><net_sink comp="233" pin=1"/></net>
+
+<net id="411"><net_src comp="114" pin="3"/><net_sink comp="408" pin=0"/></net>
+
+<net id="415"><net_src comp="122" pin="2"/><net_sink comp="412" pin=0"/></net>
+
+<net id="416"><net_src comp="412" pin="1"/><net_sink comp="360" pin=1"/></net>
+
+<net id="420"><net_src comp="334" pin="1"/><net_sink comp="417" pin=0"/></net>
+
+<net id="421"><net_src comp="417" pin="1"/><net_sink comp="239" pin=2"/></net>
+
+<net id="422"><net_src comp="417" pin="1"/><net_sink comp="271" pin=2"/></net>
+
+<net id="423"><net_src comp="417" pin="1"/><net_sink comp="283" pin=2"/></net>
+
+<net id="427"><net_src comp="177" pin="3"/><net_sink comp="424" pin=0"/></net>
+
+<net id="428"><net_src comp="424" pin="1"/><net_sink comp="184" pin=0"/></net>
+
+<net id="432"><net_src comp="339" pin="1"/><net_sink comp="429" pin=0"/></net>
+
+<net id="433"><net_src comp="429" pin="1"/><net_sink comp="247" pin=2"/></net>
+
+<net id="434"><net_src comp="429" pin="1"/><net_sink comp="255" pin=2"/></net>
+
+<net id="435"><net_src comp="429" pin="1"/><net_sink comp="263" pin=2"/></net>
+
+<net id="439"><net_src comp="128" pin="3"/><net_sink comp="436" pin=0"/></net>
+
+<net id="443"><net_src comp="136" pin="2"/><net_sink comp="440" pin=0"/></net>
+
+<net id="444"><net_src comp="440" pin="1"/><net_sink comp="343" pin=0"/></net>
+
+<net id="448"><net_src comp="184" pin="3"/><net_sink comp="445" pin=0"/></net>
+
+<net id="452"><net_src comp="200" pin="3"/><net_sink comp="449" pin=0"/></net>
+
+<net id="453"><net_src comp="449" pin="1"/><net_sink comp="207" pin=0"/></net>
+
+<net id="457"><net_src comp="213" pin="3"/><net_sink comp="454" pin=0"/></net>
+
+<net id="458"><net_src comp="454" pin="1"/><net_sink comp="220" pin=0"/></net>
+
+<net id="462"><net_src comp="226" pin="3"/><net_sink comp="459" pin=0"/></net>
+
+<net id="463"><net_src comp="459" pin="1"/><net_sink comp="233" pin=0"/></net>
+
+<net id="467"><net_src comp="239" pin="3"/><net_sink comp="464" pin=0"/></net>
+
+<net id="468"><net_src comp="464" pin="1"/><net_sink comp="220" pin=0"/></net>
+
+<net id="472"><net_src comp="207" pin="3"/><net_sink comp="469" pin=0"/></net>
+
+<net id="473"><net_src comp="469" pin="1"/><net_sink comp="349" pin=3"/></net>
+
+<net id="477"><net_src comp="233" pin="3"/><net_sink comp="474" pin=0"/></net>
+
+<net id="478"><net_src comp="474" pin="1"/><net_sink comp="349" pin=1"/></net>
+
+<net id="482"><net_src comp="271" pin="3"/><net_sink comp="479" pin=0"/></net>
+
+<net id="483"><net_src comp="479" pin="1"/><net_sink comp="207" pin=2"/></net>
+
+<net id="487"><net_src comp="283" pin="3"/><net_sink comp="484" pin=0"/></net>
+
+<net id="488"><net_src comp="484" pin="1"/><net_sink comp="233" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: myIpAddress | {}
+	Port: myIpAddress_c | {6 }
+	Port: reverseLupInsertFifo | {}
+	Port: reverseLookupTable_theirIp_V | {4 }
+	Port: reverseLookupTable_myPort_V | {4 }
+	Port: reverseLookupTable_theirPort_V | {4 }
+	Port: tupleValid | {2 }
+	Port: stateTable2sLookup_releaseSession | {}
+	Port: sLookup2portTable_releasePort | {6 }
+	Port: sessionDelete_req | {6 }
+	Port: txEng2sLookup_rev_req | {}
+	Port: sLookup2txEng_rev_rsp | {6 }
+ - Input state : 
+	Port: reverseLookupTableInterface : myIpAddress | {6 }
+	Port: reverseLookupTableInterface : myIpAddress_c | {}
+	Port: reverseLookupTableInterface : reverseLupInsertFifo | {1 }
+	Port: reverseLookupTableInterface : reverseLookupTable_theirIp_V | {4 5 6 }
+	Port: reverseLookupTableInterface : reverseLookupTable_myPort_V | {4 5 }
+	Port: reverseLookupTableInterface : reverseLookupTable_theirPort_V | {4 5 6 }
+	Port: reverseLookupTableInterface : tupleValid | {2 3 }
+	Port: reverseLookupTableInterface : stateTable2sLookup_releaseSession | {2 }
+	Port: reverseLookupTableInterface : sLookup2portTable_releasePort | {}
+	Port: reverseLookupTableInterface : sessionDelete_req | {}
+	Port: reverseLookupTableInterface : txEng2sLookup_rev_req | {3 }
+	Port: reverseLookupTableInterface : sLookup2txEng_rev_rsp | {}
+  - Chain level:
+	State 1
+	State 2
+		tupleValid_addr_1 : 1
+		tupleValid_load : 2
+		store_ln282 : 2
+		tupleValid_addr : 1
+		store_ln269 : 2
+	State 3
+		br_ln277 : 1
+	State 4
+		reverseLookupTable_theirIp_V_addr_2 : 1
+		toeTuple_dstIp_V : 2
+		reverseLookupTable_myPort_V_addr_2 : 1
+		toeTuple_srcPort_V : 2
+		reverseLookupTable_theirPort_V_addr_2 : 1
+		toeTuple_dstPort_V : 2
+		releaseTuple_myPort_V : 1
+		store_ln268 : 1
+		store_ln268 : 1
+		store_ln268 : 1
+	State 5
+		releaseTuple_theirIp_V : 1
+		releaseTuple_theirPort_V : 1
+	State 6
+		write_ln173 : 1
+		or_ln : 1
+		or_ln173 : 2
+		zext_ln173 : 2
+		write_ln173 : 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|---------------------------------------|
+| Operation|            Functional Unit            |
+|----------|---------------------------------------|
+|          |         tmp_i_nbreadreq_fu_100        |
+| nbreadreq|       tmp_i_320_nbreadreq_fu_114      |
+|          |       tmp_22_i_nbreadreq_fu_128       |
+|----------|---------------------------------------|
+|          | reverseLupInsertFifo_read_read_fu_108 |
+|   read   |        sessionID_V_read_fu_122        |
+|          |       sessionID_V_1_read_fu_136       |
+|          |      toeTuple_srcIp_V_read_fu_142     |
+|----------|---------------------------------------|
+|          |        write_ln243_write_fu_148       |
+|   write  |        write_ln173_write_fu_156       |
+|          |        write_ln173_write_fu_163       |
+|          |        write_ln173_write_fu_170       |
+|----------|---------------------------------------|
+|   trunc  |          insert_key_V_fu_300          |
+|----------|---------------------------------------|
+|          |     insert_value_theirIp_V_fu_304     |
+|partselect|      insert_value_myPort_V_fu_314     |
+|          |    insert_value_theirPort_V_fu_324    |
+|----------|---------------------------------------|
+|          |          zext_ln587_12_fu_334         |
+|   zext   |           zext_ln587_fu_339           |
+|          |          zext_ln587_13_fu_343         |
+|          |           zext_ln173_fu_379           |
+|----------|---------------------------------------|
+|bitconcatenate|               p_s_fu_349              |
+|          |              or_ln_fu_360             |
+|----------|---------------------------------------|
+|    or    |            or_ln173_fu_373            |
+|----------|---------------------------------------|
+|   Total  |                                       |
+|----------|---------------------------------------|
+
+Memories:
+N/A
+
+* Register list:
++---------------------------------------------+--------+
+|                                             |   FF   |
++---------------------------------------------+--------+
+|             insert_key_V_reg_388            |   10   |
+|        insert_value_myPort_V_reg_398        |   16   |
+|        insert_value_theirIp_V_reg_393       |   32   |
+|       insert_value_theirPort_V_reg_403      |   16   |
+|                   reg_295                   |   16   |
+|  reverseLookupTable_myPort_V_addr_1_reg_464 |   10   |
+|  reverseLookupTable_myPort_V_addr_2_reg_454 |   10   |
+| reverseLookupTable_theirIp_V_addr_1_reg_479 |   10   |
+| reverseLookupTable_theirIp_V_addr_2_reg_449 |   10   |
+|reverseLookupTable_theirPort_V_addr_1_reg_484|   10   |
+|reverseLookupTable_theirPort_V_addr_2_reg_459|   10   |
+|            sessionID_V_1_reg_440            |   16   |
+|             sessionID_V_reg_412             |   16   |
+|               tmp_22_i_reg_436              |    1   |
+|              tmp_i_320_reg_408              |    1   |
+|                tmp_i_reg_384                |    1   |
+|           toeTuple_dstIp_V_reg_469          |   32   |
+|          toeTuple_dstPort_V_reg_474         |   16   |
+|          tupleValid_addr_1_reg_424          |   10   |
+|           tupleValid_load_reg_445           |    1   |
+|            zext_ln587_12_reg_417            |   64   |
+|              zext_ln587_reg_429             |   64   |
++---------------------------------------------+--------+
+|                    Total                    |   372  |
++---------------------------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|-------------------|------|------|------|--------||---------||---------|
+|        Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-------------------|------|------|------|--------||---------||---------|
+| grp_access_fu_184 |  p0  |   3  |  10  |   30   ||    14   |
+| grp_access_fu_184 |  p1  |   2  |   1  |    2   |
+| grp_access_fu_207 |  p0  |   3  |  10  |   30   ||    14   |
+| grp_access_fu_207 |  p2  |   2  |   0  |    0   ||    9    |
+| grp_access_fu_220 |  p0  |   5  |  10  |   50   ||    26   |
+| grp_access_fu_233 |  p0  |   3  |  10  |   30   ||    14   |
+| grp_access_fu_233 |  p2  |   2  |   0  |    0   ||    9    |
+|-------------------|------|------|------|--------||---------||---------|
+|       Total       |      |      |      |   142  || 2.90614 ||    86   |
+|-------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    -   |    -   |    -   |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|    2   |    -   |   86   |
+|  Register |    -   |   372  |    -   |
++-----------+--------+--------+--------+
+|   Total   |    2   |   372  |   86   |
++-----------+--------+--------+--------+

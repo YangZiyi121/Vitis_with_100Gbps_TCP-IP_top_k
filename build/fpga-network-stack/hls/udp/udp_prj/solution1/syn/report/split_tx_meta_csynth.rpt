@@ -1,0 +1,156 @@
+
+
+================================================================
+== Vitis HLS Report for 'split_tx_meta'
+================================================================
+* Date:           Sat Mar 18 14:40:36 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        udp_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  1.953 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        2|        2|  6.400 ns|  6.400 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       41|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       36|    -|
+|Register             |        -|     -|       86|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|       86|       77|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |tempLen_V_fu_112_p2               |         +|   0|  0|  23|          16|           4|
+    |ap_block_state2_io                |       and|   0|  0|   2|           1|           1|
+    |ap_block_state3_io                |       and|   0|  0|   2|           1|           1|
+    |tmp_i_nbreadreq_fu_54_p3          |       and|   0|  0|   2|           1|           0|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  41|          25|          13|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |ap_done                     |   9|          2|    1|          2|
+    |m_axis_tx_meta_TDATA_blk_n  |   9|          2|    1|          2|
+    |s_axis_tx_meta_TDATA_blk_n  |   9|          2|    1|          2|
+    |tx_udpMetaFifo_blk_n        |   9|          2|    1|          2|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       |  36|          8|    4|          8|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |   1|   0|    1|          0|
+    |ap_done_reg                  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2      |   1|   0|    1|          0|
+    |meta_length_V_reg_143        |  16|   0|   16|          0|
+    |p_Result_i_reg_148           |  32|   0|   32|          0|
+    |tmp_i_reg_139                |   1|   0|    1|          0|
+    |tmp_i_reg_139_pp0_iter1_reg  |   1|   0|    1|          0|
+    |tmp_reg_153                  |  32|   0|   32|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        |  86|   0|   86|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+----------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++-----------------------+-----+-----+------------+----------------+--------------+
+|ap_clk                 |   in|    1|  ap_ctrl_hs|   split_tx_meta|  return value|
+|ap_rst                 |   in|    1|  ap_ctrl_hs|   split_tx_meta|  return value|
+|ap_start               |   in|    1|  ap_ctrl_hs|   split_tx_meta|  return value|
+|ap_done                |  out|    1|  ap_ctrl_hs|   split_tx_meta|  return value|
+|ap_continue            |   in|    1|  ap_ctrl_hs|   split_tx_meta|  return value|
+|ap_idle                |  out|    1|  ap_ctrl_hs|   split_tx_meta|  return value|
+|ap_ready               |  out|    1|  ap_ctrl_hs|   split_tx_meta|  return value|
+|s_axis_tx_meta_TVALID  |   in|    1|        axis|  s_axis_tx_meta|       pointer|
+|s_axis_tx_meta_TDATA   |   in|  176|        axis|  s_axis_tx_meta|       pointer|
+|s_axis_tx_meta_TREADY  |  out|    1|        axis|  s_axis_tx_meta|       pointer|
+|m_axis_tx_meta_TREADY  |   in|    1|        axis|  m_axis_tx_meta|       pointer|
+|m_axis_tx_meta_TDATA   |  out|   48|        axis|  m_axis_tx_meta|       pointer|
+|m_axis_tx_meta_TVALID  |  out|    1|        axis|  m_axis_tx_meta|       pointer|
+|tx_udpMetaFifo_din     |  out|   64|     ap_fifo|  tx_udpMetaFifo|       pointer|
+|tx_udpMetaFifo_full_n  |   in|    1|     ap_fifo|  tx_udpMetaFifo|       pointer|
+|tx_udpMetaFifo_write   |  out|    1|     ap_fifo|  tx_udpMetaFifo|       pointer|
++-----------------------+-----+-----+------------+----------------+--------------+
+

@@ -1,0 +1,231 @@
+
+
+================================================================
+== Vitis HLS Report for 'entry_proc'
+================================================================
+* Date:           Sat Mar 18 14:42:53 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        scatter_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  1.168 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|        2|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|      198|    -|
+|Register             |        -|     -|        2|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|        2|      200|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |ap_done                   |   9|          2|    1|          2|
+    |clientPkgNum_c_blk_n      |   9|          2|    1|          2|
+    |expectedRespInKB_c_blk_n  |   9|          2|    1|          2|
+    |pkgWordCount_c_blk_n      |   9|          2|    1|          2|
+    |regBasePort_c41_blk_n     |   9|          2|    1|          2|
+    |regBasePort_c_blk_n       |   9|          2|    1|          2|
+    |regIpAddress0_c_blk_n     |   9|          2|    1|          2|
+    |regIpAddress10_c_blk_n    |   9|          2|    1|          2|
+    |regIpAddress1_c_blk_n     |   9|          2|    1|          2|
+    |regIpAddress2_c_blk_n     |   9|          2|    1|          2|
+    |regIpAddress3_c_blk_n     |   9|          2|    1|          2|
+    |regIpAddress4_c_blk_n     |   9|          2|    1|          2|
+    |regIpAddress5_c_blk_n     |   9|          2|    1|          2|
+    |regIpAddress6_c_blk_n     |   9|          2|    1|          2|
+    |regIpAddress7_c_blk_n     |   9|          2|    1|          2|
+    |regIpAddress8_c_blk_n     |   9|          2|    1|          2|
+    |regIpAddress9_c_blk_n     |   9|          2|    1|          2|
+    |runExperiment_c40_blk_n   |   9|          2|    1|          2|
+    |runExperiment_c_blk_n     |   9|          2|    1|          2|
+    |useConn_c_blk_n           |   9|          2|    1|          2|
+    |useIpAddr_c_blk_n         |   9|          2|    1|          2|
+    |usePort_c_blk_n           |   9|          2|    1|          2|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     | 198|         44|   22|         44|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        |  2|   0|    2|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+--------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |    Source Object   |    C Type    |
++---------------------------+-----+-----+------------+--------------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|          entry_proc|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|          entry_proc|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|          entry_proc|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|          entry_proc|  return value|
+|ap_continue                |   in|    1|  ap_ctrl_hs|          entry_proc|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|          entry_proc|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|          entry_proc|  return value|
+|runExperiment              |   in|    1|     ap_none|       runExperiment|        scalar|
+|runExperiment_c_din        |  out|    1|     ap_fifo|     runExperiment_c|       pointer|
+|runExperiment_c_full_n     |   in|    1|     ap_fifo|     runExperiment_c|       pointer|
+|runExperiment_c_write      |  out|    1|     ap_fifo|     runExperiment_c|       pointer|
+|runExperiment_c40_din      |  out|    1|     ap_fifo|   runExperiment_c40|       pointer|
+|runExperiment_c40_full_n   |   in|    1|     ap_fifo|   runExperiment_c40|       pointer|
+|runExperiment_c40_write    |  out|    1|     ap_fifo|   runExperiment_c40|       pointer|
+|useConn                    |   in|   16|     ap_none|             useConn|        scalar|
+|useConn_c_din              |  out|   16|     ap_fifo|           useConn_c|       pointer|
+|useConn_c_full_n           |   in|    1|     ap_fifo|           useConn_c|       pointer|
+|useConn_c_write            |  out|    1|     ap_fifo|           useConn_c|       pointer|
+|useIpAddr                  |   in|   16|     ap_none|           useIpAddr|        scalar|
+|useIpAddr_c_din            |  out|   16|     ap_fifo|         useIpAddr_c|       pointer|
+|useIpAddr_c_full_n         |   in|    1|     ap_fifo|         useIpAddr_c|       pointer|
+|useIpAddr_c_write          |  out|    1|     ap_fifo|         useIpAddr_c|       pointer|
+|pkgWordCount               |   in|   16|     ap_none|        pkgWordCount|        scalar|
+|pkgWordCount_c_din         |  out|   16|     ap_fifo|      pkgWordCount_c|       pointer|
+|pkgWordCount_c_full_n      |   in|    1|     ap_fifo|      pkgWordCount_c|       pointer|
+|pkgWordCount_c_write       |  out|    1|     ap_fifo|      pkgWordCount_c|       pointer|
+|regBasePort                |   in|   16|     ap_none|         regBasePort|        scalar|
+|regBasePort_c_din          |  out|   16|     ap_fifo|       regBasePort_c|       pointer|
+|regBasePort_c_full_n       |   in|    1|     ap_fifo|       regBasePort_c|       pointer|
+|regBasePort_c_write        |  out|    1|     ap_fifo|       regBasePort_c|       pointer|
+|regBasePort_c41_din        |  out|   16|     ap_fifo|     regBasePort_c41|       pointer|
+|regBasePort_c41_full_n     |   in|    1|     ap_fifo|     regBasePort_c41|       pointer|
+|regBasePort_c41_write      |  out|    1|     ap_fifo|     regBasePort_c41|       pointer|
+|usePort                    |   in|   16|     ap_none|             usePort|        scalar|
+|usePort_c_din              |  out|   16|     ap_fifo|           usePort_c|       pointer|
+|usePort_c_full_n           |   in|    1|     ap_fifo|           usePort_c|       pointer|
+|usePort_c_write            |  out|    1|     ap_fifo|           usePort_c|       pointer|
+|expectedRespInKB           |   in|   16|     ap_none|    expectedRespInKB|        scalar|
+|expectedRespInKB_c_din     |  out|   16|     ap_fifo|  expectedRespInKB_c|       pointer|
+|expectedRespInKB_c_full_n  |   in|    1|     ap_fifo|  expectedRespInKB_c|       pointer|
+|expectedRespInKB_c_write   |  out|    1|     ap_fifo|  expectedRespInKB_c|       pointer|
+|clientPkgNum               |   in|   32|     ap_none|        clientPkgNum|        scalar|
+|clientPkgNum_c_din         |  out|   32|     ap_fifo|      clientPkgNum_c|       pointer|
+|clientPkgNum_c_full_n      |   in|    1|     ap_fifo|      clientPkgNum_c|       pointer|
+|clientPkgNum_c_write       |  out|    1|     ap_fifo|      clientPkgNum_c|       pointer|
+|regIpAddress0              |   in|   32|     ap_none|       regIpAddress0|        scalar|
+|regIpAddress0_c_din        |  out|   32|     ap_fifo|     regIpAddress0_c|       pointer|
+|regIpAddress0_c_full_n     |   in|    1|     ap_fifo|     regIpAddress0_c|       pointer|
+|regIpAddress0_c_write      |  out|    1|     ap_fifo|     regIpAddress0_c|       pointer|
+|regIpAddress1              |   in|   32|     ap_none|       regIpAddress1|        scalar|
+|regIpAddress1_c_din        |  out|   32|     ap_fifo|     regIpAddress1_c|       pointer|
+|regIpAddress1_c_full_n     |   in|    1|     ap_fifo|     regIpAddress1_c|       pointer|
+|regIpAddress1_c_write      |  out|    1|     ap_fifo|     regIpAddress1_c|       pointer|
+|regIpAddress2              |   in|   32|     ap_none|       regIpAddress2|        scalar|
+|regIpAddress2_c_din        |  out|   32|     ap_fifo|     regIpAddress2_c|       pointer|
+|regIpAddress2_c_full_n     |   in|    1|     ap_fifo|     regIpAddress2_c|       pointer|
+|regIpAddress2_c_write      |  out|    1|     ap_fifo|     regIpAddress2_c|       pointer|
+|regIpAddress3              |   in|   32|     ap_none|       regIpAddress3|        scalar|
+|regIpAddress3_c_din        |  out|   32|     ap_fifo|     regIpAddress3_c|       pointer|
+|regIpAddress3_c_full_n     |   in|    1|     ap_fifo|     regIpAddress3_c|       pointer|
+|regIpAddress3_c_write      |  out|    1|     ap_fifo|     regIpAddress3_c|       pointer|
+|regIpAddress4              |   in|   32|     ap_none|       regIpAddress4|        scalar|
+|regIpAddress4_c_din        |  out|   32|     ap_fifo|     regIpAddress4_c|       pointer|
+|regIpAddress4_c_full_n     |   in|    1|     ap_fifo|     regIpAddress4_c|       pointer|
+|regIpAddress4_c_write      |  out|    1|     ap_fifo|     regIpAddress4_c|       pointer|
+|regIpAddress5              |   in|   32|     ap_none|       regIpAddress5|        scalar|
+|regIpAddress5_c_din        |  out|   32|     ap_fifo|     regIpAddress5_c|       pointer|
+|regIpAddress5_c_full_n     |   in|    1|     ap_fifo|     regIpAddress5_c|       pointer|
+|regIpAddress5_c_write      |  out|    1|     ap_fifo|     regIpAddress5_c|       pointer|
+|regIpAddress6              |   in|   32|     ap_none|       regIpAddress6|        scalar|
+|regIpAddress6_c_din        |  out|   32|     ap_fifo|     regIpAddress6_c|       pointer|
+|regIpAddress6_c_full_n     |   in|    1|     ap_fifo|     regIpAddress6_c|       pointer|
+|regIpAddress6_c_write      |  out|    1|     ap_fifo|     regIpAddress6_c|       pointer|
+|regIpAddress7              |   in|   32|     ap_none|       regIpAddress7|        scalar|
+|regIpAddress7_c_din        |  out|   32|     ap_fifo|     regIpAddress7_c|       pointer|
+|regIpAddress7_c_full_n     |   in|    1|     ap_fifo|     regIpAddress7_c|       pointer|
+|regIpAddress7_c_write      |  out|    1|     ap_fifo|     regIpAddress7_c|       pointer|
+|regIpAddress8              |   in|   32|     ap_none|       regIpAddress8|        scalar|
+|regIpAddress8_c_din        |  out|   32|     ap_fifo|     regIpAddress8_c|       pointer|
+|regIpAddress8_c_full_n     |   in|    1|     ap_fifo|     regIpAddress8_c|       pointer|
+|regIpAddress8_c_write      |  out|    1|     ap_fifo|     regIpAddress8_c|       pointer|
+|regIpAddress9              |   in|   32|     ap_none|       regIpAddress9|        scalar|
+|regIpAddress9_c_din        |  out|   32|     ap_fifo|     regIpAddress9_c|       pointer|
+|regIpAddress9_c_full_n     |   in|    1|     ap_fifo|     regIpAddress9_c|       pointer|
+|regIpAddress9_c_write      |  out|    1|     ap_fifo|     regIpAddress9_c|       pointer|
+|regIpAddress10             |   in|   32|     ap_none|      regIpAddress10|        scalar|
+|regIpAddress10_c_din       |  out|   32|     ap_fifo|    regIpAddress10_c|       pointer|
+|regIpAddress10_c_full_n    |   in|    1|     ap_fifo|    regIpAddress10_c|       pointer|
+|regIpAddress10_c_write     |  out|    1|     ap_fifo|    regIpAddress10_c|       pointer|
++---------------------------+-----+-----+------------+--------------------+--------------+
+

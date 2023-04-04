@@ -1,0 +1,1185 @@
+
+
+================================================================
+== Vitis HLS Report for 'rx_app_stream_if'
+================================================================
+* Date:           Sat Mar 18 14:39:16 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        toe_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  1.965 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        2|        2|  6.400 ns|  6.400 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       74|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       68|    -|
+|Register             |        -|     -|       77|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|       77|      142|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln223_fu_180_p2               |         +|   0|  0|  25|          18|          18|
+    |ap_block_state2_io                |       and|   0|  0|   2|           1|           1|
+    |ap_block_state3_io                |       and|   0|  0|   2|           1|           1|
+    |ap_condition_186                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_188                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_211                  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op23_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op34_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op40_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op42_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op49_write_state3    |       and|   0|  0|   2|           1|           1|
+    |tmp_i_304_nbreadreq_fu_76_p3      |       and|   0|  0|   2|           1|           0|
+    |tmp_i_nbreadreq_fu_62_p3          |       and|   0|  0|   2|           1|           0|
+    |icmp_ln1068_fu_130_p2             |      icmp|   0|  0|  13|          16|           1|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  74|          52|          36|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |                   Name                  | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |ap_done                                  |   9|          2|    1|          2|
+    |m_axis_rx_data_rsp_metadata_TDATA_blk_n  |   9|          2|    1|          2|
+    |rxApp2rxSar_upd_req_blk_n                |   9|          2|    1|          2|
+    |rxApp2rxSar_upd_req_din                  |  14|          3|   35|        105|
+    |rxBufferReadCmd_blk_n                    |   9|          2|    1|          2|
+    |rxSar2rxApp_upd_rsp_blk_n                |   9|          2|    1|          2|
+    |s_axis_rx_data_req_TDATA_blk_n           |   9|          2|    1|          2|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |Total                                    |  68|         15|   41|        117|
+    +-----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------+----+----+-----+-----------+
+    |                    Name                    | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                   |   1|   0|    1|          0|
+    |ap_done_reg                                 |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                     |   1|   0|    1|          0|
+    |icmp_ln1068_reg_208                         |   1|   0|    1|          0|
+    |rasi_fsmState_V                             |   1|   0|    1|          0|
+    |rasi_fsmState_V_load_reg_195                |   1|   0|    1|          0|
+    |rasi_fsmState_V_load_reg_195_pp0_iter1_reg  |   1|   0|    1|          0|
+    |rasi_readLength_V                           |  16|   0|   16|          0|
+    |tmp_appd_V_reg_222                          |  18|   0|   18|          0|
+    |tmp_i_304_reg_212                           |   1|   0|    1|          0|
+    |tmp_i_304_reg_212_pp0_iter1_reg             |   1|   0|    1|          0|
+    |tmp_i_reg_199                               |   1|   0|    1|          0|
+    |tmp_sessionID_V_reg_203                     |  16|   0|   16|          0|
+    |trunc_ln144_reg_216                         |  16|   0|   16|          0|
+    +--------------------------------------------+----+----+-----+-----------+
+    |Total                                       |  77|   0|   77|          0|
+    +--------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------------+-----+-----+------------+-----------------------------+--------------+
+|              RTL Ports             | Dir | Bits|  Protocol  |        Source Object        |    C Type    |
++------------------------------------+-----+-----+------------+-----------------------------+--------------+
+|ap_clk                              |   in|    1|  ap_ctrl_hs|             rx_app_stream_if|  return value|
+|ap_rst                              |   in|    1|  ap_ctrl_hs|             rx_app_stream_if|  return value|
+|ap_start                            |   in|    1|  ap_ctrl_hs|             rx_app_stream_if|  return value|
+|ap_done                             |  out|    1|  ap_ctrl_hs|             rx_app_stream_if|  return value|
+|ap_continue                         |   in|    1|  ap_ctrl_hs|             rx_app_stream_if|  return value|
+|ap_idle                             |  out|    1|  ap_ctrl_hs|             rx_app_stream_if|  return value|
+|ap_ready                            |  out|    1|  ap_ctrl_hs|             rx_app_stream_if|  return value|
+|s_axis_rx_data_req_TVALID           |   in|    1|        axis|           s_axis_rx_data_req|       pointer|
+|s_axis_rx_data_req_TDATA            |   in|   32|        axis|           s_axis_rx_data_req|       pointer|
+|s_axis_rx_data_req_TREADY           |  out|    1|        axis|           s_axis_rx_data_req|       pointer|
+|rxSar2rxApp_upd_rsp_dout            |   in|   35|     ap_fifo|          rxSar2rxApp_upd_rsp|       pointer|
+|rxSar2rxApp_upd_rsp_empty_n         |   in|    1|     ap_fifo|          rxSar2rxApp_upd_rsp|       pointer|
+|rxSar2rxApp_upd_rsp_read            |  out|    1|     ap_fifo|          rxSar2rxApp_upd_rsp|       pointer|
+|rxApp2rxSar_upd_req_din             |  out|   35|     ap_fifo|          rxApp2rxSar_upd_req|       pointer|
+|rxApp2rxSar_upd_req_full_n          |   in|    1|     ap_fifo|          rxApp2rxSar_upd_req|       pointer|
+|rxApp2rxSar_upd_req_write           |  out|    1|     ap_fifo|          rxApp2rxSar_upd_req|       pointer|
+|m_axis_rx_data_rsp_metadata_TREADY  |   in|    1|        axis|  m_axis_rx_data_rsp_metadata|       pointer|
+|m_axis_rx_data_rsp_metadata_TDATA   |  out|   16|        axis|  m_axis_rx_data_rsp_metadata|       pointer|
+|m_axis_rx_data_rsp_metadata_TVALID  |  out|    1|        axis|  m_axis_rx_data_rsp_metadata|       pointer|
+|rxBufferReadCmd_din                 |  out|    1|     ap_fifo|              rxBufferReadCmd|       pointer|
+|rxBufferReadCmd_full_n              |   in|    1|     ap_fifo|              rxBufferReadCmd|       pointer|
+|rxBufferReadCmd_write               |  out|    1|     ap_fifo|              rxBufferReadCmd|       pointer|
++------------------------------------+-----+-----+------------+-----------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.18>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i35 %rxApp2rxSar_upd_req, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 4 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i35 %rxApp2rxSar_upd_req, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i35 %rxApp2rxSar_upd_req, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %rxBufferReadCmd, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %rxBufferReadCmd, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %rxBufferReadCmd, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i35 %rxSar2rxApp_upd_rsp, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i35 %rxSar2rxApp_upd_rsp, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i35 %rxSar2rxApp_upd_rsp, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %rxBufferReadCmd, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i35 %rxSar2rxApp_upd_rsp, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i35 %rxApp2rxSar_upd_req, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %m_axis_rx_data_rsp_metadata, void @empty_5, i32 1, i32 1, void @empty_4, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %s_axis_rx_data_req, void @empty_5, i32 1, i32 1, void @empty_4, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specpipeline_ln50 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_3" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/rx_app_stream_if/rx_app_stream_if.cpp:50]   --->   Operation 18 'specpipeline' 'specpipeline_ln50' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%rasi_fsmState_V_load = load i1 %rasi_fsmState_V"   --->   Operation 19 'load' 'rasi_fsmState_V_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln60 = br i1 %rasi_fsmState_V_load, void, void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/rx_app_stream_if/rx_app_stream_if.cpp:60]   --->   Operation 20 'br' 'br_ln60' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_i = nbreadreq i1 @_ssdm_op_NbReadReq.axis.i32P128A, i32 %s_axis_rx_data_req, i32 1" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:135]   --->   Operation 21 'nbreadreq' 'tmp_i' <Predicate = (!rasi_fsmState_V_load)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln63 = br i1 %tmp_i, void %._crit_edge.i, void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/rx_app_stream_if/rx_app_stream_if.cpp:63]   --->   Operation 22 'br' 'br_ln63' <Predicate = (!rasi_fsmState_V_load)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%s_axis_rx_data_req_read = read i32 @_ssdm_op_Read.axis.volatile.i32P128A, i32 %s_axis_rx_data_req" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 23 'read' 's_axis_rx_data_req_read' <Predicate = (!rasi_fsmState_V_load & tmp_i)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_sessionID_V = trunc i32 %s_axis_rx_data_req_read" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 24 'trunc' 'tmp_sessionID_V' <Predicate = (!rasi_fsmState_V_load & tmp_i)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_length_V = partselect i16 @_ssdm_op_PartSelect.i16.i32.i32.i32, i32 %s_axis_rx_data_req_read, i32 16, i32 31" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 25 'partselect' 'tmp_length_V' <Predicate = (!rasi_fsmState_V_load & tmp_i)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.67ns)   --->   "%icmp_ln1068 = icmp_eq  i16 %tmp_length_V, i16 0"   --->   Operation 26 'icmp' 'icmp_ln1068' <Predicate = (!rasi_fsmState_V_load & tmp_i)> <Delay = 0.67> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln67 = br i1 %icmp_ln1068, void, void %._crit_edge1.i" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/rx_app_stream_if/rx_app_stream_if.cpp:67]   --->   Operation 27 'br' 'br_ln67' <Predicate = (!rasi_fsmState_V_load & tmp_i)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%store_ln71 = store i16 %tmp_length_V, i16 %rasi_readLength_V" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/rx_app_stream_if/rx_app_stream_if.cpp:71]   --->   Operation 28 'store' 'store_ln71' <Predicate = (!rasi_fsmState_V_load & tmp_i & !icmp_ln1068)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.38ns)   --->   "%store_ln72 = store i1 1, i1 %rasi_fsmState_V" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/rx_app_stream_if/rx_app_stream_if.cpp:72]   --->   Operation 29 'store' 'store_ln72' <Predicate = (!rasi_fsmState_V_load & tmp_i & !icmp_ln1068)> <Delay = 0.38>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln74 = br void %._crit_edge.i" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/rx_app_stream_if/rx_app_stream_if.cpp:74]   --->   Operation 30 'br' 'br_ln74' <Predicate = (!rasi_fsmState_V_load & tmp_i)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln75 = br void %rx_app_stream_if.exit" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/rx_app_stream_if/rx_app_stream_if.cpp:75]   --->   Operation 31 'br' 'br_ln75' <Predicate = (!rasi_fsmState_V_load)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_i_304 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i35P0A, i35 %rxSar2rxApp_upd_rsp, i32 1" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:135]   --->   Operation 32 'nbreadreq' 'tmp_i_304' <Predicate = (rasi_fsmState_V_load)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 35> <Depth = 2> <FIFO>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%br_ln77 = br i1 %tmp_i_304, void %._crit_edge2.i, void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/rx_app_stream_if/rx_app_stream_if.cpp:77]   --->   Operation 33 'br' 'br_ln77' <Predicate = (rasi_fsmState_V_load)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (1.16ns)   --->   "%rxSar2rxApp_upd_rsp_read = read i35 @_ssdm_op_Read.ap_fifo.volatile.i35P0A, i35 %rxSar2rxApp_upd_rsp" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 34 'read' 'rxSar2rxApp_upd_rsp_read' <Predicate = (rasi_fsmState_V_load & tmp_i_304)> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 35> <Depth = 2> <FIFO>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%trunc_ln144 = trunc i35 %rxSar2rxApp_upd_rsp_read" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 35 'trunc' 'trunc_ln144' <Predicate = (rasi_fsmState_V_load & tmp_i_304)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_appd_V = partselect i18 @_ssdm_op_PartSelect.i18.i35.i32.i32, i35 %rxSar2rxApp_upd_rsp_read, i32 16, i32 33" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 36 'partselect' 'tmp_appd_V' <Predicate = (rasi_fsmState_V_load & tmp_i_304)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.38ns)   --->   "%store_ln91 = store i1 0, i1 %rasi_fsmState_V" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/rx_app_stream_if/rx_app_stream_if.cpp:91]   --->   Operation 37 'store' 'store_ln91' <Predicate = (rasi_fsmState_V_load & tmp_i_304)> <Delay = 0.38>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln93 = br void %rx_app_stream_if.exit" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/rx_app_stream_if/rx_app_stream_if.cpp:93]   --->   Operation 38 'br' 'br_ln93' <Predicate = (rasi_fsmState_V_load)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.96>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%zext_ln173 = zext i16 %tmp_sessionID_V" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 39 'zext' 'zext_ln173' <Predicate = (!rasi_fsmState_V_load & tmp_i & !icmp_ln1068)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (1.16ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i35P0A, i35 %rxApp2rxSar_upd_req, i35 %zext_ln173" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 40 'write' 'write_ln173' <Predicate = (!rasi_fsmState_V_load & tmp_i & !icmp_ln1068)> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 35> <Depth = 2> <FIFO>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln73 = br void %._crit_edge1.i" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/rx_app_stream_if/rx_app_stream_if.cpp:73]   --->   Operation 41 'br' 'br_ln73' <Predicate = (!rasi_fsmState_V_load & tmp_i & !icmp_ln1068)> <Delay = 0.00>
+ST_2 : Operation 42 [2/2] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.axis.volatile.i16P128A, i16 %m_axis_rx_data_rsp_metadata, i16 %trunc_ln144" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 42 'write' 'write_ln173' <Predicate = (rasi_fsmState_V_load & tmp_i_304)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 43 [1/1] (1.16ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %rxBufferReadCmd, i1 1" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 43 'write' 'write_ln173' <Predicate = (rasi_fsmState_V_load & tmp_i_304)> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 4> <FIFO>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%rasi_readLength_V_load = load i16 %rasi_readLength_V"   --->   Operation 44 'load' 'rasi_readLength_V_load' <Predicate = (rasi_fsmState_V_load & tmp_i_304)> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%zext_ln223 = zext i16 %rasi_readLength_V_load"   --->   Operation 45 'zext' 'zext_ln223' <Predicate = (rasi_fsmState_V_load & tmp_i_304)> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.79ns)   --->   "%add_ln223 = add i18 %tmp_appd_V, i18 %zext_ln223"   --->   Operation 46 'add' 'add_ln223' <Predicate = (rasi_fsmState_V_load & tmp_i_304)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%p_04 = bitconcatenate i35 @_ssdm_op_BitConcatenate.i35.i1.i18.i16, i1 1, i18 %add_ln223, i16 %trunc_ln144" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 47 'bitconcatenate' 'p_04' <Predicate = (rasi_fsmState_V_load & tmp_i_304)> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (1.16ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i35P0A, i35 %rxApp2rxSar_upd_req, i35 %p_04" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 48 'write' 'write_ln173' <Predicate = (rasi_fsmState_V_load & tmp_i_304)> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 35> <Depth = 2> <FIFO>
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 49 [1/2] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.axis.volatile.i16P128A, i16 %m_axis_rx_data_rsp_metadata, i16 %trunc_ln144" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 49 'write' 'write_ln173' <Predicate = (rasi_fsmState_V_load & tmp_i_304)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%br_ln92 = br void %._crit_edge2.i" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/rx_app_stream_if/rx_app_stream_if.cpp:92]   --->   Operation 50 'br' 'br_ln92' <Predicate = (rasi_fsmState_V_load & tmp_i_304)> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 51 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 1
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ s_axis_rx_data_req]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ m_axis_rx_data_rsp_metadata]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ rasi_fsmState_V]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; IO mode=ap_ovld:ce=0
+Port [ rxApp2rxSar_upd_req]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ rasi_readLength_V]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; IO mode=ap_ovld:ce=0
+Port [ rxSar2rxApp_upd_rsp]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ rxBufferReadCmd]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+specinterface_ln0        (specinterface ) [ 0000]
+specinterface_ln0        (specinterface ) [ 0000]
+specinterface_ln0        (specinterface ) [ 0000]
+specinterface_ln0        (specinterface ) [ 0000]
+specinterface_ln0        (specinterface ) [ 0000]
+specinterface_ln0        (specinterface ) [ 0000]
+specinterface_ln0        (specinterface ) [ 0000]
+specinterface_ln0        (specinterface ) [ 0000]
+specinterface_ln0        (specinterface ) [ 0000]
+specinterface_ln0        (specinterface ) [ 0000]
+specinterface_ln0        (specinterface ) [ 0000]
+specinterface_ln0        (specinterface ) [ 0000]
+specinterface_ln0        (specinterface ) [ 0000]
+specinterface_ln0        (specinterface ) [ 0000]
+specpipeline_ln50        (specpipeline  ) [ 0000]
+rasi_fsmState_V_load     (load          ) [ 0111]
+br_ln60                  (br            ) [ 0000]
+tmp_i                    (nbreadreq     ) [ 0110]
+br_ln63                  (br            ) [ 0000]
+s_axis_rx_data_req_read  (read          ) [ 0000]
+tmp_sessionID_V          (trunc         ) [ 0110]
+tmp_length_V             (partselect    ) [ 0000]
+icmp_ln1068              (icmp          ) [ 0110]
+br_ln67                  (br            ) [ 0000]
+store_ln71               (store         ) [ 0000]
+store_ln72               (store         ) [ 0000]
+br_ln74                  (br            ) [ 0000]
+br_ln75                  (br            ) [ 0000]
+tmp_i_304                (nbreadreq     ) [ 0111]
+br_ln77                  (br            ) [ 0000]
+rxSar2rxApp_upd_rsp_read (read          ) [ 0000]
+trunc_ln144              (trunc         ) [ 0111]
+tmp_appd_V               (partselect    ) [ 0110]
+store_ln91               (store         ) [ 0000]
+br_ln93                  (br            ) [ 0000]
+zext_ln173               (zext          ) [ 0000]
+write_ln173              (write         ) [ 0000]
+br_ln73                  (br            ) [ 0000]
+write_ln173              (write         ) [ 0000]
+rasi_readLength_V_load   (load          ) [ 0000]
+zext_ln223               (zext          ) [ 0000]
+add_ln223                (add           ) [ 0000]
+p_04                     (bitconcatenate) [ 0000]
+write_ln173              (write         ) [ 0000]
+write_ln173              (write         ) [ 0000]
+br_ln92                  (br            ) [ 0000]
+ret_ln0                  (ret           ) [ 0000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="s_axis_rx_data_req">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="s_axis_rx_data_req"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="m_axis_rx_data_rsp_metadata">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="m_axis_rx_data_rsp_metadata"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="rasi_fsmState_V">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rasi_fsmState_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="rxApp2rxSar_upd_req">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rxApp2rxSar_upd_req"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="rasi_readLength_V">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rasi_readLength_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="rxSar2rxApp_upd_rsp">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rxSar2rxApp_upd_rsp"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="rxBufferReadCmd">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rxBufferReadCmd"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_5"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_4"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_NbReadReq.axis.i32P128A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.axis.volatile.i32P128A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i16.i32.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_NbReadReq.ap_fifo.i35P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i35P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i18.i35.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1001" name="const_54">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i35P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1001" name="const_56">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.axis.volatile.i16P128A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1001" name="const_58">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i1P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1001" name="const_60">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i35.i1.i18.i16"/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1004" name="tmp_i_nbreadreq_fu_62">
+<pin_list>
+<pin id="63" dir="0" index="0" bw="1" slack="0"/>
+<pin id="64" dir="0" index="1" bw="32" slack="0"/>
+<pin id="65" dir="0" index="2" bw="1" slack="0"/>
+<pin id="66" dir="1" index="3" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="nbreadreq(1156) " fcode="nbreadreq"/>
+<opset="tmp_i/1 "/>
+</bind>
+</comp>
+
+<comp id="70" class="1004" name="s_axis_rx_data_req_read_read_fu_70">
+<pin_list>
+<pin id="71" dir="0" index="0" bw="32" slack="0"/>
+<pin id="72" dir="0" index="1" bw="32" slack="0"/>
+<pin id="73" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="s_axis_rx_data_req_read/1 "/>
+</bind>
+</comp>
+
+<comp id="76" class="1004" name="tmp_i_304_nbreadreq_fu_76">
+<pin_list>
+<pin id="77" dir="0" index="0" bw="1" slack="0"/>
+<pin id="78" dir="0" index="1" bw="35" slack="0"/>
+<pin id="79" dir="0" index="2" bw="1" slack="0"/>
+<pin id="80" dir="1" index="3" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="nbreadreq(1156) " fcode="nbreadreq"/>
+<opset="tmp_i_304/1 "/>
+</bind>
+</comp>
+
+<comp id="84" class="1004" name="rxSar2rxApp_upd_rsp_read_read_fu_84">
+<pin_list>
+<pin id="85" dir="0" index="0" bw="35" slack="0"/>
+<pin id="86" dir="0" index="1" bw="35" slack="0"/>
+<pin id="87" dir="1" index="2" bw="35" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="rxSar2rxApp_upd_rsp_read/1 "/>
+</bind>
+</comp>
+
+<comp id="90" class="1004" name="grp_write_fu_90">
+<pin_list>
+<pin id="91" dir="0" index="0" bw="0" slack="0"/>
+<pin id="92" dir="0" index="1" bw="35" slack="0"/>
+<pin id="93" dir="0" index="2" bw="35" slack="0"/>
+<pin id="94" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln173/2 write_ln173/2 "/>
+</bind>
+</comp>
+
+<comp id="97" class="1004" name="grp_write_fu_97">
+<pin_list>
+<pin id="98" dir="0" index="0" bw="0" slack="0"/>
+<pin id="99" dir="0" index="1" bw="16" slack="0"/>
+<pin id="100" dir="0" index="2" bw="16" slack="1"/>
+<pin id="101" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln173/2 "/>
+</bind>
+</comp>
+
+<comp id="104" class="1004" name="write_ln173_write_fu_104">
+<pin_list>
+<pin id="105" dir="0" index="0" bw="0" slack="0"/>
+<pin id="106" dir="0" index="1" bw="1" slack="0"/>
+<pin id="107" dir="0" index="2" bw="1" slack="0"/>
+<pin id="108" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln173/2 "/>
+</bind>
+</comp>
+
+<comp id="112" class="1004" name="rasi_fsmState_V_load_load_fu_112">
+<pin_list>
+<pin id="113" dir="0" index="0" bw="1" slack="0"/>
+<pin id="114" dir="1" index="1" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="rasi_fsmState_V_load/1 "/>
+</bind>
+</comp>
+
+<comp id="116" class="1004" name="tmp_sessionID_V_fu_116">
+<pin_list>
+<pin id="117" dir="0" index="0" bw="32" slack="0"/>
+<pin id="118" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="tmp_sessionID_V/1 "/>
+</bind>
+</comp>
+
+<comp id="120" class="1004" name="tmp_length_V_fu_120">
+<pin_list>
+<pin id="121" dir="0" index="0" bw="16" slack="0"/>
+<pin id="122" dir="0" index="1" bw="32" slack="0"/>
+<pin id="123" dir="0" index="2" bw="6" slack="0"/>
+<pin id="124" dir="0" index="3" bw="6" slack="0"/>
+<pin id="125" dir="1" index="4" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="tmp_length_V/1 "/>
+</bind>
+</comp>
+
+<comp id="130" class="1004" name="icmp_ln1068_fu_130">
+<pin_list>
+<pin id="131" dir="0" index="0" bw="16" slack="0"/>
+<pin id="132" dir="0" index="1" bw="16" slack="0"/>
+<pin id="133" dir="1" index="2" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln1068/1 "/>
+</bind>
+</comp>
+
+<comp id="136" class="1004" name="store_ln71_store_fu_136">
+<pin_list>
+<pin id="137" dir="0" index="0" bw="16" slack="0"/>
+<pin id="138" dir="0" index="1" bw="16" slack="0"/>
+<pin id="139" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln71/1 "/>
+</bind>
+</comp>
+
+<comp id="142" class="1004" name="store_ln72_store_fu_142">
+<pin_list>
+<pin id="143" dir="0" index="0" bw="1" slack="0"/>
+<pin id="144" dir="0" index="1" bw="1" slack="0"/>
+<pin id="145" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln72/1 "/>
+</bind>
+</comp>
+
+<comp id="148" class="1004" name="trunc_ln144_fu_148">
+<pin_list>
+<pin id="149" dir="0" index="0" bw="35" slack="0"/>
+<pin id="150" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="trunc_ln144/1 "/>
+</bind>
+</comp>
+
+<comp id="152" class="1004" name="tmp_appd_V_fu_152">
+<pin_list>
+<pin id="153" dir="0" index="0" bw="18" slack="0"/>
+<pin id="154" dir="0" index="1" bw="35" slack="0"/>
+<pin id="155" dir="0" index="2" bw="6" slack="0"/>
+<pin id="156" dir="0" index="3" bw="7" slack="0"/>
+<pin id="157" dir="1" index="4" bw="18" slack="1"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="tmp_appd_V/1 "/>
+</bind>
+</comp>
+
+<comp id="162" class="1004" name="store_ln91_store_fu_162">
+<pin_list>
+<pin id="163" dir="0" index="0" bw="1" slack="0"/>
+<pin id="164" dir="0" index="1" bw="1" slack="0"/>
+<pin id="165" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln91/1 "/>
+</bind>
+</comp>
+
+<comp id="168" class="1004" name="zext_ln173_fu_168">
+<pin_list>
+<pin id="169" dir="0" index="0" bw="16" slack="1"/>
+<pin id="170" dir="1" index="1" bw="35" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln173/2 "/>
+</bind>
+</comp>
+
+<comp id="172" class="1004" name="rasi_readLength_V_load_load_fu_172">
+<pin_list>
+<pin id="173" dir="0" index="0" bw="16" slack="0"/>
+<pin id="174" dir="1" index="1" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="rasi_readLength_V_load/2 "/>
+</bind>
+</comp>
+
+<comp id="176" class="1004" name="zext_ln223_fu_176">
+<pin_list>
+<pin id="177" dir="0" index="0" bw="16" slack="0"/>
+<pin id="178" dir="1" index="1" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln223/2 "/>
+</bind>
+</comp>
+
+<comp id="180" class="1004" name="add_ln223_fu_180">
+<pin_list>
+<pin id="181" dir="0" index="0" bw="18" slack="1"/>
+<pin id="182" dir="0" index="1" bw="16" slack="0"/>
+<pin id="183" dir="1" index="2" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln223/2 "/>
+</bind>
+</comp>
+
+<comp id="185" class="1004" name="p_04_fu_185">
+<pin_list>
+<pin id="186" dir="0" index="0" bw="35" slack="0"/>
+<pin id="187" dir="0" index="1" bw="1" slack="0"/>
+<pin id="188" dir="0" index="2" bw="18" slack="0"/>
+<pin id="189" dir="0" index="3" bw="16" slack="1"/>
+<pin id="190" dir="1" index="4" bw="35" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="p_04/2 "/>
+</bind>
+</comp>
+
+<comp id="195" class="1005" name="rasi_fsmState_V_load_reg_195">
+<pin_list>
+<pin id="196" dir="0" index="0" bw="1" slack="1"/>
+<pin id="197" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="rasi_fsmState_V_load "/>
+</bind>
+</comp>
+
+<comp id="199" class="1005" name="tmp_i_reg_199">
+<pin_list>
+<pin id="200" dir="0" index="0" bw="1" slack="1"/>
+<pin id="201" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="tmp_i "/>
+</bind>
+</comp>
+
+<comp id="203" class="1005" name="tmp_sessionID_V_reg_203">
+<pin_list>
+<pin id="204" dir="0" index="0" bw="16" slack="1"/>
+<pin id="205" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="tmp_sessionID_V "/>
+</bind>
+</comp>
+
+<comp id="208" class="1005" name="icmp_ln1068_reg_208">
+<pin_list>
+<pin id="209" dir="0" index="0" bw="1" slack="1"/>
+<pin id="210" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="icmp_ln1068 "/>
+</bind>
+</comp>
+
+<comp id="212" class="1005" name="tmp_i_304_reg_212">
+<pin_list>
+<pin id="213" dir="0" index="0" bw="1" slack="1"/>
+<pin id="214" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="tmp_i_304 "/>
+</bind>
+</comp>
+
+<comp id="216" class="1005" name="trunc_ln144_reg_216">
+<pin_list>
+<pin id="217" dir="0" index="0" bw="16" slack="1"/>
+<pin id="218" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="trunc_ln144 "/>
+</bind>
+</comp>
+
+<comp id="222" class="1005" name="tmp_appd_V_reg_222">
+<pin_list>
+<pin id="223" dir="0" index="0" bw="18" slack="1"/>
+<pin id="224" dir="1" index="1" bw="18" slack="1"/>
+</pin_list>
+<bind>
+<opset="tmp_appd_V "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="67"><net_src comp="30" pin="0"/><net_sink comp="62" pin=0"/></net>
+
+<net id="68"><net_src comp="0" pin="0"/><net_sink comp="62" pin=1"/></net>
+
+<net id="69"><net_src comp="24" pin="0"/><net_sink comp="62" pin=2"/></net>
+
+<net id="74"><net_src comp="32" pin="0"/><net_sink comp="70" pin=0"/></net>
+
+<net id="75"><net_src comp="0" pin="0"/><net_sink comp="70" pin=1"/></net>
+
+<net id="81"><net_src comp="44" pin="0"/><net_sink comp="76" pin=0"/></net>
+
+<net id="82"><net_src comp="10" pin="0"/><net_sink comp="76" pin=1"/></net>
+
+<net id="83"><net_src comp="24" pin="0"/><net_sink comp="76" pin=2"/></net>
+
+<net id="88"><net_src comp="46" pin="0"/><net_sink comp="84" pin=0"/></net>
+
+<net id="89"><net_src comp="10" pin="0"/><net_sink comp="84" pin=1"/></net>
+
+<net id="95"><net_src comp="54" pin="0"/><net_sink comp="90" pin=0"/></net>
+
+<net id="96"><net_src comp="6" pin="0"/><net_sink comp="90" pin=1"/></net>
+
+<net id="102"><net_src comp="56" pin="0"/><net_sink comp="97" pin=0"/></net>
+
+<net id="103"><net_src comp="2" pin="0"/><net_sink comp="97" pin=1"/></net>
+
+<net id="109"><net_src comp="58" pin="0"/><net_sink comp="104" pin=0"/></net>
+
+<net id="110"><net_src comp="12" pin="0"/><net_sink comp="104" pin=1"/></net>
+
+<net id="111"><net_src comp="42" pin="0"/><net_sink comp="104" pin=2"/></net>
+
+<net id="115"><net_src comp="4" pin="0"/><net_sink comp="112" pin=0"/></net>
+
+<net id="119"><net_src comp="70" pin="2"/><net_sink comp="116" pin=0"/></net>
+
+<net id="126"><net_src comp="34" pin="0"/><net_sink comp="120" pin=0"/></net>
+
+<net id="127"><net_src comp="70" pin="2"/><net_sink comp="120" pin=1"/></net>
+
+<net id="128"><net_src comp="36" pin="0"/><net_sink comp="120" pin=2"/></net>
+
+<net id="129"><net_src comp="38" pin="0"/><net_sink comp="120" pin=3"/></net>
+
+<net id="134"><net_src comp="120" pin="4"/><net_sink comp="130" pin=0"/></net>
+
+<net id="135"><net_src comp="40" pin="0"/><net_sink comp="130" pin=1"/></net>
+
+<net id="140"><net_src comp="120" pin="4"/><net_sink comp="136" pin=0"/></net>
+
+<net id="141"><net_src comp="8" pin="0"/><net_sink comp="136" pin=1"/></net>
+
+<net id="146"><net_src comp="42" pin="0"/><net_sink comp="142" pin=0"/></net>
+
+<net id="147"><net_src comp="4" pin="0"/><net_sink comp="142" pin=1"/></net>
+
+<net id="151"><net_src comp="84" pin="2"/><net_sink comp="148" pin=0"/></net>
+
+<net id="158"><net_src comp="48" pin="0"/><net_sink comp="152" pin=0"/></net>
+
+<net id="159"><net_src comp="84" pin="2"/><net_sink comp="152" pin=1"/></net>
+
+<net id="160"><net_src comp="36" pin="0"/><net_sink comp="152" pin=2"/></net>
+
+<net id="161"><net_src comp="50" pin="0"/><net_sink comp="152" pin=3"/></net>
+
+<net id="166"><net_src comp="52" pin="0"/><net_sink comp="162" pin=0"/></net>
+
+<net id="167"><net_src comp="4" pin="0"/><net_sink comp="162" pin=1"/></net>
+
+<net id="171"><net_src comp="168" pin="1"/><net_sink comp="90" pin=2"/></net>
+
+<net id="175"><net_src comp="8" pin="0"/><net_sink comp="172" pin=0"/></net>
+
+<net id="179"><net_src comp="172" pin="1"/><net_sink comp="176" pin=0"/></net>
+
+<net id="184"><net_src comp="176" pin="1"/><net_sink comp="180" pin=1"/></net>
+
+<net id="191"><net_src comp="60" pin="0"/><net_sink comp="185" pin=0"/></net>
+
+<net id="192"><net_src comp="42" pin="0"/><net_sink comp="185" pin=1"/></net>
+
+<net id="193"><net_src comp="180" pin="2"/><net_sink comp="185" pin=2"/></net>
+
+<net id="194"><net_src comp="185" pin="4"/><net_sink comp="90" pin=2"/></net>
+
+<net id="198"><net_src comp="112" pin="1"/><net_sink comp="195" pin=0"/></net>
+
+<net id="202"><net_src comp="62" pin="3"/><net_sink comp="199" pin=0"/></net>
+
+<net id="206"><net_src comp="116" pin="1"/><net_sink comp="203" pin=0"/></net>
+
+<net id="207"><net_src comp="203" pin="1"/><net_sink comp="168" pin=0"/></net>
+
+<net id="211"><net_src comp="130" pin="2"/><net_sink comp="208" pin=0"/></net>
+
+<net id="215"><net_src comp="76" pin="3"/><net_sink comp="212" pin=0"/></net>
+
+<net id="219"><net_src comp="148" pin="1"/><net_sink comp="216" pin=0"/></net>
+
+<net id="220"><net_src comp="216" pin="1"/><net_sink comp="97" pin=2"/></net>
+
+<net id="221"><net_src comp="216" pin="1"/><net_sink comp="185" pin=3"/></net>
+
+<net id="225"><net_src comp="152" pin="4"/><net_sink comp="222" pin=0"/></net>
+
+<net id="226"><net_src comp="222" pin="1"/><net_sink comp="180" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: s_axis_rx_data_req | {}
+	Port: m_axis_rx_data_rsp_metadata | {3 }
+	Port: rasi_fsmState_V | {1 }
+	Port: rxApp2rxSar_upd_req | {2 }
+	Port: rasi_readLength_V | {1 }
+	Port: rxSar2rxApp_upd_rsp | {}
+	Port: rxBufferReadCmd | {2 }
+ - Input state : 
+	Port: rx_app_stream_if : s_axis_rx_data_req | {1 }
+	Port: rx_app_stream_if : m_axis_rx_data_rsp_metadata | {}
+	Port: rx_app_stream_if : rasi_fsmState_V | {1 }
+	Port: rx_app_stream_if : rxApp2rxSar_upd_req | {}
+	Port: rx_app_stream_if : rasi_readLength_V | {2 }
+	Port: rx_app_stream_if : rxSar2rxApp_upd_rsp | {1 }
+	Port: rx_app_stream_if : rxBufferReadCmd | {}
+  - Chain level:
+	State 1
+		br_ln60 : 1
+		icmp_ln1068 : 1
+		br_ln67 : 2
+		store_ln71 : 1
+	State 2
+		write_ln173 : 1
+		zext_ln223 : 1
+		add_ln223 : 2
+		p_04 : 3
+		write_ln173 : 4
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-------------------------------------|---------|---------|
+| Operation|           Functional Unit           |    FF   |   LUT   |
+|----------|-------------------------------------|---------|---------|
+|    add   |           add_ln223_fu_180          |    0    |    25   |
+|----------|-------------------------------------|---------|---------|
+|   icmp   |          icmp_ln1068_fu_130         |    0    |    13   |
+|----------|-------------------------------------|---------|---------|
+| nbreadreq|        tmp_i_nbreadreq_fu_62        |    0    |    0    |
+|          |      tmp_i_304_nbreadreq_fu_76      |    0    |    0    |
+|----------|-------------------------------------|---------|---------|
+|   read   |  s_axis_rx_data_req_read_read_fu_70 |    0    |    0    |
+|          | rxSar2rxApp_upd_rsp_read_read_fu_84 |    0    |    0    |
+|----------|-------------------------------------|---------|---------|
+|          |           grp_write_fu_90           |    0    |    0    |
+|   write  |           grp_write_fu_97           |    0    |    0    |
+|          |       write_ln173_write_fu_104      |    0    |    0    |
+|----------|-------------------------------------|---------|---------|
+|   trunc  |        tmp_sessionID_V_fu_116       |    0    |    0    |
+|          |          trunc_ln144_fu_148         |    0    |    0    |
+|----------|-------------------------------------|---------|---------|
+|partselect|         tmp_length_V_fu_120         |    0    |    0    |
+|          |          tmp_appd_V_fu_152          |    0    |    0    |
+|----------|-------------------------------------|---------|---------|
+|   zext   |          zext_ln173_fu_168          |    0    |    0    |
+|          |          zext_ln223_fu_176          |    0    |    0    |
+|----------|-------------------------------------|---------|---------|
+|bitconcatenate|             p_04_fu_185             |    0    |    0    |
+|----------|-------------------------------------|---------|---------|
+|   Total  |                                     |    0    |    38   |
+|----------|-------------------------------------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++----------------------------+--------+
+|                            |   FF   |
++----------------------------+--------+
+|     icmp_ln1068_reg_208    |    1   |
+|rasi_fsmState_V_load_reg_195|    1   |
+|     tmp_appd_V_reg_222     |   18   |
+|      tmp_i_304_reg_212     |    1   |
+|        tmp_i_reg_199       |    1   |
+|   tmp_sessionID_V_reg_203  |   16   |
+|     trunc_ln144_reg_216    |   16   |
++----------------------------+--------+
+|            Total           |   54   |
++----------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|-----------------|------|------|------|--------||---------||---------|
+|       Comp      |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-----------------|------|------|------|--------||---------||---------|
+| grp_write_fu_90 |  p2  |   2  |  35  |   70   ||    9    |
+|-----------------|------|------|------|--------||---------||---------|
+|      Total      |      |      |      |   70   ||  0.387  ||    9    |
+|-----------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    -   |    0   |   38   |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|    0   |    -   |    9   |
+|  Register |    -   |   54   |    -   |
++-----------+--------+--------+--------+
+|   Total   |    0   |   54   |   47   |
++-----------+--------+--------+--------+

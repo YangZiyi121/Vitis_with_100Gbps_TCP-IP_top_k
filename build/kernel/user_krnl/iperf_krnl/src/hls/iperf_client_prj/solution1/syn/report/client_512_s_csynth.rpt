@@ -1,0 +1,366 @@
+
+
+================================================================
+== Vitis HLS Report for 'client_512_s'
+================================================================
+* Date:           Sat Mar 18 14:31:10 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        iperf_client_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  2.544 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        3|        3|  9.600 ns|  9.600 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|     2087|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|      585|    -|
+|Register             |        -|     -|     1146|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|     1146|     2672|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |add_ln885_2_fu_836_p2             |         +|   0|  0|   15|           8|           1|
+    |add_ln885_3_fu_1092_p2            |         +|   0|  0|   21|          14|           1|
+    |add_ln885_4_fu_805_p2             |         +|   0|  0|   21|          14|           1|
+    |add_ln885_5_fu_1119_p2            |         +|   0|  0|   12|           4|           1|
+    |add_ln885_fu_1158_p2              |         +|   0|  0|   15|           8|           1|
+    |grp_fu_742_p2                     |         +|   0|  0|   21|          14|           2|
+    |grp_fu_747_p2                     |         +|   0|  0|   21|          14|           1|
+    |ap_condition_1212                 |       and|   0|  0|    2|           1|           1|
+    |ap_condition_443                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_526                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_610                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_695                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_710                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_714                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_717                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_720                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_723                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_726                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_729                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_732                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_735                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_738                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_750                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_753                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_756                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_778                  |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op107_read_state2    |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op141_read_state2    |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op158_read_state2    |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op228_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op235_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op240_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op248_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op250_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op254_write_state3   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op255_write_state4   |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op256_write_state4   |       and|   0|  0|    2|           1|           1|
+    |grp_nbreadreq_fu_350_p3           |       and|   0|  0|    2|           1|           0|
+    |tmp_5_i_nbreadreq_fu_336_p3       |       and|   0|  0|  575|           1|           0|
+    |tmp_i_nbreadreq_fu_364_p3         |       and|   0|  0|  575|           1|           0|
+    |currWord_last_V_fu_843_p2         |      icmp|   0|  0|   11|           8|           8|
+    |grp_fu_755_p2                     |      icmp|   0|  0|   12|          14|          14|
+    |icmp_ln1064_1_fu_1038_p2          |      icmp|   0|  0|   12|          14|          14|
+    |icmp_ln1064_2_fu_799_p2           |      icmp|   0|  0|   12|          14|          14|
+    |icmp_ln1064_4_fu_1129_p2          |      icmp|   0|  0|   13|          16|          16|
+    |icmp_ln1064_fu_1165_p2            |      icmp|   0|  0|   11|           8|           8|
+    |icmp_ln1068_1_fu_818_p2           |      icmp|   0|  0|   12|          14|          14|
+    |icmp_ln1068_fu_848_p2             |      icmp|   0|  0|   11|           8|           1|
+    |icmp_ln1072_fu_1110_p2            |      icmp|   0|  0|   12|          14|          14|
+    |icmp_ln231_fu_1086_p2             |      icmp|   0|  0|   11|           8|           1|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|    2|           1|           1|
+    |ap_block_pp0_stage0_11001         |        or|   0|  0|    2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|    2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|    2|           1|           1|
+    |ap_block_state3_io                |        or|   0|  0|    2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2  |        or|   0|  0|    2|           1|           1|
+    |ap_block_state4_io                |        or|   0|  0|    2|           1|           1|
+    |ap_block_state4_pp0_stage0_iter3  |        or|   0|  0|    2|           1|           1|
+    |ap_condition_584                  |        or|   0|  0|    2|           1|           1|
+    |ap_condition_747                  |        or|   0|  0|    2|           1|           1|
+    |or_ln173_fu_1237_p2               |        or|   0|  0|  576|         577|         576|
+    |p_cast_fu_911_p3                  |    select|   0|  0|   25|           1|          25|
+    |select_ln215_fu_1134_p3           |    select|   0|  0|    4|           1|           1|
+    |select_ln365_fu_853_p3            |    select|   0|  0|    5|           1|           4|
+    |ap_enable_pp0                     |       xor|   0|  0|    2|           1|           2|
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |Total                             |          |   0|  0| 2087|         818|         760|
+    +----------------------------------+----------+----+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------------------------+----+-----------+------+-----------+
+    |                          Name                          | LUT| Input Size| Bits | Total Bits|
+    +--------------------------------------------------------+----+-----------+------+-----------+
+    |ap_done                                                 |   9|          2|     1|          2|
+    |ap_phi_mux_closeIt_V_loc_0_i_phi_fu_419_p4              |  14|          3|    14|         42|
+    |ap_phi_mux_packetGapCounter_V_new_0_i_phi_fu_428_p4     |  14|          3|     8|         24|
+    |ap_phi_mux_sessionIt_V_flag_4_i_phi_fu_438_p30          |  14|          3|     1|          3|
+    |ap_phi_mux_sessionIt_V_new_4_i_phi_fu_488_p30           |  14|          3|    14|         42|
+    |ap_phi_mux_timeOver_flag_0_i_phi_fu_535_p30             |  14|          3|     1|          3|
+    |ap_phi_mux_timeOver_flag_1_i_phi_fu_685_p4              |   9|          2|     1|          2|
+    |ap_phi_mux_timeOver_new_1_i_phi_fu_696_p4               |   9|          2|     1|          2|
+    |ap_phi_mux_wordCount_V_flag_1_i_phi_fu_585_p30          |  14|          3|     1|          3|
+    |ap_phi_mux_wordCount_V_new_1_i_phi_fu_635_p30           |  20|          4|     8|         32|
+    |ap_phi_reg_pp0_iter1_timeOver_flag_1_i_reg_681          |   9|          2|     1|          2|
+    |ap_phi_reg_pp0_iter1_timeOver_new_1_i_reg_693           |   9|          2|     1|          2|
+    |ap_phi_reg_pp0_iter2_openTuple_ip_address_V_10_reg_703  |  59|         11|    32|        352|
+    |closeIt_V                                               |   9|          2|    14|         28|
+    |currentSessionID_V                                      |   9|          2|    16|         32|
+    |dualModeEn_blk_n                                        |   9|          2|     1|          2|
+    |ipAddressIdx_V                                          |   9|          2|     4|          8|
+    |iperfFsmState                                           |  65|         12|     4|         48|
+    |m_axis_close_connection_TDATA_blk_n                     |   9|          2|     1|          2|
+    |m_axis_open_connection_TDATA_blk_n                      |   9|          2|     1|          2|
+    |numConnections_V                                        |  14|          3|    14|         42|
+    |openConStatusBuffer_blk_n                               |   9|          2|     1|          2|
+    |packetGap_blk_n                                         |   9|          2|     1|          2|
+    |pkgWordCount_blk_n                                      |   9|          2|     1|          2|
+    |regIpAddress0_blk_n                                     |   9|          2|     1|          2|
+    |regIpAddress1_blk_n                                     |   9|          2|     1|          2|
+    |regIpAddress2_blk_n                                     |   9|          2|     1|          2|
+    |regIpAddress3_blk_n                                     |   9|          2|     1|          2|
+    |regIpAddress4_blk_n                                     |   9|          2|     1|          2|
+    |regIpAddress5_blk_n                                     |   9|          2|     1|          2|
+    |regIpAddress6_blk_n                                     |   9|          2|     1|          2|
+    |regIpAddress7_blk_n                                     |   9|          2|     1|          2|
+    |regIpAddress8_blk_n                                     |   9|          2|     1|          2|
+    |regIpAddress9_blk_n                                     |   9|          2|     1|          2|
+    |runExperiment_blk_n                                     |   9|          2|     1|          2|
+    |startSignalFifo_blk_n                                   |   9|          2|     1|          2|
+    |stopSignalFifo_blk_n                                    |   9|          2|     1|          2|
+    |timeInSeconds_blk_n                                     |   9|          2|     1|          2|
+    |txDataBuffer_blk_n                                      |   9|          2|     1|          2|
+    |txDataBuffer_din                                        |  20|          4|  1024|       4096|
+    |txMetaDataBuffer_blk_n                                  |   9|          2|     1|          2|
+    |txMetaDataBuffer_din                                    |  26|          5|    32|        160|
+    |txStatusBuffer_blk_n                                    |   9|          2|     1|          2|
+    |useConn_blk_n                                           |   9|          2|     1|          2|
+    |useIpAddr_blk_n                                         |   9|          2|     1|          2|
+    +--------------------------------------------------------+----+-----------+------+-----------+
+    |Total                                                   | 585|        123|  1217|       4975|
+    +--------------------------------------------------------+----+-----------+------+-----------+
+
+    * Register: 
+    +--------------------------------------------------------+-----+----+-----+-----------+
+    |                          Name                          |  FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                                               |    1|   0|    1|          0|
+    |ap_done_reg                                             |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                                 |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                                 |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3                                 |    1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter1_openTuple_ip_address_V_10_reg_703  |   32|   0|   32|          0|
+    |ap_phi_reg_pp0_iter1_timeOver_flag_1_i_reg_681          |    1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter1_timeOver_new_1_i_reg_693           |    1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter2_openTuple_ip_address_V_10_reg_703  |   32|   0|   32|          0|
+    |closeIt_V                                               |   14|   0|   14|          0|
+    |currWord_last_V_reg_1439                                |    1|   0|    1|          0|
+    |currentSessionID_V                                      |   16|   0|   16|          0|
+    |currentSessionID_V_load_reg_1425                        |   16|   0|   16|          0|
+    |en_reg_1395                                             |    1|   0|    1|          0|
+    |header_header_V                                         |  512|   0|  512|          0|
+    |icmp_ln1064_2_reg_1432                                  |    1|   0|    1|          0|
+    |icmp_ln1064_2_reg_1432_pp0_iter2_reg                    |    1|   0|    1|          0|
+    |icmp_ln1064_5_reg_1472                                  |    1|   0|    1|          0|
+    |icmp_ln1072_reg_1476                                    |    1|   0|    1|          0|
+    |icmp_ln1072_reg_1476_pp0_iter2_reg                      |    1|   0|    1|          0|
+    |icmp_ln231_reg_1468                                     |    1|   0|    1|          0|
+    |ipAddressIdx_V                                          |    4|   0|    4|          0|
+    |iperfFsmState                                           |    4|   0|    4|          0|
+    |iperfFsmState_load_reg_1413                             |    4|   0|    4|          0|
+    |iperfFsmState_load_reg_1413_pp0_iter2_reg               |    4|   0|    4|          0|
+    |numConnections_V                                        |   14|   0|   14|          0|
+    |openTuple_ip_address_V_1_reg_1352                       |   32|   0|   32|          0|
+    |openTuple_ip_address_V_2_reg_1347                       |   32|   0|   32|          0|
+    |openTuple_ip_address_V_3_reg_1342                       |   32|   0|   32|          0|
+    |openTuple_ip_address_V_4_reg_1337                       |   32|   0|   32|          0|
+    |openTuple_ip_address_V_5_reg_1332                       |   32|   0|   32|          0|
+    |openTuple_ip_address_V_6_reg_1327                       |   32|   0|   32|          0|
+    |openTuple_ip_address_V_7_reg_1322                       |   32|   0|   32|          0|
+    |openTuple_ip_address_V_8_reg_1317                       |   32|   0|   32|          0|
+    |openTuple_ip_address_V_9_reg_1312                       |   32|   0|   32|          0|
+    |openTuple_ip_address_V_reg_1357                         |   32|   0|   32|          0|
+    |packetGapCounter_V                                      |    8|   0|    8|          0|
+    |packetGap_read_reg_1375                                 |    8|   0|    8|          0|
+    |pkgWordCount_read_reg_1381                              |    8|   0|    8|          0|
+    |pkgWordCount_read_reg_1381_pp0_iter1_reg                |    8|   0|    8|          0|
+    |runExperiment_read_reg_1400                             |    1|   0|    1|          0|
+    |seconds_V_reg_1367                                      |   32|   0|   32|          0|
+    |sessionIt_V                                             |   14|   0|   14|          0|
+    |stopSend                                                |    1|   0|    1|          0|
+    |stopSend_load_reg_1421                                  |    1|   0|    1|          0|
+    |stopSend_load_reg_1421_pp0_iter2_reg                    |    1|   0|    1|          0|
+    |timeOver                                                |    1|   0|    1|          0|
+    |timeOver_load_reg_1417                                  |    1|   0|    1|          0|
+    |tmp_1_i_reg_1444                                        |    1|   0|    1|          0|
+    |tmp_5_i_reg_1404                                        |    1|   0|    1|          0|
+    |tmp_error_V_2_reg_760                                   |    2|   0|    2|          0|
+    |tmp_i_reg_1459                                          |    1|   0|    1|          0|
+    |tmp_sessionID_V_2_reg_1448                              |   16|   0|   16|          0|
+    |tmp_sessionID_V_reg_1463                                |   16|   0|   16|          0|
+    |useConn_read_reg_1389                                   |   14|   0|   14|          0|
+    |useIpAddr_read_reg_1362                                 |   16|   0|   16|          0|
+    |wordCount_V                                             |    8|   0|    8|          0|
+    +--------------------------------------------------------+-----+----+-----+-----------+
+    |Total                                                   | 1146|   0| 1146|          0|
+    +--------------------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------+-----+------+------------+-------------------------+--------------+
+|            RTL Ports           | Dir | Bits |  Protocol  |      Source Object      |    C Type    |
++--------------------------------+-----+------+------------+-------------------------+--------------+
+|ap_clk                          |   in|     1|  ap_ctrl_hs|              client<512>|  return value|
+|ap_rst                          |   in|     1|  ap_ctrl_hs|              client<512>|  return value|
+|ap_start                        |   in|     1|  ap_ctrl_hs|              client<512>|  return value|
+|ap_done                         |  out|     1|  ap_ctrl_hs|              client<512>|  return value|
+|ap_continue                     |   in|     1|  ap_ctrl_hs|              client<512>|  return value|
+|ap_idle                         |  out|     1|  ap_ctrl_hs|              client<512>|  return value|
+|ap_ready                        |  out|     1|  ap_ctrl_hs|              client<512>|  return value|
+|regIpAddress9_dout              |   in|    32|     ap_fifo|            regIpAddress9|       pointer|
+|regIpAddress9_empty_n           |   in|     1|     ap_fifo|            regIpAddress9|       pointer|
+|regIpAddress9_read              |  out|     1|     ap_fifo|            regIpAddress9|       pointer|
+|regIpAddress8_dout              |   in|    32|     ap_fifo|            regIpAddress8|       pointer|
+|regIpAddress8_empty_n           |   in|     1|     ap_fifo|            regIpAddress8|       pointer|
+|regIpAddress8_read              |  out|     1|     ap_fifo|            regIpAddress8|       pointer|
+|regIpAddress7_dout              |   in|    32|     ap_fifo|            regIpAddress7|       pointer|
+|regIpAddress7_empty_n           |   in|     1|     ap_fifo|            regIpAddress7|       pointer|
+|regIpAddress7_read              |  out|     1|     ap_fifo|            regIpAddress7|       pointer|
+|regIpAddress6_dout              |   in|    32|     ap_fifo|            regIpAddress6|       pointer|
+|regIpAddress6_empty_n           |   in|     1|     ap_fifo|            regIpAddress6|       pointer|
+|regIpAddress6_read              |  out|     1|     ap_fifo|            regIpAddress6|       pointer|
+|regIpAddress5_dout              |   in|    32|     ap_fifo|            regIpAddress5|       pointer|
+|regIpAddress5_empty_n           |   in|     1|     ap_fifo|            regIpAddress5|       pointer|
+|regIpAddress5_read              |  out|     1|     ap_fifo|            regIpAddress5|       pointer|
+|regIpAddress4_dout              |   in|    32|     ap_fifo|            regIpAddress4|       pointer|
+|regIpAddress4_empty_n           |   in|     1|     ap_fifo|            regIpAddress4|       pointer|
+|regIpAddress4_read              |  out|     1|     ap_fifo|            regIpAddress4|       pointer|
+|regIpAddress3_dout              |   in|    32|     ap_fifo|            regIpAddress3|       pointer|
+|regIpAddress3_empty_n           |   in|     1|     ap_fifo|            regIpAddress3|       pointer|
+|regIpAddress3_read              |  out|     1|     ap_fifo|            regIpAddress3|       pointer|
+|regIpAddress2_dout              |   in|    32|     ap_fifo|            regIpAddress2|       pointer|
+|regIpAddress2_empty_n           |   in|     1|     ap_fifo|            regIpAddress2|       pointer|
+|regIpAddress2_read              |  out|     1|     ap_fifo|            regIpAddress2|       pointer|
+|regIpAddress1_dout              |   in|    32|     ap_fifo|            regIpAddress1|       pointer|
+|regIpAddress1_empty_n           |   in|     1|     ap_fifo|            regIpAddress1|       pointer|
+|regIpAddress1_read              |  out|     1|     ap_fifo|            regIpAddress1|       pointer|
+|regIpAddress0_dout              |   in|    32|     ap_fifo|            regIpAddress0|       pointer|
+|regIpAddress0_empty_n           |   in|     1|     ap_fifo|            regIpAddress0|       pointer|
+|regIpAddress0_read              |  out|     1|     ap_fifo|            regIpAddress0|       pointer|
+|useIpAddr_dout                  |   in|    16|     ap_fifo|                useIpAddr|       pointer|
+|useIpAddr_empty_n               |   in|     1|     ap_fifo|                useIpAddr|       pointer|
+|useIpAddr_read                  |  out|     1|     ap_fifo|                useIpAddr|       pointer|
+|timeInSeconds_dout              |   in|    32|     ap_fifo|            timeInSeconds|       pointer|
+|timeInSeconds_empty_n           |   in|     1|     ap_fifo|            timeInSeconds|       pointer|
+|timeInSeconds_read              |  out|     1|     ap_fifo|            timeInSeconds|       pointer|
+|packetGap_dout                  |   in|     8|     ap_fifo|                packetGap|       pointer|
+|packetGap_empty_n               |   in|     1|     ap_fifo|                packetGap|       pointer|
+|packetGap_read                  |  out|     1|     ap_fifo|                packetGap|       pointer|
+|pkgWordCount_dout               |   in|     8|     ap_fifo|             pkgWordCount|       pointer|
+|pkgWordCount_empty_n            |   in|     1|     ap_fifo|             pkgWordCount|       pointer|
+|pkgWordCount_read               |  out|     1|     ap_fifo|             pkgWordCount|       pointer|
+|useConn_dout                    |   in|    14|     ap_fifo|                  useConn|       pointer|
+|useConn_empty_n                 |   in|     1|     ap_fifo|                  useConn|       pointer|
+|useConn_read                    |  out|     1|     ap_fifo|                  useConn|       pointer|
+|dualModeEn_dout                 |   in|     1|     ap_fifo|               dualModeEn|       pointer|
+|dualModeEn_empty_n              |   in|     1|     ap_fifo|               dualModeEn|       pointer|
+|dualModeEn_read                 |  out|     1|     ap_fifo|               dualModeEn|       pointer|
+|runExperiment_dout              |   in|     1|     ap_fifo|            runExperiment|       pointer|
+|runExperiment_empty_n           |   in|     1|     ap_fifo|            runExperiment|       pointer|
+|runExperiment_read              |  out|     1|     ap_fifo|            runExperiment|       pointer|
+|stopSignalFifo_dout             |   in|     1|     ap_fifo|           stopSignalFifo|       pointer|
+|stopSignalFifo_empty_n          |   in|     1|     ap_fifo|           stopSignalFifo|       pointer|
+|stopSignalFifo_read             |  out|     1|     ap_fifo|           stopSignalFifo|       pointer|
+|txStatusBuffer_dout             |   in|    32|     ap_fifo|           txStatusBuffer|       pointer|
+|txStatusBuffer_empty_n          |   in|     1|     ap_fifo|           txStatusBuffer|       pointer|
+|txStatusBuffer_read             |  out|     1|     ap_fifo|           txStatusBuffer|       pointer|
+|openConStatusBuffer_dout        |   in|    96|     ap_fifo|      openConStatusBuffer|       pointer|
+|openConStatusBuffer_empty_n     |   in|     1|     ap_fifo|      openConStatusBuffer|       pointer|
+|openConStatusBuffer_read        |  out|     1|     ap_fifo|      openConStatusBuffer|       pointer|
+|m_axis_close_connection_TREADY  |   in|     1|        axis|  m_axis_close_connection|       pointer|
+|m_axis_close_connection_TDATA   |  out|    16|        axis|  m_axis_close_connection|       pointer|
+|m_axis_close_connection_TVALID  |  out|     1|        axis|  m_axis_close_connection|       pointer|
+|txDataBuffer_din                |  out|  1024|     ap_fifo|             txDataBuffer|       pointer|
+|txDataBuffer_full_n             |   in|     1|     ap_fifo|             txDataBuffer|       pointer|
+|txDataBuffer_write              |  out|     1|     ap_fifo|             txDataBuffer|       pointer|
+|txMetaDataBuffer_din            |  out|    32|     ap_fifo|         txMetaDataBuffer|       pointer|
+|txMetaDataBuffer_full_n         |   in|     1|     ap_fifo|         txMetaDataBuffer|       pointer|
+|txMetaDataBuffer_write          |  out|     1|     ap_fifo|         txMetaDataBuffer|       pointer|
+|startSignalFifo_din             |  out|     1|     ap_fifo|          startSignalFifo|       pointer|
+|startSignalFifo_full_n          |   in|     1|     ap_fifo|          startSignalFifo|       pointer|
+|startSignalFifo_write           |  out|     1|     ap_fifo|          startSignalFifo|       pointer|
+|m_axis_open_connection_TREADY   |   in|     1|        axis|   m_axis_open_connection|       pointer|
+|m_axis_open_connection_TDATA    |  out|    48|        axis|   m_axis_open_connection|       pointer|
+|m_axis_open_connection_TVALID   |  out|     1|        axis|   m_axis_open_connection|       pointer|
++--------------------------------+-----+------+------------+-------------------------+--------------+
+

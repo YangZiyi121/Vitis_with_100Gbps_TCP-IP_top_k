@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="udp_top" xd:componentRef="udp" xd:initiationInterval="1" xd:clockPeriod="3.2" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="s_axis_rx_meta" xd:originalName="s_axis_rx_meta" xd:direction="in" xd:interfaceRef="s_axis_rx_meta" xd:busTypeRef="axis" xd:dataWidth="48"/>
+  <xd:arg xd:name="s_axis_rx_data" xd:originalName="s_axis_rx_data" xd:direction="in" xd:interfaceRef="s_axis_rx_data" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="m_axis_rx_meta" xd:originalName="m_axis_rx_meta" xd:direction="out" xd:interfaceRef="m_axis_rx_meta" xd:busTypeRef="axis" xd:dataWidth="176"/>
+  <xd:arg xd:name="m_axis_rx_data" xd:originalName="m_axis_rx_data" xd:direction="out" xd:interfaceRef="m_axis_rx_data" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="s_axis_tx_meta" xd:originalName="s_axis_tx_meta" xd:direction="in" xd:interfaceRef="s_axis_tx_meta" xd:busTypeRef="axis" xd:dataWidth="176"/>
+  <xd:arg xd:name="s_axis_tx_data" xd:originalName="s_axis_tx_data" xd:direction="in" xd:interfaceRef="s_axis_tx_data" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="m_axis_tx_meta" xd:originalName="m_axis_tx_meta" xd:direction="out" xd:interfaceRef="m_axis_tx_meta" xd:busTypeRef="axis" xd:dataWidth="48"/>
+  <xd:arg xd:name="m_axis_tx_data" xd:originalName="m_axis_tx_data" xd:direction="out" xd:interfaceRef="m_axis_tx_data" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="reg_ip_address" xd:originalName="reg_ip_address" xd:direction="in" xd:interfaceRef="reg_ip_address" xd:busTypeRef="register" xd:dataWidth="128"/>
+  <xd:arg xd:name="reg_listen_port" xd:originalName="reg_listen_port" xd:direction="in" xd:interfaceRef="reg_listen_port" xd:busTypeRef="register" xd:dataWidth="16"/>
+  <xd:latencyEstimates xd:best-case="7" xd:worst-case="7" xd:average-case="7"/>
+  <xd:resourceEstimates xd:LUT="8394" xd:FF="21108" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

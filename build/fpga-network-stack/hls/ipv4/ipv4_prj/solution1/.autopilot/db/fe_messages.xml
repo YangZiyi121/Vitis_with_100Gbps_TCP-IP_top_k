@@ -1,0 +1,594 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:257:26" msg_body="unused parameter 'output'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:257:47" msg_body="unused parameter 'word'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:272:28" msg_body="unused parameter 'output'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:272:48" msg_body="unused parameter 'data'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:285:28" msg_body="unused parameter 'output'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:285:49" msg_body="unused parameter 'word'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:300:28" msg_body="unused parameter 'output'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:300:59" msg_body="unused parameter 'word'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:476:20" msg_body="unused parameter 'd'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:476:26" msg_body="unused parameter 's'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_ref.h:718:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_ref.h:732:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_ref.h:746:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:122:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_user_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:126:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_id_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:130:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_dest_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:160:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_strb_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:164:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_user_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:168:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_id_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:172:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_dest_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:178:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:182:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_keep" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:186:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_last" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:191:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:195:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_keep" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:199:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_last" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:203:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="keep_all" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:209:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:213:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:217:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:222:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:227:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:231:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator=" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:266:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="empty" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:273:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="full" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:281:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:291:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:302:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:312:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:327:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:363:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="empty" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:370:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="full" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:378:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:388:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:399:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:409:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:425:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:76:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convert_net_axis_to_axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:96:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convert_axis_to_net_axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:115:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convert_routed_net_axis_to_axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:137:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="reverse" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:149:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="reverse_bits" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:318:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="increaseStreamWidth" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:348:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="reduceStreamWidth" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:411:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convertStreamWidth" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:412:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convertStreamWidth" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:423:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convertStreamWidth" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:424:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convertStreamWidth" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:432:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convertStreamWidth" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:433:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convertStreamWidth" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:441:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convertStreamWidth" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:442:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convertStreamWidth" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:450:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convertStreamWidth" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:451:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convertStreamWidth" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:459:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convertStreamWidth" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:460:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convertStreamWidth" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:468:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convertStreamWidth" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:469:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convertStreamWidth" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:493:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="rshiftWordByOctet" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:494:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="rshiftWordByOctet" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:568:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lshiftWordByOctet" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:569:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lshiftWordByOctet" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:637:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream_merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:638:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream_merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:656:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream_merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:657:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream_merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:718:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fair_merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:719:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fair_merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:752:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fair_pkg_merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:753:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fair_pkg_merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:834:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream_pkg_merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:835:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream_pkg_merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:913:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream_pkg_splitter" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:914:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream_pkg_splitter" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:978:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pass_valid_pkg" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:979:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pass_valid_pkg" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:1040:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="toe_duplicate_stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:1041:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="toe_duplicate_stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:1056:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ip_handler_duplicate_stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:1057:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ip_handler_duplicate_stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:1095:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="udp_lshiftWordByOctet" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:1096:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="udp_lshiftWordByOctet" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:1166:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_lshiftWordByOctet" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:1167:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_lshiftWordByOctet" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:1237:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_lshiftWordByOctet" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:1238:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_lshiftWordByOctet" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:1308:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ip_handler_rshiftWordByOctet" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:1309:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ip_handler_rshiftWordByOctet" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:1383:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="udp_rshiftWordByOctet" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:1384:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="udp_rshiftWordByOctet" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../packet.hpp:159:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clear" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:58:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="drop_optional_ip_header" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:59:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="drop_optional_ip_header" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:200:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_drop_optional_ip_header" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:201:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_drop_optional_ip_header" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:372:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="toe_check_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:373:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="toe_check_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:383:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="toe_check_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:393:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="toe_check_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:403:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="toe_check_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:429:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ip_handler_check_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:430:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ip_handler_check_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:440:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ip_handler_check_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:450:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ip_handler_check_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:460:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ip_handler_check_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:484:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="finalize_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:485:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="finalize_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:495:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="finalize_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:505:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="finalize_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:515:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="finalize_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:540:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_finalize_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:541:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_finalize_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:551:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_finalize_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:561:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_finalize_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:571:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_finalize_ipv4_checksum" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:36:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="process_ipv4" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="process_ipv4" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:79:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generate_ipv4" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:80:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generate_ipv4" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:164:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_generate_ipv4" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:165:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_generate_ipv4" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:253:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:262:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4" ARG_PragmaIsValid="1" ARG_PragmaOptions="depth=2 variable=rx_process2dropLengthFifo" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:263:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4" ARG_PragmaIsValid="1" ARG_PragmaOptions="depth=8 variable=rx_process2dropFifo" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:264:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4" ARG_PragmaIsValid="1" ARG_PragmaOptions="depth=8 variable=tx_shift2ipv4Fifo" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:289:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="ipv4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=ipv4_top" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:289:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="disable_start_propagation" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:290:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:292:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register port=s_axis_rx_data" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:293:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register port=m_axis_rx_meta" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:294:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register port=m_axis_rx_data" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:295:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register port=s_axis_tx_meta" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:296:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register port=s_axis_tx_data" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:297:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register port=m_axis_tx_data" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:298:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=m_axis_rx_meta compact=bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:299:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=s_axis_tx_meta compact=bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:300:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none register port=local_ipv4_address" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:301:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none register port=protocol" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:304:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="depth=2 variable=s_axis_rx_data_internal" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:306:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="depth=2 variable=s_axis_tx_data_internal" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:308:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="depth=2 variable=m_axis_rx_data_internal" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:310:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ipv4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="depth=2 variable=m_axis_tx_data_internal" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-273" msg_severity="WARNING" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:252:0" msg_body="In function 'void ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)', Pragma conflict happens on 'INLINE' and DATAFLOW pragmas: Inline into dataflow region is not suggested">
+        <args Function="void ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:66:11" msg_body="Inlining function 'packetHeader&lt;512, 160&gt;::clear()' into 'void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;)'">
+        <args Callee="packetHeader&lt;512, 160&gt;::clear()" Caller="void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:181:11" msg_body="Inlining function 'packetHeader&lt;512, 160&gt;::clear()' into 'void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)'">
+        <args Callee="packetHeader&lt;512, 160&gt;::clear()" Caller="void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:325:5" msg_body="Inlining function 'void ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)' into 'ipv4_top(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)'">
+        <args Callee="void ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)" Caller="ipv4_top(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:135:20" msg_body="Loop 'VITIS_LOOP_135_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_135_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:133:0" msg_body="Unrolling loop 'VITIS_LOOP_135_1' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:135:20) in function 'reverse&lt;16&gt;' completely with a factor of 2">
+        <args Factor="2" LoopLoc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/../axi_utils.hpp:135:20" LoopName="VITIS_LOOP_135_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:611:0" msg_body="Inlining function 'packetHeader&lt;512, 160&gt;::packetHeader() (.139.168.175.204)' into 'ipv4Header&lt;512&gt;::ipv4Header()'">
+        <args Callee="packetHeader&lt;512, 160&gt;::packetHeader() (.139.168.175.204)" Caller="ipv4Header&lt;512&gt;::ipv4Header()"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:637:0" msg_body="Inlining function 'ap_uint&lt;16&gt; reverse&lt;16&gt;(ap_uint&lt;16&gt; const&amp;)' into 'ipv4Header&lt;512&gt;::getLength()'">
+        <args Callee="ap_uint&lt;16&gt; reverse&lt;16&gt;(ap_uint&lt;16&gt; const&amp;)" Caller="ipv4Header&lt;512&gt;::getLength()"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:35:0" msg_body="Inlining function 'ipv4Header&lt;512&gt;::ipv4Header()' into 'void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;)'">
+        <args Callee="ipv4Header&lt;512&gt;::ipv4Header()" Caller="void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:35:0" msg_body="Inlining function 'packetHeader&lt;512, 160&gt;::parseWord(ap_uint&lt;512&gt;&amp;)' into 'void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;)'">
+        <args Callee="packetHeader&lt;512, 160&gt;::parseWord(ap_uint&lt;512&gt;&amp;)" Caller="void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:35:0" msg_body="Inlining function 'packetHeader&lt;512, 160&gt;::isReady()' into 'void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;)'">
+        <args Callee="packetHeader&lt;512, 160&gt;::isReady()" Caller="void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:35:0" msg_body="Inlining function 'ipv4Header&lt;512&gt;::getSrcAddr()' into 'void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;)'">
+        <args Callee="ipv4Header&lt;512&gt;::getSrcAddr()" Caller="void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:35:0" msg_body="Inlining function 'ipv4Header&lt;512&gt;::getLength()' into 'void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;)'">
+        <args Callee="ipv4Header&lt;512&gt;::getLength()" Caller="void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:35:0" msg_body="Inlining function 'ipv4Header&lt;512&gt;::getHeaderLength()' into 'void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;)'">
+        <args Callee="ipv4Header&lt;512&gt;::getHeaderLength()" Caller="void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:35:0" msg_body="Inlining function 'ipv4Meta::ipv4Meta(ap_uint&lt;32&gt;, ap_uint&lt;16&gt;)' into 'void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;)'">
+        <args Callee="ipv4Meta::ipv4Meta(ap_uint&lt;32&gt;, ap_uint&lt;16&gt;)" Caller="void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.hpp:633:0" msg_body="Inlining function 'ap_uint&lt;16&gt; reverse&lt;16&gt;(ap_uint&lt;16&gt; const&amp;)' into 'ipv4Header&lt;512&gt;::setLength(ap_uint&lt;16&gt;)'">
+        <args Callee="ap_uint&lt;16&gt; reverse&lt;16&gt;(ap_uint&lt;16&gt; const&amp;)" Caller="ipv4Header&lt;512&gt;::setLength(ap_uint&lt;16&gt;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:163:0" msg_body="Inlining function 'ipv4Header&lt;512&gt;::ipv4Header()' into 'void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)'">
+        <args Callee="ipv4Header&lt;512&gt;::ipv4Header()" Caller="void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:163:0" msg_body="Inlining function 'ipv4Header&lt;512&gt;::setLength(ap_uint&lt;16&gt;)' into 'void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)'">
+        <args Callee="ipv4Header&lt;512&gt;::setLength(ap_uint&lt;16&gt;)" Caller="void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:163:0" msg_body="Inlining function 'ipv4Header&lt;512&gt;::setDstAddr(ap_uint&lt;32&gt; const&amp;)' into 'void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)'">
+        <args Callee="ipv4Header&lt;512&gt;::setDstAddr(ap_uint&lt;32&gt; const&amp;)" Caller="void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:163:0" msg_body="Inlining function 'ipv4Header&lt;512&gt;::setSrcAddr(ap_uint&lt;32&gt; const&amp;)' into 'void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)'">
+        <args Callee="ipv4Header&lt;512&gt;::setSrcAddr(ap_uint&lt;32&gt; const&amp;)" Caller="void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:163:0" msg_body="Inlining function 'ipv4Header&lt;512&gt;::setProtocol(ap_uint&lt;8&gt; const&amp;)' into 'void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)'">
+        <args Callee="ipv4Header&lt;512&gt;::setProtocol(ap_uint&lt;8&gt; const&amp;)" Caller="void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:163:0" msg_body="Inlining function 'packetHeader&lt;512, 160&gt;::consumeWord(ap_uint&lt;512&gt;&amp;)' into 'void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)'">
+        <args Callee="packetHeader&lt;512, 160&gt;::consumeWord(ap_uint&lt;512&gt;&amp;)" Caller="void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:288:0" msg_body="Aggregating axis (hls::stream) variable 'm_axis_rx_meta' with compact=bit mode in 48-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="48" HwTyName="axis (hls::stream)" Name="m_axis_rx_meta"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ipv4/ipv4.cpp:288:0" msg_body="Aggregating axis (hls::stream) variable 's_axis_tx_meta' with compact=bit mode in 48-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="48" HwTyName="axis (hls::stream)" Name="s_axis_tx_meta"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5" msg_body="Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint&lt;512&gt;s.i512' into 'void convert_axis_to_net_axis&lt;512&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.271.1)'">
+        <args Callee="_llvm.fpga.unpack.none.s_struct.ap_uint&lt;512&gt;s.i512" Caller="void convert_axis_to_net_axis&lt;512&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.271.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9" msg_body="Inlining function '_llvm.fpga.pack.none.i1024.s_struct.net_axis&lt;512&gt;s' into 'void convert_axis_to_net_axis&lt;512&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.271.1)'">
+        <args Callee="_llvm.fpga.pack.none.i1024.s_struct.net_axis&lt;512&gt;s" Caller="void convert_axis_to_net_axis&lt;512&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.271.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5" msg_body="Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint&lt;1&gt;s.i1' into 'void convert_axis_to_net_axis&lt;512&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.271.1)'">
+        <args Callee="_llvm.fpga.unpack.none.s_struct.ap_uint&lt;1&gt;s.i1" Caller="void convert_axis_to_net_axis&lt;512&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.271.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5" msg_body="Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint&lt;64&gt;s.i64' into 'void convert_axis_to_net_axis&lt;512&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.271.1)'">
+        <args Callee="_llvm.fpga.unpack.none.s_struct.ap_uint&lt;64&gt;s.i64" Caller="void convert_axis_to_net_axis&lt;512&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.271.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5" msg_body="Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint&lt;512&gt;s.i512' into 'void convert_axis_to_net_axis&lt;512&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)'">
+        <args Callee="_llvm.fpga.unpack.none.s_struct.ap_uint&lt;512&gt;s.i512" Caller="void convert_axis_to_net_axis&lt;512&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9" msg_body="Inlining function '_llvm.fpga.pack.none.i1024.s_struct.net_axis&lt;512&gt;s' into 'void convert_axis_to_net_axis&lt;512&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i1024.s_struct.net_axis&lt;512&gt;s" Caller="void convert_axis_to_net_axis&lt;512&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5" msg_body="Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint&lt;1&gt;s.i1' into 'void convert_axis_to_net_axis&lt;512&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)'">
+        <args Callee="_llvm.fpga.unpack.none.s_struct.ap_uint&lt;1&gt;s.i1" Caller="void convert_axis_to_net_axis&lt;512&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5" msg_body="Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint&lt;64&gt;s.i64' into 'void convert_axis_to_net_axis&lt;512&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)'">
+        <args Callee="_llvm.fpga.unpack.none.s_struct.ap_uint&lt;64&gt;s.i64" Caller="void convert_axis_to_net_axis&lt;512&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5" msg_body="Inlining function '_llvm.fpga.pack.none.i512.s_struct.ap_uint&lt;512&gt;s' into 'void convert_net_axis_to_axis&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;) (.272.1)'">
+        <args Callee="_llvm.fpga.pack.none.i512.s_struct.ap_uint&lt;512&gt;s" Caller="void convert_net_axis_to_axis&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;) (.272.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5" msg_body="Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint&lt;1&gt;s' into 'void convert_net_axis_to_axis&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;) (.272.1)'">
+        <args Callee="_llvm.fpga.pack.none.i1.s_struct.ap_uint&lt;1&gt;s" Caller="void convert_net_axis_to_axis&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;) (.272.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5" msg_body="Inlining function '_llvm.fpga.pack.none.i64.s_struct.ap_uint&lt;64&gt;s' into 'void convert_net_axis_to_axis&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;) (.272.1)'">
+        <args Callee="_llvm.fpga.pack.none.i64.s_struct.ap_uint&lt;64&gt;s" Caller="void convert_net_axis_to_axis&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;) (.272.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5" msg_body="Inlining function '_llvm.fpga.pack.none.i512.s_struct.ap_uint&lt;512&gt;s' into 'void convert_net_axis_to_axis&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i512.s_struct.ap_uint&lt;512&gt;s" Caller="void convert_net_axis_to_axis&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5" msg_body="Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint&lt;1&gt;s' into 'void convert_net_axis_to_axis&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i1.s_struct.ap_uint&lt;1&gt;s" Caller="void convert_net_axis_to_axis&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5" msg_body="Inlining function '_llvm.fpga.pack.none.i64.s_struct.ap_uint&lt;64&gt;s' into 'void convert_net_axis_to_axis&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i64.s_struct.ap_uint&lt;64&gt;s" Caller="void convert_net_axis_to_axis&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;512&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9" msg_body="Inlining function '_llvm.fpga.pack.none.i4.s_struct.ap_uint&lt;4&gt;s' into 'void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i4.s_struct.ap_uint&lt;4&gt;s" Caller="void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9" msg_body="Inlining function '_llvm.fpga.pack.bits.i48.s_struct.ipv4Metas.1' into 'void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)'">
+        <args Callee="_llvm.fpga.pack.bits.i48.s_struct.ipv4Metas.1" Caller="void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9" msg_body="Inlining function '_llvm.fpga.pack.none.i64.s_struct.ipv4Metas' into 'void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i64.s_struct.ipv4Metas" Caller="void process_ipv4&lt;512&gt;(hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9" msg_body="Inlining function '_llvm.fpga.pack.none.i1024.s_struct.net_axis&lt;512&gt;s' into 'void ipv4_drop_optional_ip_header&lt;512&gt;(hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i1024.s_struct.net_axis&lt;512&gt;s" Caller="void ipv4_drop_optional_ip_header&lt;512&gt;(hls::stream&lt;ap_uint&lt;4&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9" msg_body="Inlining function '_llvm.fpga.pack.none.i1024.s_struct.net_axis&lt;512&gt;s' into 'void ipv4_lshiftWordByOctet&lt;512, 2&gt;(unsigned short, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i1024.s_struct.net_axis&lt;512&gt;s" Caller="void ipv4_lshiftWordByOctet&lt;512, 2&gt;(unsigned short, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144:9" msg_body="Inlining function '_llvm.fpga.unpack.bits.s_struct.ipv4Metas.i48.1' into 'void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;) (.1)'">
+        <args Callee="_llvm.fpga.unpack.bits.s_struct.ipv4Metas.i48.1" Caller="void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9" msg_body="Inlining function '_llvm.fpga.pack.none.i1024.s_struct.net_axis&lt;512&gt;s' into 'void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i1024.s_struct.net_axis&lt;512&gt;s" Caller="void ipv4_generate_ipv4&lt;512&gt;(hls::stream&lt;ipv4Meta, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, hls::stream&lt;net_axis&lt;512&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, ap_uint&lt;8&gt;) (.1)"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

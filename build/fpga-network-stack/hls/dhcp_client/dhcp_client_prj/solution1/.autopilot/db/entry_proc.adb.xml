@@ -1,0 +1,229 @@
+<stg><name>entry_proc</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %inputIpAddress_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:1 %inputIpAddress_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %inputIpAddress
+
+]]></Node>
+<StgValue><ssdm name="inputIpAddress_read"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>FIFO_SRL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+entry:2 %write_ln0 = write void @_ssdm_op_Write.ap_fifo.i32P0A, i32 %inputIpAddress_c, i32 %inputIpAddress_read
+
+]]></Node>
+<StgValue><ssdm name="write_ln0"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+entry:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %dhcpEnable_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+entry:4 %dhcpEnable_read = read i1 @_ssdm_op_Read.ap_auto.i1P0A, i1 %dhcpEnable
+
+]]></Node>
+<StgValue><ssdm name="dhcpEnable_read"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>FIFO_SRL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1">
+<![CDATA[
+entry:5 %write_ln0 = write void @_ssdm_op_Write.ap_fifo.i1P0A, i1 %dhcpEnable_c, i1 %dhcpEnable_read
+
+]]></Node>
+<StgValue><ssdm name="write_ln0"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="0">
+<![CDATA[
+entry:6 %ret_ln0 = ret
+
+]]></Node>
+<StgValue><ssdm name="ret_ln0"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="9" name="dhcpEnable" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="dhcpEnable"/></StgValue>
+</port>
+<port id="10" name="dhcpEnable_c" dir="1" iftype="3">
+<core>FIFO_SRL</core><StgValue><ssdm name="dhcpEnable_c"/></StgValue>
+</port>
+<port id="11" name="inputIpAddress" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="inputIpAddress"/></StgValue>
+</port>
+<port id="12" name="inputIpAddress_c" dir="1" iftype="3">
+<core>FIFO_SRL</core><StgValue><ssdm name="inputIpAddress_c"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="14" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="13" toId="2">
+</dataflow>
+<dataflow id="15" from="inputIpAddress_c" to="specinterface_ln0" fromId="12" toId="2">
+</dataflow>
+<dataflow id="17" from="ap_fifo_str" to="specinterface_ln0" fromId="16" toId="2">
+</dataflow>
+<dataflow id="19" from="StgValue_18" to="specinterface_ln0" fromId="18" toId="2">
+</dataflow>
+<dataflow id="20" from="StgValue_18" to="specinterface_ln0" fromId="18" toId="2">
+</dataflow>
+<dataflow id="22" from="p_str" to="specinterface_ln0" fromId="21" toId="2">
+</dataflow>
+<dataflow id="23" from="StgValue_18" to="specinterface_ln0" fromId="18" toId="2">
+</dataflow>
+<dataflow id="24" from="StgValue_18" to="specinterface_ln0" fromId="18" toId="2">
+</dataflow>
+<dataflow id="25" from="p_str" to="specinterface_ln0" fromId="21" toId="2">
+</dataflow>
+<dataflow id="26" from="p_str" to="specinterface_ln0" fromId="21" toId="2">
+</dataflow>
+<dataflow id="27" from="p_str" to="specinterface_ln0" fromId="21" toId="2">
+</dataflow>
+<dataflow id="29" from="StgValue_28" to="specinterface_ln0" fromId="28" toId="2">
+</dataflow>
+<dataflow id="30" from="StgValue_28" to="specinterface_ln0" fromId="28" toId="2">
+</dataflow>
+<dataflow id="32" from="StgValue_31" to="specinterface_ln0" fromId="31" toId="2">
+</dataflow>
+<dataflow id="33" from="StgValue_31" to="specinterface_ln0" fromId="31" toId="2">
+</dataflow>
+<dataflow id="34" from="p_str" to="specinterface_ln0" fromId="21" toId="2">
+</dataflow>
+<dataflow id="36" from="ScalarProp_str" to="specinterface_ln0" fromId="35" toId="2">
+</dataflow>
+<dataflow id="38" from="_ssdm_op_Read.ap_auto.i32P0A" to="inputIpAddress_read" fromId="37" toId="3">
+</dataflow>
+<dataflow id="39" from="inputIpAddress" to="inputIpAddress_read" fromId="11" toId="3">
+</dataflow>
+<dataflow id="41" from="_ssdm_op_Write.ap_fifo.i32P0A" to="write_ln0" fromId="40" toId="4">
+</dataflow>
+<dataflow id="42" from="inputIpAddress_c" to="write_ln0" fromId="12" toId="4">
+</dataflow>
+<dataflow id="43" from="inputIpAddress_read" to="write_ln0" fromId="3" toId="4">
+</dataflow>
+<dataflow id="44" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="13" toId="5">
+</dataflow>
+<dataflow id="45" from="dhcpEnable_c" to="specinterface_ln0" fromId="10" toId="5">
+</dataflow>
+<dataflow id="46" from="ap_fifo_str" to="specinterface_ln0" fromId="16" toId="5">
+</dataflow>
+<dataflow id="47" from="StgValue_18" to="specinterface_ln0" fromId="18" toId="5">
+</dataflow>
+<dataflow id="48" from="StgValue_18" to="specinterface_ln0" fromId="18" toId="5">
+</dataflow>
+<dataflow id="49" from="p_str" to="specinterface_ln0" fromId="21" toId="5">
+</dataflow>
+<dataflow id="50" from="StgValue_18" to="specinterface_ln0" fromId="18" toId="5">
+</dataflow>
+<dataflow id="51" from="StgValue_18" to="specinterface_ln0" fromId="18" toId="5">
+</dataflow>
+<dataflow id="52" from="p_str" to="specinterface_ln0" fromId="21" toId="5">
+</dataflow>
+<dataflow id="53" from="p_str" to="specinterface_ln0" fromId="21" toId="5">
+</dataflow>
+<dataflow id="54" from="p_str" to="specinterface_ln0" fromId="21" toId="5">
+</dataflow>
+<dataflow id="55" from="StgValue_28" to="specinterface_ln0" fromId="28" toId="5">
+</dataflow>
+<dataflow id="56" from="StgValue_28" to="specinterface_ln0" fromId="28" toId="5">
+</dataflow>
+<dataflow id="57" from="StgValue_31" to="specinterface_ln0" fromId="31" toId="5">
+</dataflow>
+<dataflow id="58" from="StgValue_31" to="specinterface_ln0" fromId="31" toId="5">
+</dataflow>
+<dataflow id="59" from="p_str" to="specinterface_ln0" fromId="21" toId="5">
+</dataflow>
+<dataflow id="60" from="ScalarProp_str" to="specinterface_ln0" fromId="35" toId="5">
+</dataflow>
+<dataflow id="62" from="_ssdm_op_Read.ap_auto.i1P0A" to="dhcpEnable_read" fromId="61" toId="6">
+</dataflow>
+<dataflow id="63" from="dhcpEnable" to="dhcpEnable_read" fromId="9" toId="6">
+</dataflow>
+<dataflow id="65" from="_ssdm_op_Write.ap_fifo.i1P0A" to="write_ln0" fromId="64" toId="7">
+</dataflow>
+<dataflow id="66" from="dhcpEnable_c" to="write_ln0" fromId="10" toId="7">
+</dataflow>
+<dataflow id="67" from="dhcpEnable_read" to="write_ln0" fromId="6" toId="7">
+</dataflow>
+</dataflows>
+
+
+</stg>

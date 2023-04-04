@@ -1,0 +1,201 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1510] Running: create_clock -period 3.2 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-1510] Running: set_top dhcp_client 
+INFO: [HLS 200-1510] Running: add_files /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp -cflags -I/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client 
+INFO: [HLS 200-10] Adding design file '/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp' to the project
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.185 GB.
+INFO: [HLS 200-10] Analyzing design file '/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp' ... 
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:257:26)
+WARNING: [HLS 207-5287] unused parameter 'word' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:257:47)
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:272:28)
+WARNING: [HLS 207-5287] unused parameter 'data' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:272:48)
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:285:28)
+WARNING: [HLS 207-5287] unused parameter 'word' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:285:49)
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:300:28)
+WARNING: [HLS 207-5287] unused parameter 'word' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:300:59)
+WARNING: [HLS 207-5287] unused parameter 'd' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:476:20)
+WARNING: [HLS 207-5287] unused parameter 's' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:476:26)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.87 seconds. CPU system time: 0.5 seconds. Elapsed time: 4.74 seconds; current allocated memory: 279.152 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-178] Inlining function 'dhcpRequestMeta::dhcpRequestMeta(ap_uint<32>, ap_uint<8>)' into 'dhcp_fsm(hls::stream<dhcpReplyMeta, 0>&, hls::stream<dhcpRequestMeta, 0>&, hls::stream<ap_uint<1>, 0>&, ap_uint<32>&, ap_uint<1>&, ap_uint<32>&)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:245:0)
+INFO: [HLS 214-178] Inlining function 'dhcpRequestMeta::dhcpRequestMeta(ap_uint<32>, ap_uint<8>, ap_uint<32>)' into 'dhcp_fsm(hls::stream<dhcpReplyMeta, 0>&, hls::stream<dhcpRequestMeta, 0>&, hls::stream<ap_uint<1>, 0>&, ap_uint<32>&, ap_uint<1>&, ap_uint<32>&)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:245:0)
+INFO: [HLS 214-178] Inlining function 'sockaddr_in::sockaddr_in(ap_uint<32>, ap_uint<16>)' into 'send_message(hls::stream<dhcpRequestMeta, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<48>)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:137:0)
+INFO: [HLS 214-178] Inlining function 'udpMetadata::udpMetadata(sockaddr_in, sockaddr_in)' into 'send_message(hls::stream<dhcpRequestMeta, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<48>)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:137:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'myMacAddress' with compact=bit mode in 48-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:345:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'dhcpIpAddressOut' with compact=bit mode in 32-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:345:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'inputIpAddress' with compact=bit mode in 32-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:345:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'dhcpEnable' with compact=bit mode in 1-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:345:0)
+INFO: [HLS 214-241] Aggregating axis (hls::stream) variable 'dataOutMeta' with compact=bit mode in 96-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:345:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'dhcp_client(hls::stream<ap_uint<16>, 0>&, hls::stream<bool, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<1>&, ap_uint<32>&, ap_uint<32>&, ap_uint<48>&)::dhcp_replyMetaFifo' with compact=bit mode in 104-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:363:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'dhcp_client(hls::stream<ap_uint<16>, 0>&, hls::stream<bool, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<1>&, ap_uint<32>&, ap_uint<32>&, ap_uint<48>&)::dhcp_requestMetaFifo' with compact=bit mode in 72-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:364:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<64>s.i64' into 'receive_message(hls::stream<udpMetadata, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<dhcpReplyMeta, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:283:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i104.s_struct.dhcpReplyMetas.1' into 'receive_message(hls::stream<udpMetadata, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<dhcpReplyMeta, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i128.s_struct.dhcpReplyMetas' into 'receive_message(hls::stream<udpMetadata, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<dhcpReplyMeta, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<1>s.i1' into 'receive_message(hls::stream<udpMetadata, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<dhcpReplyMeta, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:283:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<8>s.i8' into 'receive_message(hls::stream<udpMetadata, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<dhcpReplyMeta, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:283:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i96.sl_s_struct.ap_uint<32>ss_struct.ap_uint<32>ss_struct.ap_uint<8>ss' into '_llvm.fpga.unpack.bits.s_struct.dhcpReplyMetas.i104.1'
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i96.s_struct.dhcpRequestMetas' into 'dhcp_fsm(hls::stream<dhcpReplyMeta, 0>&, hls::stream<dhcpRequestMeta, 0>&, hls::stream<ap_uint<1>, 0>&, ap_uint<32>&, ap_uint<1>&, ap_uint<32>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.dhcpReplyMetas.i104.1' into 'dhcp_fsm(hls::stream<dhcpReplyMeta, 0>&, hls::stream<dhcpRequestMeta, 0>&, hls::stream<ap_uint<1>, 0>&, ap_uint<32>&, ap_uint<1>&, ap_uint<32>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i72.s_struct.dhcpRequestMetas.1' into 'dhcp_fsm(hls::stream<dhcpReplyMeta, 0>&, hls::stream<dhcpRequestMeta, 0>&, hls::stream<ap_uint<1>, 0>&, ap_uint<32>&, ap_uint<1>&, ap_uint<32>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i96.sl_s_struct.ap_uint<32>ss_struct.ap_uint<8>ss_struct.ap_uint<32>ss' into '_llvm.fpga.unpack.bits.s_struct.dhcpRequestMetas.i72.1'
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.dhcpRequestMetas.i72.1' into 'send_message(hls::stream<dhcpRequestMeta, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'send_message(hls::stream<dhcpRequestMeta, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i8.s_struct.ap_uint<8>s' into 'send_message(hls::stream<dhcpRequestMeta, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i64.s_struct.ap_uint<64>s' into 'send_message(hls::stream<dhcpRequestMeta, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.2 seconds. CPU system time: 0.25 seconds. Elapsed time: 3.45 seconds; current allocated memory: 281.020 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 281.020 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 292.777 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.11 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.12 seconds; current allocated memory: 309.223 MB.
+WARNING: [HLS 200-805] An internal stream 'portOpen' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+INFO: [XFORM 203-712] Applying dataflow to function 'dhcp_client' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:363:1), detected/extracted 5 process function(s): 
+	 'entry_proc'
+	 'open_dhcp_port'
+	 'receive_message'
+	 'dhcp_fsm'
+	 'send_message'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:220:3) in function 'send_message'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:229:3) in function 'send_message'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:93:35) to (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:94:4) in function 'receive_message'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:97:35) to (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:98:4) in function 'receive_message'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 345.508 MB.
+WARNING: [HLS 200-631] Ignoring ap_ctrl_none interface for dhcp_client due to entry_proc with non-FIFO I/O
+WARNING: [HLS 200-631] Ignoring ap_ctrl_none interface for dhcp_client due to receive_message with non-FIFO I/O
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.15 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.16 seconds; current allocated memory: 394.840 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dhcp_client' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.07 seconds; current allocated memory: 395.047 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 395.141 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'open_dhcp_port' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'open_dhcp_port'.
+WARNING: [HLS 200-880] The II Violation in module 'open_dhcp_port' (function 'open_dhcp_port'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between axis write operation ('m_axis_open_port_write_ln173', /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'm_axis_open_port' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) and axis request operation ('tmp_i', /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:139) on port 'm_axis_open_port' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:139).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 3, function 'open_dhcp_port'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 396.328 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 396.328 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'receive_message' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'receive_message'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'receive_message'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 397.336 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 397.336 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dhcp_fsm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'dhcp_fsm'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'dhcp_fsm'
+WARNING: [HLS 200-871] Estimated clock period (2.68971ns) exceeds the target (target clock period: 3.2ns, clock uncertainty: 0.864ns, effective delay budget: 2.336ns).
+WARNING: [HLS 200-1016] The critical path in module 'dhcp_fsm' consists of the following:	fifo read operation ('dhcp_replyMetaFifo_read_1', /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'dhcp_replyMetaFifo' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [53]  (1.17 ns)
+	'icmp' operation ('icmp_ln1064_11') [59]  (0.581 ns)
+	multiplexor before 'phi' operation ('storemerge_i') [65]  (0.387 ns)
+	'phi' operation ('storemerge_i') [65]  (0 ns)
+	'store' operation ('state_write_ln309', /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:309) of variable 'storemerge_i' on static variable 'state' [66]  (0.453 ns)
+	blocking operation 0.101 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 398.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 398.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'send_message' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'send_message'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, function 'send_message'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 399.371 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 399.371 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dhcp_client' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 399.371 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 399.371 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 399.371 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'open_dhcp_port' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'openPortWaitTime_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'odp_listenDone' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'odp_waitListenStatus' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'open_dhcp_port' pipeline 'open_dhcp_port' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'open_dhcp_port'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 399.699 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'receive_message' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'rm_wordCount_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'rm_isReply' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'rm_correctMac' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'rm_isDHCP' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'meta_identifier_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'meta_assignedIpAddress_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'meta_serverAddress_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'meta_type_V_1' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'receive_message' pipeline 'receive_message' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'receive_message'.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================

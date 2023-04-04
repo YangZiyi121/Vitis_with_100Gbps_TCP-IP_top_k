@@ -1,0 +1,168 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'server_512_s'" level="0">
+<item name = "Date">Sat Mar 18 14:31:10 2023
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
+<item name = "Project">iperf_client_prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu280-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.20 ns, 1.677 ns, 0.86 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">2, 2, 6.400 ns, 6.400 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 53, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 63, -</column>
+<column name="Register">-, -, 44, -, -</column>
+<specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_condition_201">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_206">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_381">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_382">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op20_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op41_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op51_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op59_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op62_write_state3">and, 0, 0, 2, 1, 1</column>
+<column name="grp_nbreadreq_fu_110_p3">and, 0, 0, 2, 1, 0</column>
+<column name="tmp_5_i_nbreadreq_fu_88_p3">and, 0, 0, 2, 1, 0</column>
+<column name="tmp_7_i_nbreadreq_fu_102_p3">and, 0, 0, 2, 1, 0</column>
+<column name="tmp_i_nbreadreq_fu_74_p3">and, 0, 0, 2, 1, 0</column>
+<column name="icmp_ln1068_fu_183_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state1_pp0_stage0_iter0">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state2_io">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state3_io">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state3_pp0_stage0_iter2">or, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="m_axis_listen_port_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="m_axis_read_package_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="rxDataBuffer_blk_n">9, 2, 1, 2</column>
+<column name="s_axis_listen_port_status_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="s_axis_notifications_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="s_axis_rx_metadata_TDATA_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="icmp_ln1068_reg_223">1, 0, 1, 0</column>
+<column name="icmp_ln1068_reg_223_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="listenState">1, 0, 1, 0</column>
+<column name="listenState_load_reg_209">1, 0, 1, 0</column>
+<column name="listenState_load_reg_209_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="serverFsmState">1, 0, 1, 0</column>
+<column name="tmp_5_i_reg_219">1, 0, 1, 0</column>
+<column name="tmp_5_i_reg_219_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="trunc_ln173_reg_227">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, server&lt;512&gt;, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, server&lt;512&gt;, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, server&lt;512&gt;, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, server&lt;512&gt;, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, server&lt;512&gt;, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, server&lt;512&gt;, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, server&lt;512&gt;, return value</column>
+<column name="s_axis_listen_port_status_TVALID">in, 1, axis, s_axis_listen_port_status, pointer</column>
+<column name="s_axis_listen_port_status_TDATA">in, 8, axis, s_axis_listen_port_status, pointer</column>
+<column name="s_axis_listen_port_status_TREADY">out, 1, axis, s_axis_listen_port_status, pointer</column>
+<column name="s_axis_notifications_TVALID">in, 1, axis, s_axis_notifications, pointer</column>
+<column name="s_axis_notifications_TDATA">in, 88, axis, s_axis_notifications, pointer</column>
+<column name="s_axis_notifications_TREADY">out, 1, axis, s_axis_notifications, pointer</column>
+<column name="s_axis_rx_metadata_TVALID">in, 1, axis, s_axis_rx_metadata, pointer</column>
+<column name="s_axis_rx_metadata_TDATA">in, 16, axis, s_axis_rx_metadata, pointer</column>
+<column name="s_axis_rx_metadata_TREADY">out, 1, axis, s_axis_rx_metadata, pointer</column>
+<column name="rxDataBuffer_dout">in, 1024, ap_fifo, rxDataBuffer, pointer</column>
+<column name="rxDataBuffer_empty_n">in, 1, ap_fifo, rxDataBuffer, pointer</column>
+<column name="rxDataBuffer_read">out, 1, ap_fifo, rxDataBuffer, pointer</column>
+<column name="m_axis_listen_port_TREADY">in, 1, axis, m_axis_listen_port, pointer</column>
+<column name="m_axis_listen_port_TDATA">out, 16, axis, m_axis_listen_port, pointer</column>
+<column name="m_axis_listen_port_TVALID">out, 1, axis, m_axis_listen_port, pointer</column>
+<column name="m_axis_read_package_TREADY">in, 1, axis, m_axis_read_package, pointer</column>
+<column name="m_axis_read_package_TDATA">out, 32, axis, m_axis_read_package, pointer</column>
+<column name="m_axis_read_package_TVALID">out, 1, axis, m_axis_read_package, pointer</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,1496 @@
+INFO-FLOW: Workspace /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1 opened at Sat Mar 18 14:32:10 +03 2023
+Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -default_interface 
+Execute       get_config_rtl -register_reset_num 
+Execute     set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+Execute       create_platform xcu280-fsvh2892-2L-e -board  
+DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2021.2/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2021.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/virtexuplus_dsp48e2.hlp 
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+Command       create_platform done; 1.01 sec.
+Execute       source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/util.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.1 sec.
+Execute     create_clock -period 3.2 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 3.2 -name default 
+Execute       ap_set_clock -name default -period 3.2 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+Execute     set_top dhcp_client 
+INFO: [HLS 200-1510] Running: set_top dhcp_client 
+Execute     add_files /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp -cflags -I/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client 
+INFO: [HLS 200-1510] Running: add_files /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp -cflags -I/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client 
+INFO: [HLS 200-10] Adding design file '/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp' to the project
+Execute     csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -hw_syn 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -pre_tcl 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.185 GB.
+INFO: [HLS 200-10] Analyzing design file '/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp as C++
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp -foptimization-record-file=/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0 -fhls -fno-exceptions -E -I/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium > /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.cpp.clang.out.log 2> /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.cpp.clang.err.log 
+Command         ap_eval done; 0.11 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
+Execute         set_directive_top dhcp_client -name=dhcp_client 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute         list_core -type functional_unit 
+INFO-FLOW: Source syntax check for synthesis
+Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium > /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/clang.out.log 2> /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/clang.err.log 
+Command         ap_eval done; 0.54 sec.
+Execute         clang_tidy xilinx-systemc-detector -desc systemc-detector /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/.systemc_flag -fix-errors /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.52 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma -desc directive2pragma /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/all.directive.json -fix-errors /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.77 sec.
+Execute         clang_tidy xilinx-constantarray-param,xilinx-remove-assert -desc constantarray_remove-assert /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.6 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 1.4 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute         clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command           ap_eval done; 0.96 sec.
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command         clang_tidy done; 1.01 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command         ap_eval done; 0.49 sec.
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp -I/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.bc -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium > /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp.clang.out.log 2> /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.pp.0.cpp.clang.err.log 
+Command         ap_eval done; 0.55 sec.
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:257:26)
+WARNING: [HLS 207-5287] unused parameter 'word' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:257:47)
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:272:28)
+WARNING: [HLS 207-5287] unused parameter 'data' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:272:48)
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:285:28)
+WARNING: [HLS 207-5287] unused parameter 'word' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:285:49)
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:300:28)
+WARNING: [HLS 207-5287] unused parameter 'word' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:300:59)
+WARNING: [HLS 207-5287] unused parameter 'd' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:476:20)
+WARNING: [HLS 207-5287] unused parameter 's' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:476:26)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.87 seconds. CPU system time: 0.5 seconds. Elapsed time: 4.74 seconds; current allocated memory: 279.152 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute         run_link_or_opt -out /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.g.bc"  
+Execute           ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.g.bc -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.0.bc > /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute           ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.1.lower.bc > /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute         run_link_or_opt -out /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tools/Xilinx/Vitis_HLS/2021.2/lnx64/lib/libhlsm_39.bc /tools/Xilinx/Vitis_HLS/2021.2/lnx64/lib/libhlsmc++_39.bc 
+Execute           ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tools/Xilinx/Vitis_HLS/2021.2/lnx64/lib/libhlsm_39.bc /tools/Xilinx/Vitis_HLS/2021.2/lnx64/lib/libhlsmc++_39.bc -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
+Command           ap_eval done; 1.73 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 1.73 sec.
+Execute         run_link_or_opt -opt -out /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=dhcp_client -reflow-float-conversion 
+Execute           ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=dhcp_client -reflow-float-conversion -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
+Command           ap_eval done; 0.6 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 0.6 sec.
+Execute         run_link_or_opt -out /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tools/Xilinx/Vitis_HLS/2021.2/lnx64/lib/libfloatconversion_39.bc 
+Execute           ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tools/Xilinx/Vitis_HLS/2021.2/lnx64/lib/libfloatconversion_39.bc -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=dhcp_client 
+Execute           ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=dhcp_client -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
+INFO-FLOW: 
+Execute         get_solution -flow_target 
+Execute         get_config_export -xo 
+Execute         get_config_export -format 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_interface -default_slave_interface 
+Execute         get_solution -flow_target 
+Execute         get_config_export -xo 
+Execute         get_config_export -format 
+Execute         get_config_interface -m_axi_offset 
+Execute         get_config_interface -m_axi_latency 
+Execute         get_config_interface -m_axi_alignment_byte_size 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_max_widen_bitwidth 
+Execute         get_config_interface -m_axi_num_read_outstanding 
+Execute         get_config_interface -m_axi_num_write_outstanding 
+Execute         get_config_interface -m_axi_max_read_burst_length 
+Execute         get_config_interface -m_axi_max_write_burst_length 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_latency 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_max_widen_bitwidth 
+Execute         get_config_interface -m_axi_auto_max_ports 
+Execute         get_config_interface -m_axi_num_read_outstanding 
+Execute         get_config_interface -m_axi_num_write_outstanding 
+Execute         get_config_interface -m_axi_max_read_burst_length 
+Execute         get_config_interface -m_axi_max_write_burst_length 
+Execute         get_config_interface -s_axilite_data64 
+Execute         get_config_compile -instruction_warning_threshold 
+Execute         get_config_interface -m_axi_alignment_byte_size 
+Execute         get_config_compile -pragma_strict_mode 
+Execute         get_config_compile -pipeline_style 
+Execute         get_config_array_partition -throughput_driven 
+Execute         send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute         is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=dhcp_client -mllvm -hls-db-dir -mllvm /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshhold=200000 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -reflow-pipeline-style-llvm-setting=0 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-disaggregate-bitwidth-threshold=4096 -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -x ir /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium > /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
+Command         ap_eval done; 0.35 sec.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-178] Inlining function 'dhcpRequestMeta::dhcpRequestMeta(ap_uint<32>, ap_uint<8>)' into 'dhcp_fsm(hls::stream<dhcpReplyMeta, 0>&, hls::stream<dhcpRequestMeta, 0>&, hls::stream<ap_uint<1>, 0>&, ap_uint<32>&, ap_uint<1>&, ap_uint<32>&)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:245:0)
+INFO: [HLS 214-178] Inlining function 'dhcpRequestMeta::dhcpRequestMeta(ap_uint<32>, ap_uint<8>, ap_uint<32>)' into 'dhcp_fsm(hls::stream<dhcpReplyMeta, 0>&, hls::stream<dhcpRequestMeta, 0>&, hls::stream<ap_uint<1>, 0>&, ap_uint<32>&, ap_uint<1>&, ap_uint<32>&)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:245:0)
+INFO: [HLS 214-178] Inlining function 'sockaddr_in::sockaddr_in(ap_uint<32>, ap_uint<16>)' into 'send_message(hls::stream<dhcpRequestMeta, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<48>)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:137:0)
+INFO: [HLS 214-178] Inlining function 'udpMetadata::udpMetadata(sockaddr_in, sockaddr_in)' into 'send_message(hls::stream<dhcpRequestMeta, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<48>)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:137:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'myMacAddress' with compact=bit mode in 48-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:345:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'dhcpIpAddressOut' with compact=bit mode in 32-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:345:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'inputIpAddress' with compact=bit mode in 32-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:345:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'dhcpEnable' with compact=bit mode in 1-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:345:0)
+INFO: [HLS 214-241] Aggregating axis (hls::stream) variable 'dataOutMeta' with compact=bit mode in 96-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:345:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'dhcp_client(hls::stream<ap_uint<16>, 0>&, hls::stream<bool, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<1>&, ap_uint<32>&, ap_uint<32>&, ap_uint<48>&)::dhcp_replyMetaFifo' with compact=bit mode in 104-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:363:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'dhcp_client(hls::stream<ap_uint<16>, 0>&, hls::stream<bool, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<1>&, ap_uint<32>&, ap_uint<32>&, ap_uint<48>&)::dhcp_requestMetaFifo' with compact=bit mode in 72-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:364:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<64>s.i64' into 'receive_message(hls::stream<udpMetadata, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<dhcpReplyMeta, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:283:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i104.s_struct.dhcpReplyMetas.1' into 'receive_message(hls::stream<udpMetadata, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<dhcpReplyMeta, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i128.s_struct.dhcpReplyMetas' into 'receive_message(hls::stream<udpMetadata, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<dhcpReplyMeta, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<1>s.i1' into 'receive_message(hls::stream<udpMetadata, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<dhcpReplyMeta, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:283:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<8>s.i8' into 'receive_message(hls::stream<udpMetadata, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<dhcpReplyMeta, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:283:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i96.sl_s_struct.ap_uint<32>ss_struct.ap_uint<32>ss_struct.ap_uint<8>ss' into '_llvm.fpga.unpack.bits.s_struct.dhcpReplyMetas.i104.1'
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i96.s_struct.dhcpRequestMetas' into 'dhcp_fsm(hls::stream<dhcpReplyMeta, 0>&, hls::stream<dhcpRequestMeta, 0>&, hls::stream<ap_uint<1>, 0>&, ap_uint<32>&, ap_uint<1>&, ap_uint<32>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.dhcpReplyMetas.i104.1' into 'dhcp_fsm(hls::stream<dhcpReplyMeta, 0>&, hls::stream<dhcpRequestMeta, 0>&, hls::stream<ap_uint<1>, 0>&, ap_uint<32>&, ap_uint<1>&, ap_uint<32>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i72.s_struct.dhcpRequestMetas.1' into 'dhcp_fsm(hls::stream<dhcpReplyMeta, 0>&, hls::stream<dhcpRequestMeta, 0>&, hls::stream<ap_uint<1>, 0>&, ap_uint<32>&, ap_uint<1>&, ap_uint<32>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i96.sl_s_struct.ap_uint<32>ss_struct.ap_uint<8>ss_struct.ap_uint<32>ss' into '_llvm.fpga.unpack.bits.s_struct.dhcpRequestMetas.i72.1'
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.dhcpRequestMetas.i72.1' into 'send_message(hls::stream<dhcpRequestMeta, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'send_message(hls::stream<dhcpRequestMeta, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i8.s_struct.ap_uint<8>s' into 'send_message(hls::stream<dhcpRequestMeta, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i64.s_struct.ap_uint<64>s' into 'send_message(hls::stream<dhcpRequestMeta, 0>&, hls::stream<udpMetadata, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<48>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.2 seconds. CPU system time: 0.25 seconds. Elapsed time: 3.45 seconds; current allocated memory: 281.020 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 281.020 MB.
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top dhcp_client -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.0.bc -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 292.777 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.1.bc -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.11 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.12 seconds; current allocated memory: 309.223 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.g.1.bc to /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -annotate-dataflow-channels -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.o.1.bc -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+WARNING: [HLS 200-805] An internal stream 'portOpen' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+INFO: [XFORM 203-712] Applying dataflow to function 'dhcp_client' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:363:1), detected/extracted 5 process function(s): 
+	 'entry_proc'
+	 'open_dhcp_port'
+	 'receive_message'
+	 'dhcp_fsm'
+	 'send_message'.
+Command           transform done; 0.14 sec.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:220:3) in function 'send_message'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:229:3) in function 'send_message'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:93:35) to (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:94:4) in function 'receive_message'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:97:35) to (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:98:4) in function 'receive_message'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 345.508 MB.
+Execute           get_config_compile -enable_auto_rewind 
+Execute           get_config_compile -enable_loop_extract 
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation2 -deadargelim -globaldce -mem2reg -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.o.2.bc -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [HLS 200-631] Ignoring ap_ctrl_none interface for dhcp_client due to entry_proc with non-FIFO I/O
+WARNING: [HLS 200-631] Ignoring ap_ctrl_none interface for dhcp_client due to receive_message with non-FIFO I/O
+Command           transform done; 0.16 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.15 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.16 seconds; current allocated memory: 394.840 MB.
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 0.58 sec.
+Command       elaborate done; 8.79 sec.
+Execute       ap_eval exec zip -j /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'dhcp_client' ...
+Execute         ap_set_top_model dhcp_client 
+Execute         get_model_list dhcp_client -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model dhcp_client 
+Execute         preproc_iomode -model send_message 
+Execute         preproc_iomode -model dhcp_fsm 
+Execute         preproc_iomode -model receive_message 
+Execute         preproc_iomode -model open_dhcp_port 
+Execute         preproc_iomode -model entry_proc 
+Execute         get_model_list dhcp_client -filter all-wo-channel 
+INFO-FLOW: Model list for configure: entry_proc open_dhcp_port receive_message dhcp_fsm send_message dhcp_client
+INFO-FLOW: Configuring Module : entry_proc ...
+Execute         set_default_model entry_proc 
+Execute         apply_spec_resource_limit entry_proc 
+INFO-FLOW: Configuring Module : open_dhcp_port ...
+Execute         set_default_model open_dhcp_port 
+Execute         apply_spec_resource_limit open_dhcp_port 
+INFO-FLOW: Configuring Module : receive_message ...
+Execute         set_default_model receive_message 
+Execute         apply_spec_resource_limit receive_message 
+INFO-FLOW: Configuring Module : dhcp_fsm ...
+Execute         set_default_model dhcp_fsm 
+Execute         apply_spec_resource_limit dhcp_fsm 
+INFO-FLOW: Configuring Module : send_message ...
+Execute         set_default_model send_message 
+Execute         apply_spec_resource_limit send_message 
+INFO-FLOW: Configuring Module : dhcp_client ...
+Execute         set_default_model dhcp_client 
+Execute         apply_spec_resource_limit dhcp_client 
+INFO-FLOW: Model list for preprocess: entry_proc open_dhcp_port receive_message dhcp_fsm send_message dhcp_client
+INFO-FLOW: Preprocessing Module: entry_proc ...
+Execute         set_default_model entry_proc 
+Execute         cdfg_preprocess -model entry_proc 
+Execute         rtl_gen_preprocess entry_proc 
+INFO-FLOW: Preprocessing Module: open_dhcp_port ...
+Execute         set_default_model open_dhcp_port 
+Execute         cdfg_preprocess -model open_dhcp_port 
+Execute         rtl_gen_preprocess open_dhcp_port 
+INFO-FLOW: Preprocessing Module: receive_message ...
+Execute         set_default_model receive_message 
+Execute         cdfg_preprocess -model receive_message 
+Execute         rtl_gen_preprocess receive_message 
+INFO-FLOW: Preprocessing Module: dhcp_fsm ...
+Execute         set_default_model dhcp_fsm 
+Execute         cdfg_preprocess -model dhcp_fsm 
+Execute         rtl_gen_preprocess dhcp_fsm 
+INFO-FLOW: Preprocessing Module: send_message ...
+Execute         set_default_model send_message 
+Execute         cdfg_preprocess -model send_message 
+Execute         rtl_gen_preprocess send_message 
+INFO-FLOW: Preprocessing Module: dhcp_client ...
+Execute         set_default_model dhcp_client 
+Execute         cdfg_preprocess -model dhcp_client 
+Execute         rtl_gen_preprocess dhcp_client 
+INFO-FLOW: Model list for synthesis: entry_proc open_dhcp_port receive_message dhcp_fsm send_message dhcp_client
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model entry_proc 
+Execute         schedule -model entry_proc 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.07 seconds; current allocated memory: 395.047 MB.
+Execute         syn_report -verbosereport -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/entry_proc.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/entry_proc.sched.adb -f 
+INFO-FLOW: Finish scheduling entry_proc.
+Execute         set_default_model entry_proc 
+Execute         bind -model entry_proc 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 395.141 MB.
+Execute         syn_report -verbosereport -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/entry_proc.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/entry_proc.bind.adb -f 
+INFO-FLOW: Finish binding entry_proc.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'open_dhcp_port' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model open_dhcp_port 
+Execute         schedule -model open_dhcp_port 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'open_dhcp_port'.
+WARNING: [HLS 200-880] The II Violation in module 'open_dhcp_port' (function 'open_dhcp_port'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between axis write operation ('m_axis_open_port_write_ln173', /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'm_axis_open_port' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) and axis request operation ('tmp_i', /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:139) on port 'm_axis_open_port' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:139).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 3, function 'open_dhcp_port'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 396.328 MB.
+Execute         syn_report -verbosereport -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/open_dhcp_port.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/open_dhcp_port.sched.adb -f 
+INFO-FLOW: Finish scheduling open_dhcp_port.
+Execute         set_default_model open_dhcp_port 
+Execute         bind -model open_dhcp_port 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 396.328 MB.
+Execute         syn_report -verbosereport -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/open_dhcp_port.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/open_dhcp_port.bind.adb -f 
+INFO-FLOW: Finish binding open_dhcp_port.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'receive_message' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model receive_message 
+Execute         schedule -model receive_message 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'receive_message'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'receive_message'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 397.336 MB.
+Execute         syn_report -verbosereport -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/receive_message.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/receive_message.sched.adb -f 
+INFO-FLOW: Finish scheduling receive_message.
+Execute         set_default_model receive_message 
+Execute         bind -model receive_message 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 397.336 MB.
+Execute         syn_report -verbosereport -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/receive_message.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/receive_message.bind.adb -f 
+INFO-FLOW: Finish binding receive_message.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dhcp_fsm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model dhcp_fsm 
+Execute         schedule -model dhcp_fsm 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'dhcp_fsm'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'dhcp_fsm'
+WARNING: [HLS 200-871] Estimated clock period (2.68971ns) exceeds the target (target clock period: 3.2ns, clock uncertainty: 0.864ns, effective delay budget: 2.336ns).
+WARNING: [HLS 200-1016] The critical path in module 'dhcp_fsm' consists of the following:	fifo read operation ('dhcp_replyMetaFifo_read_1', /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'dhcp_replyMetaFifo' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [53]  (1.17 ns)
+	'icmp' operation ('icmp_ln1064_11') [59]  (0.581 ns)
+	multiplexor before 'phi' operation ('storemerge_i') [65]  (0.387 ns)
+	'phi' operation ('storemerge_i') [65]  (0 ns)
+	'store' operation ('state_write_ln309', /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:309) of variable 'storemerge_i' on static variable 'state' [66]  (0.453 ns)
+	blocking operation 0.101 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 398.789 MB.
+Execute         syn_report -verbosereport -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_fsm.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_fsm.sched.adb -f 
+INFO-FLOW: Finish scheduling dhcp_fsm.
+Execute         set_default_model dhcp_fsm 
+Execute         bind -model dhcp_fsm 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 398.789 MB.
+Execute         syn_report -verbosereport -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_fsm.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_fsm.bind.adb -f 
+INFO-FLOW: Finish binding dhcp_fsm.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'send_message' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model send_message 
+Execute         schedule -model send_message 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'send_message'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, function 'send_message'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 399.371 MB.
+Execute         syn_report -verbosereport -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/send_message.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/send_message.sched.adb -f 
+INFO-FLOW: Finish scheduling send_message.
+Execute         set_default_model send_message 
+Execute         bind -model send_message 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 399.371 MB.
+Execute         syn_report -verbosereport -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/send_message.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/send_message.bind.adb -f 
+INFO-FLOW: Finish binding send_message.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dhcp_client' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model dhcp_client 
+Execute         schedule -model dhcp_client 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 399.371 MB.
+Execute         syn_report -verbosereport -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.sched.adb -f 
+INFO-FLOW: Finish scheduling dhcp_client.
+Execute         set_default_model dhcp_client 
+Execute         bind -model dhcp_client 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 399.371 MB.
+Execute         syn_report -verbosereport -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.bind.adb -f 
+INFO-FLOW: Finish binding dhcp_client.
+Execute         get_model_list dhcp_client -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess entry_proc 
+Execute         rtl_gen_preprocess open_dhcp_port 
+Execute         rtl_gen_preprocess receive_message 
+Execute         rtl_gen_preprocess dhcp_fsm 
+Execute         rtl_gen_preprocess send_message 
+Execute         rtl_gen_preprocess dhcp_client 
+INFO-FLOW: Model list for RTL generation: entry_proc open_dhcp_port receive_message dhcp_fsm send_message dhcp_client
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model entry_proc -top_prefix dhcp_client_ -sub_prefix dhcp_client_ -mg_file /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/entry_proc.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 399.371 MB.
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.rtl_wrap.cfg.tcl 
+Execute         gen_rtl entry_proc -style xilinx -f -lang vhdl -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/vhdl/dhcp_client_entry_proc 
+Execute         gen_rtl entry_proc -style xilinx -f -lang vlog -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/verilog/dhcp_client_entry_proc 
+Execute         syn_report -csynth -model entry_proc -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/report/entry_proc_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model entry_proc -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/report/entry_proc_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model entry_proc -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/entry_proc.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model entry_proc -f -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/entry_proc.adb 
+Execute         db_write -model entry_proc -bindview -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info entry_proc -p /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/entry_proc 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'open_dhcp_port' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model open_dhcp_port -top_prefix dhcp_client_ -sub_prefix dhcp_client_ -mg_file /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/open_dhcp_port.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'openPortWaitTime_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'odp_listenDone' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'odp_waitListenStatus' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'open_dhcp_port' pipeline 'open_dhcp_port' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'open_dhcp_port'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 399.699 MB.
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.rtl_wrap.cfg.tcl 
+Execute         gen_rtl open_dhcp_port -style xilinx -f -lang vhdl -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/vhdl/dhcp_client_open_dhcp_port 
+Execute         gen_rtl open_dhcp_port -style xilinx -f -lang vlog -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/verilog/dhcp_client_open_dhcp_port 
+Execute         syn_report -csynth -model open_dhcp_port -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/report/open_dhcp_port_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model open_dhcp_port -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/report/open_dhcp_port_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model open_dhcp_port -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/open_dhcp_port.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model open_dhcp_port -f -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/open_dhcp_port.adb 
+Execute         db_write -model open_dhcp_port -bindview -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info open_dhcp_port -p /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/open_dhcp_port 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'receive_message' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model receive_message -top_prefix dhcp_client_ -sub_prefix dhcp_client_ -mg_file /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/receive_message.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'rm_wordCount_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'rm_isReply' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'rm_correctMac' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'rm_isDHCP' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'meta_identifier_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'meta_assignedIpAddress_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'meta_serverAddress_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'meta_type_V_1' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'receive_message' pipeline 'receive_message' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'receive_message'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 400.949 MB.
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.rtl_wrap.cfg.tcl 
+Execute         gen_rtl receive_message -style xilinx -f -lang vhdl -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/vhdl/dhcp_client_receive_message 
+Execute         gen_rtl receive_message -style xilinx -f -lang vlog -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/verilog/dhcp_client_receive_message 
+Execute         syn_report -csynth -model receive_message -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/report/receive_message_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model receive_message -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/report/receive_message_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model receive_message -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/receive_message.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model receive_message -f -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/receive_message.adb 
+Execute         db_write -model receive_message -bindview -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info receive_message -p /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/receive_message 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dhcp_fsm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model dhcp_fsm -top_prefix dhcp_client_ -sub_prefix dhcp_client_ -mg_file /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_fsm.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'myIpAddress_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'state' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'time_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'randomValue_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'myIdentity_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'IpAddressBuffer_V' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dhcp_fsm' pipeline 'dhcp_fsm' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dhcp_fsm'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 402.941 MB.
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.rtl_wrap.cfg.tcl 
+Execute         gen_rtl dhcp_fsm -style xilinx -f -lang vhdl -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/vhdl/dhcp_client_dhcp_fsm 
+Execute         gen_rtl dhcp_fsm -style xilinx -f -lang vlog -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/verilog/dhcp_client_dhcp_fsm 
+Execute         syn_report -csynth -model dhcp_fsm -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/report/dhcp_fsm_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model dhcp_fsm -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/report/dhcp_fsm_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model dhcp_fsm -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_fsm.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model dhcp_fsm -f -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_fsm.adb 
+Execute         db_write -model dhcp_fsm -bindview -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info dhcp_fsm -p /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_fsm 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'send_message' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model send_message -top_prefix dhcp_client_ -sub_prefix dhcp_client_ -mg_file /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/send_message.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'sm_wordCount_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'meta_type_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'meta_requestedIpAddress_V' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'send_message' pipeline 'send_message' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'send_message'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 405.531 MB.
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.rtl_wrap.cfg.tcl 
+Execute         gen_rtl send_message -style xilinx -f -lang vhdl -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/vhdl/dhcp_client_send_message 
+Execute         gen_rtl send_message -style xilinx -f -lang vlog -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/verilog/dhcp_client_send_message 
+Execute         syn_report -csynth -model send_message -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/report/send_message_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model send_message -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/report/send_message_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model send_message -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/send_message.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model send_message -f -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/send_message.adb 
+Execute         db_write -model send_message -bindview -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info send_message -p /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/send_message 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dhcp_client' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model dhcp_client -top_prefix  -sub_prefix dhcp_client_ -mg_file /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dhcp_client/m_axis_open_port' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dhcp_client/s_axis_open_port_status' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dhcp_client/s_axis_rx_metadata' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dhcp_client/s_axis_rx_data_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dhcp_client/s_axis_rx_data_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dhcp_client/s_axis_rx_data_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dhcp_client/s_axis_rx_data_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dhcp_client/m_axis_tx_metadata' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dhcp_client/m_axis_tx_length' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dhcp_client/m_axis_tx_data_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dhcp_client/m_axis_tx_data_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dhcp_client/m_axis_tx_data_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dhcp_client/m_axis_tx_data_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dhcp_client/dhcpEnable' to 'ap_none' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dhcp_client/inputIpAddress' to 'ap_none' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dhcp_client/dhcpIpAddressOut' to 'ap_none' (register, both mode).
+WARNING: [RTGEN 206-101] Port 'dhcpIpAddressOut' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dhcp_client/myMacAddress' to 'ap_none' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'dhcp_client' to 'ap_ctrl_none'.
+WARNING: [HLS 200-656] Deadlocks can occur since process open_dhcp_port is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+WARNING: [HLS 200-656] Deadlocks can occur since process receive_message is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+WARNING: [HLS 200-656] Deadlocks can occur since process dhcp_fsm is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+WARNING: [HLS 200-656] Deadlocks can occur since process send_message is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dhcp_client'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 407.465 MB.
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.rtl_wrap.cfg.tcl 
+Execute         gen_rtl dhcp_client -istop -style xilinx -f -lang vhdl -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/vhdl/dhcp_client 
+Execute         gen_rtl dhcp_client -istop -style xilinx -f -lang vlog -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/verilog/dhcp_client 
+Execute         syn_report -csynth -model dhcp_client -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/report/dhcp_client_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model dhcp_client -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/report/dhcp_client_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model dhcp_client -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model dhcp_client -f -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.adb 
+Execute         db_write -model dhcp_client -bindview -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info dhcp_client -p /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client 
+Execute         export_constraint_db -f -tool general -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.constraint.tcl 
+Execute         syn_report -designview -model dhcp_client -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.design.xml 
+Command         syn_report done; 0.14 sec.
+Execute         syn_report -csynthDesign -model dhcp_client -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/report/csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         get_config_rtl -disable_wave_debug 
+Execute         syn_report -wcfg -model dhcp_client -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model dhcp_client -o /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.protoinst 
+Execute         get_config_debug -directory 
+Execute         sc_get_clocks dhcp_client 
+Execute         get_config_export -vivado_clock 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         sc_get_portdomain dhcp_client 
+INFO-FLOW: Model list for RTL component generation: entry_proc open_dhcp_port receive_message dhcp_fsm send_message dhcp_client
+INFO-FLOW: Handling components in module [entry_proc] ... 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/entry_proc.compgen.tcl 
+INFO-FLOW: Handling components in module [open_dhcp_port] ... 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/open_dhcp_port.compgen.tcl 
+INFO-FLOW: Found component dhcp_client_regslice_both.
+INFO-FLOW: Append model dhcp_client_regslice_both
+INFO-FLOW: Found component dhcp_client_regslice_both.
+INFO-FLOW: Append model dhcp_client_regslice_both
+INFO-FLOW: Handling components in module [receive_message] ... 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/receive_message.compgen.tcl 
+INFO-FLOW: Found component dhcp_client_regslice_both.
+INFO-FLOW: Append model dhcp_client_regslice_both
+INFO-FLOW: Found component dhcp_client_regslice_both.
+INFO-FLOW: Append model dhcp_client_regslice_both
+INFO-FLOW: Found component dhcp_client_regslice_both.
+INFO-FLOW: Append model dhcp_client_regslice_both
+INFO-FLOW: Found component dhcp_client_regslice_both.
+INFO-FLOW: Append model dhcp_client_regslice_both
+INFO-FLOW: Found component dhcp_client_regslice_both.
+INFO-FLOW: Append model dhcp_client_regslice_both
+INFO-FLOW: Handling components in module [dhcp_fsm] ... 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_fsm.compgen.tcl 
+INFO-FLOW: Handling components in module [send_message] ... 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/send_message.compgen.tcl 
+INFO-FLOW: Found component dhcp_client_regslice_both.
+INFO-FLOW: Append model dhcp_client_regslice_both
+INFO-FLOW: Found component dhcp_client_regslice_both.
+INFO-FLOW: Append model dhcp_client_regslice_both
+INFO-FLOW: Found component dhcp_client_regslice_both.
+INFO-FLOW: Append model dhcp_client_regslice_both
+INFO-FLOW: Found component dhcp_client_regslice_both.
+INFO-FLOW: Append model dhcp_client_regslice_both
+INFO-FLOW: Found component dhcp_client_regslice_both.
+INFO-FLOW: Append model dhcp_client_regslice_both
+INFO-FLOW: Found component dhcp_client_regslice_both.
+INFO-FLOW: Append model dhcp_client_regslice_both
+INFO-FLOW: Handling components in module [dhcp_client] ... 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.compgen.tcl 
+INFO-FLOW: Found component dhcp_client_fifo_w1_d3_S.
+INFO-FLOW: Append model dhcp_client_fifo_w1_d3_S
+INFO-FLOW: Found component dhcp_client_fifo_w32_d3_S.
+INFO-FLOW: Append model dhcp_client_fifo_w32_d3_S
+INFO-FLOW: Found component dhcp_client_fifo_w1_d2_S.
+INFO-FLOW: Append model dhcp_client_fifo_w1_d2_S
+INFO-FLOW: Found component dhcp_client_fifo_w48_d3_S.
+INFO-FLOW: Append model dhcp_client_fifo_w48_d3_S
+INFO-FLOW: Found component dhcp_client_fifo_w104_d4_S.
+INFO-FLOW: Append model dhcp_client_fifo_w104_d4_S
+INFO-FLOW: Found component dhcp_client_fifo_w72_d4_S.
+INFO-FLOW: Append model dhcp_client_fifo_w72_d4_S
+INFO-FLOW: Append model entry_proc
+INFO-FLOW: Append model open_dhcp_port
+INFO-FLOW: Append model receive_message
+INFO-FLOW: Append model dhcp_fsm
+INFO-FLOW: Append model send_message
+INFO-FLOW: Append model dhcp_client
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: dhcp_client_regslice_both dhcp_client_regslice_both dhcp_client_regslice_both dhcp_client_regslice_both dhcp_client_regslice_both dhcp_client_regslice_both dhcp_client_regslice_both dhcp_client_regslice_both dhcp_client_regslice_both dhcp_client_regslice_both dhcp_client_regslice_both dhcp_client_regslice_both dhcp_client_regslice_both dhcp_client_fifo_w1_d3_S dhcp_client_fifo_w32_d3_S dhcp_client_fifo_w1_d2_S dhcp_client_fifo_w48_d3_S dhcp_client_fifo_w104_d4_S dhcp_client_fifo_w72_d4_S entry_proc open_dhcp_port receive_message dhcp_fsm send_message dhcp_client
+INFO-FLOW: Generating /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model dhcp_client_regslice_both
+INFO-FLOW: To file: write model dhcp_client_regslice_both
+INFO-FLOW: To file: write model dhcp_client_regslice_both
+INFO-FLOW: To file: write model dhcp_client_regslice_both
+INFO-FLOW: To file: write model dhcp_client_regslice_both
+INFO-FLOW: To file: write model dhcp_client_regslice_both
+INFO-FLOW: To file: write model dhcp_client_regslice_both
+INFO-FLOW: To file: write model dhcp_client_regslice_both
+INFO-FLOW: To file: write model dhcp_client_regslice_both
+INFO-FLOW: To file: write model dhcp_client_regslice_both
+INFO-FLOW: To file: write model dhcp_client_regslice_both
+INFO-FLOW: To file: write model dhcp_client_regslice_both
+INFO-FLOW: To file: write model dhcp_client_regslice_both
+INFO-FLOW: To file: write model dhcp_client_fifo_w1_d3_S
+INFO-FLOW: To file: write model dhcp_client_fifo_w32_d3_S
+INFO-FLOW: To file: write model dhcp_client_fifo_w1_d2_S
+INFO-FLOW: To file: write model dhcp_client_fifo_w48_d3_S
+INFO-FLOW: To file: write model dhcp_client_fifo_w104_d4_S
+INFO-FLOW: To file: write model dhcp_client_fifo_w72_d4_S
+INFO-FLOW: To file: write model entry_proc
+INFO-FLOW: To file: write model open_dhcp_port
+INFO-FLOW: To file: write model receive_message
+INFO-FLOW: To file: write model dhcp_fsm
+INFO-FLOW: To file: write model send_message
+INFO-FLOW: To file: write model dhcp_client
+INFO-FLOW: Generating /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+Execute         get_top 
+Execute         get_config_export -ipname 
+Execute         get_config_export -xo 
+Execute         get_config_export -format 
+Execute         get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/generic/autopilot/common.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/generic/autopilot/op.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/util.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=3.200 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/vhdl' dstVlogDir='/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/vlog' tclDir='/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db' modelList='dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_fifo_w1_d3_S
+dhcp_client_fifo_w32_d3_S
+dhcp_client_fifo_w1_d2_S
+dhcp_client_fifo_w48_d3_S
+dhcp_client_fifo_w104_d4_S
+dhcp_client_fifo_w72_d4_S
+entry_proc
+open_dhcp_port
+receive_message
+dhcp_fsm
+send_message
+dhcp_client
+' expOnly='0'
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/entry_proc.compgen.tcl 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/open_dhcp_port.compgen.tcl 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/receive_message.compgen.tcl 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_fsm.compgen.tcl 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/send_message.compgen.tcl 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.compgen.tcl 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'dhcpEnable_c_U(dhcp_client_fifo_w1_d3_S)' using Shift Registers.
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'inputIpAddress_c_U(dhcp_client_fifo_w32_d3_S)' using Shift Registers.
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'portOpen_U(dhcp_client_fifo_w1_d2_S)' using Shift Registers.
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'myMacAddress_c_U(dhcp_client_fifo_w48_d3_S)' using Shift Registers.
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'dhcp_replyMetaFifo_U(dhcp_client_fifo_w104_d4_S)' using Shift Registers.
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'dhcp_requestMetaFifo_U(dhcp_client_fifo_w72_d4_S)' using Shift Registers.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.42 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.44 seconds; current allocated memory: 412.117 MB.
+INFO-FLOW: DBG:PROC: ::AP::create_csynth_xml bind_adapter_nodes_var='bind_adapter_nodes' bind_report_dict_var='bind_report_dict' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: No bind nodes found for module_name entry_proc
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+Execute         get_config_op mul -impl 
+Execute         get_config_op mul -latency 
+Execute         get_config_op mul -precision 
+Execute         get_config_op add -impl 
+Execute         get_config_op add -latency 
+Execute         get_config_op add -precision 
+Execute         get_config_op sub -impl 
+Execute         get_config_op sub -latency 
+Execute         get_config_op sub -precision 
+Execute         get_config_op fadd -impl 
+Execute         get_config_op fadd -latency 
+Execute         get_config_op fadd -precision 
+Execute         get_config_op fsub -impl 
+Execute         get_config_op fsub -latency 
+Execute         get_config_op fsub -precision 
+Execute         get_config_op fdiv -impl 
+Execute         get_config_op fdiv -latency 
+Execute         get_config_op fdiv -precision 
+Execute         get_config_op fexp -impl 
+Execute         get_config_op fexp -latency 
+Execute         get_config_op fexp -precision 
+Execute         get_config_op flog -impl 
+Execute         get_config_op flog -latency 
+Execute         get_config_op flog -precision 
+Execute         get_config_op fmul -impl 
+Execute         get_config_op fmul -latency 
+Execute         get_config_op fmul -precision 
+Execute         get_config_op frsqrt -impl 
+Execute         get_config_op frsqrt -latency 
+Execute         get_config_op frsqrt -precision 
+Execute         get_config_op frecip -impl 
+Execute         get_config_op frecip -latency 
+Execute         get_config_op frecip -precision 
+Execute         get_config_op fsqrt -impl 
+Execute         get_config_op fsqrt -latency 
+Execute         get_config_op fsqrt -precision 
+Execute         get_config_op dadd -impl 
+Execute         get_config_op dadd -latency 
+Execute         get_config_op dadd -precision 
+Execute         get_config_op dsub -impl 
+Execute         get_config_op dsub -latency 
+Execute         get_config_op dsub -precision 
+Execute         get_config_op ddiv -impl 
+Execute         get_config_op ddiv -latency 
+Execute         get_config_op ddiv -precision 
+Execute         get_config_op dexp -impl 
+Execute         get_config_op dexp -latency 
+Execute         get_config_op dexp -precision 
+Execute         get_config_op dlog -impl 
+Execute         get_config_op dlog -latency 
+Execute         get_config_op dlog -precision 
+Execute         get_config_op dmul -impl 
+Execute         get_config_op dmul -latency 
+Execute         get_config_op dmul -precision 
+Execute         get_config_op drsqrt -impl 
+Execute         get_config_op drsqrt -latency 
+Execute         get_config_op drsqrt -precision 
+Execute         get_config_op drecip -impl 
+Execute         get_config_op drecip -latency 
+Execute         get_config_op drecip -precision 
+Execute         get_config_op dsqrt -impl 
+Execute         get_config_op dsqrt -latency 
+Execute         get_config_op dsqrt -precision 
+Execute         get_config_op hadd -impl 
+Execute         get_config_op hadd -latency 
+Execute         get_config_op hadd -precision 
+Execute         get_config_op hsub -impl 
+Execute         get_config_op hsub -latency 
+Execute         get_config_op hsub -precision 
+Execute         get_config_op hdiv -impl 
+Execute         get_config_op hdiv -latency 
+Execute         get_config_op hdiv -precision 
+Execute         get_config_op hmul -impl 
+Execute         get_config_op hmul -latency 
+Execute         get_config_op hmul -precision 
+Execute         get_config_op hsqrt -impl 
+Execute         get_config_op hsqrt -latency 
+Execute         get_config_op hsqrt -precision 
+Execute         get_config_op facc -impl 
+Execute         get_config_op facc -latency 
+Execute         get_config_op facc -precision 
+Execute         get_config_op fmacc -impl 
+Execute         get_config_op fmacc -latency 
+Execute         get_config_op fmacc -precision 
+Execute         get_config_op fmadd -impl 
+Execute         get_config_op fmadd -latency 
+Execute         get_config_op fmadd -precision 
+Execute         get_config_storage fifo -auto_srl_max_bits 
+Execute         get_config_storage fifo -auto_srl_max_depth 
+Execute         get_config_storage fifo -impl 
+Execute         get_solution -flow_target 
+Execute         get_config_array_partition -complete_threshold 
+Execute         get_config_array_partition -throughput_driven 
+Execute         get_config_compile -enable_auto_rewind 
+Execute         get_config_compile -name_max_length 
+Execute         get_config_compile -no_signed_zeros 
+Execute         get_config_compile -pipeline_loops 
+Execute         get_config_compile -pipeline_style 
+Execute         get_config_compile -pragma_strict_mode 
+Execute         get_config_compile -pre_tcl 
+Execute         get_config_compile -unsafe_math_optimizations 
+Execute         get_config_dataflow -default_channel 
+Execute         get_config_dataflow -disable_fifo_sizing_opt 
+Execute         get_config_dataflow -fifo_depth 
+Execute         get_config_dataflow -override_user_fifo_depth 
+Execute         get_config_dataflow -scalar_fifo_depth 
+Execute         get_config_dataflow -start_fifo_depth 
+Execute         get_config_dataflow -strict_mode 
+Execute         get_config_dataflow -strict_stable_sync 
+Execute         get_config_dataflow -task_level_fifo_depth 
+Execute         get_config_debug -directory 
+Execute         get_config_debug -enable 
+Execute         get_config_export -deadlock_detection 
+Execute         get_config_export -description 
+Execute         get_config_export -display_name 
+Execute         get_config_export -format 
+Execute         get_config_export -ip_xdc_file 
+Execute         get_config_export -ip_xdc_ooc_file 
+Execute         get_config_export -ipname 
+Execute         get_config_export -library 
+Execute         get_config_export -output 
+Execute         get_config_export -rtl 
+Execute         get_config_export -taxonomy 
+Execute         get_config_export -vendor 
+Execute         get_config_export -version 
+Execute         get_config_export -vivado_clock 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_max_timing_paths 
+Execute         get_config_export -vivado_optimization_level 
+Execute         get_config_export -vivado_pblock 
+Execute         get_config_export -vivado_phys_opt 
+Execute         get_config_export -vivado_report_level 
+Execute         get_config_export -vivado_synth_design_args 
+Execute         get_config_export -vivado_synth_strategy 
+Execute         get_config_interface -clock_enable 
+Execute         get_config_interface -default_slave_interface 
+Execute         get_config_interface -m_axi_addr64 
+Execute         get_config_interface -m_axi_alignment_byte_size 
+Execute         get_config_interface -m_axi_auto_max_ports 
+Execute         get_config_interface -m_axi_buffer_impl 
+Execute         get_config_interface -m_axi_conservative_mode 
+Execute         get_config_interface -m_axi_flush_mode 
+Execute         get_config_interface -m_axi_latency 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_max_read_burst_length 
+Execute         get_config_interface -m_axi_max_widen_bitwidth 
+Execute         get_config_interface -m_axi_max_write_burst_length 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_num_read_outstanding 
+Execute         get_config_interface -m_axi_num_write_outstanding 
+Execute         get_config_interface -m_axi_offset 
+Execute         get_config_interface -register_io 
+Execute         get_config_interface -s_axilite_data64 
+Execute         get_config_interface -s_axilite_mailbox 
+Execute         get_config_interface -s_axilite_status_regs 
+Execute         get_config_interface -s_axilite_sw_reset 
+Execute         get_config_rtl -header 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -mult_keep_attribute 
+Execute         get_config_rtl -register_all_io 
+Execute         get_config_rtl -register_reset_num 
+Execute         get_config_rtl -reset 
+Execute         get_config_rtl -reset_async 
+Execute         get_config_rtl -reset_level 
+Execute         get_config_schedule -enable_dsp_full_reg 
+Execute         get_config_unroll -tripcount_threshold 
+INFO-FLOW: Done: create_csynth_xml config info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:       create_csynth_xml wrote csynth_xml=/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_fifo_w1_d3_S
+dhcp_client_fifo_w32_d3_S
+dhcp_client_fifo_w1_d2_S
+dhcp_client_fifo_w48_d3_S
+dhcp_client_fifo_w104_d4_S
+dhcp_client_fifo_w72_d4_S
+entry_proc
+open_dhcp_port
+receive_message
+dhcp_fsm
+send_message
+dhcp_client
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         get_solution -flow_target 
+Execute         get_config_export -xo 
+Execute         get_config_export -format 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/top-io-be.tcl 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.rtl_wrap.cfg.tcl 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.compgen.dataonly.tcl 
+Execute         get_config_export -format 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/entry_proc.tbgen.tcl 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/open_dhcp_port.tbgen.tcl 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/receive_message.tbgen.tcl 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_fsm.tbgen.tcl 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/send_message.tbgen.tcl 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute         get_solution -flow_target 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -stall_sig_gen 
+Execute         get_config_rtl -profile 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.constraint.tcl 
+Execute         sc_get_clocks dhcp_client 
+Execute         source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         get_config_export -ip_xdc_file 
+Execute         get_config_export -ip_xdc_ooc_file 
+Execute         get_config_debug -directory 
+INFO-FLOW: DBG:PROC: ::AP::add_csynth_report_sections bind_adapter_nodes='' bind_report_dict='TOP dhcp_client DATA {dhcp_client {DEPTH 1 CHILDREN {open_dhcp_port receive_message entry_proc dhcp_fsm send_message} BINDINFO {{BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME myMacAddress_c_U SOURCE {} VARIABLE myMacAddress_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME inputIpAddress_c_U SOURCE {} VARIABLE inputIpAddress_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME dhcpEnable_c_U SOURCE {} VARIABLE dhcpEnable_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}}} AREA {DSP 0 BRAM 0 URAM 0}} open_dhcp_port {DEPTH 2 CHILDREN {} BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln886_fu_92_p2 SOURCE /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:886 VARIABLE add_ln886 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} receive_message {DEPTH 2 CHILDREN {} BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln885_fu_429_p2 SOURCE /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:885 VARIABLE add_ln885 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} entry_proc {DEPTH 2 CHILDREN {} AREA {DSP 0 BRAM 0 URAM 0}} dhcp_fsm {DEPTH 2 CHILDREN {} BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_206_p2 SOURCE /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:886 VARIABLE add_ln886_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_206_p2 SOURCE /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:886 VARIABLE add_ln886_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_206_p2 SOURCE /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:886 VARIABLE add_ln886 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln885_fu_382_p2 SOURCE /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:885 VARIABLE add_ln885 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} send_message {DEPTH 2 CHILDREN {} BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln885_fu_330_p2 SOURCE /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:885 VARIABLE add_ln885 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}}}'
+INFO-FLOW: DBG:PUTS:       update_csynth_reports json2reportxml
+INFO-FLOW: Running: gen_csynth_pragma_report_xml
+INFO-FLOW: Done: gen_csynth_pragma_report_xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:       update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:       update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 413.023 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for dhcp_client.
+INFO: [VLOG 209-307] Generating Verilog RTL for dhcp_client.
+Execute         syn_report -model dhcp_client -printsummary 
+INFO: [HLS 200-789] **** Estimated Fmax: 371.79 MHz
+Command       autosyn done; 1.93 sec.
+Command     csynth_design done; 10.76 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 10.51 seconds. CPU system time: 0.87 seconds. Elapsed time: 10.76 seconds; current allocated memory: -799.555 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1 opened at Sat Mar 18 14:32:23 +03 2023
+Execute       ap_set_clock -name default -period 3.2 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+Execute       set_part xcu280-fsvh2892-2L-e 
+Execute         create_platform xcu280-fsvh2892-2L-e -board  
+DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2021.2/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2021.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/virtexuplus_dsp48e2.hlp 
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+Command         create_platform done; 1.01 sec.
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/util.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.1 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -default_interface 
+Execute       get_config_rtl -register_reset_num 
+Command     open_solution done; 1.11 sec.
+Execute     set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+Execute       create_platform xcu280-fsvh2892-2L-e -board  
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/virtexuplus_dsp48e2.hlp 
+Execute       source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/util.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.11 sec.
+Execute     create_clock -period 3.2 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 3.2 -name default 
+Execute     set_top dhcp_client 
+INFO: [HLS 200-1510] Running: set_top dhcp_client 
+Execute     add_files /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp -cflags -I/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client 
+INFO: [HLS 200-1510] Running: add_files /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp -cflags -I/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client 
+INFO: [HLS 200-10] Adding design file '/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp' to the project
+Execute     export_design -format ip_catalog -ipname dhcp_client -display_name DHCP Client -description DHCP Client to be used with the Xilinx Labs TCP & UDP offload engines. -vendor xilinx.labs -version 1.05 
+INFO: [HLS 200-1510] Running: export_design -format ip_catalog -ipname dhcp_client -display_name DHCP Client -description DHCP Client to be used with the Xilinx Labs TCP & UDP offload engines. -vendor xilinx.labs -version 1.05 
+Execute       get_config_export -clock_margin 
+Execute       get_config_export -custom_script 
+Execute       get_config_export -driver_input_dir 
+Execute       get_config_export -library 
+Execute       get_config_export -output 
+Execute       get_config_export -qor_test 
+Execute       get_config_export -rtl 
+Execute       get_config_export -sim 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -use_ip 
+Execute       get_config_export -use_netlist 
+Execute       get_config_export -xo 
+Execute       config_export -description=DHCP Client to be used with the Xilinx Labs TCP & UDP offload engines. -display_name=DHCP Client -format=ip_catalog -ipname=dhcp_client -vendor=xilinx.labs -version=1.05 
+INFO-FLOW: DBG:PUTS: export_design_wrap: -format ip_catalog -rtl verilog -vendor xilinx.labs -version 1.05 -ipname dhcp_client -description {DHCP Client to be used with the Xilinx Labs TCP & UDP offload engines.} -display_name {DHCP Client}
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -vivado_clock 
+Execute       get_top 
+Execute       get_config_export -ipname 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl
+Execute       source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/generic/autopilot/common.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/generic/autopilot/op.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/util.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=3.200 (was NA)
+INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=dhcp_client xml_exists=0
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.rtl_wrap.cfg.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.rtl_wrap.cfg.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.rtl_wrap.cfg.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute       get_config_export -deadlock_detection 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute       get_config_export -deadlock_detection 
+Execute       get_config_export -deadlock_detection 
+Execute       get_config_rtl -module_prefix 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to dhcp_client
+Execute       get_config_export -deadlock_detection 
+INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=17
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=25 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_regslice_both
+dhcp_client_fifo_w1_d3_S
+dhcp_client_fifo_w32_d3_S
+dhcp_client_fifo_w1_d2_S
+dhcp_client_fifo_w48_d3_S
+dhcp_client_fifo_w104_d4_S
+dhcp_client_fifo_w72_d4_S
+entry_proc
+open_dhcp_port
+receive_message
+dhcp_fsm
+send_message
+dhcp_client
+' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source /tools/Xilinx/Vitis_HLS/2021.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source /tools/Xilinx/Vitis_HLS/2021.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.rtl_wrap.cfg.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.compgen.dataonly.tcl 
+Execute       get_config_export -format 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/entry_proc.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/open_dhcp_port.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/receive_message.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_fsm.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/send_message.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute       get_solution -flow_target 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.constraint.tcl 
+Execute       sc_get_clocks dhcp_client 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_debug -directory 
+Execute       get_config_export -deadlock_detection 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute       get_config_export -deadlock_detection 
+Execute       get_config_export -deadlock_detection 
+Execute       get_config_rtl -module_prefix 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to dhcp_client
+Execute       get_config_export -deadlock_detection 
+Execute       get_config_export -format 
+INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+INFO-FLOW: DBG:PUTS:       generate_top_info
+INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=dhcp_client
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.rtl_wrap.cfg.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.rtl_wrap.cfg.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.rtl_wrap.cfg.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_export -ip_xdc_file 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.constraint.tcl 
+INFO-FLOW: DBG:PUTS:       generate_ipi_example_script
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.constraint.tcl 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/dhcp_client.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl
+Execute       source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/generic/autopilot/common.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/generic/autopilot/op.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/util.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:     IP package: exec /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/impl/ip/pack.sh
+INFO-FLOW: DBG:PUTS:     IP package: success /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1/impl/ip/pack.sh
+Execute       get_config_export -output 
+Execute       send_msg_by_id INFO @200-802@%s dhcp_client_prj/solution1/impl/export.zip 
+INFO: [HLS 200-802] Generated output file dhcp_client_prj/solution1/impl/export.zip
+Command     export_design done; 13.7 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 12.35 seconds. CPU system time: 0.68 seconds. Elapsed time: 13.7 seconds; current allocated memory: -930.363 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client/dhcp_client_prj/solution1 opened at Sat Mar 18 14:32:40 +03 2023
+Execute       ap_set_clock -name default -period 3.2 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+Execute       set_part xcu280-fsvh2892-2L-e 
+Execute         create_platform xcu280-fsvh2892-2L-e -board  
+DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2021.2/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2021.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/virtexuplus_dsp48e2.hlp 
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+Command         create_platform done; 1.01 sec.
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/util.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.1 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -default_interface 
+Execute       get_config_rtl -register_reset_num 
+Execute       send_msg_by_id INFO @200-1464@%s config_export -description {DHCP Client to be used with the Xilinx Labs TCP & UDP offload engines.} 
+INFO: [HLS 200-1464] Running solution command: config_export -description {DHCP Client to be used with the Xilinx Labs TCP & UDP offload engines.}
+Execute       config_export -description DHCP Client to be used with the Xilinx Labs TCP & UDP offload engines. 
+Execute       send_msg_by_id INFO @200-1464@%s config_export -display_name {DHCP Client} 
+INFO: [HLS 200-1464] Running solution command: config_export -display_name {DHCP Client}
+Execute       config_export -display_name DHCP Client 
+Execute       send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute       config_export -format=ip_catalog 
+Execute       send_msg_by_id INFO @200-1464@%s config_export -ipname=dhcp_client 
+INFO: [HLS 200-1464] Running solution command: config_export -ipname=dhcp_client
+Execute       config_export -ipname=dhcp_client 
+Execute       send_msg_by_id INFO @200-1464@%s config_export -vendor=xilinx.labs 
+INFO: [HLS 200-1464] Running solution command: config_export -vendor=xilinx.labs
+Execute       config_export -vendor=xilinx.labs 
+Execute       send_msg_by_id INFO @200-1464@%s config_export -version=1.05 
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.05
+Execute       config_export -version=1.05 
+Command     open_solution done; 1.12 sec.
+Execute     set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+Execute       create_platform xcu280-fsvh2892-2L-e -board  
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/virtexuplus_dsp48e2.hlp 
+Execute       source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/util.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Execute     create_clock -period 3.2 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 3.2 -name default 
+Execute     set_top dhcp_client 
+INFO: [HLS 200-1510] Running: set_top dhcp_client 
+Execute     add_files /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp -cflags -I/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client 
+INFO: [HLS 200-1510] Running: add_files /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp -cflags -I/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/dhcp_client 
+INFO: [HLS 200-10] Adding design file '/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp' to the project
+Execute     cleanup_all 

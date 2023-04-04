@@ -1,0 +1,162 @@
+
+
+================================================================
+== Vitis HLS Report for 'ip_handler_rshiftWordByOctet_net_axis_512_512_3_s'
+================================================================
+* Date:           Sat Mar 18 14:33:50 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        ip_handler_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  2.644 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       44|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       69|    -|
+|Register             |        -|     -|     1287|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|     1287|      113|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |ap_condition_128                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_143                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_162                  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op18_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op46_write_state2    |       and|   0|  0|   2|           1|           1|
+    |tmp_i_nbreadreq_fu_74_p3          |       and|   0|  0|   2|           1|           0|
+    |sendWord_last_V_fu_196_p2         |      icmp|   0|  0|  24|          50|           1|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  44|          60|          11|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------------+----+-----------+------+-----------+
+    |                      Name                     | LUT| Input Size| Bits | Total Bits|
+    +-----------------------------------------------+----+-----------+------+-----------+
+    |ap_done                                        |   9|          2|     1|          2|
+    |ap_phi_mux_rs_firstWord_new_0_i_phi_fu_108_p4  |  14|          3|     1|          3|
+    |ap_phi_mux_sendWord_last_V_1_phi_fu_98_p4      |  14|          3|     1|          3|
+    |ipv6DataFifo_blk_n                             |   9|          2|     1|          2|
+    |ipv6DataFifo_din                               |  14|          3|  1024|       3072|
+    |ipv6ShiftFifo_blk_n                            |   9|          2|     1|          2|
+    +-----------------------------------------------+----+-----------+------+-----------+
+    |Total                                          |  69|         15|  1029|       3084|
+    +-----------------------------------------------+----+-----------+------+-----------+
+
+    * Register: 
+    +---------------------------+-----+----+-----+-----------+
+    |            Name           |  FF | LUT| Bits| Const Bits|
+    +---------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                  |    1|   0|    1|          0|
+    |ap_done_reg                |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1    |    1|   0|    1|          0|
+    |fsmState                   |    1|   0|    1|          0|
+    |fsmState_load_reg_266      |    1|   0|    1|          0|
+    |p_Result_4_i_reg_296       |   14|   0|   14|          0|
+    |p_Val2_1_reg_275           |   64|   0|   64|          0|
+    |p_Val2_s_reg_270           |  512|   0|  512|          0|
+    |prevWord_data_V            |  512|   0|  512|          0|
+    |prevWord_keep_V            |   64|   0|   64|          0|
+    |rs_firstWord               |    1|   0|    1|          0|
+    |rs_firstWord_load_reg_287  |    1|   0|    1|          0|
+    |sendWord_last_V_reg_301    |    1|   0|    1|          0|
+    |tmp_i_reg_280              |    1|   0|    1|          0|
+    |trunc_ln674_reg_291        |  112|   0|  112|          0|
+    +---------------------------+-----+----+-----+-----------+
+    |Total                      | 1287|   0| 1287|          0|
+    +---------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+------+------------+-----------------------------------------------------+--------------+
+|       RTL Ports       | Dir | Bits |  Protocol  |                    Source Object                    |    C Type    |
++-----------------------+-----+------+------------+-----------------------------------------------------+--------------+
+|ap_clk                 |   in|     1|  ap_ctrl_hs|  ip_handler_rshiftWordByOctet<net_axis<512>, 512, 3>|  return value|
+|ap_rst                 |   in|     1|  ap_ctrl_hs|  ip_handler_rshiftWordByOctet<net_axis<512>, 512, 3>|  return value|
+|ap_start               |   in|     1|  ap_ctrl_hs|  ip_handler_rshiftWordByOctet<net_axis<512>, 512, 3>|  return value|
+|ap_done                |  out|     1|  ap_ctrl_hs|  ip_handler_rshiftWordByOctet<net_axis<512>, 512, 3>|  return value|
+|ap_continue            |   in|     1|  ap_ctrl_hs|  ip_handler_rshiftWordByOctet<net_axis<512>, 512, 3>|  return value|
+|ap_idle                |  out|     1|  ap_ctrl_hs|  ip_handler_rshiftWordByOctet<net_axis<512>, 512, 3>|  return value|
+|ap_ready               |  out|     1|  ap_ctrl_hs|  ip_handler_rshiftWordByOctet<net_axis<512>, 512, 3>|  return value|
+|ipv6ShiftFifo_dout     |   in|  1024|     ap_fifo|                                        ipv6ShiftFifo|       pointer|
+|ipv6ShiftFifo_empty_n  |   in|     1|     ap_fifo|                                        ipv6ShiftFifo|       pointer|
+|ipv6ShiftFifo_read     |  out|     1|     ap_fifo|                                        ipv6ShiftFifo|       pointer|
+|ipv6DataFifo_din       |  out|  1024|     ap_fifo|                                         ipv6DataFifo|       pointer|
+|ipv6DataFifo_full_n    |   in|     1|     ap_fifo|                                         ipv6DataFifo|       pointer|
+|ipv6DataFifo_write     |  out|     1|     ap_fifo|                                         ipv6DataFifo|       pointer|
++-----------------------+-----+------+------------+-----------------------------------------------------+--------------+
+

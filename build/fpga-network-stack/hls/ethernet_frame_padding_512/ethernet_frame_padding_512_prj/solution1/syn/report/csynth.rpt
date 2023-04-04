@@ -1,0 +1,151 @@
+
+
+================================================================
+== Synthesis Summary Report of 'ethernet_frame_padding_512'
+================================================================
++ General Information: 
+    * Date:           Sat Mar 18 14:42:21 2023
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+    * Project:        ethernet_frame_padding_512_prj
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu280-fsvh2892-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-------------+------------+-----+
+    |            Modules           | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |             |            |     |
+    |            & Loops           | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|      FF     |     LUT    | URAM|
+    +------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-------------+------------+-----+
+    |+ ethernet_frame_padding_512  |     -|  0.02|       16|  51.200|         -|        1|     -|       yes|     -|   -|  18405 (~0%)|  31299 (2%)|    -|
+    +------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+| Interface | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+| m_axis    | both          | 512   | 64    | 1     | 1      | 64    | 1      |
+| s_axis    | both          | 512   | 64    | 1     | 1      | 64    | 1      |
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------------------------------------------+
+| Argument | Direction | Datatype                                     |
++----------+-----------+----------------------------------------------+
+| dataIn   | in        | stream<hls::axis<ap_uint<512>, 0, 0, 0>, 0>& |
+| dataOut  | out       | stream<hls::axis<ap_uint<512>, 0, 0, 0>, 0>& |
++----------+-----------+----------------------------------------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| dataIn   | s_axis       | interface |
+| dataOut  | m_axis       | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
+  No bind op info in design
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type      | Options                                | Location                                                                                                                                                                         |
++-----------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:76 in convert_net_axis_to_axis                          |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:96 in convert_axis_to_net_axis                          |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:115 in convert_routed_net_axis_to_axis                  |
+| unroll    |                                        | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:137 in reverse                                          |
+| unroll    |                                        | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:149 in reverse_bits                                     |
+| inline    |                                        | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:318 in increasestreamwidth                              |
+| inline    |                                        | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:348 in reducestreamwidth                                |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:411 in convertstreamwidth                               |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:412 in convertstreamwidth                               |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:423 in convertstreamwidth                               |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:424 in convertstreamwidth                               |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:432 in convertstreamwidth                               |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:433 in convertstreamwidth                               |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:441 in convertstreamwidth                               |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:442 in convertstreamwidth                               |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:450 in convertstreamwidth                               |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:451 in convertstreamwidth                               |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:459 in convertstreamwidth                               |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:460 in convertstreamwidth                               |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:468 in convertstreamwidth                               |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:469 in convertstreamwidth                               |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:493 in rshiftwordbyoctet                                |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:494 in rshiftwordbyoctet                                |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:568 in lshiftwordbyoctet                                |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:569 in lshiftwordbyoctet                                |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:637 in stream_merger                                    |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:638 in stream_merger                                    |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:656 in stream_merger                                    |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:657 in stream_merger                                    |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:718 in fair_merger                                      |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:719 in fair_merger                                      |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:752 in fair_pkg_merger                                  |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:753 in fair_pkg_merger                                  |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:834 in stream_pkg_merger                                |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:835 in stream_pkg_merger                                |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:913 in stream_pkg_splitter                              |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:914 in stream_pkg_splitter                              |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:978 in pass_valid_pkg                                   |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:979 in pass_valid_pkg                                   |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1040 in toe_duplicate_stream                            |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1041 in toe_duplicate_stream                            |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1056 in ip_handler_duplicate_stream                     |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1057 in ip_handler_duplicate_stream                     |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1095 in udp_lshiftwordbyoctet                           |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1096 in udp_lshiftwordbyoctet                           |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1166 in mac_lshiftwordbyoctet                           |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1167 in mac_lshiftwordbyoctet                           |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1237 in ipv4_lshiftwordbyoctet                          |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1238 in ipv4_lshiftwordbyoctet                          |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1308 in ip_handler_rshiftwordbyoctet                    |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1309 in ip_handler_rshiftwordbyoctet                    |
+| inline    | off                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1383 in udp_rshiftwordbyoctet                           |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/../axi_utils.hpp:1384 in udp_rshiftwordbyoctet                           |
+| pipeline  | II=1                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/ethernet_frame_padding_512.cpp:32 in ethernet_frame_padding_512          |
+| interface | ap_ctrl_none port=return               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/ethernet_frame_padding_512.cpp:33 in ethernet_frame_padding_512, return  |
+| interface | axis register port=dataIn name=s_axis  | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/ethernet_frame_padding_512.cpp:35 in ethernet_frame_padding_512, dataIn  |
+| interface | axis register port=dataOut name=m_axis | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/ethernet_frame_padding_512.cpp:36 in ethernet_frame_padding_512, dataOut |
+| unroll    |                                        | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ethernet_frame_padding_512/ethernet_frame_padding_512.cpp:76 in ethernet_frame_padding_512          |
++-----------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+

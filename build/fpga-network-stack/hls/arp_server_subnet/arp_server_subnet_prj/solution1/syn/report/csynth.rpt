@@ -1,0 +1,235 @@
+
+
+================================================================
+== Synthesis Summary Report of 'arp_server_subnet_top'
+================================================================
++ General Information: 
+    * Date:           Sat Mar 18 14:32:58 2023
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+    * Project:        arp_server_subnet_prj
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu280-fsvh2892-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------+------+------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |              Modules              | Issue|      | Latency | Latency| Iteration|         | Trip |          |         |    |            |            |     |
+    |              & Loops              | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF     |     LUT    | URAM|
+    +-----------------------------------+------+------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |+ arp_server_subnet_top*           |     -|  0.00|        9|  28.800|         -|        1|     -|  dataflow|  3 (~0%)|   -|  9026 (~0%)|  6163 (~0%)|    -|
+    | + entry_proc                      |     -|  1.17|        0|   0.000|         -|        0|     -|        no|        -|   -|     2 (~0%)|    29 (~0%)|    -|
+    | + convert_axis_to_net_axis_512_s  |     -|  1.17|        1|   3.200|         -|        1|     -|       yes|        -|   -|   581 (~0%)|    37 (~0%)|    -|
+    | + process_arp_pkg_512_s           |     -|  0.00|        3|   9.600|         -|        1|     -|       yes|        -|   -|  2491 (~0%)|  3236 (~0%)|    -|
+    | + convert_net_axis_to_axis_512_s  |     -|  1.17|        2|   6.400|         -|        1|     -|       yes|        -|   -|   583 (~0%)|    43 (~0%)|    -|
+    | + generate_arp_pkg_512_s          |     -|  0.78|        1|   3.200|         -|        1|     -|       yes|        -|   -|   693 (~0%)|   145 (~0%)|    -|
+    | + arp_table                       |     -|  1.14|        3|   9.600|         -|        1|     -|       yes|  3 (~0%)|   -|   467 (~0%)|   325 (~0%)|    -|
+    +-----------------------------------+------+------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++--------------------------------+---------------+-------+-------+-------+--------+-------+--------+
+| Interface                      | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
++--------------------------------+---------------+-------+-------+-------+--------+-------+--------+
+| m_axis                         | both          | 512   | 64    | 1     | 1      | 64    | 1      |
+| m_axis_arp_lookup_reply        | both          | 56    |       |       | 1      |       | 1      |
+| m_axis_host_arp_lookup_reply   | both          | 56    |       |       | 1      |       | 1      |
+| s_axis                         | both          | 512   | 64    | 1     | 1      | 64    | 1      |
+| s_axis_arp_lookup_request      | both          | 32    |       |       | 1      |       | 1      |
+| s_axis_host_arp_lookup_request | both          | 32    |       |       | 1      |       | 1      |
++--------------------------------+---------------+-------+-------+-------+--------+-------+--------+
+
+* REGISTER
++-----------------+---------+----------+
+| Interface       | Mode    | Bitwidth |
++-----------------+---------+----------+
+| myIpAddress     | ap_none | 32       |
+| myMacAddress    | ap_none | 48       |
+| regReplyCount   | ap_none | 16       |
+| regRequestCount | ap_none | 16       |
++-----------------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------------+-----------+----------------------------------------------+
+| Argument         | Direction | Datatype                                     |
++------------------+-----------+----------------------------------------------+
+| arpDataIn        | in        | stream<hls::axis<ap_uint<512>, 0, 0, 0>, 0>& |
+| macIpEncode_req  | in        | stream<ap_uint<32>, 0>&                      |
+| hostIpEncode_req | in        | stream<ap_uint<32>, 0>&                      |
+| arpDataOut       | out       | stream<hls::axis<ap_uint<512>, 0, 0, 0>, 0>& |
+| macIpEncode_rsp  | out       | stream<arpTableReply, 0>&                    |
+| hostIpEncode_rsp | out       | stream<arpTableReply, 0>&                    |
+| myMacAddress     | in        | ap_uint<48>                                  |
+| myIpAddress      | in        | ap_uint<32>                                  |
+| regRequestCount  | out       | ap_uint<16>&                                 |
+| regReplyCount    | out       | ap_uint<16>&                                 |
++------------------+-----------+----------------------------------------------+
+
+* SW-to-HW Mapping
++------------------+--------------------------------+-----------+
+| Argument         | HW Interface                   | HW Type   |
++------------------+--------------------------------+-----------+
+| arpDataIn        | s_axis                         | interface |
+| macIpEncode_req  | s_axis_arp_lookup_request      | interface |
+| hostIpEncode_req | s_axis_host_arp_lookup_request | interface |
+| arpDataOut       | m_axis                         | interface |
+| macIpEncode_rsp  | m_axis_arp_lookup_reply        | interface |
+| hostIpEncode_rsp | m_axis_host_arp_lookup_reply   | interface |
+| myMacAddress     | myMacAddress                   | port      |
+| myIpAddress      | myIpAddress                    | port      |
+| regRequestCount  | regRequestCount                | port      |
+| regRequestCount  | regRequestCount_ap_vld         | port      |
+| regReplyCount    | regReplyCount                  | port      |
+| regReplyCount    | regReplyCount_ap_vld           | port      |
++------------------+--------------------------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                      | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++---------------------------+-----+--------+-------------+-----+--------+---------+
+| + arp_server_subnet_top   | 0   |        |             |     |        |         |
+|  + process_arp_pkg_512_s  | 0   |        |             |     |        |         |
+|    add_ln67_fu_376_p2     | -   |        | add_ln67    | add | fabric | 0       |
+|    add_ln885_1_fu_474_p2  | -   |        | add_ln885_1 | add | fabric | 0       |
+|    add_ln885_fu_498_p2    | -   |        | add_ln885   | add | fabric | 0       |
+|  + generate_arp_pkg_512_s | 0   |        |             |     |        |         |
+|    add_ln85_fu_328_p2     | -   |        | add_ln85    | add | fabric | 0       |
++---------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++----------------------------+------+------+--------+-----------------------+---------+------+---------+
+| Name                       | BRAM | URAM | Pragma | Variable              | Storage | Impl | Latency |
++----------------------------+------+------+--------+-----------------------+---------+------+---------+
+| + arp_server_subnet_top    | 3    | 0    |        |                       |         |      |         |
+|   myIpAddress_c16_U        | -    | -    |        | myIpAddress_c16       | fifo    | srl  | 0       |
+|   myIpAddress_c_U          | -    | -    |        | myIpAddress_c         | fifo    | srl  | 0       |
+|   myMacAddress_c_U         | -    | -    |        | myMacAddress_c        | fifo    | srl  | 0       |
+|  + arp_table               | 3    | 0    |        |                       |         |      |         |
+|    arpTable_macAddress_V_U | 2    | -    | pragma | arpTable_macAddress_V | ram_1p  | bram | 1       |
+|    arpTable_valid_U        | 1    | -    | pragma | arpTable_valid        | ram_1p  | bram | 1       |
++----------------------------+------+------+--------+-----------------------+---------+------+---------+
+
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++--------------+-------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type         | Options                                                                 | Location                                                                                                                                                               |
++--------------+-------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| inline       |                                                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.cpp:188 in keeptolen                                       |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:76 in convert_net_axis_to_axis                         |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:96 in convert_axis_to_net_axis                         |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:115 in convert_routed_net_axis_to_axis                 |
+| unroll       |                                                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:137 in reverse                                         |
+| unroll       |                                                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:149 in reverse_bits                                    |
+| inline       |                                                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:318 in increasestreamwidth                             |
+| inline       |                                                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:348 in reducestreamwidth                               |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:411 in convertstreamwidth                              |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:412 in convertstreamwidth                              |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:423 in convertstreamwidth                              |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:424 in convertstreamwidth                              |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:432 in convertstreamwidth                              |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:433 in convertstreamwidth                              |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:441 in convertstreamwidth                              |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:442 in convertstreamwidth                              |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:450 in convertstreamwidth                              |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:451 in convertstreamwidth                              |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:459 in convertstreamwidth                              |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:460 in convertstreamwidth                              |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:468 in convertstreamwidth                              |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:469 in convertstreamwidth                              |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:493 in rshiftwordbyoctet                               |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:494 in rshiftwordbyoctet                               |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:568 in lshiftwordbyoctet                               |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:569 in lshiftwordbyoctet                               |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:637 in stream_merger                                   |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:638 in stream_merger                                   |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:656 in stream_merger                                   |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:657 in stream_merger                                   |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:718 in fair_merger                                     |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:719 in fair_merger                                     |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:752 in fair_pkg_merger                                 |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:753 in fair_pkg_merger                                 |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:834 in stream_pkg_merger                               |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:835 in stream_pkg_merger                               |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:913 in stream_pkg_splitter                             |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:914 in stream_pkg_splitter                             |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:978 in pass_valid_pkg                                  |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:979 in pass_valid_pkg                                  |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:1040 in toe_duplicate_stream                           |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:1041 in toe_duplicate_stream                           |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:1056 in ip_handler_duplicate_stream                    |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:1057 in ip_handler_duplicate_stream                    |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:1095 in udp_lshiftwordbyoctet                          |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:1096 in udp_lshiftwordbyoctet                          |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:1166 in mac_lshiftwordbyoctet                          |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:1167 in mac_lshiftwordbyoctet                          |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:1237 in ipv4_lshiftwordbyoctet                         |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:1238 in ipv4_lshiftwordbyoctet                         |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:1308 in ip_handler_rshiftwordbyoctet                   |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:1309 in ip_handler_rshiftwordbyoctet                   |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:1383 in udp_rshiftwordbyoctet                          |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../axi_utils.hpp:1384 in udp_rshiftwordbyoctet                          |
+| inline       |                                                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/../packet.hpp:159 in clear                                              |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:39 in process_arp_pkg                             |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:40 in process_arp_pkg                             |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:81 in generate_arp_pkg                            |
+| inline       | off                                                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:82 in generate_arp_pkg                            |
+| pipeline     | II=1                                                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:174 in arp_table                                  |
+| bind_storage | variable=arpTable type=RAM_1P impl=BRAM                                 | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:177 in arp_table, arpTable                        |
+| dependence   | variable=arpTable inter false                                           | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:178 in arp_table, arpTable                        |
+| inline       |                                                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:226 in arp_server_subnet                          |
+| stream       | variable=arpReplyMetaFifo depth=4                                       | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:229 in arp_server_subnet, arpReplyMetaFifo        |
+| aggregate    | variable=arpReplyMetaFifo compact=bit                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:230 in arp_server_subnet, arpReplyMetaFifo        |
+| stream       | variable=arpRequestMetaFifo depth=4                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:233 in arp_server_subnet, arpRequestMetaFifo      |
+| stream       | variable=arpTableInsertFifo depth=4                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:237 in arp_server_subnet, arpTableInsertFifo      |
+| aggregate    | variable=arpTableInsertFifo compact=bit                                 | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:238 in arp_server_subnet, arpTableInsertFifo      |
+| interface    | ap_ctrl_none port=return                                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:272 in arp_server_subnet_top, return              |
+| dataflow     | disable_start_propagation                                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:273 in arp_server_subnet_top                      |
+| interface    | axis register port=arpDataIn name=s_axis                                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:275 in arp_server_subnet_top, arpDataIn           |
+| interface    | axis register port=arpDataOut name=m_axis                               | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:276 in arp_server_subnet_top, arpDataOut          |
+| interface    | axis register port=macIpEncode_req name=s_axis_arp_lookup_request       | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:277 in arp_server_subnet_top, macIpEncode_req     |
+| interface    | axis register port=macIpEncode_rsp name=m_axis_arp_lookup_reply         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:278 in arp_server_subnet_top, macIpEncode_rsp     |
+| interface    | axis register port=hostIpEncode_req name=s_axis_host_arp_lookup_request | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:279 in arp_server_subnet_top, hostIpEncode_req    |
+| interface    | axis register port=hostIpEncode_rsp name=m_axis_host_arp_lookup_reply   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:280 in arp_server_subnet_top, hostIpEncode_rsp    |
+| aggregate    | variable=macIpEncode_rsp compact=bit                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:281 in arp_server_subnet_top, macIpEncode_rsp     |
+| aggregate    | variable=hostIpEncode_rsp compact=bit                                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:282 in arp_server_subnet_top, hostIpEncode_rsp    |
+| interface    | ap_none register port=myMacAddress                                      | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:283 in arp_server_subnet_top, myMacAddress        |
+| interface    | ap_none register port=myIpAddress                                       | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:284 in arp_server_subnet_top, myIpAddress         |
+| stream       | depth=2 variable=arpDataIn_internal                                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:287 in arp_server_subnet_top, arpDataIn_internal  |
+| stream       | depth=2 variable=arpDataOut_internal                                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet.cpp:289 in arp_server_subnet_top, arpDataOut_internal |
++--------------+-------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+

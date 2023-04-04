@@ -1,0 +1,259 @@
+
+
+================================================================
+== Synthesis Summary Report of 'icmp_server_top'
+================================================================
++ General Information: 
+    * Date:           Sat Mar 18 14:31:48 2023
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+    * Project:        icmp_server_prj
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu280-fsvh2892-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |              Modules             |  Issue |       | Latency | Latency| Iteration|         | Trip |          |         |    |            |            |     |
+    |              & Loops             |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF     |     LUT    | URAM|
+    +----------------------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |+ icmp_server_top*                |  Timing|  -2.06|        8|  35.139|         -|        1|     -|  dataflow|  4 (~0%)|   -|  4429 (~0%)|  4293 (~0%)|    -|
+    | + convert_axis_to_net_axis_64_s  |       -|   1.17|        1|   4.392|         -|        1|     -|       yes|        -|   -|    77 (~0%)|    37 (~0%)|    -|
+    | + check_icmp_checksum            |       -|   0.35|        2|   8.785|         -|        1|     -|       yes|        -|   -|   689 (~0%)|  1199 (~0%)|    -|
+    | + convert_axis_to_net_axis_64_1  |       -|   1.17|        1|   4.392|         -|        1|     -|       yes|        -|   -|    77 (~0%)|    37 (~0%)|    -|
+    | + convert_axis_to_net_axis_64_2  |       -|   1.17|        1|   4.392|         -|        1|     -|       yes|        -|   -|    77 (~0%)|    37 (~0%)|    -|
+    | + convert_net_axis_to_axis_64_s  |       -|   1.17|        2|   8.785|         -|        1|     -|       yes|        -|   -|    79 (~0%)|    43 (~0%)|    -|
+    | + udpPortUnreachable             |  Timing|  -2.06|        0|   0.000|         -|        1|     -|       yes|        -|   -|    28 (~0%)|   536 (~0%)|    -|
+    | + dropper                        |       -|   0.36|        1|   4.392|         -|        1|     -|       yes|        -|   -|    83 (~0%)|   148 (~0%)|    -|
+    | + udpAddIpHeader                 |  Timing|  -0.75|        0|   0.000|         -|        1|     -|       yes|        -|   -|   109 (~0%)|   215 (~0%)|    -|
+    | + insertChecksum                 |       -|   0.12|        1|   4.392|         -|        1|     -|       yes|        -|   -|   440 (~0%)|   335 (~0%)|    -|
+    +----------------------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+| Interface | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+| m_axis    | both          | 64    | 8     | 1     | 1      | 8     | 1      |
+| s_axis    | both          | 64    | 8     | 1     | 1      | 8     | 1      |
+| ttlIn     | both          | 64    | 8     | 1     | 1      | 8     | 1      |
+| udpIn     | both          | 64    | 8     | 1     | 1      | 8     | 1      |
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------------------------------------+
+| Argument | Direction | Datatype                                    |
++----------+-----------+---------------------------------------------+
+| dataIn   | in        | stream<hls::axis<ap_uint<64>, 0, 0, 0>, 0>& |
+| udpIn    | in        | stream<hls::axis<ap_uint<64>, 0, 0, 0>, 0>& |
+| ttlIn    | in        | stream<hls::axis<ap_uint<64>, 0, 0, 0>, 0>& |
+| dataOut  | out       | stream<hls::axis<ap_uint<64>, 0, 0, 0>, 0>& |
++----------+-----------+---------------------------------------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| dataIn   | s_axis       | interface |
+| udpIn    | udpIn        | interface |
+| ttlIn    | ttlIn        | interface |
+| dataOut  | m_axis       | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------+-----+--------+---------------+-----+--------+---------+
+| Name                       | DSP | Pragma | Variable      | Op  | Impl   | Latency |
++----------------------------+-----+--------+---------------+-----+--------+---------+
+| + icmp_server_top          | 0   |        |               |     |        |         |
+|  + check_icmp_checksum     | 0   |        |               |     |        |         |
+|    add_ln885_3_fu_437_p2   | -   |        | add_ln885_3   | add | fabric | 0       |
+|    add_ln229_17_fu_455_p2  | -   |        | add_ln229_17  | add | tadder | 0       |
+|    add_ln229_4_fu_461_p2   | -   |        | add_ln229_4   | add | tadder | 0       |
+|    add_ln885_4_fu_485_p2   | -   |        | add_ln885_4   | add | fabric | 0       |
+|    add_ln229_18_fu_503_p2  | -   |        | add_ln229_18  | add | tadder | 0       |
+|    add_ln229_5_fu_509_p2   | -   |        | add_ln229_5   | add | tadder | 0       |
+|    add_ln885_7_fu_579_p2   | -   |        | add_ln885_7   | add | fabric | 0       |
+|    add_ln229_20_fu_597_p2  | -   |        | add_ln229_20  | add | tadder | 0       |
+|    add_ln229_7_fu_603_p2   | -   |        | add_ln229_7   | add | tadder | 0       |
+|    add_ln885_5_fu_647_p2   | -   |        | add_ln885_5   | add | fabric | 0       |
+|    add_ln229_19_fu_665_p2  | -   |        | add_ln229_19  | add | tadder | 0       |
+|    add_ln229_6_fu_671_p2   | -   |        | add_ln229_6   | add | tadder | 0       |
+|    add_ln885_9_fu_721_p2   | -   |        | add_ln885_9   | add | fabric | 0       |
+|    add_ln229_22_fu_739_p2  | -   |        | add_ln229_22  | add | tadder | 0       |
+|    add_ln229_9_fu_745_p2   | -   |        | add_ln229_9   | add | tadder | 0       |
+|    add_ln885_8_fu_778_p2   | -   |        | add_ln885_8   | add | fabric | 0       |
+|    add_ln229_21_fu_796_p2  | -   |        | add_ln229_21  | add | tadder | 0       |
+|    add_ln229_8_fu_802_p2   | -   |        | add_ln229_8   | add | tadder | 0       |
+|    add_ln885_11_fu_848_p2  | -   |        | add_ln885_11  | add | fabric | 0       |
+|    add_ln229_24_fu_866_p2  | -   |        | add_ln229_24  | add | tadder | 0       |
+|    add_ln229_11_fu_872_p2  | -   |        | add_ln229_11  | add | tadder | 0       |
+|    add_ln885_10_fu_896_p2  | -   |        | add_ln885_10  | add | fabric | 0       |
+|    add_ln229_23_fu_914_p2  | -   |        | add_ln229_23  | add | tadder | 0       |
+|    add_ln229_10_fu_920_p2  | -   |        | add_ln229_10  | add | tadder | 0       |
+|    add_ln885_13_fu_966_p2  | -   |        | add_ln885_13  | add | fabric | 0       |
+|    add_ln229_26_fu_984_p2  | -   |        | add_ln229_26  | add | tadder | 0       |
+|    add_ln229_13_fu_990_p2  | -   |        | add_ln229_13  | add | tadder | 0       |
+|    add_ln885_12_fu_1014_p2 | -   |        | add_ln885_12  | add | fabric | 0       |
+|    add_ln229_25_fu_1032_p2 | -   |        | add_ln229_25  | add | tadder | 0       |
+|    add_ln229_12_fu_1038_p2 | -   |        | add_ln229_12  | add | tadder | 0       |
+|    add_ln885_14_fu_1055_p2 | -   |        | add_ln885_14  | add | fabric | 0       |
+|    add_ln885_2_fu_1084_p2  | -   |        | add_ln885_2   | add | fabric | 0       |
+|    add_ln229_16_fu_1102_p2 | -   |        | add_ln229_16  | add | tadder | 0       |
+|    add_ln229_3_fu_1108_p2  | -   |        | add_ln229_3   | add | tadder | 0       |
+|    add_ln886_fu_1346_p2    | -   |        | add_ln886     | add | fabric | 0       |
+|    add_ln1691_fu_1352_p2   | -   |        | add_ln1691    | add | tadder | 0       |
+|    sub_ln229_fu_1370_p2    | -   |        | sub_ln229     | add | tadder | 0       |
+|    add_ln885_fu_1128_p2    | -   |        | add_ln885     | add | fabric | 0       |
+|    add_ln229_14_fu_1146_p2 | -   |        | add_ln229_14  | add | tadder | 0       |
+|    add_ln229_fu_1152_p2    | -   |        | add_ln229     | add | tadder | 0       |
+|    add_ln885_1_fu_1168_p2  | -   |        | add_ln885_1   | add | fabric | 0       |
+|    add_ln229_15_fu_1186_p2 | -   |        | add_ln229_15  | add | tadder | 0       |
+|    add_ln229_2_fu_1192_p2  | -   |        | add_ln229_2   | add | tadder | 0       |
+|    add_ln885_6_fu_339_p2   | -   |        | add_ln885_6   | add | fabric | 0       |
+|  + udpPortUnreachable      | 0   |        |               |     |        |         |
+|    add_ln223_fu_315_p2     | -   |        | add_ln223     | add | fabric | 0       |
+|    add_ln223_1_fu_325_p2   | -   |        | add_ln223_1   | add | fabric | 0       |
+|    add_ln223_2_fu_335_p2   | -   |        | add_ln223_2   | add | fabric | 0       |
+|    add_ln223_3_fu_345_p2   | -   |        | add_ln223_3   | add | fabric | 0       |
+|    add_ln223_4_fu_451_p2   | -   |        | add_ln223_4   | add | fabric | 0       |
+|    add_ln223_5_fu_461_p2   | -   |        | add_ln223_5   | add | fabric | 0       |
+|    add_ln223_6_fu_471_p2   | -   |        | add_ln223_6   | add | fabric | 0       |
+|    add_ln223_7_fu_481_p2   | -   |        | add_ln223_7   | add | fabric | 0       |
+|    add_ln885_fu_504_p2     | -   |        | add_ln885     | add | fabric | 0       |
+|    add_ln229_fu_544_p2     | -   |        | add_ln229     | add | fabric | 0       |
+|    add_ln1542_fu_550_p2    | -   |        | add_ln1542    | add | fabric | 0       |
+|    add_ln229_1_fu_572_p2   | -   |        | add_ln229_1   | add | fabric | 0       |
+|  + udpAddIpHeader          | 0   |        |               |     |        |         |
+|    inputVector_V_fu_533_p2 | -   |        | inputVector_V | add | fabric | 0       |
+|  + insertChecksum          | 0   |        |               |     |        |         |
+|    add_ln885_fu_260_p2     | -   |        | add_ln885     | add | fabric | 0       |
++----------------------------+-----+--------+---------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type      | Options                                      | Location                                                                                                                                                |
++-----------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:76 in convert_net_axis_to_axis                |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:96 in convert_axis_to_net_axis                |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:115 in convert_routed_net_axis_to_axis        |
+| unroll    |                                              | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:137 in reverse                                |
+| unroll    |                                              | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:149 in reverse_bits                           |
+| inline    |                                              | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:318 in increasestreamwidth                    |
+| inline    |                                              | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:348 in reducestreamwidth                      |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:411 in convertstreamwidth                     |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:412 in convertstreamwidth                     |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:423 in convertstreamwidth                     |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:424 in convertstreamwidth                     |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:432 in convertstreamwidth                     |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:433 in convertstreamwidth                     |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:441 in convertstreamwidth                     |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:442 in convertstreamwidth                     |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:450 in convertstreamwidth                     |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:451 in convertstreamwidth                     |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:459 in convertstreamwidth                     |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:460 in convertstreamwidth                     |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:468 in convertstreamwidth                     |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:469 in convertstreamwidth                     |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:493 in rshiftwordbyoctet                      |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:494 in rshiftwordbyoctet                      |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:568 in lshiftwordbyoctet                      |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:569 in lshiftwordbyoctet                      |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:637 in stream_merger                          |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:638 in stream_merger                          |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:656 in stream_merger                          |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:657 in stream_merger                          |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:718 in fair_merger                            |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:719 in fair_merger                            |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:752 in fair_pkg_merger                        |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:753 in fair_pkg_merger                        |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:834 in stream_pkg_merger                      |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:835 in stream_pkg_merger                      |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:913 in stream_pkg_splitter                    |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:914 in stream_pkg_splitter                    |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:978 in pass_valid_pkg                         |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:979 in pass_valid_pkg                         |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:1040 in toe_duplicate_stream                  |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:1041 in toe_duplicate_stream                  |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:1056 in ip_handler_duplicate_stream           |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:1057 in ip_handler_duplicate_stream           |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:1095 in udp_lshiftwordbyoctet                 |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:1096 in udp_lshiftwordbyoctet                 |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:1166 in mac_lshiftwordbyoctet                 |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:1167 in mac_lshiftwordbyoctet                 |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:1237 in ipv4_lshiftwordbyoctet                |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:1238 in ipv4_lshiftwordbyoctet                |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:1308 in ip_handler_rshiftwordbyoctet          |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:1309 in ip_handler_rshiftwordbyoctet          |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:1383 in udp_rshiftwordbyoctet                 |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/../axi_utils.hpp:1384 in udp_rshiftwordbyoctet                 |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:47 in check_icmp_checksum                      |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:48 in check_icmp_checksum                      |
+| unroll    |                                              | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:128 in check_icmp_checksum                     |
+| unroll    |                                              | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:140 in check_icmp_checksum                     |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:171 in udpportunreachable                      |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:172 in udpportunreachable                      |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:243 in udpaddipheader                          |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:244 in udpaddipheader                          |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:324 in dropper                                 |
+| inline    | off                                          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:364 in insertchecksum                          |
+| pipeline  | II=1                                         | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:365 in insertchecksum                          |
+| inline    |                                              | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:418 in icmp_server                             |
+| stream    | variable=dataStreams depth=16                | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:427 in icmp_server, dataStreams                |
+| stream    | variable=checksumStreams depth=16            | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:429 in icmp_server, checksumStreams            |
+| stream    | variable=packageBuffer1 depth=64             | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:431 in icmp_server, packageBuffer1             |
+| stream    | variable=udpPort2insertChecksum depth=8      | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:432 in icmp_server, udpPort2insertChecksum     |
+| stream    | variable=udpPort2addIpHeader_data depth=192  | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:433 in icmp_server, udpPort2addIpHeader_data   |
+| stream    | variable=validFifo depth=8                   | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:434 in icmp_server, validFifo                  |
+| stream    | variable=udpPort2addIpHeader_header depth=64 | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:435 in icmp_server, udpPort2addIpHeader_header |
+| aggregate | variable=packageBuffer1 compact=bit          | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:436 in icmp_server, packageBuffer1             |
+| aggregate | variable=udpPort2insertChecksum compact=bit  | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:437 in icmp_server, udpPort2insertChecksum     |
+| dataflow  | disable_start_propagation                    | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:452 in icmp_server_top                         |
+| interface | ap_ctrl_none port=return                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:453 in icmp_server_top, return                 |
+| interface | axis register port=dataIn name=s_axis        | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:455 in icmp_server_top, dataIn                 |
+| interface | axis register port=udpIn                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:456 in icmp_server_top, udpIn                  |
+| interface | axis register port=ttlIn                     | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:457 in icmp_server_top, ttlIn                  |
+| interface | axis register port=dataOut name=m_axis       | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:458 in icmp_server_top, dataOut                |
+| stream    | depth=2 variable=dataIn_internal             | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:461 in icmp_server_top, dataIn_internal        |
+| stream    | depth=2 variable=udpIn_internal              | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:463 in icmp_server_top, udpIn_internal         |
+| stream    | depth=2 variable=ttlIn_internal              | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:465 in icmp_server_top, ttlIn_internal         |
+| stream    | depth=2 variable=dataOut_internal            | /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/icmp_server/icmp_server.cpp:467 in icmp_server_top, dataOut_internal       |
++-----------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+

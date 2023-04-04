@@ -1,0 +1,170 @@
+
+
+================================================================
+== Vitis HLS Report for 'arp_server_subnet_top'
+================================================================
+* Date:           Sat Mar 18 14:32:58 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        arp_server_subnet_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  2.336 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        9|        9|  28.800 ns|  28.800 ns|    1|    1|  dataflow|
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------+--------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                 |                                |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |             Instance            |             Module             |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +---------------------------------+--------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |entry_proc_U0                    |entry_proc                      |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+        |convert_axis_to_net_axis_512_U0  |convert_axis_to_net_axis_512_s  |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+        |process_arp_pkg_512_U0           |process_arp_pkg_512_s           |        3|        3|  9.600 ns|  9.600 ns|    1|    1|      yes|
+        |convert_net_axis_to_axis_512_U0  |convert_net_axis_to_axis_512_s  |        2|        2|  6.400 ns|  6.400 ns|    1|    1|      yes|
+        |generate_arp_pkg_512_U0          |generate_arp_pkg_512_s          |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+        |arp_table_U0                     |arp_table                       |        3|        3|  9.600 ns|  9.600 ns|    1|    1|      yes|
+        +---------------------------------+--------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        -|        -|    -|
+|FIFO                 |        -|     -|     4209|     2348|    -|
+|Instance             |        3|     -|     4817|     3815|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|        -|    -|
+|Register             |        -|     -|        -|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        3|     0|     9026|     6163|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |       ~0|     0|        1|        1|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |       ~0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------+--------------------------------+---------+----+------+------+-----+
+    |             Instance            |             Module             | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +---------------------------------+--------------------------------+---------+----+------+------+-----+
+    |arp_table_U0                     |arp_table                       |        3|   0|   467|   325|    0|
+    |convert_axis_to_net_axis_512_U0  |convert_axis_to_net_axis_512_s  |        0|   0|   581|    37|    0|
+    |convert_net_axis_to_axis_512_U0  |convert_net_axis_to_axis_512_s  |        0|   0|   583|    43|    0|
+    |entry_proc_U0                    |entry_proc                      |        0|   0|     2|    29|    0|
+    |generate_arp_pkg_512_U0          |generate_arp_pkg_512_s          |        0|   0|   693|   145|    0|
+    |process_arp_pkg_512_U0           |process_arp_pkg_512_s           |        0|   0|  2491|  3236|    0|
+    +---------------------------------+--------------------------------+---------+----+------+------+-----+
+    |Total                            |                                |        3|   0|  4817|  3815|    0|
+    +---------------------------------+--------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +-----------------------+---------+------+----+-----+------+------+---------+
+    |          Name         | BRAM_18K|  FF  | LUT| URAM| Depth| Bits | Size:D*B|
+    +-----------------------+---------+------+----+-----+------+------+---------+
+    |arpDataIn_internal_U   |        0|  2058|   0|    -|     2|  1024|     2048|
+    |arpDataOut_internal_U  |        0|  2058|   0|    -|     2|  1024|     2048|
+    |arpReplyMetaFifo_U     |        0|     5|   0|    -|     4|   128|      512|
+    |arpRequestMetaFifo_U   |        0|     5|   0|    -|     4|    32|      128|
+    |arpTableInsertFifo_U   |        0|     5|   0|    -|     4|    81|      324|
+    |myIpAddress_c16_U      |        0|     5|   0|    -|     3|    32|       96|
+    |myIpAddress_c_U        |        0|    68|   0|    -|     2|    32|       64|
+    |myMacAddress_c_U       |        0|     5|   0|    -|     4|    48|      192|
+    +-----------------------+---------+------+----+-----+------+------+---------+
+    |Total                  |        0|  4209|   0|    0|    25|  2401|     5412|
+    +-----------------------+---------+------+----+-----+------+------+---------+
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------------+-----+-----+--------------+--------------------------------+--------------+
+|               RTL Ports               | Dir | Bits|   Protocol   |          Source Object         |    C Type    |
++---------------------------------------+-----+-----+--------------+--------------------------------+--------------+
+|ap_local_block                         |  out|    1|  ap_ctrl_none|           arp_server_subnet_top|  return value|
+|ap_local_deadlock                      |  out|    1|  ap_ctrl_none|           arp_server_subnet_top|  return value|
+|ap_clk                                 |   in|    1|  ap_ctrl_none|           arp_server_subnet_top|  return value|
+|ap_rst_n                               |   in|    1|  ap_ctrl_none|           arp_server_subnet_top|  return value|
+|s_axis_TDATA                           |   in|  512|          axis|                 s_axis_V_data_V|       pointer|
+|s_axis_TKEEP                           |   in|   64|          axis|                 s_axis_V_keep_V|       pointer|
+|s_axis_TSTRB                           |   in|   64|          axis|                 s_axis_V_strb_V|       pointer|
+|s_axis_TLAST                           |   in|    1|          axis|                 s_axis_V_last_V|       pointer|
+|s_axis_TVALID                          |   in|    1|          axis|                 s_axis_V_last_V|       pointer|
+|s_axis_TREADY                          |  out|    1|          axis|                 s_axis_V_last_V|       pointer|
+|s_axis_arp_lookup_request_TDATA        |   in|   32|          axis|       s_axis_arp_lookup_request|       pointer|
+|s_axis_arp_lookup_request_TVALID       |   in|    1|          axis|       s_axis_arp_lookup_request|       pointer|
+|s_axis_arp_lookup_request_TREADY       |  out|    1|          axis|       s_axis_arp_lookup_request|       pointer|
+|s_axis_host_arp_lookup_request_TDATA   |   in|   32|          axis|  s_axis_host_arp_lookup_request|       pointer|
+|s_axis_host_arp_lookup_request_TVALID  |   in|    1|          axis|  s_axis_host_arp_lookup_request|       pointer|
+|s_axis_host_arp_lookup_request_TREADY  |  out|    1|          axis|  s_axis_host_arp_lookup_request|       pointer|
+|m_axis_TDATA                           |  out|  512|          axis|                 m_axis_V_data_V|       pointer|
+|m_axis_TKEEP                           |  out|   64|          axis|                 m_axis_V_keep_V|       pointer|
+|m_axis_TSTRB                           |  out|   64|          axis|                 m_axis_V_strb_V|       pointer|
+|m_axis_TLAST                           |  out|    1|          axis|                 m_axis_V_last_V|       pointer|
+|m_axis_TVALID                          |  out|    1|          axis|                 m_axis_V_last_V|       pointer|
+|m_axis_TREADY                          |   in|    1|          axis|                 m_axis_V_last_V|       pointer|
+|m_axis_arp_lookup_reply_TDATA          |  out|   56|          axis|         m_axis_arp_lookup_reply|       pointer|
+|m_axis_arp_lookup_reply_TVALID         |  out|    1|          axis|         m_axis_arp_lookup_reply|       pointer|
+|m_axis_arp_lookup_reply_TREADY         |   in|    1|          axis|         m_axis_arp_lookup_reply|       pointer|
+|m_axis_host_arp_lookup_reply_TDATA     |  out|   56|          axis|    m_axis_host_arp_lookup_reply|       pointer|
+|m_axis_host_arp_lookup_reply_TVALID    |  out|    1|          axis|    m_axis_host_arp_lookup_reply|       pointer|
+|m_axis_host_arp_lookup_reply_TREADY    |   in|    1|          axis|    m_axis_host_arp_lookup_reply|       pointer|
+|myMacAddress                           |   in|   48|       ap_none|                    myMacAddress|        scalar|
+|myIpAddress                            |   in|   32|       ap_none|                     myIpAddress|        scalar|
+|regRequestCount                        |  out|   16|        ap_vld|                 regRequestCount|       pointer|
+|regRequestCount_ap_vld                 |  out|    1|        ap_vld|                 regRequestCount|       pointer|
+|regReplyCount                          |  out|   16|        ap_vld|                   regReplyCount|       pointer|
+|regReplyCount_ap_vld                   |  out|    1|        ap_vld|                   regReplyCount|       pointer|
++---------------------------------------+-----+-----+--------------+--------------------------------+--------------+
+

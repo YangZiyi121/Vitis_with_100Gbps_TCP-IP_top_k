@@ -1,0 +1,161 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'generate_udp_512_s'" level="0">
+<item name = "Date">Sat Mar 18 14:40:37 2023
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
+<item name = "Project">udp_prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu280-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.20 ns, 1.866 ns, 0.86 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">1, 1, 3.200 ns, 3.200 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 87, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 108, -</column>
+<column name="Register">-, -, 2202, -, -</column>
+<specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="grp_fu_165_p2">+, 0, 0, 23, 16, 1</column>
+<column name="ap_condition_144">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_153">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_175">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_187">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_209">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op22_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op47_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op56_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op80_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op88_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="grp_nbreadreq_fu_102_p3">and, 0, 0, 2, 1, 0</column>
+<column name="tmp_i_nbreadreq_fu_116_p3">and, 0, 0, 2, 1, 0</column>
+<column name="icmp_ln82_1_fu_195_p2">icmp, 0, 0, 14, 19, 1</column>
+<column name="icmp_ln82_fu_257_p2">icmp, 0, 0, 14, 19, 1</column>
+<column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state1_pp0_stage0_iter0">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state2_pp0_stage0_iter1">or, 0, 0, 2, 1, 1</column>
+<column name="select_ln132_cast_i_fu_235_p3">select, 0, 0, 2, 1, 2</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln132_fu_229_p2">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="ap_phi_reg_pp0_iter1_currWord_data_V_1_reg_146">9, 2, 512, 1024</column>
+<column name="ap_phi_reg_pp0_iter1_currWord_data_V_3_reg_137">14, 3, 512, 1536</column>
+<column name="header_idx">9, 2, 16, 32</column>
+<column name="m_axis_tx_data_internal_blk_n">9, 2, 1, 2</column>
+<column name="m_axis_tx_data_internal_din">20, 4, 1024, 4096</column>
+<column name="state">20, 4, 2, 8</column>
+<column name="tx_shift2udpFifo_blk_n">9, 2, 1, 2</column>
+<column name="tx_udpMetaFifo_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_phi_reg_pp0_iter1_currWord_data_V_1_reg_146">512, 0, 512, 0</column>
+<column name="ap_phi_reg_pp0_iter1_currWord_data_V_3_reg_137">512, 0, 512, 0</column>
+<column name="header_header_V">64, 0, 64, 0</column>
+<column name="header_idx">16, 0, 16, 0</column>
+<column name="state">2, 0, 2, 0</column>
+<column name="state_load_reg_502">2, 0, 2, 0</column>
+<column name="tmp_1_i_reg_536">1, 0, 1, 0</column>
+<column name="tmp_i_46_reg_506">1, 0, 1, 0</column>
+<column name="tmp_reg_523">65, 0, 65, 0</column>
+<column name="tx_shift2udpFifo_read_reg_540">1024, 0, 1024, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, generate_udp&lt;512&gt;, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, generate_udp&lt;512&gt;, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, generate_udp&lt;512&gt;, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, generate_udp&lt;512&gt;, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, generate_udp&lt;512&gt;, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, generate_udp&lt;512&gt;, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, generate_udp&lt;512&gt;, return value</column>
+<column name="tx_shift2udpFifo_dout">in, 1024, ap_fifo, tx_shift2udpFifo, pointer</column>
+<column name="tx_shift2udpFifo_empty_n">in, 1, ap_fifo, tx_shift2udpFifo, pointer</column>
+<column name="tx_shift2udpFifo_read">out, 1, ap_fifo, tx_shift2udpFifo, pointer</column>
+<column name="tx_udpMetaFifo_dout">in, 64, ap_fifo, tx_udpMetaFifo, pointer</column>
+<column name="tx_udpMetaFifo_empty_n">in, 1, ap_fifo, tx_udpMetaFifo, pointer</column>
+<column name="tx_udpMetaFifo_read">out, 1, ap_fifo, tx_udpMetaFifo, pointer</column>
+<column name="m_axis_tx_data_internal_din">out, 1024, ap_fifo, m_axis_tx_data_internal, pointer</column>
+<column name="m_axis_tx_data_internal_full_n">in, 1, ap_fifo, m_axis_tx_data_internal, pointer</column>
+<column name="m_axis_tx_data_internal_write">out, 1, ap_fifo, m_axis_tx_data_internal, pointer</column>
+</table>
+</item>
+</section>
+</profile>

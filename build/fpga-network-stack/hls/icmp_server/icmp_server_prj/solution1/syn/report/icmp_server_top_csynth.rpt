@@ -1,0 +1,174 @@
+
+
+================================================================
+== Vitis HLS Report for 'icmp_server_top'
+================================================================
+* Date:           Sat Mar 18 14:31:48 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        icmp_server_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  4.392 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        8|        8|  35.139 ns|  35.139 ns|    1|    1|  dataflow|
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------+-------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                  |                               |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |             Instance             |             Module            |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +----------------------------------+-------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |convert_axis_to_net_axis_64_U0    |convert_axis_to_net_axis_64_s  |        1|        1|  4.392 ns|  4.392 ns|    1|    1|      yes|
+        |check_icmp_checksum_U0            |check_icmp_checksum            |        2|        2|  8.785 ns|  8.785 ns|    1|    1|      yes|
+        |convert_axis_to_net_axis_64_1_U0  |convert_axis_to_net_axis_64_1  |        1|        1|  4.392 ns|  4.392 ns|    1|    1|      yes|
+        |convert_axis_to_net_axis_64_2_U0  |convert_axis_to_net_axis_64_2  |        1|        1|  4.392 ns|  4.392 ns|    1|    1|      yes|
+        |convert_net_axis_to_axis_64_U0    |convert_net_axis_to_axis_64_s  |        2|        2|  8.785 ns|  8.785 ns|    1|    1|      yes|
+        |udpPortUnreachable_U0             |udpPortUnreachable             |        0|        0|      0 ns|      0 ns|    1|    1|      yes|
+        |dropper_U0                        |dropper                        |        1|        1|  4.392 ns|  4.392 ns|    1|    1|      yes|
+        |udpAddIpHeader_U0                 |udpAddIpHeader                 |        0|        0|      0 ns|      0 ns|    1|    1|      yes|
+        |insertChecksum_U0                 |insertChecksum                 |        1|        1|  4.392 ns|  4.392 ns|    1|    1|      yes|
+        +----------------------------------+-------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        -|        -|    -|
+|FIFO                 |        4|     -|     2770|     1706|    -|
+|Instance             |        -|     -|     1659|     2587|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|        -|    -|
+|Register             |        -|     -|        -|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        4|     0|     4429|     4293|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |       ~0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |       ~0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------+-------------------------------+---------+----+-----+------+-----+
+    |             Instance             |             Module            | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +----------------------------------+-------------------------------+---------+----+-----+------+-----+
+    |check_icmp_checksum_U0            |check_icmp_checksum            |        0|   0|  689|  1199|    0|
+    |convert_axis_to_net_axis_64_1_U0  |convert_axis_to_net_axis_64_1  |        0|   0|   77|    37|    0|
+    |convert_axis_to_net_axis_64_2_U0  |convert_axis_to_net_axis_64_2  |        0|   0|   77|    37|    0|
+    |convert_axis_to_net_axis_64_U0    |convert_axis_to_net_axis_64_s  |        0|   0|   77|    37|    0|
+    |convert_net_axis_to_axis_64_U0    |convert_net_axis_to_axis_64_s  |        0|   0|   79|    43|    0|
+    |dropper_U0                        |dropper                        |        0|   0|   83|   148|    0|
+    |insertChecksum_U0                 |insertChecksum                 |        0|   0|  440|   335|    0|
+    |udpAddIpHeader_U0                 |udpAddIpHeader                 |        0|   0|  109|   215|    0|
+    |udpPortUnreachable_U0             |udpPortUnreachable             |        0|   0|   28|   536|    0|
+    +----------------------------------+-------------------------------+---------+----+-----+------+-----+
+    |Total                             |                               |        0|   0| 1659|  2587|    0|
+    +----------------------------------+-------------------------------+---------+----+-----+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +---------------------------------------------------------------------------------------------------------------------+---------+-----+----+-----+------+-----+---------+
+    |                                                         Name                                                        | BRAM_18K|  FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +---------------------------------------------------------------------------------------------------------------------+---------+-----+----+-----+------+-----+---------+
+    |dataIn_internal_U                                                                                                    |        0|  260|   0|    -|     2|  128|      256|
+    |dataOut_internal_U                                                                                                   |        0|  260|   0|    -|     2|  128|      256|
+    |icmp_server_stream_net_axis_64_0_stream_net_axis_64_0_stream_net_axis_64_0_stream_net_axis_64_0_checksumStreams_1_U  |        0|    7|   0|    -|    16|   16|      256|
+    |icmp_server_stream_net_axis_64_0_stream_net_axis_64_0_stream_net_axis_64_0_stream_net_axis_64_0_checksumStreams_U    |        0|    7|   0|    -|    16|   16|      256|
+    |icmp_server_stream_net_axis_64_0_stream_net_axis_64_0_stream_net_axis_64_0_stream_net_axis_64_0_dataStreams_1_U      |        0|  401|   0|    -|    16|  128|     2048|
+    |icmp_server_stream_net_axis_64_0_stream_net_axis_64_0_stream_net_axis_64_0_stream_net_axis_64_0_dataStreams_U        |        0|  401|   0|    -|    16|  128|     2048|
+    |packageBuffer1_U                                                                                                     |        0|  406|   0|    -|    64|   73|     4672|
+    |ttlIn_internal_U                                                                                                     |        0|  260|   0|    -|     2|  128|      256|
+    |udpIn_internal_U                                                                                                     |        0|  260|   0|    -|     2|  128|      256|
+    |udpPort2addIpHeader_data_U                                                                                           |        4|  284|   0|    -|   192|  128|    24576|
+    |udpPort2addIpHeader_header_U                                                                                         |        0|  218|   0|    -|    64|   64|     4096|
+    |validFifo_U                                                                                                          |        0|    6|   0|    -|     8|    1|        8|
+    +---------------------------------------------------------------------------------------------------------------------+---------+-----+----+-----+------+-----+---------+
+    |Total                                                                                                                |        4| 2770|   0|    0|   400| 1066|    38984|
+    +---------------------------------------------------------------------------------------------------------------------+---------+-----+----+-----+------+-----+---------+
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+--------------+-----------------+--------------+
+|     RTL Ports     | Dir | Bits|   Protocol   |  Source Object  |    C Type    |
++-------------------+-----+-----+--------------+-----------------+--------------+
+|ap_local_block     |  out|    1|  ap_ctrl_none|  icmp_server_top|  return value|
+|ap_local_deadlock  |  out|    1|  ap_ctrl_none|  icmp_server_top|  return value|
+|ap_clk             |   in|    1|  ap_ctrl_none|  icmp_server_top|  return value|
+|ap_rst_n           |   in|    1|  ap_ctrl_none|  icmp_server_top|  return value|
+|s_axis_TDATA       |   in|   64|          axis|  s_axis_V_data_V|       pointer|
+|s_axis_TKEEP       |   in|    8|          axis|  s_axis_V_keep_V|       pointer|
+|s_axis_TSTRB       |   in|    8|          axis|  s_axis_V_strb_V|       pointer|
+|s_axis_TLAST       |   in|    1|          axis|  s_axis_V_last_V|       pointer|
+|s_axis_TVALID      |   in|    1|          axis|  s_axis_V_last_V|       pointer|
+|s_axis_TREADY      |  out|    1|          axis|  s_axis_V_last_V|       pointer|
+|udpIn_TDATA        |   in|   64|          axis|   udpIn_V_data_V|       pointer|
+|udpIn_TKEEP        |   in|    8|          axis|   udpIn_V_keep_V|       pointer|
+|udpIn_TSTRB        |   in|    8|          axis|   udpIn_V_strb_V|       pointer|
+|udpIn_TLAST        |   in|    1|          axis|   udpIn_V_last_V|       pointer|
+|udpIn_TVALID       |   in|    1|          axis|   udpIn_V_last_V|       pointer|
+|udpIn_TREADY       |  out|    1|          axis|   udpIn_V_last_V|       pointer|
+|ttlIn_TDATA        |   in|   64|          axis|   ttlIn_V_data_V|       pointer|
+|ttlIn_TKEEP        |   in|    8|          axis|   ttlIn_V_keep_V|       pointer|
+|ttlIn_TSTRB        |   in|    8|          axis|   ttlIn_V_strb_V|       pointer|
+|ttlIn_TLAST        |   in|    1|          axis|   ttlIn_V_last_V|       pointer|
+|ttlIn_TVALID       |   in|    1|          axis|   ttlIn_V_last_V|       pointer|
+|ttlIn_TREADY       |  out|    1|          axis|   ttlIn_V_last_V|       pointer|
+|m_axis_TDATA       |  out|   64|          axis|  m_axis_V_data_V|       pointer|
+|m_axis_TKEEP       |  out|    8|          axis|  m_axis_V_keep_V|       pointer|
+|m_axis_TSTRB       |  out|    8|          axis|  m_axis_V_strb_V|       pointer|
+|m_axis_TLAST       |  out|    1|          axis|  m_axis_V_last_V|       pointer|
+|m_axis_TVALID      |  out|    1|          axis|  m_axis_V_last_V|       pointer|
+|m_axis_TREADY      |   in|    1|          axis|  m_axis_V_last_V|       pointer|
++-------------------+-----+-----+--------------+-----------------+--------------+
+

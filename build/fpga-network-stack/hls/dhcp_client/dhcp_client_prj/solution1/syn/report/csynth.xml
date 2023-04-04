@@ -1,0 +1,1178 @@
+<profile>
+    <ReportVersion>
+        <Version>2021.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplus</ProductFamily>
+        <Part>xcu280-fsvh2892-2L-e</Part>
+        <TopModelName>dhcp_client</TopModelName>
+        <TargetClockPeriod>3.20</TargetClockPeriod>
+        <ClockUncertainty>0.86</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>dataflow</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>2.690</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>7</Best-caseLatency>
+            <Average-caseLatency>7</Average-caseLatency>
+            <Worst-caseLatency>7</Worst-caseLatency>
+            <Best-caseRealTimeLatency>22.400 ns</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>22.400 ns</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>22.400 ns</Worst-caseRealTimeLatency>
+            <DataflowPipelineThroughput>2</DataflowPipelineThroughput>
+            <Interval-min>2</Interval-min>
+            <Interval-max>2</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <FF>671</FF>
+            <LUT>1503</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>4032</BRAM_18K>
+            <DSP>9024</DSP>
+            <FF>2607360</FF>
+            <LUT>1303680</LUT>
+            <URAM>960</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_local_block</name>
+            <Object>dhcp_client</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_local_deadlock</name>
+            <Object>dhcp_client</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>dhcp_client</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>dhcp_client</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_open_port_TDATA</name>
+            <Object>m_axis_open_port</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_open_port_TVALID</name>
+            <Object>m_axis_open_port</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_open_port_TREADY</name>
+            <Object>m_axis_open_port</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_open_port_status_TDATA</name>
+            <Object>s_axis_open_port_status</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_open_port_status_TVALID</name>
+            <Object>s_axis_open_port_status</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_open_port_status_TREADY</name>
+            <Object>s_axis_open_port_status</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_rx_metadata_TDATA</name>
+            <Object>s_axis_rx_metadata</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>128</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_rx_metadata_TVALID</name>
+            <Object>s_axis_rx_metadata</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_rx_metadata_TREADY</name>
+            <Object>s_axis_rx_metadata</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_rx_data_TDATA</name>
+            <Object>s_axis_rx_data_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_rx_data_TKEEP</name>
+            <Object>s_axis_rx_data_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_rx_data_TSTRB</name>
+            <Object>s_axis_rx_data_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_rx_data_TLAST</name>
+            <Object>s_axis_rx_data_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_rx_data_TVALID</name>
+            <Object>s_axis_rx_data_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axis_rx_data_TREADY</name>
+            <Object>s_axis_rx_data_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_tx_metadata_TDATA</name>
+            <Object>m_axis_tx_metadata</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>96</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_tx_metadata_TVALID</name>
+            <Object>m_axis_tx_metadata</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_tx_metadata_TREADY</name>
+            <Object>m_axis_tx_metadata</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_tx_length_TDATA</name>
+            <Object>m_axis_tx_length</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_tx_length_TVALID</name>
+            <Object>m_axis_tx_length</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_tx_length_TREADY</name>
+            <Object>m_axis_tx_length</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_tx_data_TDATA</name>
+            <Object>m_axis_tx_data_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_tx_data_TKEEP</name>
+            <Object>m_axis_tx_data_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_tx_data_TSTRB</name>
+            <Object>m_axis_tx_data_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_tx_data_TLAST</name>
+            <Object>m_axis_tx_data_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_tx_data_TVALID</name>
+            <Object>m_axis_tx_data_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axis_tx_data_TREADY</name>
+            <Object>m_axis_tx_data_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>dhcpEnable</name>
+            <Object>dhcpEnable</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>inputIpAddress</name>
+            <Object>inputIpAddress</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>dhcpIpAddressOut</name>
+            <Object>dhcpIpAddressOut</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>myMacAddress</name>
+            <Object>myMacAddress</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>48</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="3">
+            <ModuleName>dhcp_client</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>open_dhcp_port_U0</InstName>
+                    <ModuleName>open_dhcp_port</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>158</ID>
+                    <BindInstances>add_ln886_fu_92_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>receive_message_U0</InstName>
+                    <ModuleName>receive_message</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>174</ID>
+                    <BindInstances>add_ln885_fu_429_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>entry_proc_U0</InstName>
+                    <ModuleName>entry_proc</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>209</ID>
+                </Instance>
+                <Instance>
+                    <InstName>dhcp_fsm_U0</InstName>
+                    <ModuleName>dhcp_fsm</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>219</ID>
+                    <BindInstances>grp_fu_206_p2 grp_fu_206_p2 grp_fu_206_p2 add_ln885_fu_382_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>send_message_U0</InstName>
+                    <ModuleName>send_message</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>245</ID>
+                    <BindInstances>add_ln885_fu_330_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>myMacAddress_c_U inputIpAddress_c_U dhcpEnable_c_U</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>entry_proc</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.20</TargetClockPeriod>
+                    <ClockUncertainty>0.86</ClockUncertainty>
+                    <EstimatedClockPeriod>1.168</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>0</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>2</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>29</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>open_dhcp_port</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.20</TargetClockPeriod>
+                    <ClockUncertainty>0.86</ClockUncertainty>
+                    <TargetInitiationInterval>1</TargetInitiationInterval>
+                    <EstimatedClockPeriod>1.168</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>2</Best-caseLatency>
+                    <Average-caseLatency>2</Average-caseLatency>
+                    <Worst-caseLatency>2</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>6.400 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>6.400 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>6.400 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>2</PipelineInitiationInterval>
+                    <PipelineDepth>3</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>44</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>159</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln886_fu_92_p2" SOURCE="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:886" URAM="0" VARIABLE="add_ln886"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>receive_message</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.20</TargetClockPeriod>
+                    <ClockUncertainty>0.86</ClockUncertainty>
+                    <TargetInitiationInterval>1</TargetInitiationInterval>
+                    <EstimatedClockPeriod>1.556</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>1</Best-caseLatency>
+                    <Average-caseLatency>1</Average-caseLatency>
+                    <Worst-caseLatency>1</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>3.200 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>3.200 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>3.200 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>2</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>119</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>241</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln885_fu_429_p2" SOURCE="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:885" URAM="0" VARIABLE="add_ln885"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>dhcp_fsm</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.20</TargetClockPeriod>
+                    <ClockUncertainty>0.86</ClockUncertainty>
+                    <TargetInitiationInterval>1</TargetInitiationInterval>
+                    <EstimatedClockPeriod>2.690</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>1</Best-caseLatency>
+                    <Average-caseLatency>1</Average-caseLatency>
+                    <Worst-caseLatency>1</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>3.200 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>3.200 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>3.200 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>2</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>337</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>513</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="grp_fu_206_p2" SOURCE="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:886" URAM="0" VARIABLE="add_ln886_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="grp_fu_206_p2" SOURCE="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:886" URAM="0" VARIABLE="add_ln886_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="grp_fu_206_p2" SOURCE="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:886" URAM="0" VARIABLE="add_ln886"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln885_fu_382_p2" SOURCE="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:885" URAM="0" VARIABLE="add_ln885"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>send_message</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.20</TargetClockPeriod>
+                    <ClockUncertainty>0.86</ClockUncertainty>
+                    <TargetInitiationInterval>1</TargetInitiationInterval>
+                    <EstimatedClockPeriod>1.378</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>2</Best-caseLatency>
+                    <Average-caseLatency>2</Average-caseLatency>
+                    <Worst-caseLatency>2</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>6.400 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>6.400 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>6.400 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>3</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>136</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>318</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln885_fu_330_p2" SOURCE="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:885" URAM="0" VARIABLE="add_ln885"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>dhcp_client</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.20</TargetClockPeriod>
+                    <ClockUncertainty>0.86</ClockUncertainty>
+                    <EstimatedClockPeriod>2.690</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>7</Best-caseLatency>
+                    <Average-caseLatency>7</Average-caseLatency>
+                    <Worst-caseLatency>7</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>22.400 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>22.400 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>22.400 ns</Worst-caseRealTimeLatency>
+                    <DataflowPipelineThroughput>2</DataflowPipelineThroughput>
+                    <PipelineInitiationInterval>2</PipelineInitiationInterval>
+                    <PipelineType>dataflow</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>671</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1503</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="myMacAddress_c_U" SOURCE="" URAM="0" VARIABLE="myMacAddress_c"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="inputIpAddress_c_U" SOURCE="" URAM="0" VARIABLE="inputIpAddress_c"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="dhcpEnable_c_U" SOURCE="" URAM="0" VARIABLE="dhcpEnable_c"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation>
+        <FIFOInst>
+            <Name>portOpen_U</Name>
+            <ParentInst/>
+            <StaticDepth>2</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>dhcp_replyMetaFifo_U</Name>
+            <ParentInst/>
+            <StaticDepth>4</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>dhcp_requestMetaFifo_U</Name>
+            <ParentInst/>
+            <StaticDepth>4</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+    </FIFOInformation>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="openPort" index="0" direction="out" srcType="stream&lt;ap_uint&lt;16&gt;, 0&gt;&amp;" srcSize="16">
+            <hwRefs>
+                <hwRef type="interface" interface="m_axis_open_port" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="confirmPortStatus" index="1" direction="in" srcType="stream&lt;bool, 0&gt;&amp;" srcSize="8">
+            <hwRefs>
+                <hwRef type="interface" interface="s_axis_open_port_status" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="dataInMeta" index="2" direction="in" srcType="stream&lt;udpMetadata, 0&gt;&amp;" srcSize="128">
+            <hwRefs>
+                <hwRef type="interface" interface="s_axis_rx_metadata" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="dataIn" index="3" direction="in" srcType="stream&lt;hls::axis&lt;ap_uint&lt;64&gt;, 0, 0, 0&gt;, 0&gt;&amp;" srcSize="128">
+            <hwRefs>
+                <hwRef type="interface" interface="s_axis_rx_data" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="dataOutMeta" index="4" direction="out" srcType="stream&lt;udpMetadata, 0&gt;&amp;" srcSize="128">
+            <hwRefs>
+                <hwRef type="interface" interface="m_axis_tx_metadata" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="dataOutLength" index="5" direction="out" srcType="stream&lt;ap_uint&lt;16&gt;, 0&gt;&amp;" srcSize="16">
+            <hwRefs>
+                <hwRef type="interface" interface="m_axis_tx_length" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="dataOut" index="6" direction="out" srcType="stream&lt;hls::axis&lt;ap_uint&lt;64&gt;, 0, 0, 0&gt;, 0&gt;&amp;" srcSize="128">
+            <hwRefs>
+                <hwRef type="interface" interface="m_axis_tx_data" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="dhcpEnable" index="7" direction="in" srcType="ap_uint&lt;1&gt;&amp;" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="dhcpEnable" name="dhcpEnable" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="inputIpAddress" index="8" direction="in" srcType="ap_uint&lt;32&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="inputIpAddress" name="inputIpAddress" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="dhcpIpAddressOut" index="9" direction="out" srcType="ap_uint&lt;32&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="dhcpIpAddressOut" name="dhcpIpAddressOut" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="myMacAddress" index="10" direction="in" srcType="ap_uint&lt;48&gt;&amp;" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="myMacAddress" name="myMacAddress" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">m_axis_open_port:s_axis_open_port_status:s_axis_rx_metadata:s_axis_rx_data:m_axis_tx_metadata:m_axis_tx_length:m_axis_tx_data</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="m_axis_open_port" type="axi4stream" busTypeName="axis" mode="master" dataWidth="16" portPrefix="m_axis_open_port_">
+            <ports>
+                <port>m_axis_open_port_TDATA</port>
+                <port>m_axis_open_port_TREADY</port>
+                <port>m_axis_open_port_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="openPort"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="s_axis_open_port_status" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="8" portPrefix="s_axis_open_port_status_">
+            <ports>
+                <port>s_axis_open_port_status_TDATA</port>
+                <port>s_axis_open_port_status_TREADY</port>
+                <port>s_axis_open_port_status_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="confirmPortStatus"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="s_axis_rx_metadata" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="128" portPrefix="s_axis_rx_metadata_">
+            <ports>
+                <port>s_axis_rx_metadata_TDATA</port>
+                <port>s_axis_rx_metadata_TREADY</port>
+                <port>s_axis_rx_metadata_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="dataInMeta"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="s_axis_rx_data" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="64" portPrefix="s_axis_rx_data_">
+            <ports>
+                <port>s_axis_rx_data_TDATA</port>
+                <port>s_axis_rx_data_TKEEP</port>
+                <port>s_axis_rx_data_TLAST</port>
+                <port>s_axis_rx_data_TREADY</port>
+                <port>s_axis_rx_data_TSTRB</port>
+                <port>s_axis_rx_data_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="dataIn"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="m_axis_tx_metadata" type="axi4stream" busTypeName="axis" mode="master" dataWidth="96" portPrefix="m_axis_tx_metadata_">
+            <ports>
+                <port>m_axis_tx_metadata_TDATA</port>
+                <port>m_axis_tx_metadata_TREADY</port>
+                <port>m_axis_tx_metadata_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="dataOutMeta"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="m_axis_tx_length" type="axi4stream" busTypeName="axis" mode="master" dataWidth="16" portPrefix="m_axis_tx_length_">
+            <ports>
+                <port>m_axis_tx_length_TDATA</port>
+                <port>m_axis_tx_length_TREADY</port>
+                <port>m_axis_tx_length_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="dataOutLength"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="m_axis_tx_data" type="axi4stream" busTypeName="axis" mode="master" dataWidth="64" portPrefix="m_axis_tx_data_">
+            <ports>
+                <port>m_axis_tx_data_TDATA</port>
+                <port>m_axis_tx_data_TKEEP</port>
+                <port>m_axis_tx_data_TLAST</port>
+                <port>m_axis_tx_data_TREADY</port>
+                <port>m_axis_tx_data_TSTRB</port>
+                <port>m_axis_tx_data_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="dataOut"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="dhcpEnable" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="dhcpEnable">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>dhcpEnable</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="1" argName="dhcpEnable"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="inputIpAddress" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="inputIpAddress">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>inputIpAddress</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="1" argName="inputIpAddress"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="dhcpIpAddressOut" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="dhcpIpAddressOut">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>dhcpIpAddressOut</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="1" argName="dhcpIpAddressOut"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="myMacAddress" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="48">
+            <portMaps>
+                <portMap portMapName="myMacAddress">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>myMacAddress</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="1" argName="myMacAddress"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AXIS">
+                <table isCollapsed="0">
+                    <keys size="8">Interface, Register Mode, TDATA, TKEEP, TLAST, TREADY, TSTRB, TVALID</keys>
+                    <column name="m_axis_open_port">both, 16, , , 1, , 1</column>
+                    <column name="m_axis_tx_data">both, 64, 8, 1, 1, 8, 1</column>
+                    <column name="m_axis_tx_length">both, 16, , , 1, , 1</column>
+                    <column name="m_axis_tx_metadata">both, 96, , , 1, , 1</column>
+                    <column name="s_axis_open_port_status">both, 8, , , 1, , 1</column>
+                    <column name="s_axis_rx_data">both, 64, 8, 1, 1, 8, 1</column>
+                    <column name="s_axis_rx_metadata">both, 128, , , 1, , 1</column>
+                </table>
+            </item>
+            <item name="REGISTER">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Mode, Bitwidth</keys>
+                    <column name="dhcpEnable">ap_none, 1</column>
+                    <column name="dhcpIpAddressOut">ap_none, 32</column>
+                    <column name="inputIpAddress">ap_none, 32</column>
+                    <column name="myMacAddress">ap_none, 48</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst_n">reset, ap_rst_n</column>
+                    <column name="ap_ctrl">ap_ctrl_none</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="openPort">out, stream&lt;ap_uint&lt;16&gt; 0&gt;&amp;</column>
+                    <column name="confirmPortStatus">in, stream&lt;bool 0&gt;&amp;</column>
+                    <column name="dataInMeta">in, stream&lt;udpMetadata 0&gt;&amp;</column>
+                    <column name="dataIn">in, stream&lt;hls::axis&lt;ap_uint&lt;64&gt; 0 0 0&gt; 0&gt;&amp;</column>
+                    <column name="dataOutMeta">out, stream&lt;udpMetadata 0&gt;&amp;</column>
+                    <column name="dataOutLength">out, stream&lt;ap_uint&lt;16&gt; 0&gt;&amp;</column>
+                    <column name="dataOut">out, stream&lt;hls::axis&lt;ap_uint&lt;64&gt; 0 0 0&gt; 0&gt;&amp;</column>
+                    <column name="dhcpEnable">in, ap_uint&lt;1&gt;&amp;</column>
+                    <column name="inputIpAddress">in, ap_uint&lt;32&gt;&amp;</column>
+                    <column name="dhcpIpAddressOut">out, ap_uint&lt;32&gt;&amp;</column>
+                    <column name="myMacAddress">in, ap_uint&lt;48&gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="openPort">m_axis_open_port, interface</column>
+                    <column name="confirmPortStatus">s_axis_open_port_status, interface</column>
+                    <column name="dataInMeta">s_axis_rx_metadata, interface</column>
+                    <column name="dataIn">s_axis_rx_data, interface</column>
+                    <column name="dataOutMeta">m_axis_tx_metadata, interface</column>
+                    <column name="dataOutLength">m_axis_tx_length, interface</column>
+                    <column name="dataOut">m_axis_tx_data, interface</column>
+                    <column name="dhcpEnable">dhcpEnable, port</column>
+                    <column name="inputIpAddress">inputIpAddress, port</column>
+                    <column name="dhcpIpAddressOut">dhcpIpAddressOut, port</column>
+                    <column name="myMacAddress">myMacAddress, port</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:76" status="valid" parentFunction="convert_net_axis_to_axis" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:96" status="valid" parentFunction="convert_axis_to_net_axis" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:115" status="valid" parentFunction="convert_routed_net_axis_to_axis" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:137" status="valid" parentFunction="reverse" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:149" status="valid" parentFunction="reverse_bits" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:318" status="valid" parentFunction="increasestreamwidth" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:348" status="valid" parentFunction="reducestreamwidth" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:411" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:412" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:423" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:424" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:432" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:433" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:441" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:442" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:450" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:451" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:459" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:460" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:468" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:469" status="valid" parentFunction="convertstreamwidth" variable="" isDirective="0" options="off"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:493" status="valid" parentFunction="rshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:494" status="valid" parentFunction="rshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:568" status="valid" parentFunction="lshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:569" status="valid" parentFunction="lshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:637" status="valid" parentFunction="stream_merger" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:638" status="valid" parentFunction="stream_merger" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:656" status="valid" parentFunction="stream_merger" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:657" status="valid" parentFunction="stream_merger" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:718" status="valid" parentFunction="fair_merger" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:719" status="valid" parentFunction="fair_merger" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:752" status="valid" parentFunction="fair_pkg_merger" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:753" status="valid" parentFunction="fair_pkg_merger" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:834" status="valid" parentFunction="stream_pkg_merger" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:835" status="valid" parentFunction="stream_pkg_merger" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:913" status="valid" parentFunction="stream_pkg_splitter" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:914" status="valid" parentFunction="stream_pkg_splitter" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:978" status="valid" parentFunction="pass_valid_pkg" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:979" status="valid" parentFunction="pass_valid_pkg" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:1040" status="valid" parentFunction="toe_duplicate_stream" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:1041" status="valid" parentFunction="toe_duplicate_stream" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:1056" status="valid" parentFunction="ip_handler_duplicate_stream" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:1057" status="valid" parentFunction="ip_handler_duplicate_stream" variable="" isDirective="0" options="off"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:1095" status="valid" parentFunction="udp_lshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:1096" status="valid" parentFunction="udp_lshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:1166" status="valid" parentFunction="mac_lshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:1167" status="valid" parentFunction="mac_lshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:1237" status="valid" parentFunction="ipv4_lshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:1238" status="valid" parentFunction="ipv4_lshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:1308" status="valid" parentFunction="ip_handler_rshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:1309" status="valid" parentFunction="ip_handler_rshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:1383" status="valid" parentFunction="udp_rshiftwordbyoctet" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/../axi_utils.hpp:1384" status="valid" parentFunction="udp_rshiftwordbyoctet" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:38" status="valid" parentFunction="open_dhcp_port" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:39" status="valid" parentFunction="open_dhcp_port" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:64" status="valid" parentFunction="receive_message" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:65" status="valid" parentFunction="receive_message" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:138" status="valid" parentFunction="send_message" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:139" status="valid" parentFunction="send_message" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:246" status="valid" parentFunction="dhcp_fsm" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:247" status="valid" parentFunction="dhcp_fsm" variable="" isDirective="0" options="off"/>
+        <Pragma type="dataflow" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:346" status="valid" parentFunction="dhcp_client" variable="" isDirective="0" options="disable_start_propagation"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:347" status="valid" parentFunction="dhcp_client" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:349" status="valid" parentFunction="dhcp_client" variable="openPort" isDirective="0" options="axis register port=openPort name=m_axis_open_port"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:350" status="valid" parentFunction="dhcp_client" variable="confirmPortStatus" isDirective="0" options="axis register port=confirmPortStatus name=s_axis_open_port_status"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:351" status="valid" parentFunction="dhcp_client" variable="dataInMeta" isDirective="0" options="axis register port=dataInMeta name=s_axis_rx_metadata"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:352" status="valid" parentFunction="dhcp_client" variable="dataIn" isDirective="0" options="axis register port=dataIn name=s_axis_rx_data"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:353" status="valid" parentFunction="dhcp_client" variable="dataOutMeta" isDirective="0" options="axis register port=dataOutMeta name=m_axis_tx_metadata"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:354" status="valid" parentFunction="dhcp_client" variable="dataOutLength" isDirective="0" options="axis register port=dataOutLength name=m_axis_tx_length"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:355" status="valid" parentFunction="dhcp_client" variable="dataOut" isDirective="0" options="axis register port=dataOut name=m_axis_tx_data"/>
+        <Pragma type="aggregate" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:356" status="valid" parentFunction="dhcp_client" variable="dataOutMeta" isDirective="0" options="variable=dataOutMeta compact=bit"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:358" status="valid" parentFunction="dhcp_client" variable="dhcpEnable" isDirective="0" options="ap_none register port=dhcpEnable"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:359" status="valid" parentFunction="dhcp_client" variable="dhcpIpAddressOut" isDirective="0" options="ap_none register port=dhcpIpAddressOut"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:360" status="valid" parentFunction="dhcp_client" variable="myMacAddress" isDirective="0" options="ap_none register port=myMacAddress"/>
+        <Pragma type="interface" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:361" status="valid" parentFunction="dhcp_client" variable="inputIpAddress" isDirective="0" options="ap_none register port=inputIpAddress"/>
+        <Pragma type="stream" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:365" status="valid" parentFunction="dhcp_client" variable="dhcp_replyMetaFifo" isDirective="0" options="variable=dhcp_replyMetaFifo depth=4"/>
+        <Pragma type="stream" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:366" status="valid" parentFunction="dhcp_client" variable="dhcp_requestMetaFifo" isDirective="0" options="variable=dhcp_requestMetaFifo depth=4"/>
+        <Pragma type="aggregate" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:367" status="valid" parentFunction="dhcp_client" variable="dhcp_replyMetaFifo" isDirective="0" options="variable=dhcp_replyMetaFifo compact=bit"/>
+        <Pragma type="aggregate" location="/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/dhcp_client/dhcp_client.cpp:368" status="valid" parentFunction="dhcp_client" variable="dhcp_requestMetaFifo" isDirective="0" options="variable=dhcp_requestMetaFifo compact=bit"/>
+    </PragmaReport>
+</profile>
+

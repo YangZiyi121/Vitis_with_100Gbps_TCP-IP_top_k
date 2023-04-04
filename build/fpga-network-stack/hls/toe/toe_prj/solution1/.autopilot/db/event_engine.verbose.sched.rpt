@@ -1,0 +1,193 @@
+
+
+================================================================
+== Vitis HLS Report for 'event_engine'
+================================================================
+* Date:           Sat Mar 18 14:38:28 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        toe_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  2.228 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.22>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %ackDelayFifoReadCount, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 2 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %ackDelayFifoReadCount, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 3 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %ackDelayFifoReadCount, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 4 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %ackDelayFifoWriteCount, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %ackDelayFifoWriteCount, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %ackDelayFifoWriteCount, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i181 %eventEng2ackDelay_event, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i181 %eventEng2ackDelay_event, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i181 %eventEng2ackDelay_event, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i181 %rxEng2eventEng_setEvent, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i181 %rxEng2eventEng_setEvent, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i181 %rxEng2eventEng_setEvent, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i85 %timer2eventEng_setEvent, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i85 %timer2eventEng_setEvent, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i85 %timer2eventEng_setEvent, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i85 %txApp2eventEng_setEvent, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i85 %txApp2eventEng_setEvent, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i85 %txApp2eventEng_setEvent, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %txEngFifoReadCount, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %txEngFifoReadCount, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %txEngFifoReadCount, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %txEngFifoReadCount, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %ackDelayFifoWriteCount, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %ackDelayFifoReadCount, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i85 %txApp2eventEng_setEvent, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i181 %eventEng2ackDelay_event, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i181 %rxEng2eventEng_setEvent, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i85 %timer2eventEng_setEvent, void @empty_0, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%specpipeline_ln44 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_3" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/event_engine/event_engine.cpp:44]   --->   Operation 30 'specpipeline' 'specpipeline_ln44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_i = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i181P0A, i181 %rxEng2eventEng_setEvent, i32 1" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:135]   --->   Operation 31 'nbreadreq' 'tmp_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 0.98> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 181> <Depth = 512> <FIFO>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%ee_writeCounter_load = load i8 %ee_writeCounter"   --->   Operation 32 'load' 'ee_writeCounter_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%ee_adReadCounter_load = load i8 %ee_adReadCounter"   --->   Operation 33 'load' 'ee_adReadCounter_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%ee_adWriteCounter_load = load i8 %ee_adWriteCounter"   --->   Operation 34 'load' 'ee_adWriteCounter_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%ee_txEngReadCounter_load = load i8 %ee_txEngReadCounter"   --->   Operation 35 'load' 'ee_txEngReadCounter_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%br_ln76 = br i1 %tmp_i, void %._crit_edge4.i, void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/event_engine/event_engine.cpp:76]   --->   Operation 36 'br' 'br_ln76' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_i_339 = nbwritereq i1 @_ssdm_op_NbWriteReq.ap_fifo.i181P0A, i181 %eventEng2ackDelay_event, i32 1" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:139]   --->   Operation 37 'nbwritereq' 'tmp_i_339' <Predicate = (tmp_i)> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.25> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 181> <Depth = 64> <FIFO>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln76 = br i1 %tmp_i_339, void %._crit_edge4.i, void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/event_engine/event_engine.cpp:76]   --->   Operation 38 'br' 'br_ln76' <Predicate = (tmp_i)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.58ns)   --->   "%icmp_ln1064 = icmp_eq  i8 %ee_writeCounter_load, i8 %ee_adReadCounter_load"   --->   Operation 39 'icmp' 'icmp_ln1064' <Predicate = (!tmp_i_339) | (!tmp_i)> <Delay = 0.58> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (0.58ns)   --->   "%icmp_ln1064_78 = icmp_eq  i8 %ee_adWriteCounter_load, i8 %ee_txEngReadCounter_load"   --->   Operation 40 'icmp' 'icmp_ln1064_78' <Predicate = (!tmp_i_339) | (!tmp_i)> <Delay = 0.58> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (0.12ns)   --->   "%and_ln83 = and i1 %icmp_ln1064, i1 %icmp_ln1064_78" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/event_engine/event_engine.cpp:83]   --->   Operation 41 'and' 'and_ln83' <Predicate = (!tmp_i_339) | (!tmp_i)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln83 = br i1 %and_ln83, void %._crit_edge6.i, void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/event_engine/event_engine.cpp:83]   --->   Operation 42 'br' 'br_ln83' <Predicate = (!tmp_i_339) | (!tmp_i)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_53_i = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i85P0A, i85 %timer2eventEng_setEvent, i32 1" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:135]   --->   Operation 43 'nbreadreq' 'tmp_53_i' <Predicate = (!tmp_i_339 & and_ln83) | (!tmp_i & and_ln83)> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.06> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 85> <Depth = 64> <FIFO>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln86 = br i1 %tmp_53_i, void, void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/event_engine/event_engine.cpp:86]   --->   Operation 44 'br' 'br_ln86' <Predicate = (!tmp_i_339 & and_ln83) | (!tmp_i & and_ln83)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%tmp_54_i = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i85P0A, i85 %txApp2eventEng_setEvent, i32 1" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:135]   --->   Operation 45 'nbreadreq' 'tmp_54_i' <Predicate = (!tmp_i_339 & and_ln83 & !tmp_53_i) | (!tmp_i & and_ln83 & !tmp_53_i)> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.06> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 85> <Depth = 64> <FIFO>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln93 = br i1 %tmp_54_i, void %._crit_edge8.i, void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/event_engine/event_engine.cpp:93]   --->   Operation 46 'br' 'br_ln93' <Predicate = (!tmp_i_339 & and_ln83 & !tmp_53_i) | (!tmp_i & and_ln83 & !tmp_53_i)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (1.06ns)   --->   "%txApp2eventEng_setEvent_read = read i85 @_ssdm_op_Read.ap_fifo.volatile.i85P0A, i85 %txApp2eventEng_setEvent" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 47 'read' 'txApp2eventEng_setEvent_read' <Predicate = (!tmp_i_339 & and_ln83 & !tmp_53_i & tmp_54_i) | (!tmp_i & and_ln83 & !tmp_53_i & tmp_54_i)> <Delay = 1.06> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.06> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 85> <Depth = 64> <FIFO>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%zext_ln173_56 = zext i85 %txApp2eventEng_setEvent_read" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 48 'zext' 'zext_ln173_56' <Predicate = (!tmp_i_339 & and_ln83 & !tmp_53_i & tmp_54_i) | (!tmp_i & and_ln83 & !tmp_53_i & tmp_54_i)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (1.16ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i181P0A, i181 %eventEng2ackDelay_event, i181 %zext_ln173_56" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 49 'write' 'write_ln173' <Predicate = (!tmp_i_339 & and_ln83 & !tmp_53_i & tmp_54_i) | (!tmp_i & and_ln83 & !tmp_53_i & tmp_54_i)> <Delay = 1.16> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.25> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 181> <Depth = 64> <FIFO>
+ST_1 : Operation 50 [1/1] (0.70ns)   --->   "%add_ln885_192 = add i8 %ee_writeCounter_load, i8 1"   --->   Operation 50 'add' 'add_ln885_192' <Predicate = (!tmp_i_339 & and_ln83 & !tmp_53_i & tmp_54_i) | (!tmp_i & and_ln83 & !tmp_53_i & tmp_54_i)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 51 [1/1] (0.41ns)   --->   "%store_ln885 = store i8 %add_ln885_192, i8 %ee_writeCounter"   --->   Operation 51 'store' 'store_ln885' <Predicate = (!tmp_i_339 & and_ln83 & !tmp_53_i & tmp_54_i) | (!tmp_i & and_ln83 & !tmp_53_i & tmp_54_i)> <Delay = 0.41>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln99 = br void %._crit_edge8.i" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/event_engine/event_engine.cpp:99]   --->   Operation 52 'br' 'br_ln99' <Predicate = (!tmp_i_339 & and_ln83 & !tmp_53_i & tmp_54_i) | (!tmp_i & and_ln83 & !tmp_53_i & tmp_54_i)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 53 'br' 'br_ln0' <Predicate = (!tmp_i_339 & and_ln83 & !tmp_53_i) | (!tmp_i & and_ln83 & !tmp_53_i)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (1.06ns)   --->   "%timer2eventEng_setEvent_read = read i85 @_ssdm_op_Read.ap_fifo.volatile.i85P0A, i85 %timer2eventEng_setEvent" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 54 'read' 'timer2eventEng_setEvent_read' <Predicate = (!tmp_i_339 & and_ln83 & tmp_53_i) | (!tmp_i & and_ln83 & tmp_53_i)> <Delay = 1.06> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.06> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 85> <Depth = 64> <FIFO>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%zext_ln173 = zext i85 %timer2eventEng_setEvent_read" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 55 'zext' 'zext_ln173' <Predicate = (!tmp_i_339 & and_ln83 & tmp_53_i) | (!tmp_i & and_ln83 & tmp_53_i)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (1.16ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i181P0A, i181 %eventEng2ackDelay_event, i181 %zext_ln173" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 56 'write' 'write_ln173' <Predicate = (!tmp_i_339 & and_ln83 & tmp_53_i) | (!tmp_i & and_ln83 & tmp_53_i)> <Delay = 1.16> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.25> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 181> <Depth = 64> <FIFO>
+ST_1 : Operation 57 [1/1] (0.70ns)   --->   "%add_ln885_191 = add i8 %ee_writeCounter_load, i8 1"   --->   Operation 57 'add' 'add_ln885_191' <Predicate = (!tmp_i_339 & and_ln83 & tmp_53_i) | (!tmp_i & and_ln83 & tmp_53_i)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 58 [1/1] (0.41ns)   --->   "%store_ln885 = store i8 %add_ln885_191, i8 %ee_writeCounter"   --->   Operation 58 'store' 'store_ln885' <Predicate = (!tmp_i_339 & and_ln83 & tmp_53_i) | (!tmp_i & and_ln83 & tmp_53_i)> <Delay = 0.41>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln92 = br void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/event_engine/event_engine.cpp:92]   --->   Operation 59 'br' 'br_ln92' <Predicate = (!tmp_i_339 & and_ln83 & tmp_53_i) | (!tmp_i & and_ln83 & tmp_53_i)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln100 = br void %._crit_edge6.i" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/event_engine/event_engine.cpp:100]   --->   Operation 60 'br' 'br_ln100' <Predicate = (!tmp_i_339 & and_ln83) | (!tmp_i & and_ln83)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 61 'br' 'br_ln0' <Predicate = (!tmp_i_339) | (!tmp_i)> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.98ns)   --->   "%rxEng2eventEng_setEvent_read = read i181 @_ssdm_op_Read.ap_fifo.volatile.i181P0A, i181 %rxEng2eventEng_setEvent" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 62 'read' 'rxEng2eventEng_setEvent_read' <Predicate = (tmp_i & tmp_i_339)> <Delay = 0.98> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 0.98> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 181> <Depth = 512> <FIFO>
+ST_1 : Operation 63 [1/1] (1.16ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i181P0A, i181 %eventEng2ackDelay_event, i181 %rxEng2eventEng_setEvent_read" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 63 'write' 'write_ln173' <Predicate = (tmp_i & tmp_i_339)> <Delay = 1.16> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.25> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 181> <Depth = 64> <FIFO>
+ST_1 : Operation 64 [1/1] (0.70ns)   --->   "%add_ln885 = add i8 %ee_writeCounter_load, i8 1"   --->   Operation 64 'add' 'add_ln885' <Predicate = (tmp_i & tmp_i_339)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 65 [1/1] (0.41ns)   --->   "%store_ln885 = store i8 %add_ln885, i8 %ee_writeCounter"   --->   Operation 65 'store' 'store_ln885' <Predicate = (tmp_i & tmp_i_339)> <Delay = 0.41>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%br_ln82 = br void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/event_engine/event_engine.cpp:82]   --->   Operation 66 'br' 'br_ln82' <Predicate = (tmp_i & tmp_i_339)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%tmp_55_i = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i1P0A, i1 %ackDelayFifoReadCount, i32 1" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:135]   --->   Operation 67 'nbreadreq' 'tmp_55_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 64> <FIFO>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%br_ln104 = br i1 %tmp_55_i, void %._crit_edge9.i, void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/event_engine/event_engine.cpp:104]   --->   Operation 68 'br' 'br_ln104' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (1.16ns)   --->   "%p_03 = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P0A, i1 %ackDelayFifoReadCount" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 69 'read' 'p_03' <Predicate = (tmp_55_i)> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 64> <FIFO>
+ST_1 : Operation 70 [1/1] (0.70ns)   --->   "%add_ln885_193 = add i8 %ee_adReadCounter_load, i8 1"   --->   Operation 70 'add' 'add_ln885_193' <Predicate = (tmp_55_i)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%store_ln885 = store i8 %add_ln885_193, i8 %ee_adReadCounter"   --->   Operation 71 'store' 'store_ln885' <Predicate = (tmp_55_i)> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%br_ln108 = br void %._crit_edge9.i" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/event_engine/event_engine.cpp:108]   --->   Operation 72 'br' 'br_ln108' <Predicate = (tmp_55_i)> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%tmp_56_i = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i1P0A, i1 %ackDelayFifoWriteCount, i32 1" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:135]   --->   Operation 73 'nbreadreq' 'tmp_56_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 64> <FIFO>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%br_ln109 = br i1 %tmp_56_i, void %._crit_edge10.i, void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/event_engine/event_engine.cpp:109]   --->   Operation 74 'br' 'br_ln109' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.70ns)   --->   "%add_ln885_194 = add i8 %ee_adWriteCounter_load, i8 1"   --->   Operation 75 'add' 'add_ln885_194' <Predicate = (tmp_56_i)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%store_ln885 = store i8 %add_ln885_194, i8 %ee_adWriteCounter"   --->   Operation 76 'store' 'store_ln885' <Predicate = (tmp_56_i)> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (1.16ns)   --->   "%p_04 = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P0A, i1 %ackDelayFifoWriteCount" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 77 'read' 'p_04' <Predicate = (tmp_56_i)> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 64> <FIFO>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%br_ln113 = br void %._crit_edge10.i" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/event_engine/event_engine.cpp:113]   --->   Operation 78 'br' 'br_ln113' <Predicate = (tmp_56_i)> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%tmp_57_i = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i1P0A, i1 %txEngFifoReadCount, i32 1" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:135]   --->   Operation 79 'nbreadreq' 'tmp_57_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 64> <FIFO>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%br_ln114 = br i1 %tmp_57_i, void %event_engine.exit, void" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/event_engine/event_engine.cpp:114]   --->   Operation 80 'br' 'br_ln114' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.70ns)   --->   "%add_ln885_195 = add i8 %ee_txEngReadCounter_load, i8 1"   --->   Operation 81 'add' 'add_ln885_195' <Predicate = (tmp_57_i)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%store_ln885 = store i8 %add_ln885_195, i8 %ee_txEngReadCounter"   --->   Operation 82 'store' 'store_ln885' <Predicate = (tmp_57_i)> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (1.16ns)   --->   "%p_05 = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P0A, i1 %txEngFifoReadCount" [/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 83 'read' 'p_05' <Predicate = (tmp_57_i)> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 64> <FIFO>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%br_ln118 = br void %event_engine.exit" [/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/toe/event_engine/event_engine.cpp:118]   --->   Operation 84 'br' 'br_ln118' <Predicate = (tmp_57_i)> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 85 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.2ns, clock uncertainty: 0.864ns.
+
+ <State 1>: 2.23ns
+The critical path consists of the following:
+	fifo read operation ('txApp2eventEng_setEvent_read', /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'txApp2eventEng_setEvent' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [62]  (1.06 ns)
+	fifo write operation ('write_ln173', /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'eventEng2ackDelay_event' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) [64]  (1.17 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

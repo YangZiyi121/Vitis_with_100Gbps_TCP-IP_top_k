@@ -1,0 +1,173 @@
+
+
+================================================================
+== Vitis HLS Report for 'route_by_eth_protocol_512_s'
+================================================================
+* Date:           Sat Mar 18 14:33:50 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        ip_handler_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  1.824 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       32|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       54|    -|
+|Register             |        -|     -|     1080|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|     1080|       86|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |ap_condition_263                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_264                  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op30_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op44_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op55_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op57_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op59_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op61_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op63_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op65_write_state2    |       and|   0|  0|   2|           1|           1|
+    |grp_nbreadreq_fu_58_p3            |       and|   0|  0|   2|           1|           0|
+    |tmp_1_i_nbreadreq_fu_50_p3        |       and|   0|  0|   2|           1|           0|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  32|          16|          15|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------+----+-----------+-----+-----------+
+    |            Name           | LUT| Input Size| Bits| Total Bits|
+    +---------------------------+----+-----------+-----+-----------+
+    |ap_done                    |   9|          2|    1|          2|
+    |ethDataFifo_blk_n          |   9|          2|    1|          2|
+    |etherTypeFifo_blk_n        |   9|          2|    1|          2|
+    |ipv4ShiftFifo_blk_n        |   9|          2|    1|          2|
+    |ipv6ShiftFifo_blk_n        |   9|          2|    1|          2|
+    |m_axis_arp_internal_blk_n  |   9|          2|    1|          2|
+    +---------------------------+----+-----------+-----+-----------+
+    |Total                      |  54|         12|    6|         12|
+    +---------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------+------+----+------+-----------+
+    |             Name             |  FF  | LUT| Bits | Const Bits|
+    +------------------------------+------+----+------+-----------+
+    |ap_CS_fsm                     |     1|   0|     1|          0|
+    |ap_done_reg                   |     1|   0|     1|          0|
+    |ap_enable_reg_pp0_iter1       |     1|   0|     1|          0|
+    |reg_107                       |  1024|   0|  1024|          0|
+    |rep_etherType_V               |    16|   0|    16|          0|
+    |rep_etherType_V_load_reg_166  |    16|   0|    16|          0|
+    |rep_fsmState_V                |     1|   0|     1|          0|
+    |rep_fsmState_V_load_reg_140   |     1|   0|     1|          0|
+    |tmp_1_i_reg_144               |     1|   0|     1|          0|
+    |tmp_2_i_reg_148               |     1|   0|     1|          0|
+    |tmp_i_reg_159                 |     1|   0|     1|          0|
+    |tmp_reg_152                   |    16|   0|    16|          0|
+    +------------------------------+------+----+------+-----------+
+    |Total                         |  1080|   0|  1080|          0|
+    +------------------------------+------+----+------+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+------+------------+----------------------------+--------------+
+|          RTL Ports         | Dir | Bits |  Protocol  |        Source Object       |    C Type    |
++----------------------------+-----+------+------------+----------------------------+--------------+
+|ap_clk                      |   in|     1|  ap_ctrl_hs|  route_by_eth_protocol<512>|  return value|
+|ap_rst                      |   in|     1|  ap_ctrl_hs|  route_by_eth_protocol<512>|  return value|
+|ap_start                    |   in|     1|  ap_ctrl_hs|  route_by_eth_protocol<512>|  return value|
+|ap_done                     |  out|     1|  ap_ctrl_hs|  route_by_eth_protocol<512>|  return value|
+|ap_continue                 |   in|     1|  ap_ctrl_hs|  route_by_eth_protocol<512>|  return value|
+|ap_idle                     |  out|     1|  ap_ctrl_hs|  route_by_eth_protocol<512>|  return value|
+|ap_ready                    |  out|     1|  ap_ctrl_hs|  route_by_eth_protocol<512>|  return value|
+|etherTypeFifo_dout          |   in|    16|     ap_fifo|               etherTypeFifo|       pointer|
+|etherTypeFifo_empty_n       |   in|     1|     ap_fifo|               etherTypeFifo|       pointer|
+|etherTypeFifo_read          |  out|     1|     ap_fifo|               etherTypeFifo|       pointer|
+|ethDataFifo_dout            |   in|  1024|     ap_fifo|                 ethDataFifo|       pointer|
+|ethDataFifo_empty_n         |   in|     1|     ap_fifo|                 ethDataFifo|       pointer|
+|ethDataFifo_read            |  out|     1|     ap_fifo|                 ethDataFifo|       pointer|
+|ipv6ShiftFifo_din           |  out|  1024|     ap_fifo|               ipv6ShiftFifo|       pointer|
+|ipv6ShiftFifo_full_n        |   in|     1|     ap_fifo|               ipv6ShiftFifo|       pointer|
+|ipv6ShiftFifo_write         |  out|     1|     ap_fifo|               ipv6ShiftFifo|       pointer|
+|ipv4ShiftFifo_din           |  out|  1024|     ap_fifo|               ipv4ShiftFifo|       pointer|
+|ipv4ShiftFifo_full_n        |   in|     1|     ap_fifo|               ipv4ShiftFifo|       pointer|
+|ipv4ShiftFifo_write         |  out|     1|     ap_fifo|               ipv4ShiftFifo|       pointer|
+|m_axis_arp_internal_din     |  out|  1024|     ap_fifo|         m_axis_arp_internal|       pointer|
+|m_axis_arp_internal_full_n  |   in|     1|     ap_fifo|         m_axis_arp_internal|       pointer|
+|m_axis_arp_internal_write   |  out|     1|     ap_fifo|         m_axis_arp_internal|       pointer|
++----------------------------+-----+------+------------+----------------------------+--------------+
+

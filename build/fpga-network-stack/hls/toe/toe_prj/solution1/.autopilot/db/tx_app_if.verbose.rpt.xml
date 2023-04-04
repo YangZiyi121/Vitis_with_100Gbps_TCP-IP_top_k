@@ -1,0 +1,238 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'tx_app_if'" level="0">
+<item name = "Date">Sat Mar 18 14:39:19 2023
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
+<item name = "Project">toe_prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu280-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.20 ns, 2.336 ns, 0.86 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">2, 2, 6.400 ns, 6.400 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 230, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 177, -</column>
+<column name="Register">-, -, 374, -, -</column>
+<specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln135_fu_387_p2">+, 0, 0, 39, 32, 3</column>
+<column name="ap_condition_417">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_457">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_69">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op100_write_state3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op102_write_state3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op107_write_state3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op113_write_state3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op116_write_state3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op31_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op33_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op35_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op43_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op86_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op89_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op8_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op90_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op91_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op96_write_state3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op98_write_state3">and, 0, 0, 2, 1, 1</column>
+<column name="tmp_1_i_nbreadreq_fu_222_p3">and, 0, 0, 3, 1, 0</column>
+<column name="tmp_2_i_nbreadreq_fu_166_p3">and, 0, 0, 3, 1, 0</column>
+<column name="tmp_3_i_nbreadreq_fu_174_p3">and, 0, 0, 3, 1, 0</column>
+<column name="tmp_4_i_nbreadreq_fu_182_p3">and, 0, 0, 3, 1, 0</column>
+<column name="tmp_5_i_nbreadreq_fu_190_p3">and, 0, 0, 3, 1, 0</column>
+<column name="tmp_i_163_nbreadreq_fu_146_p3">and, 0, 0, 3, 1, 0</column>
+<column name="tmp_i_nbreadreq_fu_138_p3">and, 0, 0, 3, 1, 0</column>
+<column name="icmp_ln135_fu_392_p2">icmp, 0, 0, 20, 32, 2</column>
+<column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state1_pp0_stage0_iter0">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state2_io">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state2_pp0_stage0_iter1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state3_io">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state3_pp0_stage0_iter2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln173_1_fu_409_p2">or, 0, 0, 48, 48, 2</column>
+<column name="or_ln173_fu_459_p2">or, 0, 0, 48, 48, 3</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="conEstablishedFifo_blk_n">9, 2, 1, 2</column>
+<column name="m_axis_open_conn_rsp_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="m_axis_open_conn_rsp_TDATA_int_regslice">20, 4, 72, 288</column>
+<column name="myIpAddress_blk_n">9, 2, 1, 2</column>
+<column name="portTable2txApp_port_rsp_blk_n">9, 2, 1, 2</column>
+<column name="sLookup2txApp_rsp_blk_n">9, 2, 1, 2</column>
+<column name="s_axis_close_conn_req_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="s_axis_open_conn_req_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="stateTable2txApp_upd_rsp_blk_n">9, 2, 1, 2</column>
+<column name="timer2txApp_notification_blk_n">9, 2, 1, 2</column>
+<column name="txApp2eventEng_mergeEvent_blk_n">9, 2, 1, 2</column>
+<column name="txApp2eventEng_mergeEvent_din">14, 3, 85, 255</column>
+<column name="txApp2sLookup_req_blk_n">9, 2, 1, 2</column>
+<column name="txApp2stateTable_upd_req_blk_n">9, 2, 1, 2</column>
+<column name="txApp2stateTable_upd_req_din">26, 5, 49, 245</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="conEstablishedFifo_read_reg_549">72, 0, 72, 0</column>
+<column name="icmp_ln135_reg_574">1, 0, 1, 0</column>
+<column name="p_Result_1_i_reg_488">8, 0, 8, 0</column>
+<column name="p_Result_3_i_reg_498">8, 0, 8, 0</column>
+<column name="p_Result_5_i_reg_508">8, 0, 8, 0</column>
+<column name="p_Result_6_i_reg_513">8, 0, 8, 0</column>
+<column name="p_Result_i_164_reg_483">8, 0, 8, 0</column>
+<column name="p_Result_i_reg_478">8, 0, 8, 0</column>
+<column name="s_axis_close_conn_req_read_reg_538">16, 0, 16, 0</column>
+<column name="s_axis_close_conn_req_read_reg_538_pp0_iter1_reg">16, 0, 16, 0</column>
+<column name="session_hit_reg_560">1, 0, 1, 0</column>
+<column name="session_hit_reg_560_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="session_sessionID_V_reg_554">16, 0, 16, 0</column>
+<column name="session_sessionID_V_reg_554_pp0_iter1_reg">16, 0, 16, 0</column>
+<column name="state_5_reg_568">32, 0, 32, 0</column>
+<column name="state_5_reg_568_pp0_iter1_reg">32, 0, 32, 0</column>
+<column name="tai_closeSessionID_V">16, 0, 16, 0</column>
+<column name="tai_fsmState">1, 0, 1, 0</column>
+<column name="tai_fsmState_load_reg_518">1, 0, 1, 0</column>
+<column name="tai_fsmState_load_reg_518_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="timer2txApp_notification_read_reg_544">72, 0, 72, 0</column>
+<column name="tmp_1_i_reg_564">1, 0, 1, 0</column>
+<column name="tmp_1_i_reg_564_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="tmp_2_i_reg_522">1, 0, 1, 0</column>
+<column name="tmp_2_i_reg_522_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="tmp_3_i_reg_526">1, 0, 1, 0</column>
+<column name="tmp_3_i_reg_526_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="tmp_4_i_reg_530">1, 0, 1, 0</column>
+<column name="tmp_4_i_reg_530_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="tmp_5_i_reg_534">1, 0, 1, 0</column>
+<column name="tmp_5_i_reg_534_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="tmp_i_163_reg_474">1, 0, 1, 0</column>
+<column name="tmp_i_reg_470">1, 0, 1, 0</column>
+<column name="trunc_ln674_1_reg_503">8, 0, 8, 0</column>
+<column name="trunc_ln674_reg_493">8, 0, 8, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, tx_app_if, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, tx_app_if, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, tx_app_if, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, tx_app_if, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, tx_app_if, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, tx_app_if, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, tx_app_if, return value</column>
+<column name="s_axis_open_conn_req_TVALID">in, 1, axis, s_axis_open_conn_req, pointer</column>
+<column name="s_axis_open_conn_req_TDATA">in, 48, axis, s_axis_open_conn_req, pointer</column>
+<column name="s_axis_open_conn_req_TREADY">out, 1, axis, s_axis_open_conn_req, pointer</column>
+<column name="portTable2txApp_port_rsp_dout">in, 16, ap_fifo, portTable2txApp_port_rsp, pointer</column>
+<column name="portTable2txApp_port_rsp_empty_n">in, 1, ap_fifo, portTable2txApp_port_rsp, pointer</column>
+<column name="portTable2txApp_port_rsp_read">out, 1, ap_fifo, portTable2txApp_port_rsp, pointer</column>
+<column name="s_axis_close_conn_req_TVALID">in, 1, axis, s_axis_close_conn_req, pointer</column>
+<column name="s_axis_close_conn_req_TDATA">in, 16, axis, s_axis_close_conn_req, pointer</column>
+<column name="s_axis_close_conn_req_TREADY">out, 1, axis, s_axis_close_conn_req, pointer</column>
+<column name="timer2txApp_notification_dout">in, 72, ap_fifo, timer2txApp_notification, pointer</column>
+<column name="timer2txApp_notification_empty_n">in, 1, ap_fifo, timer2txApp_notification, pointer</column>
+<column name="timer2txApp_notification_read">out, 1, ap_fifo, timer2txApp_notification, pointer</column>
+<column name="conEstablishedFifo_dout">in, 72, ap_fifo, conEstablishedFifo, pointer</column>
+<column name="conEstablishedFifo_empty_n">in, 1, ap_fifo, conEstablishedFifo, pointer</column>
+<column name="conEstablishedFifo_read">out, 1, ap_fifo, conEstablishedFifo, pointer</column>
+<column name="sLookup2txApp_rsp_dout">in, 17, ap_fifo, sLookup2txApp_rsp, pointer</column>
+<column name="sLookup2txApp_rsp_empty_n">in, 1, ap_fifo, sLookup2txApp_rsp, pointer</column>
+<column name="sLookup2txApp_rsp_read">out, 1, ap_fifo, sLookup2txApp_rsp, pointer</column>
+<column name="stateTable2txApp_upd_rsp_dout">in, 32, ap_fifo, stateTable2txApp_upd_rsp, pointer</column>
+<column name="stateTable2txApp_upd_rsp_empty_n">in, 1, ap_fifo, stateTable2txApp_upd_rsp, pointer</column>
+<column name="stateTable2txApp_upd_rsp_read">out, 1, ap_fifo, stateTable2txApp_upd_rsp, pointer</column>
+<column name="myIpAddress_dout">in, 32, ap_fifo, myIpAddress, pointer</column>
+<column name="myIpAddress_empty_n">in, 1, ap_fifo, myIpAddress, pointer</column>
+<column name="myIpAddress_read">out, 1, ap_fifo, myIpAddress, pointer</column>
+<column name="txApp2sLookup_req_din">out, 96, ap_fifo, txApp2sLookup_req, pointer</column>
+<column name="txApp2sLookup_req_full_n">in, 1, ap_fifo, txApp2sLookup_req, pointer</column>
+<column name="txApp2sLookup_req_write">out, 1, ap_fifo, txApp2sLookup_req, pointer</column>
+<column name="m_axis_open_conn_rsp_TREADY">in, 1, axis, m_axis_open_conn_rsp, pointer</column>
+<column name="m_axis_open_conn_rsp_TDATA">out, 72, axis, m_axis_open_conn_rsp, pointer</column>
+<column name="m_axis_open_conn_rsp_TVALID">out, 1, axis, m_axis_open_conn_rsp, pointer</column>
+<column name="txApp2stateTable_upd_req_din">out, 49, ap_fifo, txApp2stateTable_upd_req, pointer</column>
+<column name="txApp2stateTable_upd_req_full_n">in, 1, ap_fifo, txApp2stateTable_upd_req, pointer</column>
+<column name="txApp2stateTable_upd_req_write">out, 1, ap_fifo, txApp2stateTable_upd_req, pointer</column>
+<column name="txApp2eventEng_mergeEvent_din">out, 85, ap_fifo, txApp2eventEng_mergeEvent, pointer</column>
+<column name="txApp2eventEng_mergeEvent_full_n">in, 1, ap_fifo, txApp2eventEng_mergeEvent, pointer</column>
+<column name="txApp2eventEng_mergeEvent_write">out, 1, ap_fifo, txApp2eventEng_mergeEvent, pointer</column>
+</table>
+</item>
+</section>
+</profile>

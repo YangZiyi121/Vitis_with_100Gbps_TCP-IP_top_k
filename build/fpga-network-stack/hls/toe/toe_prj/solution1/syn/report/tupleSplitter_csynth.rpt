@@ -1,0 +1,175 @@
+
+
+================================================================
+== Vitis HLS Report for 'tupleSplitter'
+================================================================
+* Date:           Sat Mar 18 14:39:09 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        toe_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  1.412 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       32|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       82|    -|
+|Register             |        -|     -|      328|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|      328|      114|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |and_ln725_fu_106_p2               |       and|   0|  0|   2|           1|           1|
+    |ap_condition_189                  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op34_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op38_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op44_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op49_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op52_write_state2    |       and|   0|  0|   2|           1|           1|
+    |tmp_9_i_nbreadreq_fu_50_p3        |       and|   0|  0|   2|           1|           0|
+    |tmp_i_167_nbreadreq_fu_42_p3      |       and|   0|  0|   2|           1|           0|
+    |tmp_i_nbreadreq_fu_70_p3          |       and|   0|  0|   2|           1|           0|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |or_ln732_fu_118_p2                |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    |xor_ln732_fu_112_p2               |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  32|          16|          15|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+----+-----------+-----+-----------+
+    |              Name             | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------+----+-----------+-----+-----------+
+    |ap_done                        |   9|          2|    1|          2|
+    |sLookup2txEng_rev_rsp_blk_n    |   9|          2|    1|          2|
+    |txEng_ipTupleFifo_blk_n        |   9|          2|    1|          2|
+    |txEng_ipTupleFifo_din          |  14|          3|   64|        192|
+    |txEng_isLookUpFifo_blk_n       |   9|          2|    1|          2|
+    |txEng_tcpTupleFifo_blk_n       |   9|          2|    1|          2|
+    |txEng_tcpTupleFifo_din         |  14|          3|   96|        288|
+    |txEng_tupleShortCutFifo_blk_n  |   9|          2|    1|          2|
+    +-------------------------------+----+-----------+-----+-----------+
+    |Total                          |  82|         18|  166|        492|
+    +-------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------+----+----+-----+-----------+
+    |                 Name                 | FF | LUT| Bits| Const Bits|
+    +--------------------------------------+----+----+-----+-----------+
+    |and_ln725_reg_160                     |   1|   0|    1|          0|
+    |ap_CS_fsm                             |   1|   0|    1|          0|
+    |ap_done_reg                           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1               |   1|   0|    1|          0|
+    |or_ln732_reg_164                      |   1|   0|    1|          0|
+    |sLookup2txEng_rev_rsp_read_reg_178    |  96|   0|   96|          0|
+    |trunc_ln173_3_reg_173                 |  64|   0|   64|          0|
+    |trunc_ln173_reg_183                   |  64|   0|   64|          0|
+    |ts_getMeta                            |   1|   0|    1|          0|
+    |ts_getMeta_load_reg_156               |   1|   0|    1|          0|
+    |ts_isLookUp                           |   1|   0|    1|          0|
+    |txEng_tupleShortCutFifo_read_reg_168  |  96|   0|   96|          0|
+    +--------------------------------------+----+----+-----+-----------+
+    |Total                                 | 328|   0|  328|          0|
+    +--------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------+-----+-----+------------+-------------------------+--------------+
+|            RTL Ports            | Dir | Bits|  Protocol  |      Source Object      |    C Type    |
++---------------------------------+-----+-----+------------+-------------------------+--------------+
+|ap_clk                           |   in|    1|  ap_ctrl_hs|            tupleSplitter|  return value|
+|ap_rst                           |   in|    1|  ap_ctrl_hs|            tupleSplitter|  return value|
+|ap_start                         |   in|    1|  ap_ctrl_hs|            tupleSplitter|  return value|
+|ap_done                          |  out|    1|  ap_ctrl_hs|            tupleSplitter|  return value|
+|ap_continue                      |   in|    1|  ap_ctrl_hs|            tupleSplitter|  return value|
+|ap_idle                          |  out|    1|  ap_ctrl_hs|            tupleSplitter|  return value|
+|ap_ready                         |  out|    1|  ap_ctrl_hs|            tupleSplitter|  return value|
+|txEng_tupleShortCutFifo_dout     |   in|   96|     ap_fifo|  txEng_tupleShortCutFifo|       pointer|
+|txEng_tupleShortCutFifo_empty_n  |   in|    1|     ap_fifo|  txEng_tupleShortCutFifo|       pointer|
+|txEng_tupleShortCutFifo_read     |  out|    1|     ap_fifo|  txEng_tupleShortCutFifo|       pointer|
+|sLookup2txEng_rev_rsp_dout       |   in|   96|     ap_fifo|    sLookup2txEng_rev_rsp|       pointer|
+|sLookup2txEng_rev_rsp_empty_n    |   in|    1|     ap_fifo|    sLookup2txEng_rev_rsp|       pointer|
+|sLookup2txEng_rev_rsp_read       |  out|    1|     ap_fifo|    sLookup2txEng_rev_rsp|       pointer|
+|txEng_isLookUpFifo_dout          |   in|    1|     ap_fifo|       txEng_isLookUpFifo|       pointer|
+|txEng_isLookUpFifo_empty_n       |   in|    1|     ap_fifo|       txEng_isLookUpFifo|       pointer|
+|txEng_isLookUpFifo_read          |  out|    1|     ap_fifo|       txEng_isLookUpFifo|       pointer|
+|txEng_ipTupleFifo_din            |  out|   64|     ap_fifo|        txEng_ipTupleFifo|       pointer|
+|txEng_ipTupleFifo_full_n         |   in|    1|     ap_fifo|        txEng_ipTupleFifo|       pointer|
+|txEng_ipTupleFifo_write          |  out|    1|     ap_fifo|        txEng_ipTupleFifo|       pointer|
+|txEng_tcpTupleFifo_din           |  out|   96|     ap_fifo|       txEng_tcpTupleFifo|       pointer|
+|txEng_tcpTupleFifo_full_n        |   in|    1|     ap_fifo|       txEng_tcpTupleFifo|       pointer|
+|txEng_tcpTupleFifo_write         |  out|    1|     ap_fifo|       txEng_tcpTupleFifo|       pointer|
++---------------------------------+-----+-----+------------+-------------------------+--------------+
+

@@ -1,0 +1,889 @@
+{
+  "Top": "dhcp_client",
+  "RtlTop": "dhcp_client",
+  "RtlPrefix": "",
+  "RtlSubPrefix": "dhcp_client_",
+  "SourceLanguage": "cpp",
+  "HostMachineBits": "64",
+  "FunctionProtocol": "ap_ctrl_none",
+  "ResetStyle": "control",
+  "Target": {
+    "Family": "virtexuplushbm",
+    "Device": "xcu280",
+    "Package": "-fsvh2892",
+    "Speed": "-2L-e",
+    "Triple": "fpga64-xilinx-none"
+  },
+  "Args": {
+    "openPort": {
+      "index": "0",
+      "direction": "out",
+      "srcType": "stream<ap_uint<16>, 0>&",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "m_axis_open_port",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "confirmPortStatus": {
+      "index": "1",
+      "direction": "in",
+      "srcType": "stream<bool, 0>&",
+      "srcSize": "8",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "s_axis_open_port_status",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "dataInMeta": {
+      "index": "2",
+      "direction": "in",
+      "srcType": "stream<udpMetadata, 0>&",
+      "srcSize": "128",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "s_axis_rx_metadata",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "dataIn": {
+      "index": "3",
+      "direction": "in",
+      "srcType": "stream<hls::axis<ap_uint<64>, 0, 0, 0>, 0>&",
+      "srcSize": "128",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "s_axis_rx_data",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "dataOutMeta": {
+      "index": "4",
+      "direction": "out",
+      "srcType": "stream<udpMetadata, 0>&",
+      "srcSize": "128",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "m_axis_tx_metadata",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "dataOutLength": {
+      "index": "5",
+      "direction": "out",
+      "srcType": "stream<ap_uint<16>, 0>&",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "m_axis_tx_length",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "dataOut": {
+      "index": "6",
+      "direction": "out",
+      "srcType": "stream<hls::axis<ap_uint<64>, 0, 0, 0>, 0>&",
+      "srcSize": "128",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "m_axis_tx_data",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "dhcpEnable": {
+      "index": "7",
+      "direction": "in",
+      "srcType": "ap_uint<1>&",
+      "srcSize": "8",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "dhcpEnable",
+          "name": "dhcpEnable",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "inputIpAddress": {
+      "index": "8",
+      "direction": "in",
+      "srcType": "ap_uint<32>&",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "inputIpAddress",
+          "name": "inputIpAddress",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "dhcpIpAddressOut": {
+      "index": "9",
+      "direction": "out",
+      "srcType": "ap_uint<32>&",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "dhcpIpAddressOut",
+          "name": "dhcpIpAddressOut",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "myMacAddress": {
+      "index": "10",
+      "direction": "in",
+      "srcType": "ap_uint<48>&",
+      "srcSize": "64",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "myMacAddress",
+          "name": "myMacAddress",
+          "usage": "data",
+          "direction": "in"
+        }]
+    }
+  },
+  "HlsSolution": {
+    "FlowTarget": "vivado",
+    "ConfigTcl": [
+      "config_export -description {DHCP Client to be used with the Xilinx Labs TCP & UDP offload engines.}",
+      "config_export -display_name {DHCP Client}",
+      "config_export -format=ip_catalog",
+      "config_export -ipname=dhcp_client",
+      "config_export -vendor=xilinx.labs",
+      "config_export -version=1.05"
+    ],
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "KernelName": "dhcp_client"
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "3.2",
+    "Uncertainty": "0.864",
+    "IsCombinational": "0",
+    "II": "2",
+    "Latency": "7"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 3.200 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.labs",
+    "Library": "hls",
+    "Name": "dhcp_client",
+    "Version": "1.05",
+    "DisplayName": "DHCP Client",
+    "Revision": "",
+    "Description": "DHCP Client to be used with the Xilinx Labs TCP & UDP offload engines.",
+    "Taxonomy": "\/VITIS_HLS_IP",
+    "AutoFamilySupport": "",
+    "ZipFile": "xilinx_labs_hls_dhcp_client_1_05.zip"
+  },
+  "Files": {
+    "CSource": ["\/home\/yangz0e\/Desktop\/Vitis_with_100Gbps_TCP-IP_top_k\/fpga-network-stack\/hls\/dhcp_client\/dhcp_client.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/dhcp_client_dhcp_fsm.vhd",
+      "impl\/vhdl\/dhcp_client_entry_proc.vhd",
+      "impl\/vhdl\/dhcp_client_fifo_w1_d2_S.vhd",
+      "impl\/vhdl\/dhcp_client_fifo_w1_d3_S.vhd",
+      "impl\/vhdl\/dhcp_client_fifo_w32_d3_S.vhd",
+      "impl\/vhdl\/dhcp_client_fifo_w48_d3_S.vhd",
+      "impl\/vhdl\/dhcp_client_fifo_w72_d4_S.vhd",
+      "impl\/vhdl\/dhcp_client_fifo_w104_d4_S.vhd",
+      "impl\/vhdl\/dhcp_client_open_dhcp_port.vhd",
+      "impl\/vhdl\/dhcp_client_receive_message.vhd",
+      "impl\/vhdl\/dhcp_client_regslice_both.vhd",
+      "impl\/vhdl\/dhcp_client_send_message.vhd",
+      "impl\/vhdl\/dhcp_client.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/dhcp_client_dhcp_fsm.v",
+      "impl\/verilog\/dhcp_client_entry_proc.v",
+      "impl\/verilog\/dhcp_client_fifo_w1_d2_S.v",
+      "impl\/verilog\/dhcp_client_fifo_w1_d3_S.v",
+      "impl\/verilog\/dhcp_client_fifo_w32_d3_S.v",
+      "impl\/verilog\/dhcp_client_fifo_w48_d3_S.v",
+      "impl\/verilog\/dhcp_client_fifo_w72_d4_S.v",
+      "impl\/verilog\/dhcp_client_fifo_w104_d4_S.v",
+      "impl\/verilog\/dhcp_client_hls_deadlock_detection_unit.v",
+      "impl\/verilog\/dhcp_client_hls_deadlock_detector.vh",
+      "impl\/verilog\/dhcp_client_hls_deadlock_idx0_monitor.v",
+      "impl\/verilog\/dhcp_client_hls_deadlock_idx1_monitor.v",
+      "impl\/verilog\/dhcp_client_hls_deadlock_idx2_monitor.v",
+      "impl\/verilog\/dhcp_client_hls_deadlock_idx3_monitor.v",
+      "impl\/verilog\/dhcp_client_hls_deadlock_kernel_monitor_top.vh",
+      "impl\/verilog\/dhcp_client_hls_deadlock_report_unit.vh",
+      "impl\/verilog\/dhcp_client_open_dhcp_port.v",
+      "impl\/verilog\/dhcp_client_receive_message.v",
+      "impl\/verilog\/dhcp_client_regslice_both.v",
+      "impl\/verilog\/dhcp_client_send_message.v",
+      "impl\/verilog\/dhcp_client.v"
+    ],
+    "IpMisc": ["impl\/misc\/logo.png"],
+    "CsynthXml": "syn\/report\/csynth.xml",
+    "DebugDir": ".debug",
+    "KernelXml": ".autopilot\/db\/kernel.internal.xml",
+    "Xo": "",
+    "XoHlsDir": "",
+    "ProtoInst": [".debug\/dhcp_client.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "Ip": []
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "busTypeName": "clock",
+      "mode": "slave",
+      "busParams": {
+        "ASSOCIATED_BUSIF": "m_axis_open_port:s_axis_open_port_status:s_axis_rx_metadata:s_axis_rx_data:m_axis_tx_metadata:m_axis_tx_length:m_axis_tx_data",
+        "ASSOCIATED_RESET": "ap_rst_n"
+      },
+      "portMap": {"ap_clk": "CLK"},
+      "ports": ["ap_clk"]
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "busTypeName": "reset",
+      "mode": "slave",
+      "busParams": {"POLARITY": "ACTIVE_LOW"},
+      "portMap": {"ap_rst_n": "RST"},
+      "ports": ["ap_rst_n"]
+    },
+    "m_axis_open_port": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "master",
+      "dataWidth": "16",
+      "portPrefix": "m_axis_open_port_",
+      "ports": [
+        "m_axis_open_port_TDATA",
+        "m_axis_open_port_TREADY",
+        "m_axis_open_port_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "openPort"
+        }]
+    },
+    "s_axis_open_port_status": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "dataWidth": "8",
+      "portPrefix": "s_axis_open_port_status_",
+      "ports": [
+        "s_axis_open_port_status_TDATA",
+        "s_axis_open_port_status_TREADY",
+        "s_axis_open_port_status_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "confirmPortStatus"
+        }]
+    },
+    "s_axis_rx_metadata": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "dataWidth": "128",
+      "portPrefix": "s_axis_rx_metadata_",
+      "ports": [
+        "s_axis_rx_metadata_TDATA",
+        "s_axis_rx_metadata_TREADY",
+        "s_axis_rx_metadata_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "dataInMeta"
+        }]
+    },
+    "s_axis_rx_data": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "dataWidth": "64",
+      "portPrefix": "s_axis_rx_data_",
+      "ports": [
+        "s_axis_rx_data_TDATA",
+        "s_axis_rx_data_TKEEP",
+        "s_axis_rx_data_TLAST",
+        "s_axis_rx_data_TREADY",
+        "s_axis_rx_data_TSTRB",
+        "s_axis_rx_data_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "dataIn"
+        }]
+    },
+    "m_axis_tx_metadata": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "master",
+      "dataWidth": "96",
+      "portPrefix": "m_axis_tx_metadata_",
+      "ports": [
+        "m_axis_tx_metadata_TDATA",
+        "m_axis_tx_metadata_TREADY",
+        "m_axis_tx_metadata_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "dataOutMeta"
+        }]
+    },
+    "m_axis_tx_length": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "master",
+      "dataWidth": "16",
+      "portPrefix": "m_axis_tx_length_",
+      "ports": [
+        "m_axis_tx_length_TDATA",
+        "m_axis_tx_length_TREADY",
+        "m_axis_tx_length_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "dataOutLength"
+        }]
+    },
+    "m_axis_tx_data": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "master",
+      "dataWidth": "64",
+      "portPrefix": "m_axis_tx_data_",
+      "ports": [
+        "m_axis_tx_data_TDATA",
+        "m_axis_tx_data_TKEEP",
+        "m_axis_tx_data_TLAST",
+        "m_axis_tx_data_TREADY",
+        "m_axis_tx_data_TSTRB",
+        "m_axis_tx_data_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "dataOut"
+        }]
+    },
+    "dhcpEnable": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "1",
+      "portMap": {"dhcpEnable": "DATA"},
+      "ports": ["dhcpEnable"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "1",
+          "argName": "dhcpEnable"
+        }]
+    },
+    "inputIpAddress": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"inputIpAddress": "DATA"},
+      "ports": ["inputIpAddress"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "1",
+          "argName": "inputIpAddress"
+        }]
+    },
+    "dhcpIpAddressOut": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "master",
+      "dataWidth": "32",
+      "portMap": {"dhcpIpAddressOut": "DATA"},
+      "ports": ["dhcpIpAddressOut"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "1",
+          "argName": "dhcpIpAddressOut"
+        }]
+    },
+    "myMacAddress": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "48",
+      "portMap": {"myMacAddress": "DATA"},
+      "ports": ["myMacAddress"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "1",
+          "argName": "myMacAddress"
+        }]
+    }
+  },
+  "RtlPorts": {
+    "ap_local_block": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "ap_local_deadlock": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axis_open_port_TDATA": {
+      "dir": "out",
+      "width": "16"
+    },
+    "m_axis_open_port_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axis_open_port_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axis_open_port_status_TDATA": {
+      "dir": "in",
+      "width": "8"
+    },
+    "s_axis_open_port_status_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axis_open_port_status_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axis_rx_metadata_TDATA": {
+      "dir": "in",
+      "width": "128"
+    },
+    "s_axis_rx_metadata_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axis_rx_metadata_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axis_rx_data_TDATA": {
+      "dir": "in",
+      "width": "64"
+    },
+    "s_axis_rx_data_TKEEP": {
+      "dir": "in",
+      "width": "8"
+    },
+    "s_axis_rx_data_TSTRB": {
+      "dir": "in",
+      "width": "8"
+    },
+    "s_axis_rx_data_TLAST": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "s_axis_rx_data_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axis_rx_data_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axis_tx_metadata_TDATA": {
+      "dir": "out",
+      "width": "96"
+    },
+    "m_axis_tx_metadata_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axis_tx_metadata_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axis_tx_length_TDATA": {
+      "dir": "out",
+      "width": "16"
+    },
+    "m_axis_tx_length_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axis_tx_length_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axis_tx_data_TDATA": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axis_tx_data_TKEEP": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axis_tx_data_TSTRB": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axis_tx_data_TLAST": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axis_tx_data_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axis_tx_data_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "dhcpEnable": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "inputIpAddress": {
+      "dir": "in",
+      "width": "32"
+    },
+    "dhcpIpAddressOut": {
+      "dir": "out",
+      "width": "32"
+    },
+    "myMacAddress": {
+      "dir": "in",
+      "width": "48"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "dhcp_client",
+      "Instances": [
+        {
+          "ModuleName": "open_dhcp_port",
+          "InstanceName": "open_dhcp_port_U0"
+        },
+        {
+          "ModuleName": "receive_message",
+          "InstanceName": "receive_message_U0"
+        },
+        {
+          "ModuleName": "entry_proc",
+          "InstanceName": "entry_proc_U0"
+        },
+        {
+          "ModuleName": "dhcp_fsm",
+          "InstanceName": "dhcp_fsm_U0"
+        },
+        {
+          "ModuleName": "send_message",
+          "InstanceName": "send_message_U0"
+        }
+      ]
+    },
+    "Info": {
+      "entry_proc": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "open_dhcp_port": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "receive_message": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "dhcp_fsm": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "send_message": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "dhcp_client": {
+        "FunctionProtocol": "ap_ctrl_none",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "entry_proc": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "3.20",
+          "Uncertainty": "0.86",
+          "Estimate": "1.168"
+        },
+        "Area": {
+          "FF": "2",
+          "AVAIL_FF": "2607360",
+          "UTIL_FF": "~0",
+          "LUT": "29",
+          "AVAIL_LUT": "1303680",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "9024",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
+        }
+      },
+      "open_dhcp_port": {
+        "Latency": {
+          "LatencyBest": "2",
+          "LatencyAvg": "2",
+          "LatencyWorst": "2",
+          "PipelineII": "2",
+          "PipelineDepth": "3",
+          "PipelineType": "yes"
+        },
+        "Timing": {
+          "Target": "3.20",
+          "Uncertainty": "0.86",
+          "Estimate": "1.168"
+        },
+        "Area": {
+          "FF": "44",
+          "AVAIL_FF": "2607360",
+          "UTIL_FF": "~0",
+          "LUT": "159",
+          "AVAIL_LUT": "1303680",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "9024",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
+        }
+      },
+      "receive_message": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "1",
+          "LatencyWorst": "1",
+          "PipelineII": "1",
+          "PipelineDepth": "2",
+          "PipelineType": "yes"
+        },
+        "Timing": {
+          "Target": "3.20",
+          "Uncertainty": "0.86",
+          "Estimate": "1.556"
+        },
+        "Area": {
+          "FF": "119",
+          "AVAIL_FF": "2607360",
+          "UTIL_FF": "~0",
+          "LUT": "241",
+          "AVAIL_LUT": "1303680",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "9024",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
+        }
+      },
+      "dhcp_fsm": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "1",
+          "LatencyWorst": "1",
+          "PipelineII": "1",
+          "PipelineDepth": "2",
+          "PipelineType": "yes"
+        },
+        "Timing": {
+          "Target": "3.20",
+          "Uncertainty": "0.86",
+          "Estimate": "2.690"
+        },
+        "Area": {
+          "FF": "337",
+          "AVAIL_FF": "2607360",
+          "UTIL_FF": "~0",
+          "LUT": "513",
+          "AVAIL_LUT": "1303680",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "9024",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
+        }
+      },
+      "send_message": {
+        "Latency": {
+          "LatencyBest": "2",
+          "LatencyAvg": "2",
+          "LatencyWorst": "2",
+          "PipelineII": "1",
+          "PipelineDepth": "3",
+          "PipelineType": "yes"
+        },
+        "Timing": {
+          "Target": "3.20",
+          "Uncertainty": "0.86",
+          "Estimate": "1.378"
+        },
+        "Area": {
+          "FF": "136",
+          "AVAIL_FF": "2607360",
+          "UTIL_FF": "~0",
+          "LUT": "318",
+          "AVAIL_LUT": "1303680",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "9024",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
+        }
+      },
+      "dhcp_client": {
+        "Latency": {
+          "LatencyBest": "7",
+          "LatencyAvg": "7",
+          "LatencyWorst": "7",
+          "PipelineII": "2",
+          "PipelineDepth": "",
+          "PipelineType": "dataflow"
+        },
+        "Timing": {
+          "Target": "3.20",
+          "Uncertainty": "0.86",
+          "Estimate": "2.690"
+        },
+        "Area": {
+          "FF": "671",
+          "AVAIL_FF": "2607360",
+          "UTIL_FF": "~0",
+          "LUT": "1503",
+          "AVAIL_LUT": "1303680",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "9024",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
+        }
+      }
+    }
+  },
+  "GenerateBdFiles": "0",
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2023-03-18 14:32:25 +03",
+    "ToolName": "vitis_hls",
+    "ToolVersion": "2021.2"
+  }
+}

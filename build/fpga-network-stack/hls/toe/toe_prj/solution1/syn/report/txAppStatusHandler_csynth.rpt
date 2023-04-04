@@ -1,0 +1,177 @@
+
+
+================================================================
+== Vitis HLS Report for 'txAppStatusHandler'
+================================================================
+* Date:           Sat Mar 18 14:39:17 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        toe_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  2.461 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|      142|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       78|    -|
+|Register             |        -|     -|      112|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|      112|      220|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln223_1_fu_239_p2             |         +|   0|  0|  25|          18|          18|
+    |add_ln223_fu_255_p2               |         +|   0|  0|  25|          18|          18|
+    |ret_fu_148_p2                     |         +|   0|  0|  26|          19|          19|
+    |ap_condition_154                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_160                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_173                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_177                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_199                  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op20_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op36_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op44_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op61_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op65_write_state2    |       and|   0|  0|   2|           1|           1|
+    |grp_nbreadreq_fu_70_p3            |       and|   0|  0|   2|           1|           0|
+    |tmp_i_nbreadreq_fu_84_p3          |       and|   0|  0|   2|           1|           0|
+    |icmp_ln1080_fu_154_p2             |      icmp|   0|  0|  14|          19|          20|
+    |icmp_ln81_fu_224_p2               |      icmp|   0|  0|  20|          32|           1|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 142|         122|          91|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |ap_done                                |   9|          2|    1|          2|
+    |ap_phi_mux_storemerge_i_phi_fu_108_p4  |  14|          3|    2|          6|
+    |s_axis_txwrite_sts_TDATA_blk_n         |   9|          2|    1|          2|
+    |tash_state                             |  14|          3|    2|          6|
+    |txApp2txSar_push_blk_n                 |   9|          2|    1|          2|
+    |txApp2txSar_push_din                   |  14|          3|   34|        102|
+    |txApp_txEventCache_blk_n               |   9|          2|    1|          2|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  |  78|         17|   42|        122|
+    +---------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |   1|   0|    1|          0|
+    |ap_done_reg                  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |ev_address_V                 |  18|   0|   18|          0|
+    |ev_length_V                  |  16|   0|   16|          0|
+    |ev_sessionID_V               |  16|   0|   16|          0|
+    |ev_sessionID_V_load_reg_272  |  16|   0|   16|          0|
+    |icmp_ln1080_reg_298          |   1|   0|    1|          0|
+    |lhs_reg_278                  |  18|   0|   18|          0|
+    |rhs_reg_284                  |  16|   0|   16|          0|
+    |tash_state                   |   2|   0|    2|          0|
+    |tash_state_load_reg_268      |   2|   0|    2|          0|
+    |tmp_6_i_reg_302              |   1|   0|    1|          0|
+    |tmp_i_166_reg_290            |   1|   0|    1|          0|
+    |tmp_okay_V_1_reg_306         |   1|   0|    1|          0|
+    |tmp_okay_V_reg_294           |   1|   0|    1|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        | 112|   0|  112|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+--------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |    Source Object   |    C Type    |
++----------------------------+-----+-----+------------+--------------------+--------------+
+|ap_clk                      |   in|    1|  ap_ctrl_hs|  txAppStatusHandler|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|  txAppStatusHandler|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|  txAppStatusHandler|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|  txAppStatusHandler|  return value|
+|ap_continue                 |   in|    1|  ap_ctrl_hs|  txAppStatusHandler|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|  txAppStatusHandler|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|  txAppStatusHandler|  return value|
+|s_axis_txwrite_sts_TVALID   |   in|    1|        axis|  s_axis_txwrite_sts|       pointer|
+|s_axis_txwrite_sts_TDATA    |   in|    8|        axis|  s_axis_txwrite_sts|       pointer|
+|s_axis_txwrite_sts_TREADY   |  out|    1|        axis|  s_axis_txwrite_sts|       pointer|
+|txApp_txEventCache_dout     |   in|   85|     ap_fifo|  txApp_txEventCache|       pointer|
+|txApp_txEventCache_empty_n  |   in|    1|     ap_fifo|  txApp_txEventCache|       pointer|
+|txApp_txEventCache_read     |  out|    1|     ap_fifo|  txApp_txEventCache|       pointer|
+|txApp2txSar_push_din        |  out|   34|     ap_fifo|    txApp2txSar_push|       pointer|
+|txApp2txSar_push_full_n     |   in|    1|     ap_fifo|    txApp2txSar_push|       pointer|
+|txApp2txSar_push_write      |  out|    1|     ap_fifo|    txApp2txSar_push|       pointer|
++----------------------------+-----+-----+------------+--------------------+--------------+
+

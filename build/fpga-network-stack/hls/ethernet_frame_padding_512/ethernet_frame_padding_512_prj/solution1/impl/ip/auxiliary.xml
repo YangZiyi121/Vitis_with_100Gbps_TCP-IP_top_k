@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="ethernet_frame_padding_512" xd:componentRef="ethernet_frame_padding_512" xd:initiationInterval="1" xd:clockPeriod="3.2" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="dataIn" xd:originalName="dataIn" xd:direction="in" xd:interfaceRef="s_axis" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="dataOut" xd:originalName="dataOut" xd:direction="out" xd:interfaceRef="m_axis" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:latencyEstimates xd:best-case="16" xd:worst-case="16" xd:average-case="16"/>
+  <xd:resourceEstimates xd:LUT="31299" xd:FF="18405" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

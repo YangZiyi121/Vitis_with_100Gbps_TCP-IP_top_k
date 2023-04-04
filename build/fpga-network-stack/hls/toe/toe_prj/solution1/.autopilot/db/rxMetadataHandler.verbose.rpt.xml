@@ -1,0 +1,214 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'rxMetadataHandler'" level="0">
+<item name = "Date">Sat Mar 18 14:39:05 2023
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
+<item name = "Project">toe_prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu280-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.20 ns, 2.048 ns, 0.86 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">1, 1, 3.200 ns, 3.200 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 340, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 109, -</column>
+<column name="Register">-, -, 477, -, -</column>
+<specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln229_fu_577_p2">+, 0, 0, 24, 17, 1</column>
+<column name="seq_V_3_fu_640_p2">+, 0, 0, 39, 32, 32</column>
+<column name="seq_V_fu_695_p2">+, 0, 0, 39, 32, 32</column>
+<column name="and_ln907_fu_601_p2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_271">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_279">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_334">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op104_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op121_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op131_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op133_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op136_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op151_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op154_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op45_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="tmp_16_i_nbreadreq_fu_182_p3">and, 0, 0, 2, 1, 0</column>
+<column name="tmp_17_i_nbreadreq_fu_190_p3">and, 0, 0, 2, 1, 0</column>
+<column name="tmp_i_316_nbreadreq_fu_216_p3">and, 0, 0, 2, 1, 0</column>
+<column name="tmp_i_nbreadreq_fu_174_p3">and, 0, 0, 2, 1, 0</column>
+<column name="icmp_ln1068_2_fu_583_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="icmp_ln1068_fu_625_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state1_pp0_stage0_iter0">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state2_pp0_stage0_iter1">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln173_31_fu_671_p2">or, 0, 0, 82, 82, 3</column>
+<column name="or_ln173_fu_726_p2">or, 0, 0, 82, 82, 3</column>
+<column name="or_ln889_fu_567_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln907_fu_589_p2">or, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln907_fu_595_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln923_fu_833_p2">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="portTable2rxEng_check_rsp_blk_n">9, 2, 1, 2</column>
+<column name="rxEng2sLookup_req_blk_n">9, 2, 1, 2</column>
+<column name="rxEng_fsmMetaDataFifo_blk_n">9, 2, 1, 2</column>
+<column name="rxEng_metaDataFifo_blk_n">9, 2, 1, 2</column>
+<column name="rxEng_metaHandlerDropFifo_blk_n">9, 2, 1, 2</column>
+<column name="rxEng_metaHandlerDropFifo_din">14, 3, 1, 3</column>
+<column name="rxEng_metaHandlerEventFifo_blk_n">9, 2, 1, 2</column>
+<column name="rxEng_metaHandlerEventFifo_din">14, 3, 181, 543</column>
+<column name="rxEng_tupleBuffer_blk_n">9, 2, 1, 2</column>
+<column name="sLookup2rxEng_rsp_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln229_reg_912">17, 0, 17, 0</column>
+<column name="and_ln907_reg_921">1, 0, 1, 0</column>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="icmp_ln1068_2_reg_917">1, 0, 1, 0</column>
+<column name="icmp_ln1068_reg_940">1, 0, 1, 0</column>
+<column name="mh_dstIpPort_V">16, 0, 16, 0</column>
+<column name="mh_meta_ackNumb_V">32, 0, 32, 0</column>
+<column name="mh_meta_ack_V">1, 0, 1, 0</column>
+<column name="mh_meta_dataOffset_V">4, 0, 4, 0</column>
+<column name="mh_meta_fin_V">1, 0, 1, 0</column>
+<column name="mh_meta_length_V">16, 0, 16, 0</column>
+<column name="mh_meta_length_V_load_reg_843">16, 0, 16, 0</column>
+<column name="mh_meta_rst_V">1, 0, 1, 0</column>
+<column name="mh_meta_seqNumb_V">32, 0, 32, 0</column>
+<column name="mh_meta_syn_V">1, 0, 1, 0</column>
+<column name="mh_meta_winScale_V">4, 0, 4, 0</column>
+<column name="mh_meta_winSize_V">16, 0, 16, 0</column>
+<column name="mh_srcIpAddress_V">32, 0, 32, 0</column>
+<column name="mh_srcIpPort_V">16, 0, 16, 0</column>
+<column name="mh_state">1, 0, 1, 0</column>
+<column name="mh_state_load_reg_839">1, 0, 1, 0</column>
+<column name="or_ln889_reg_908">1, 0, 1, 0</column>
+<column name="portIsOpen_reg_875">1, 0, 1, 0</column>
+<column name="rxEng_tupleBuffer_read_reg_879">96, 0, 96, 0</column>
+<column name="tmp_16_i_reg_852">1, 0, 1, 0</column>
+<column name="tmp_17_i_reg_856">1, 0, 1, 0</column>
+<column name="tmp_249_reg_871">1, 0, 1, 0</column>
+<column name="tmp_i_316_reg_926">1, 0, 1, 0</column>
+<column name="tmp_i_reg_848">1, 0, 1, 0</column>
+<column name="tmp_reg_935">1, 0, 1, 0</column>
+<column name="trunc_ln144_11_reg_860">32, 0, 32, 0</column>
+<column name="trunc_ln144_40_reg_866">16, 0, 16, 0</column>
+<column name="trunc_ln144_reg_930">16, 0, 16, 0</column>
+<column name="tuple_dstIp_V_reg_890">32, 0, 32, 0</column>
+<column name="tuple_dstPort_V_reg_902">16, 0, 16, 0</column>
+<column name="tuple_srcIp_V_reg_884">32, 0, 32, 0</column>
+<column name="tuple_srcPort_V_reg_896">16, 0, 16, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, rxMetadataHandler, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, rxMetadataHandler, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, rxMetadataHandler, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, rxMetadataHandler, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, rxMetadataHandler, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, rxMetadataHandler, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, rxMetadataHandler, return value</column>
+<column name="rxEng_metaDataFifo_dout">in, 108, ap_fifo, rxEng_metaDataFifo, pointer</column>
+<column name="rxEng_metaDataFifo_empty_n">in, 1, ap_fifo, rxEng_metaDataFifo, pointer</column>
+<column name="rxEng_metaDataFifo_read">out, 1, ap_fifo, rxEng_metaDataFifo, pointer</column>
+<column name="portTable2rxEng_check_rsp_dout">in, 1, ap_fifo, portTable2rxEng_check_rsp, pointer</column>
+<column name="portTable2rxEng_check_rsp_empty_n">in, 1, ap_fifo, portTable2rxEng_check_rsp, pointer</column>
+<column name="portTable2rxEng_check_rsp_read">out, 1, ap_fifo, portTable2rxEng_check_rsp, pointer</column>
+<column name="rxEng_tupleBuffer_dout">in, 96, ap_fifo, rxEng_tupleBuffer, pointer</column>
+<column name="rxEng_tupleBuffer_empty_n">in, 1, ap_fifo, rxEng_tupleBuffer, pointer</column>
+<column name="rxEng_tupleBuffer_read">out, 1, ap_fifo, rxEng_tupleBuffer, pointer</column>
+<column name="sLookup2rxEng_rsp_dout">in, 17, ap_fifo, sLookup2rxEng_rsp, pointer</column>
+<column name="sLookup2rxEng_rsp_empty_n">in, 1, ap_fifo, sLookup2rxEng_rsp, pointer</column>
+<column name="sLookup2rxEng_rsp_read">out, 1, ap_fifo, sLookup2rxEng_rsp, pointer</column>
+<column name="rxEng_metaHandlerEventFifo_din">out, 181, ap_fifo, rxEng_metaHandlerEventFifo, pointer</column>
+<column name="rxEng_metaHandlerEventFifo_full_n">in, 1, ap_fifo, rxEng_metaHandlerEventFifo, pointer</column>
+<column name="rxEng_metaHandlerEventFifo_write">out, 1, ap_fifo, rxEng_metaHandlerEventFifo, pointer</column>
+<column name="rxEng_metaHandlerDropFifo_din">out, 1, ap_fifo, rxEng_metaHandlerDropFifo, pointer</column>
+<column name="rxEng_metaHandlerDropFifo_full_n">in, 1, ap_fifo, rxEng_metaHandlerDropFifo, pointer</column>
+<column name="rxEng_metaHandlerDropFifo_write">out, 1, ap_fifo, rxEng_metaHandlerDropFifo, pointer</column>
+<column name="rxEng2sLookup_req_din">out, 97, ap_fifo, rxEng2sLookup_req, pointer</column>
+<column name="rxEng2sLookup_req_full_n">in, 1, ap_fifo, rxEng2sLookup_req, pointer</column>
+<column name="rxEng2sLookup_req_write">out, 1, ap_fifo, rxEng2sLookup_req, pointer</column>
+<column name="rxEng_fsmMetaDataFifo_din">out, 188, ap_fifo, rxEng_fsmMetaDataFifo, pointer</column>
+<column name="rxEng_fsmMetaDataFifo_full_n">in, 1, ap_fifo, rxEng_fsmMetaDataFifo, pointer</column>
+<column name="rxEng_fsmMetaDataFifo_write">out, 1, ap_fifo, rxEng_fsmMetaDataFifo, pointer</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,186 @@
+
+
+================================================================
+== Vitis HLS Report for 'close_timer'
+================================================================
+* Date:           Sat Mar 18 14:38:57 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        toe_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  2.080 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        2|        2|  6.400 ns|  6.400 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|      183|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        4|     -|        0|        0|    -|
+|Multiplexer          |        -|     -|        -|       64|    -|
+|Register             |        -|     -|      143|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        4|     0|      143|      247|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |       ~0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |       ~0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-------------------+-----------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |       Memory      |                     Module                    | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------------------+-----------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |closeTimerTable_U  |probe_timer_probeTimerTable_RAM_T2P_BRAM_1R1W  |        4|  0|   0|    0|  1000|   33|     1|        33000|
+    +-------------------+-----------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total              |                                               |        4|  0|   0|    0|  1000|   33|     1|        33000|
+    +-------------------+-----------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln885_fu_141_p2                |         +|   0|  0|  23|          16|           1|
+    |add_ln886_2_fu_226_p2              |         +|   0|  0|  39|          32|           2|
+    |add_ln886_fu_196_p2                |         +|   0|  0|  23|          16|           2|
+    |ap_block_pp0                       |       and|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2   |       and|   0|  0|   2|           1|           1|
+    |ap_condition_112                   |       and|   0|  0|   2|           1|           1|
+    |ap_condition_156                   |       and|   0|  0|   2|           1|           1|
+    |ap_condition_289                   |       and|   0|  0|   2|           1|           1|
+    |ap_enable_state1_pp0_iter0_stage0  |       and|   0|  0|   2|           1|           1|
+    |ap_enable_state2_pp0_iter1_stage0  |       and|   0|  0|   2|           1|           1|
+    |ap_enable_state3_pp0_iter2_stage0  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op24_load_state1      |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op30_read_state1      |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op39_store_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op45_load_state2      |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op54_store_state3     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op56_store_state3     |       and|   0|  0|   2|           1|           1|
+    |tmp_i_nbreadreq_fu_66_p3           |       and|   0|  0|   2|           1|           0|
+    |icmp_ln1064_fu_147_p2              |      icmp|   0|  0|  13|          16|          10|
+    |icmp_ln1068_fu_179_p2              |      icmp|   0|  0|  13|          16|          16|
+    |icmp_ln1080_fu_220_p2              |      icmp|   0|  0|  20|          32|           1|
+    |ap_block_pp0_stage0_01001          |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0   |        or|   0|  0|   2|           1|           1|
+    |select_ln93_fu_153_p3              |    select|   0|  0|  16|           1|           1|
+    |ap_enable_pp0                      |       xor|   0|  0|   2|           1|           2|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |Total                              |          |   0|  0| 183|         147|          51|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------------+----+-----------+-----+-----------+
+    |                   Name                   | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------------+----+-----------+-----+-----------+
+    |ap_done                                   |   9|          2|    1|          2|
+    |closeTimer2stateTable_releaseState_blk_n  |   9|          2|    1|          2|
+    |closeTimerTable_address1                  |  14|          3|   10|         30|
+    |closeTimerTable_d0                        |  14|          3|   33|         99|
+    |ct_prevSessionID_V                        |   9|          2|   16|         32|
+    |rxEng2timer_setCloseTimer_blk_n           |   9|          2|    1|          2|
+    +------------------------------------------+----+-----------+-----+-----------+
+    |Total                                     |  64|         14|   62|        167|
+    +------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------+----+----+-----+-----------+
+    |                      Name                     | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                      |   1|   0|    1|          0|
+    |ap_done_reg                                    |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                        |   1|   0|    1|          0|
+    |closeTimerTable_addr_1_reg_253                 |  10|   0|   10|          0|
+    |closeTimerTable_addr_1_reg_253_pp0_iter1_reg   |  10|   0|   10|          0|
+    |ct_currSessionID_V                             |  16|   0|   16|          0|
+    |ct_currSessionID_V_load_reg_248                |  16|   0|   16|          0|
+    |ct_currSessionID_V_load_reg_248_pp0_iter1_reg  |  16|   0|   16|          0|
+    |ct_prevSessionID_V                             |  16|   0|   16|          0|
+    |ct_setSessionID_V                              |  16|   0|   16|          0|
+    |ct_waitForWrite                                |   1|   0|    1|          0|
+    |ct_waitForWrite_load_reg_240                   |   1|   0|    1|          0|
+    |ct_waitForWrite_load_reg_240_pp0_iter1_reg     |   1|   0|    1|          0|
+    |icmp_ln1080_reg_271                            |   1|   0|    1|          0|
+    |tmp_i_reg_244                                  |   1|   0|    1|          0|
+    |tmp_i_reg_244_pp0_iter1_reg                    |   1|   0|    1|          0|
+    |tmp_reg_262                                    |   1|   0|    1|          0|
+    |trunc_ln1080_reg_266                           |  32|   0|   32|          0|
+    +-----------------------------------------------+----+----+-----+-----------+
+    |Total                                          | 143|   0|  143|          0|
+    +-----------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------------------+-----+-----+------------+------------------------------------+--------------+
+|                 RTL Ports                 | Dir | Bits|  Protocol  |            Source Object           |    C Type    |
++-------------------------------------------+-----+-----+------------+------------------------------------+--------------+
+|ap_clk                                     |   in|    1|  ap_ctrl_hs|                         close_timer|  return value|
+|ap_rst                                     |   in|    1|  ap_ctrl_hs|                         close_timer|  return value|
+|ap_start                                   |   in|    1|  ap_ctrl_hs|                         close_timer|  return value|
+|ap_done                                    |  out|    1|  ap_ctrl_hs|                         close_timer|  return value|
+|ap_continue                                |   in|    1|  ap_ctrl_hs|                         close_timer|  return value|
+|ap_idle                                    |  out|    1|  ap_ctrl_hs|                         close_timer|  return value|
+|ap_ready                                   |  out|    1|  ap_ctrl_hs|                         close_timer|  return value|
+|rxEng2timer_setCloseTimer_dout             |   in|   16|     ap_fifo|           rxEng2timer_setCloseTimer|       pointer|
+|rxEng2timer_setCloseTimer_empty_n          |   in|    1|     ap_fifo|           rxEng2timer_setCloseTimer|       pointer|
+|rxEng2timer_setCloseTimer_read             |  out|    1|     ap_fifo|           rxEng2timer_setCloseTimer|       pointer|
+|closeTimer2stateTable_releaseState_din     |  out|   16|     ap_fifo|  closeTimer2stateTable_releaseState|       pointer|
+|closeTimer2stateTable_releaseState_full_n  |   in|    1|     ap_fifo|  closeTimer2stateTable_releaseState|       pointer|
+|closeTimer2stateTable_releaseState_write   |  out|    1|     ap_fifo|  closeTimer2stateTable_releaseState|       pointer|
++-------------------------------------------+-----+-----+------------+------------------------------------+--------------+
+

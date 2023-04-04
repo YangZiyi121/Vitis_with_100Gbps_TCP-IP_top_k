@@ -1,0 +1,222 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'ip_handler_top'" level="0">
+<item name = "Date">Sat Mar 18 14:33:54 2023
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
+<item name = "Project">ip_handler_prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu280-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.20 ns, 2.644 ns, 0.86 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">27, 27, 86.400 ns, 86.400 ns, 1, 1, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="convert_net_axis_to_axis_512_U0">convert_net_axis_to_axis_512_s, 2, 2, 6.400 ns, 6.400 ns, 1, 1, yes</column>
+<column name="entry_proc_U0">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="convert_axis_to_net_axis_512_U0">convert_axis_to_net_axis_512_s, 1, 1, 3.200 ns, 3.200 ns, 1, 1, yes</column>
+<column name="detect_eth_protocol_512_U0">detect_eth_protocol_512_s, 2, 2, 6.400 ns, 6.400 ns, 1, 1, yes</column>
+<column name="route_by_eth_protocol_512_U0">route_by_eth_protocol_512_s, 1, 1, 3.200 ns, 3.200 ns, 1, 1, yes</column>
+<column name="ip_handler_rshiftWordByOctet_net_axis_512_512_1_U0">ip_handler_rshiftWordByOctet_net_axis_512_512_1_s, 1, 1, 3.200 ns, 3.200 ns, 1, 1, yes</column>
+<column name="extract_ip_meta_512_U0">extract_ip_meta_512_s, 1, 1, 3.200 ns, 3.200 ns, 1, 1, yes</column>
+<column name="ip_handler_compute_ipv4_checksum_U0">ip_handler_compute_ipv4_checksum, 2, 2, 6.400 ns, 6.400 ns, 1, 1, yes</column>
+<column name="ip_handler_check_ipv4_checksum_32_U0">ip_handler_check_ipv4_checksum_32_s, 5, 5, 16.000 ns, 16.000 ns, 1, 1, yes</column>
+<column name="ip_invalid_dropper_512_U0">ip_invalid_dropper_512_s, 1, 1, 3.200 ns, 3.200 ns, 1, 1, yes</column>
+<column name="convert_net_axis_to_axis_512_3_U0">convert_net_axis_to_axis_512_3, 2, 2, 6.400 ns, 6.400 ns, 1, 1, yes</column>
+<column name="convert_net_axis_to_axis_512_5_U0">convert_net_axis_to_axis_512_5, 2, 2, 6.400 ns, 6.400 ns, 1, 1, yes</column>
+<column name="cut_length_U0">cut_length, 1, 1, 3.200 ns, 3.200 ns, 1, 1, yes</column>
+<column name="convert_net_axis_to_axis_512_1_U0">convert_net_axis_to_axis_512_1, 2, 2, 6.400 ns, 6.400 ns, 1, 1, yes</column>
+<column name="convert_net_axis_to_axis_512_2_U0">convert_net_axis_to_axis_512_2, 2, 2, 6.400 ns, 6.400 ns, 1, 1, yes</column>
+<column name="convert_net_axis_to_axis_512_4_U0">convert_net_axis_to_axis_512_4, 2, 2, 6.400 ns, 6.400 ns, 1, 1, yes</column>
+<column name="convert_net_axis_to_axis_512_6_U0">convert_net_axis_to_axis_512_6, 2, 2, 6.400 ns, 6.400 ns, 1, 1, yes</column>
+<column name="ip_handler_rshiftWordByOctet_net_axis_512_512_3_U0">ip_handler_rshiftWordByOctet_net_axis_512_512_3_s, 1, 1, 3.200 ns, 3.200 ns, 1, 1, yes</column>
+<column name="detect_ipv4_protocol_512_U0">detect_ipv4_protocol_512_s, 1, 1, 3.200 ns, 3.200 ns, 1, 1, yes</column>
+<column name="detect_ipv6_protocol_512_U0">detect_ipv6_protocol_512_s, 1, 1, 3.200 ns, 3.200 ns, 1, 1, yes</column>
+<column name="ip_handler_duplicate_stream_net_axis_512_U0">ip_handler_duplicate_stream_net_axis_512_s, 1, 1, 3.200 ns, 3.200 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, -, -, -</column>
+<column name="FIFO">29, -, 40222, 20346, -</column>
+<column name="Instance">-, -, 18386, 9994, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">2, 0, 6, 6, 0</specialColumn>
+<specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
+<specialColumn name="Utilization (%)">~0, 0, 2, 2, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="convert_axis_to_net_axis_512_U0">convert_axis_to_net_axis_512_s, 0, 0, 581, 37, 0</column>
+<column name="convert_net_axis_to_axis_512_1_U0">convert_net_axis_to_axis_512_1, 0, 0, 583, 43, 0</column>
+<column name="convert_net_axis_to_axis_512_2_U0">convert_net_axis_to_axis_512_2, 0, 0, 583, 43, 0</column>
+<column name="convert_net_axis_to_axis_512_3_U0">convert_net_axis_to_axis_512_3, 0, 0, 583, 43, 0</column>
+<column name="convert_net_axis_to_axis_512_4_U0">convert_net_axis_to_axis_512_4, 0, 0, 583, 43, 0</column>
+<column name="convert_net_axis_to_axis_512_5_U0">convert_net_axis_to_axis_512_5, 0, 0, 583, 43, 0</column>
+<column name="convert_net_axis_to_axis_512_6_U0">convert_net_axis_to_axis_512_6, 0, 0, 583, 43, 0</column>
+<column name="convert_net_axis_to_axis_512_U0">convert_net_axis_to_axis_512_s, 0, 0, 583, 43, 0</column>
+<column name="cut_length_U0">cut_length, 0, 0, 1160, 356, 0</column>
+<column name="detect_eth_protocol_512_U0">detect_eth_protocol_512_s, 0, 0, 1386, 1160, 0</column>
+<column name="detect_ipv4_protocol_512_U0">detect_ipv4_protocol_512_s, 0, 0, 599, 93, 0</column>
+<column name="detect_ipv6_protocol_512_U0">detect_ipv6_protocol_512_s, 0, 0, 1054, 60, 0</column>
+<column name="entry_proc_U0">entry_proc, 0, 0, 2, 20, 0</column>
+<column name="extract_ip_meta_512_U0">extract_ip_meta_512_s, 0, 0, 953, 1630, 0</column>
+<column name="ip_handler_check_ipv4_checksum_32_U0">ip_handler_check_ipv4_checksum_32_s, 0, 0, 1117, 2458, 0</column>
+<column name="ip_handler_compute_ipv4_checksum_U0">ip_handler_compute_ipv4_checksum, 0, 0, 2630, 3400, 0</column>
+<column name="ip_handler_duplicate_stream_net_axis_512_U0">ip_handler_duplicate_stream_net_axis_512_s, 0, 0, 581, 46, 0</column>
+<column name="ip_handler_rshiftWordByOctet_net_axis_512_512_1_U0">ip_handler_rshiftWordByOctet_net_axis_512_512_1_s, 0, 0, 1287, 113, 0</column>
+<column name="ip_handler_rshiftWordByOctet_net_axis_512_512_3_U0">ip_handler_rshiftWordByOctet_net_axis_512_512_3_s, 0, 0, 1287, 113, 0</column>
+<column name="ip_invalid_dropper_512_U0">ip_invalid_dropper_512_s, 0, 0, 588, 121, 0</column>
+<column name="route_by_eth_protocol_512_U0">route_by_eth_protocol_512_s, 0, 0, 1080, 86, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="ethDataFifo_U">0, 3090, 0, -, 4, 1024, 4096</column>
+<column name="etherTypeFifo_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="ipDataCheckFifo_U">29, 2077, 0, -, 64, 577, 36928</column>
+<column name="ipDataCutFifo_U">0, 2058, 0, -, 2, 577, 1154</column>
+<column name="ipDataDropFifo_U">0, 2058, 0, -, 2, 577, 1154</column>
+<column name="ipDataFifo_U">0, 2058, 0, -, 2, 577, 1154</column>
+<column name="ipDataMetaFifo_U">0, 2058, 0, -, 2, 1024, 2048</column>
+<column name="iph_subSumsFifoOut_U">0, 2058, 0, -, 2, 544, 1088</column>
+<column name="ipv4ProtocolFifo_U">0, 8, 0, -, 32, 8, 256</column>
+<column name="ipv4ShiftFifo_U">0, 2058, 0, -, 2, 1024, 2048</column>
+<column name="ipv4ValidFifo_U">0, 6, 0, -, 8, 1, 8</column>
+<column name="ipv6DataFifo_U">0, 2058, 0, -, 2, 1024, 2048</column>
+<column name="ipv6ShiftFifo_U">0, 2058, 0, -, 2, 1024, 2048</column>
+<column name="m_axis_arp_internal_U">0, 2058, 0, -, 2, 1024, 2048</column>
+<column name="m_axis_icmp_internal_U">0, 2058, 0, -, 2, 1024, 2048</column>
+<column name="m_axis_icmpv6_internal_U">0, 2058, 0, -, 2, 1024, 2048</column>
+<column name="m_axis_ipv6udp_internal_U">0, 2058, 0, -, 2, 1024, 2048</column>
+<column name="m_axis_roce_internal_U">0, 2058, 0, -, 2, 1024, 2048</column>
+<column name="m_axis_tcp_internal_U">0, 2058, 0, -, 2, 1024, 2048</column>
+<column name="m_axis_udp_internal_U">0, 2058, 0, -, 2, 1024, 2048</column>
+<column name="myIpAddress_c_U">0, 6, 0, -, 6, 32, 192</column>
+<column name="s_axis_raw_internal_U">0, 2058, 0, -, 2, 1024, 2048</column>
+<column name="udpDataFifo_U">0, 2058, 0, -, 2, 577, 1154</column>
+<column name="validChecksumFifo_U">0, 5, 0, -, 4, 1, 4</column>
+<column name="validIpAddressFifo_U">0, 8, 0, -, 32, 1, 32</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_local_block">out, 1, ap_ctrl_none, ip_handler_top, return value</column>
+<column name="ap_local_deadlock">out, 1, ap_ctrl_none, ip_handler_top, return value</column>
+<column name="ap_clk">in, 1, ap_ctrl_none, ip_handler_top, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_none, ip_handler_top, return value</column>
+<column name="s_axis_raw_TDATA">in, 512, axis, s_axis_raw_V_data_V, pointer</column>
+<column name="s_axis_raw_TKEEP">in, 64, axis, s_axis_raw_V_keep_V, pointer</column>
+<column name="s_axis_raw_TSTRB">in, 64, axis, s_axis_raw_V_strb_V, pointer</column>
+<column name="s_axis_raw_TLAST">in, 1, axis, s_axis_raw_V_last_V, pointer</column>
+<column name="s_axis_raw_TVALID">in, 1, axis, s_axis_raw_V_last_V, pointer</column>
+<column name="s_axis_raw_TREADY">out, 1, axis, s_axis_raw_V_last_V, pointer</column>
+<column name="m_axis_arp_TDATA">out, 512, axis, m_axis_arp_V_data_V, pointer</column>
+<column name="m_axis_arp_TKEEP">out, 64, axis, m_axis_arp_V_keep_V, pointer</column>
+<column name="m_axis_arp_TSTRB">out, 64, axis, m_axis_arp_V_strb_V, pointer</column>
+<column name="m_axis_arp_TLAST">out, 1, axis, m_axis_arp_V_last_V, pointer</column>
+<column name="m_axis_arp_TVALID">out, 1, axis, m_axis_arp_V_last_V, pointer</column>
+<column name="m_axis_arp_TREADY">in, 1, axis, m_axis_arp_V_last_V, pointer</column>
+<column name="m_axis_icmpv6_TDATA">out, 512, axis, m_axis_icmpv6_V_data_V, pointer</column>
+<column name="m_axis_icmpv6_TKEEP">out, 64, axis, m_axis_icmpv6_V_keep_V, pointer</column>
+<column name="m_axis_icmpv6_TSTRB">out, 64, axis, m_axis_icmpv6_V_strb_V, pointer</column>
+<column name="m_axis_icmpv6_TLAST">out, 1, axis, m_axis_icmpv6_V_last_V, pointer</column>
+<column name="m_axis_icmpv6_TVALID">out, 1, axis, m_axis_icmpv6_V_last_V, pointer</column>
+<column name="m_axis_icmpv6_TREADY">in, 1, axis, m_axis_icmpv6_V_last_V, pointer</column>
+<column name="m_axis_ipv6udp_TDATA">out, 512, axis, m_axis_ipv6udp_V_data_V, pointer</column>
+<column name="m_axis_ipv6udp_TKEEP">out, 64, axis, m_axis_ipv6udp_V_keep_V, pointer</column>
+<column name="m_axis_ipv6udp_TSTRB">out, 64, axis, m_axis_ipv6udp_V_strb_V, pointer</column>
+<column name="m_axis_ipv6udp_TLAST">out, 1, axis, m_axis_ipv6udp_V_last_V, pointer</column>
+<column name="m_axis_ipv6udp_TVALID">out, 1, axis, m_axis_ipv6udp_V_last_V, pointer</column>
+<column name="m_axis_ipv6udp_TREADY">in, 1, axis, m_axis_ipv6udp_V_last_V, pointer</column>
+<column name="m_axis_icmp_TDATA">out, 512, axis, m_axis_icmp_V_data_V, pointer</column>
+<column name="m_axis_icmp_TKEEP">out, 64, axis, m_axis_icmp_V_keep_V, pointer</column>
+<column name="m_axis_icmp_TSTRB">out, 64, axis, m_axis_icmp_V_strb_V, pointer</column>
+<column name="m_axis_icmp_TLAST">out, 1, axis, m_axis_icmp_V_last_V, pointer</column>
+<column name="m_axis_icmp_TVALID">out, 1, axis, m_axis_icmp_V_last_V, pointer</column>
+<column name="m_axis_icmp_TREADY">in, 1, axis, m_axis_icmp_V_last_V, pointer</column>
+<column name="m_axis_udp_TDATA">out, 512, axis, m_axis_udp_V_data_V, pointer</column>
+<column name="m_axis_udp_TKEEP">out, 64, axis, m_axis_udp_V_keep_V, pointer</column>
+<column name="m_axis_udp_TSTRB">out, 64, axis, m_axis_udp_V_strb_V, pointer</column>
+<column name="m_axis_udp_TLAST">out, 1, axis, m_axis_udp_V_last_V, pointer</column>
+<column name="m_axis_udp_TVALID">out, 1, axis, m_axis_udp_V_last_V, pointer</column>
+<column name="m_axis_udp_TREADY">in, 1, axis, m_axis_udp_V_last_V, pointer</column>
+<column name="m_axis_tcp_TDATA">out, 512, axis, m_axis_tcp_V_data_V, pointer</column>
+<column name="m_axis_tcp_TKEEP">out, 64, axis, m_axis_tcp_V_keep_V, pointer</column>
+<column name="m_axis_tcp_TSTRB">out, 64, axis, m_axis_tcp_V_strb_V, pointer</column>
+<column name="m_axis_tcp_TLAST">out, 1, axis, m_axis_tcp_V_last_V, pointer</column>
+<column name="m_axis_tcp_TVALID">out, 1, axis, m_axis_tcp_V_last_V, pointer</column>
+<column name="m_axis_tcp_TREADY">in, 1, axis, m_axis_tcp_V_last_V, pointer</column>
+<column name="m_axis_roce_TDATA">out, 512, axis, m_axis_roce_V_data_V, pointer</column>
+<column name="m_axis_roce_TKEEP">out, 64, axis, m_axis_roce_V_keep_V, pointer</column>
+<column name="m_axis_roce_TSTRB">out, 64, axis, m_axis_roce_V_strb_V, pointer</column>
+<column name="m_axis_roce_TLAST">out, 1, axis, m_axis_roce_V_last_V, pointer</column>
+<column name="m_axis_roce_TVALID">out, 1, axis, m_axis_roce_V_last_V, pointer</column>
+<column name="m_axis_roce_TREADY">in, 1, axis, m_axis_roce_V_last_V, pointer</column>
+<column name="myIpAddress">in, 32, ap_none, myIpAddress, scalar</column>
+</table>
+</item>
+</section>
+</profile>

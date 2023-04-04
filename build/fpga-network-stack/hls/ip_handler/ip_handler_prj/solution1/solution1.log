@@ -1,0 +1,763 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1510] Running: create_clock -period 3.2 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-1510] Running: set_top ip_handler_top 
+INFO: [HLS 200-1510] Running: add_files /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.cpp 
+INFO: [HLS 200-10] Adding design file '/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4_utils.cpp 
+INFO: [HLS 200-10] Adding design file '/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4_utils.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp -cflags -I/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/build/fpga-network-stack/hls/ip_handler 
+INFO: [HLS 200-10] Adding design file '/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/test_ip_handler.cpp 
+INFO: [HLS 200-10] Adding test bench file '/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/test_ip_handler.cpp' to the project
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.185 GB.
+INFO: [HLS 200-10] Analyzing design file '/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp' ... 
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:257:26)
+WARNING: [HLS 207-5287] unused parameter 'word' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:257:47)
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:272:28)
+WARNING: [HLS 207-5287] unused parameter 'data' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:272:48)
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:285:28)
+WARNING: [HLS 207-5287] unused parameter 'word' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:285:49)
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:300:28)
+WARNING: [HLS 207-5287] unused parameter 'word' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:300:59)
+WARNING: [HLS 207-5287] unused parameter 'd' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:476:20)
+WARNING: [HLS 207-5287] unused parameter 's' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:476:26)
+INFO: [HLS 200-10] Analyzing design file '/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4_utils.cpp' ... 
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/../axi_utils.hpp:257:26)
+WARNING: [HLS 207-5287] unused parameter 'word' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/../axi_utils.hpp:257:47)
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/../axi_utils.hpp:272:28)
+WARNING: [HLS 207-5287] unused parameter 'data' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/../axi_utils.hpp:272:48)
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/../axi_utils.hpp:285:28)
+WARNING: [HLS 207-5287] unused parameter 'word' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/../axi_utils.hpp:285:49)
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/../axi_utils.hpp:300:28)
+WARNING: [HLS 207-5287] unused parameter 'word' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/../axi_utils.hpp:300:59)
+WARNING: [HLS 207-5287] unused parameter 'd' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/../axi_utils.hpp:476:20)
+WARNING: [HLS 207-5287] unused parameter 's' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/../axi_utils.hpp:476:26)
+INFO: [HLS 200-10] Analyzing design file '/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.cpp' ... 
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:257:26)
+WARNING: [HLS 207-5287] unused parameter 'word' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:257:47)
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:272:28)
+WARNING: [HLS 207-5287] unused parameter 'data' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:272:48)
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:285:28)
+WARNING: [HLS 207-5287] unused parameter 'word' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:285:49)
+WARNING: [HLS 207-5287] unused parameter 'output' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:300:28)
+WARNING: [HLS 207-5287] unused parameter 'word' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:300:59)
+WARNING: [HLS 207-5287] unused parameter 'd' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:476:20)
+WARNING: [HLS 207-5287] unused parameter 's' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:476:26)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 13.92 seconds. CPU system time: 1.16 seconds. Elapsed time: 14.48 seconds; current allocated memory: 283.809 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+WARNING: [HLS 214-273] In function 'void ip_handler<512>(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, ap_uint<32>)', Pragma conflict happens on 'INLINE' and DATAFLOW pragmas: Inline into dataflow region is not suggested (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:476:0)
+INFO: [HLS 214-131] Inlining function 'packetHeader<512, 112>::clear()' into 'void detect_eth_protocol<512>(hls::stream<net_axis<512>, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<net_axis<512>, 0>&)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:64:11)
+INFO: [HLS 214-131] Inlining function 'packetHeader<512, 160>::clear()' into 'void extract_ip_meta<512>(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<ap_uint<8>, 0>&, hls::stream<bool, 0>&, ap_uint<32>)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:165:11)
+INFO: [HLS 214-131] Inlining function 'void ip_handler<512>(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, ap_uint<32>)' into 'ip_handler_top(hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&, ap_uint<32>)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:616:5)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_458_3' is marked as complete unroll implied by the pipeline pragma (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4.hpp:458:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_448_2' is marked as complete unroll implied by the pipeline pragma (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4.hpp:448:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_438_1' is marked as complete unroll implied by the pipeline pragma (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4.hpp:438:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_568_2' is marked as complete unroll implied by the pipeline pragma (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4_utils.cpp:568:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_549_1' is marked as complete unroll implied by the pipeline pragma (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4_utils.cpp:549:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_135_1' is marked as complete unroll implied by the pipeline pragma (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:135:20)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_458_3' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4.hpp:458:22) in function 'ip_handler_check_ipv4_checksum<32>' completely with a factor of 4 (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4.hpp:428:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_448_2' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4.hpp:448:22) in function 'ip_handler_check_ipv4_checksum<32>' completely with a factor of 8 (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4.hpp:428:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_438_1' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4.hpp:438:22) in function 'ip_handler_check_ipv4_checksum<32>' completely with a factor of 16 (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4.hpp:428:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_568_2' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4_utils.cpp:568:22) in function 'ip_handler_compute_ipv4_checksum' completely with a factor of 32 (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4_utils.cpp:530:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_549_1' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4_utils.cpp:549:22) in function 'ip_handler_compute_ipv4_checksum' completely with a factor of 32 (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4_utils.cpp:530:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_135_1' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:135:20) in function 'reverse<16>' completely with a factor of 2 (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../axi_utils.hpp:133:0)
+INFO: [HLS 214-178] Inlining function 'ap_uint<16> reverse<16>(ap_uint<16> const&) (.3.15.21.27)' into 'ethHeader<512>::getEthertype()' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ethernet/ethernet.hpp:57:0)
+INFO: [HLS 214-178] Inlining function 'packetHeader<512, 112>::parseWord(ap_uint<512>&)' into 'void detect_eth_protocol<512>(hls::stream<net_axis<512>, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<net_axis<512>, 0>&)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:40:0)
+INFO: [HLS 214-178] Inlining function 'packetHeader<512, 112>::isReady()' into 'void detect_eth_protocol<512>(hls::stream<net_axis<512>, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<net_axis<512>, 0>&)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:40:0)
+INFO: [HLS 214-178] Inlining function 'ethHeader<512>::getEthertype()' into 'void detect_eth_protocol<512>(hls::stream<net_axis<512>, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<net_axis<512>, 0>&)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:40:0)
+INFO: [HLS 214-178] Inlining function 'packetHeader<512, 160>::packetHeader()' into 'ipv4Header<512>::ipv4Header()' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4.hpp:611:0)
+INFO: [HLS 214-178] Inlining function 'ipv4Header<512>::ipv4Header()' into 'void extract_ip_meta<512>(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<ap_uint<8>, 0>&, hls::stream<bool, 0>&, ap_uint<32>)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:140:0)
+INFO: [HLS 214-178] Inlining function 'packetHeader<512, 160>::parseWord(ap_uint<512>&)' into 'void extract_ip_meta<512>(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<ap_uint<8>, 0>&, hls::stream<bool, 0>&, ap_uint<32>)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:140:0)
+INFO: [HLS 214-178] Inlining function 'packetHeader<512, 160>::isReady()' into 'void extract_ip_meta<512>(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<ap_uint<8>, 0>&, hls::stream<bool, 0>&, ap_uint<32>)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:140:0)
+INFO: [HLS 214-178] Inlining function 'ipv4Header<512>::getDstAddr()' into 'void extract_ip_meta<512>(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<ap_uint<8>, 0>&, hls::stream<bool, 0>&, ap_uint<32>)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:140:0)
+INFO: [HLS 214-178] Inlining function 'ipv4Header<512>::getProtocol()' into 'void extract_ip_meta<512>(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<ap_uint<8>, 0>&, hls::stream<bool, 0>&, ap_uint<32>)' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:140:0)
+INFO: [HLS 214-178] Inlining function 'std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' (/tools/Xilinx/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/bits/ios_base.h:104:0)
+INFO: [HLS 214-178] Inlining function 'std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' (/tools/Xilinx/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/bits/ios_base.h:100:0)
+INFO: [HLS 214-178] Inlining function 'std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' into 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' (/tools/Xilinx/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/bits/ios_base.h:664:0)
+INFO: [HLS 214-178] Inlining function 'std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' (/tools/Xilinx/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/bits/ios_base.h:664:0)
+INFO: [HLS 214-178] Inlining function 'std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' into 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' (/tools/Xilinx/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/bits/ios_base.h:664:0)
+INFO: [HLS 214-178] Inlining function 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::hex(std::ios_base&)' (/tools/Xilinx/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/bits/ios_base.h:1025:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'void ip_handler<512>(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, ap_uint<32>)::ipDataFifo' with compact=bit mode in 577-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:484:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'void ip_handler<512>(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, ap_uint<32>)::ipDataCheckFifo' with compact=bit mode in 577-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:486:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'void ip_handler<512>(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, ap_uint<32>)::ipDataDropFifo' with compact=bit mode in 577-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:487:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'void ip_handler<512>(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, ap_uint<32>)::iph_subSumsFifoOut' with compact=bit mode in 544-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:490:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'void ip_handler<512>(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, ap_uint<32>)::ipDataCutFifo' with compact=bit mode in 577-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:488:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'void ip_handler<512>(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, ap_uint<32>)::udpDataFifo' with compact=bit mode in 577-bits (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:489:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<512>s.i512' into 'void convert_axis_to_net_axis<512>(hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&, hls::stream<net_axis<512>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1024.s_struct.net_axis<512>s' into 'void convert_axis_to_net_axis<512>(hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&, hls::stream<net_axis<512>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<1>s.i1' into 'void convert_axis_to_net_axis<512>(hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&, hls::stream<net_axis<512>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<64>s.i64' into 'void convert_axis_to_net_axis<512>(hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&, hls::stream<net_axis<512>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i512.s_struct.ap_uint<512>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.158.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.158.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i64.s_struct.ap_uint<64>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.158.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i512.s_struct.ap_uint<512>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.159.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.159.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i64.s_struct.ap_uint<64>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.159.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i512.s_struct.ap_uint<512>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.160.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.160.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i64.s_struct.ap_uint<64>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.160.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i512.s_struct.ap_uint<512>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.161.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.161.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i64.s_struct.ap_uint<64>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.161.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i512.s_struct.ap_uint<512>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.162.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.162.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i64.s_struct.ap_uint<64>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.162.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i512.s_struct.ap_uint<512>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.163.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.163.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i64.s_struct.ap_uint<64>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.163.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i512.s_struct.ap_uint<512>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i64.s_struct.ap_uint<64>s' into 'void convert_net_axis_to_axis<512>(hls::stream<net_axis<512>, 0>&, hls::stream<hls::axis<ap_uint<512>, 0ul, 0ul, 0ul>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i16.s_struct.ap_uint<16>s' into 'void detect_eth_protocol<512>(hls::stream<net_axis<512>, 0>&, hls::stream<ap_uint<16>, 0>&, hls::stream<net_axis<512>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1024.s_struct.net_axis<512>s' into 'void ip_handler_rshiftWordByOctet<net_axis<512>, 512, 1>(unsigned short, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i577.s_struct.net_axis<512>s.1' into 'void ip_handler_rshiftWordByOctet<net_axis<512>, 512, 1>(unsigned short, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1024.s_struct.net_axis<512>s' into 'void ip_handler_rshiftWordByOctet<net_axis<512>, 512, 3>(unsigned short, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1024.sl_s_struct.ap_uint<512>ss_struct.ap_uint<64>ss_struct.ap_uint<1>ss' into '_llvm.fpga.unpack.bits.s_struct.net_axis<512>s.i577.1'
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.net_axis<512>s.i577.1' into 'void extract_ip_meta<512>(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<ap_uint<8>, 0>&, hls::stream<bool, 0>&, ap_uint<32>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i8.s_struct.ap_uint<8>s' into 'void extract_ip_meta<512>(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<ap_uint<8>, 0>&, hls::stream<bool, 0>&, ap_uint<32>) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i577.s_struct.net_axis<512>s.1' into 'ip_handler_compute_ipv4_checksum(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<subSums<32>, 0>&, bool) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i544.s_struct.subSums<32>s.1' into 'ip_handler_compute_ipv4_checksum(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<subSums<32>, 0>&, bool) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1024.s_struct.subSums<32>s' into 'ip_handler_compute_ipv4_checksum(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<subSums<32>, 0>&, bool) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1024.a32s_struct.ap_uint<17>s' into '_llvm.fpga.unpack.bits.s_struct.subSums<32>s.i544.1'
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.subSums<32>s.i544.1' into 'void ip_handler_check_ipv4_checksum<32>(hls::stream<subSums<32>, 0>&, hls::stream<bool, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.net_axis<512>s.i577.1' into 'void ip_invalid_dropper<512>(hls::stream<net_axis<512>, 0>&, hls::stream<bool, 0>&, hls::stream<bool, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<bool, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.net_axis<512>s.i577.1' into 'cut_length(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i577.s_struct.net_axis<512>s.1' into 'cut_length(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.net_axis<512>s.i577.1' into 'void detect_ipv4_protocol<512>(hls::stream<ap_uint<8>, 0>&, hls::stream<bool, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.net_axis<512>s.i577.1' into 'void ip_handler_duplicate_stream<net_axis<512> >(hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&, hls::stream<net_axis<512>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.18 seconds. CPU system time: 0.23 seconds. Elapsed time: 5.41 seconds; current allocated memory: 289.289 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 289.289 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 308.863 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_ref.h:414: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.49 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.51 seconds; current allocated memory: 329.664 MB.
+INFO: [XFORM 203-102] Partitioning array 'cics_ip_sums.sum.V' automatically.
+INFO: [XFORM 203-602] Inlining function 'reverse<16>' into 'ip_handler_compute_ipv4_checksum' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4_utils.cpp:552) automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'ip_handler_top' (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/ip_handler.cpp:493:1), detected/extracted 21 process function(s): 
+	 'entry_proc'
+	 'convert_axis_to_net_axis<512>'
+	 'convert_net_axis_to_axis<512>'
+	 'convert_net_axis_to_axis<512>.1'
+	 'convert_net_axis_to_axis<512>.2'
+	 'convert_net_axis_to_axis<512>.3'
+	 'convert_net_axis_to_axis<512>.4'
+	 'convert_net_axis_to_axis<512>.5'
+	 'convert_net_axis_to_axis<512>.6'
+	 'detect_eth_protocol<512>'
+	 'route_by_eth_protocol<512>'
+	 'ip_handler_rshiftWordByOctet<net_axis<512>, 512, 1>'
+	 'ip_handler_rshiftWordByOctet<net_axis<512>, 512, 3>'
+	 'extract_ip_meta<512>'
+	 'ip_handler_compute_ipv4_checksum'
+	 'ip_handler_check_ipv4_checksum<32>'
+	 'ip_invalid_dropper<512>'
+	 'cut_length'
+	 'detect_ipv4_protocol<512>'
+	 'detect_ipv6_protocol<512>'
+	 'ip_handler_duplicate_stream<net_axis<512> >'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (/home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4_utils.cpp:564:3) in function 'ip_handler_compute_ipv4_checksum'... converting 61 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1.34 seconds. CPU system time: 0.05 seconds. Elapsed time: 1.38 seconds; current allocated memory: 377.195 MB.
+WARNING: [HLS 200-657] Generating channel m_axis_arp_internal that flows backwards in the dataflow region.
+WARNING: [HLS 200-657] Generating channel m_axis_icmpv6_internal that flows backwards in the dataflow region.
+WARNING: [HLS 200-657] Generating channel m_axis_ipv6udp_internal that flows backwards in the dataflow region.
+WARNING: [HLS 200-657] Generating channel m_axis_icmp_internal that flows backwards in the dataflow region.
+WARNING: [HLS 200-657] Generating channel m_axis_udp_internal that flows backwards in the dataflow region.
+WARNING: [HLS 200-657] Generating channel m_axis_tcp_internal that flows backwards in the dataflow region.
+WARNING: [HLS 200-657] Generating channel m_axis_roce_internal that flows backwards in the dataflow region.
+WARNING: [HLS 200-631] Ignoring ap_ctrl_none interface for ip_handler_top due to entry_proc with non-FIFO I/O
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1.9 seconds. CPU system time: 0.05 seconds. Elapsed time: 1.95 seconds; current allocated memory: 649.078 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ip_handler_top' ...
+WARNING: [SYN 201-103] Legalizing function name 'convert_axis_to_net_axis<512>' to 'convert_axis_to_net_axis_512_s'.
+WARNING: [SYN 201-103] Legalizing function name 'convert_net_axis_to_axis<512>' to 'convert_net_axis_to_axis_512_s'.
+WARNING: [SYN 201-103] Legalizing function name 'convert_net_axis_to_axis<512>.1' to 'convert_net_axis_to_axis_512_1'.
+WARNING: [SYN 201-103] Legalizing function name 'convert_net_axis_to_axis<512>.2' to 'convert_net_axis_to_axis_512_2'.
+WARNING: [SYN 201-103] Legalizing function name 'convert_net_axis_to_axis<512>.3' to 'convert_net_axis_to_axis_512_3'.
+WARNING: [SYN 201-103] Legalizing function name 'convert_net_axis_to_axis<512>.4' to 'convert_net_axis_to_axis_512_4'.
+WARNING: [SYN 201-103] Legalizing function name 'convert_net_axis_to_axis<512>.5' to 'convert_net_axis_to_axis_512_5'.
+WARNING: [SYN 201-103] Legalizing function name 'convert_net_axis_to_axis<512>.6' to 'convert_net_axis_to_axis_512_6'.
+WARNING: [SYN 201-103] Legalizing function name 'detect_eth_protocol<512>' to 'detect_eth_protocol_512_s'.
+WARNING: [SYN 201-103] Legalizing function name 'route_by_eth_protocol<512>' to 'route_by_eth_protocol_512_s'.
+WARNING: [SYN 201-103] Legalizing function name 'ip_handler_rshiftWordByOctet<net_axis<512>, 512, 1>' to 'ip_handler_rshiftWordByOctet_net_axis_512_512_1_s'.
+WARNING: [SYN 201-103] Legalizing function name 'ip_handler_rshiftWordByOctet<net_axis<512>, 512, 3>' to 'ip_handler_rshiftWordByOctet_net_axis_512_512_3_s'.
+WARNING: [SYN 201-103] Legalizing function name 'extract_ip_meta<512>' to 'extract_ip_meta_512_s'.
+WARNING: [SYN 201-103] Legalizing function name 'ip_handler_check_ipv4_checksum<32>' to 'ip_handler_check_ipv4_checksum_32_s'.
+WARNING: [SYN 201-103] Legalizing function name 'ip_invalid_dropper<512>' to 'ip_invalid_dropper_512_s'.
+WARNING: [SYN 201-103] Legalizing function name 'detect_ipv4_protocol<512>' to 'detect_ipv4_protocol_512_s'.
+WARNING: [SYN 201-103] Legalizing function name 'detect_ipv6_protocol<512>' to 'detect_ipv6_protocol_512_s'.
+WARNING: [SYN 201-103] Legalizing function name 'ip_handler_duplicate_stream<net_axis<512> >' to 'ip_handler_duplicate_stream_net_axis_512_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.11 seconds; current allocated memory: 649.078 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 649.078 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convert_axis_to_net_axis_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'convert_axis_to_net_axis<512>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'convert_axis_to_net_axis<512>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 649.078 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 649.078 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convert_net_axis_to_axis_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'convert_net_axis_to_axis<512>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, function 'convert_net_axis_to_axis<512>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 649.078 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 649.078 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convert_net_axis_to_axis_512_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'convert_net_axis_to_axis<512>.1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, function 'convert_net_axis_to_axis<512>.1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 649.078 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 649.078 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convert_net_axis_to_axis_512_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'convert_net_axis_to_axis<512>.2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, function 'convert_net_axis_to_axis<512>.2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 649.078 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 649.078 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convert_net_axis_to_axis_512_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'convert_net_axis_to_axis<512>.3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, function 'convert_net_axis_to_axis<512>.3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 649.078 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 649.078 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convert_net_axis_to_axis_512_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'convert_net_axis_to_axis<512>.4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, function 'convert_net_axis_to_axis<512>.4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 649.078 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 649.078 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convert_net_axis_to_axis_512_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'convert_net_axis_to_axis<512>.5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, function 'convert_net_axis_to_axis<512>.5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 649.078 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 649.078 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convert_net_axis_to_axis_512_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'convert_net_axis_to_axis<512>.6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, function 'convert_net_axis_to_axis<512>.6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 649.234 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 649.234 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detect_eth_protocol_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'detect_eth_protocol<512>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, function 'detect_eth_protocol<512>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 649.500 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 649.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'route_by_eth_protocol_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'route_by_eth_protocol<512>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'route_by_eth_protocol<512>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 650.152 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 650.152 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ip_handler_rshiftWordByOctet_net_axis_512_512_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'ip_handler_rshiftWordByOctet<net_axis<512>, 512, 1>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'ip_handler_rshiftWordByOctet<net_axis<512>, 512, 1>'
+WARNING: [HLS 200-871] Estimated clock period (2.644ns) exceeds the target (target clock period: 3.2ns, clock uncertainty: 0.864ns, effective delay budget: 2.336ns).
+WARNING: [HLS 200-1016] The critical path in module 'ip_handler_rshiftWordByOctet_net_axis_512_512_1_s' consists of the following:	fifo read operation ('ipv4ShiftFifo_read', /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'ipv4ShiftFifo' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [24]  (1.17 ns)
+	'icmp' operation ('sendWord.last.V') [36]  (0.967 ns)
+	multiplexor before 'phi' operation ('sendWord.last.V') with incoming values : ('sendWord.last.V') [41]  (0.387 ns)
+	'phi' operation ('sendWord.last.V') with incoming values : ('sendWord.last.V') [41]  (0 ns)
+	blocking operation 0.122 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 650.695 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 650.695 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ip_handler_rshiftWordByOctet_net_axis_512_512_3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'ip_handler_rshiftWordByOctet<net_axis<512>, 512, 3>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'ip_handler_rshiftWordByOctet<net_axis<512>, 512, 3>'
+WARNING: [HLS 200-871] Estimated clock period (2.644ns) exceeds the target (target clock period: 3.2ns, clock uncertainty: 0.864ns, effective delay budget: 2.336ns).
+WARNING: [HLS 200-1016] The critical path in module 'ip_handler_rshiftWordByOctet_net_axis_512_512_3_s' consists of the following:	fifo read operation ('ipv6ShiftFifo_read', /tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'ipv6ShiftFifo' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [24]  (1.17 ns)
+	'icmp' operation ('sendWord.last.V') [36]  (0.967 ns)
+	multiplexor before 'phi' operation ('sendWord.last.V') with incoming values : ('sendWord.last.V') [42]  (0.387 ns)
+	'phi' operation ('sendWord.last.V') with incoming values : ('sendWord.last.V') [42]  (0 ns)
+	blocking operation 0.122 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 651.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 651.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'extract_ip_meta_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'extract_ip_meta<512>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'extract_ip_meta<512>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 651.617 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 651.617 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ip_handler_compute_ipv4_checksum' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'ip_handler_compute_ipv4_checksum'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, function 'ip_handler_compute_ipv4_checksum'
+WARNING: [HLS 200-871] Estimated clock period (2.38944ns) exceeds the target (target clock period: 3.2ns, clock uncertainty: 0.864ns, effective delay budget: 2.336ns).
+WARNING: [HLS 200-1016] The critical path in module 'ip_handler_compute_ipv4_checksum' consists of the following:	'load' operation ('cics_ip_sums_sum_V_29_load') on static variable 'cics_ip_sums_sum_V_29' [85]  (0 ns)
+	'add' operation ('add_ln885_29') [459]  (0.791 ns)
+	'add' operation ('add_ln229_59') [462]  (0 ns)
+	'add' operation ('add_ln229_29') [463]  (0.675 ns)
+	'select' operation ('select_ln1072_29') [465]  (0.268 ns)
+	multiplexor before 'phi' operation ('cics_ip_sums_sum_V_29_new_0_i') with incoming values : ('select_ln1072_29') [515]  (0.387 ns)
+	'phi' operation ('cics_ip_sums_sum_V_29_new_0_i') with incoming values : ('select_ln1072_29') [515]  (0 ns)
+	'select' operation ('select_ln566_29', /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4_utils.cpp:566) [561]  (0.268 ns)
+	'store' operation ('cics_ip_sums_sum_V_29_write_ln571', /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4_utils.cpp:571) of variable 'select_ln566_29', /home/yangz0e/Desktop/Vitis_with_100Gbps_TCP-IP_top_k/fpga-network-stack/hls/ip_handler/../ipv4/ipv4_utils.cpp:566 on static variable 'cics_ip_sums_sum_V_29' [564]  (0 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.49 seconds. CPU system time: 0 seconds. Elapsed time: 0.49 seconds; current allocated memory: 658.133 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 658.133 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ip_handler_check_ipv4_checksum_32_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'ip_handler_check_ipv4_checksum<32>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, function 'ip_handler_check_ipv4_checksum<32>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.65 seconds. CPU system time: 0 seconds. Elapsed time: 0.65 seconds; current allocated memory: 658.820 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 658.820 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ip_invalid_dropper_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'ip_invalid_dropper<512>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'ip_invalid_dropper<512>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.34 seconds. CPU system time: 0 seconds. Elapsed time: 0.34 seconds; current allocated memory: 659.652 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 659.652 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cut_length' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'cut_length'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'cut_length'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 660.289 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 660.289 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detect_ipv4_protocol_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'detect_ipv4_protocol<512>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'detect_ipv4_protocol<512>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 660.867 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 661.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detect_ipv6_protocol_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'detect_ipv6_protocol<512>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'detect_ipv6_protocol<512>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 662.277 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 663.785 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ip_handler_duplicate_stream_net_axis_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'ip_handler_duplicate_stream<net_axis<512> >'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'ip_handler_duplicate_stream<net_axis<512> >'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 664.707 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 664.707 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ip_handler_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 665.039 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.33 seconds. CPU system time: 0 seconds. Elapsed time: 0.33 seconds; current allocated memory: 665.258 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.71 seconds. CPU system time: 0 seconds. Elapsed time: 0.71 seconds; current allocated memory: 665.387 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convert_axis_to_net_axis_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'convert_axis_to_net_axis_512_s' pipeline 'convert_axis_to_net_axis<512>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convert_axis_to_net_axis_512_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 665.820 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convert_net_axis_to_axis_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'convert_net_axis_to_axis_512_s' pipeline 'convert_net_axis_to_axis<512>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convert_net_axis_to_axis_512_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 666.469 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convert_net_axis_to_axis_512_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'convert_net_axis_to_axis_512_1' pipeline 'convert_net_axis_to_axis<512>.1' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convert_net_axis_to_axis_512_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 667.090 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convert_net_axis_to_axis_512_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'convert_net_axis_to_axis_512_2' pipeline 'convert_net_axis_to_axis<512>.2' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convert_net_axis_to_axis_512_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 667.738 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convert_net_axis_to_axis_512_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'convert_net_axis_to_axis_512_3' pipeline 'convert_net_axis_to_axis<512>.3' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convert_net_axis_to_axis_512_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 668.359 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convert_net_axis_to_axis_512_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'convert_net_axis_to_axis_512_4' pipeline 'convert_net_axis_to_axis<512>.4' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convert_net_axis_to_axis_512_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 669.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convert_net_axis_to_axis_512_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'convert_net_axis_to_axis_512_5' pipeline 'convert_net_axis_to_axis<512>.5' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convert_net_axis_to_axis_512_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 669.688 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convert_net_axis_to_axis_512_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'convert_net_axis_to_axis_512_6' pipeline 'convert_net_axis_to_axis<512>.6' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convert_net_axis_to_axis_512_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 670.305 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detect_eth_protocol_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'header_ready_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'header_idx_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'header_header_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'metaWritten_1' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'detect_eth_protocol_512_s' pipeline 'detect_eth_protocol<512>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detect_eth_protocol_512_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 671.113 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'route_by_eth_protocol_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'rep_fsmState_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'rep_etherType_V' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'route_by_eth_protocol_512_s' pipeline 'route_by_eth_protocol<512>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'route_by_eth_protocol_512_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 672.492 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ip_handler_rshiftWordByOctet_net_axis_512_512_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'fsmState_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'prevWord_data_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'prevWord_keep_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'rs_firstWord_1' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ip_handler_rshiftWordByOctet_net_axis_512_512_1_s' pipeline 'ip_handler_rshiftWordByOctet<net_axis<512>, 512, 1>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ip_handler_rshiftWordByOctet_net_axis_512_512_1_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 673.758 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ip_handler_rshiftWordByOctet_net_axis_512_512_3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'fsmState' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'prevWord_data_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'prevWord_keep_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'rs_firstWord' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ip_handler_rshiftWordByOctet_net_axis_512_512_3_s' pipeline 'ip_handler_rshiftWordByOctet<net_axis<512>, 512, 3>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ip_handler_rshiftWordByOctet_net_axis_512_512_3_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 675.047 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'extract_ip_meta_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'header_ready' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'header_idx' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'header_header_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'metaWritten' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'extract_ip_meta_512_s' pipeline 'extract_ip_meta<512>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'extract_ip_meta_512_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 676.391 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ip_handler_compute_ipv4_checksum' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'cics_firstWord' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cics_ip_sums_sum_V_29' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ip_handler_compute_ipv4_checksum' pipeline 'ip_handler_compute_ipv4_checksum' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ip_handler_compute_ipv4_checksum'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.35 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.36 seconds; current allocated memory: 681.398 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ip_handler_check_ipv4_checksum_32_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ip_handler_check_ipv4_checksum_32_s' pipeline 'ip_handler_check_ipv4_checksum<32>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ip_handler_check_ipv4_checksum_32_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.33 seconds; current allocated memory: 693.477 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ip_invalid_dropper_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'iid_state' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ip_invalid_dropper_512_s' pipeline 'ip_invalid_dropper<512>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ip_invalid_dropper_512_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.87 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.89 seconds; current allocated memory: 700.133 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cut_length' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'cl_state' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cut_length' pipeline 'cut_length' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_646_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cut_length'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 701.637 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detect_ipv4_protocol_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'dip_state' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'dip_ipProtocol_V' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'detect_ipv4_protocol_512_s' pipeline 'detect_ipv4_protocol<512>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detect_ipv4_protocol_512_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 702.844 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detect_ipv6_protocol_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'state_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'nextHeader_V' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'detect_ipv6_protocol_512_s' pipeline 'detect_ipv6_protocol<512>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detect_ipv6_protocol_512_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 703.918 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ip_handler_duplicate_stream_net_axis_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ip_handler_duplicate_stream_net_axis_512_s' pipeline 'ip_handler_duplicate_stream<net_axis<512> >' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ip_handler_duplicate_stream_net_axis_512_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 704.824 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ip_handler_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/s_axis_raw_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/s_axis_raw_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/s_axis_raw_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/s_axis_raw_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_arp_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_arp_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_arp_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_arp_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_icmpv6_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_icmpv6_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_icmpv6_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_icmpv6_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_ipv6udp_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_ipv6udp_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_ipv6udp_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_ipv6udp_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_icmp_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_icmp_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_icmp_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_icmp_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_udp_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_udp_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_udp_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_udp_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_tcp_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_tcp_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_tcp_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_tcp_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_roce_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_roce_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_roce_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/m_axis_roce_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ip_handler_top/myIpAddress' to 'ap_none' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'ip_handler_top' to 'ap_ctrl_none'.
+WARNING: [HLS 200-656] Deadlocks can occur since process convert_axis_to_net_axis<512> is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+WARNING: [HLS 200-656] Deadlocks can occur since process convert_net_axis_to_axis<512> is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+WARNING: [HLS 200-656] Deadlocks can occur since process convert_net_axis_to_axis<512>.1 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+WARNING: [HLS 200-656] Deadlocks can occur since process convert_net_axis_to_axis<512>.2 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+WARNING: [HLS 200-656] Deadlocks can occur since process convert_net_axis_to_axis<512>.3 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+WARNING: [HLS 200-656] Deadlocks can occur since process convert_net_axis_to_axis<512>.4 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+WARNING: [HLS 200-656] Deadlocks can occur since process convert_net_axis_to_axis<512>.5 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================

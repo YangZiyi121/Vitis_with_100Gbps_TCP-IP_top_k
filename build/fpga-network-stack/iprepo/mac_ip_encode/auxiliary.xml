@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="mac_ip_encode_top" xd:componentRef="mac_ip_encode" xd:initiationInterval="1" xd:clockPeriod="3.2" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="dataIn" xd:originalName="dataIn" xd:direction="in" xd:interfaceRef="s_axis_ip" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="arpTableIn" xd:originalName="arpTableIn" xd:direction="in" xd:interfaceRef="s_axis_arp_lookup_reply" xd:busTypeRef="axis" xd:dataWidth="56"/>
+  <xd:arg xd:name="dataOut" xd:originalName="dataOut" xd:direction="out" xd:interfaceRef="m_axis_ip" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="arpTableOut" xd:originalName="arpTableOut" xd:direction="out" xd:interfaceRef="m_axis_arp_lookup_request" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="myMacAddress" xd:originalName="myMacAddress" xd:direction="in" xd:interfaceRef="myMacAddress" xd:busTypeRef="register" xd:dataWidth="48"/>
+  <xd:arg xd:name="regSubNetMask" xd:originalName="regSubNetMask" xd:direction="in" xd:interfaceRef="regSubNetMask" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="regDefaultGateway" xd:originalName="regDefaultGateway" xd:direction="in" xd:interfaceRef="regDefaultGateway" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="19" xd:worst-case="19" xd:average-case="19"/>
+  <xd:resourceEstimates xd:LUT="17995" xd:FF="26248" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

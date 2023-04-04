@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="ip_handler_top" xd:componentRef="ip_handler" xd:initiationInterval="1" xd:clockPeriod="3.2" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="s_axis_raw" xd:originalName="s_axis_raw" xd:direction="in" xd:interfaceRef="s_axis_raw" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="m_axis_arp" xd:originalName="m_axis_arp" xd:direction="out" xd:interfaceRef="m_axis_arp" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="m_axis_icmpv6" xd:originalName="m_axis_icmpv6" xd:direction="out" xd:interfaceRef="m_axis_icmpv6" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="m_axis_ipv6udp" xd:originalName="m_axis_ipv6udp" xd:direction="out" xd:interfaceRef="m_axis_ipv6udp" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="m_axis_icmp" xd:originalName="m_axis_icmp" xd:direction="out" xd:interfaceRef="m_axis_icmp" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="m_axis_udp" xd:originalName="m_axis_udp" xd:direction="out" xd:interfaceRef="m_axis_udp" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="m_axis_tcp" xd:originalName="m_axis_tcp" xd:direction="out" xd:interfaceRef="m_axis_tcp" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="m_axis_roce" xd:originalName="m_axis_roce" xd:direction="out" xd:interfaceRef="m_axis_roce" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="myIpAddress" xd:originalName="myIpAddress" xd:direction="in" xd:interfaceRef="myIpAddress" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="27" xd:worst-case="27" xd:average-case="27"/>
+  <xd:resourceEstimates xd:LUT="30340" xd:FF="58608" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

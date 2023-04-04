@@ -1,0 +1,227 @@
+
+
+================================================================
+== Vitis HLS Report for 'scatter'
+================================================================
+* Date:           Sat Mar 18 14:42:54 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        scatter_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  3.080 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        6|        6|  19.200 ns|  19.200 ns|    1|    1|  dataflow|
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------+----------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                             |                            |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |           Instance          |           Module           |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-----------------------------+----------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |txDataBuffer_handler_512_U0  |txDataBuffer_handler_512_s  |        2|        2|  6.400 ns|  6.400 ns|    1|    1|      yes|
+        |entry_proc_U0                |entry_proc                  |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+        |openStatus_handler_U0        |openStatus_handler          |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+        |txStatus_handler_U0          |txStatus_handler            |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+        |client_512_U0                |client_512_s                |        3|        3|  9.600 ns|  9.600 ns|    1|    1|      yes|
+        |rxDataBuffer_handler_512_U0  |rxDataBuffer_handler_512_s  |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+        |txMetaData_handler_U0        |txMetaData_handler          |        2|        2|  6.400 ns|  6.400 ns|    1|    1|      yes|
+        |closeConnection_handler_U0   |closeConnection_handler     |        2|        2|  6.400 ns|  6.400 ns|    1|    1|      yes|
+        |server_512_U0                |server_512_s                |        2|        2|  6.400 ns|  6.400 ns|    1|    1|      yes|
+        +-----------------------------+----------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        -|        -|    -|
+|FIFO                 |       68|     -|     5005|     3083|    -|
+|Instance             |        -|     -|     2243|     3631|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|        -|    -|
+|Register             |        -|     -|        -|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |       68|     0|     7248|     6714|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        5|     0|       ~0|        1|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        1|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------+----------------------------+---------+----+-----+------+-----+
+    |           Instance          |           Module           | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +-----------------------------+----------------------------+---------+----+-----+------+-----+
+    |client_512_U0                |client_512_s                |        0|   0|  778|  2887|    0|
+    |closeConnection_handler_U0   |closeConnection_handler     |        0|   0|   22|    43|    0|
+    |entry_proc_U0                |entry_proc                  |        0|   0|    2|   200|    0|
+    |openStatus_handler_U0        |openStatus_handler          |        0|   0|   76|    37|    0|
+    |rxDataBuffer_handler_512_U0  |rxDataBuffer_handler_512_s  |        0|   0|  581|    37|    0|
+    |server_512_U0                |server_512_s                |        0|   0|   95|   304|    0|
+    |txDataBuffer_handler_512_U0  |txDataBuffer_handler_512_s  |        0|   0|  583|    43|    0|
+    |txMetaData_handler_U0        |txMetaData_handler          |        0|   0|   38|    43|    0|
+    |txStatus_handler_U0          |txStatus_handler            |        0|   0|   68|    37|    0|
+    +-----------------------------+----------------------------+---------+----+-----+------+-----+
+    |Total                        |                            |        0|   0| 2243|  3631|    0|
+    +-----------------------------+----------------------------+---------+----+-----+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +-------------------------+---------+------+----+-----+------+------+---------+
+    |           Name          | BRAM_18K|  FF  | LUT| URAM| Depth| Bits | Size:D*B|
+    +-------------------------+---------+------+----+-----+------+------+---------+
+    |clientPkgNum_c_U         |        0|     5|   0|    -|     3|    32|       96|
+    |closeConnectionBuffer_U  |        1|    63|   0|    -|   512|    16|     8192|
+    |expectedRespInKB_c_U     |        0|     5|   0|    -|     3|    16|       48|
+    |openConStatusBuffer_U    |        4|   287|   0|    -|   512|    96|    49152|
+    |pkgWordCount_c_U         |        0|     5|   0|    -|     3|    16|       48|
+    |regBasePort_c41_U        |        0|     5|   0|    -|     3|    16|       48|
+    |regBasePort_c_U          |        0|     5|   0|    -|     3|    16|       48|
+    |regIpAddress0_c_U        |        0|     5|   0|    -|     3|    32|       96|
+    |regIpAddress10_c_U       |        0|     5|   0|    -|     3|    32|       96|
+    |regIpAddress1_c_U        |        0|     5|   0|    -|     3|    32|       96|
+    |regIpAddress2_c_U        |        0|     5|   0|    -|     3|    32|       96|
+    |regIpAddress3_c_U        |        0|     5|   0|    -|     3|    32|       96|
+    |regIpAddress4_c_U        |        0|     5|   0|    -|     3|    32|       96|
+    |regIpAddress5_c_U        |        0|     5|   0|    -|     3|    32|       96|
+    |regIpAddress6_c_U        |        0|     5|   0|    -|     3|    32|       96|
+    |regIpAddress7_c_U        |        0|     5|   0|    -|     3|    32|       96|
+    |regIpAddress8_c_U        |        0|     5|   0|    -|     3|    32|       96|
+    |regIpAddress9_c_U        |        0|     5|   0|    -|     3|    32|       96|
+    |runExperiment_c40_U      |        0|     5|   0|    -|     3|     1|        3|
+    |runExperiment_c_U        |        0|     5|   0|    -|     3|     1|        3|
+    |rxDataBuffer_U           |       29|  2084|   0|    -|   512|  1024|   524288|
+    |txDataBuffer_U           |       29|  2084|   0|    -|   512|  1024|   524288|
+    |txMetaDataBuffer_U       |        1|    95|   0|    -|   512|    32|    16384|
+    |txStatusBuffer_U         |        4|   287|   0|    -|   512|    96|    49152|
+    |useConn_c_U              |        0|     5|   0|    -|     3|    16|       48|
+    |useIpAddr_c_U            |        0|     5|   0|    -|     3|    16|       48|
+    |usePort_c_U              |        0|     5|   0|    -|     3|    16|       48|
+    +-------------------------+---------+------+----+-----+------+------+---------+
+    |Total                    |       68|  5005|   0|    0|  3135|  2786|  1172950|
+    +-------------------------+---------+------+----+-----+------+------+---------+
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+-----+--------------+---------------------------+--------------+
+|             RTL Ports            | Dir | Bits|   Protocol   |       Source Object       |    C Type    |
++----------------------------------+-----+-----+--------------+---------------------------+--------------+
+|ap_local_block                    |  out|    1|  ap_ctrl_none|                    scatter|  return value|
+|ap_local_deadlock                 |  out|    1|  ap_ctrl_none|                    scatter|  return value|
+|ap_clk                            |   in|    1|  ap_ctrl_none|                    scatter|  return value|
+|ap_rst_n                          |   in|    1|  ap_ctrl_none|                    scatter|  return value|
+|m_axis_listen_port_TDATA          |  out|   16|          axis|         m_axis_listen_port|       pointer|
+|m_axis_listen_port_TVALID         |  out|    1|          axis|         m_axis_listen_port|       pointer|
+|m_axis_listen_port_TREADY         |   in|    1|          axis|         m_axis_listen_port|       pointer|
+|s_axis_listen_port_status_TDATA   |   in|    8|          axis|  s_axis_listen_port_status|       pointer|
+|s_axis_listen_port_status_TVALID  |   in|    1|          axis|  s_axis_listen_port_status|       pointer|
+|s_axis_listen_port_status_TREADY  |  out|    1|          axis|  s_axis_listen_port_status|       pointer|
+|s_axis_notifications_TDATA        |   in|   88|          axis|       s_axis_notifications|       pointer|
+|s_axis_notifications_TVALID       |   in|    1|          axis|       s_axis_notifications|       pointer|
+|s_axis_notifications_TREADY       |  out|    1|          axis|       s_axis_notifications|       pointer|
+|m_axis_read_package_TDATA         |  out|   32|          axis|        m_axis_read_package|       pointer|
+|m_axis_read_package_TVALID        |  out|    1|          axis|        m_axis_read_package|       pointer|
+|m_axis_read_package_TREADY        |   in|    1|          axis|        m_axis_read_package|       pointer|
+|s_axis_rx_metadata_TDATA          |   in|   16|          axis|         s_axis_rx_metadata|       pointer|
+|s_axis_rx_metadata_TVALID         |   in|    1|          axis|         s_axis_rx_metadata|       pointer|
+|s_axis_rx_metadata_TREADY         |  out|    1|          axis|         s_axis_rx_metadata|       pointer|
+|s_axis_rx_data_TDATA              |   in|  512|          axis|    s_axis_rx_data_V_data_V|       pointer|
+|s_axis_rx_data_TKEEP              |   in|   64|          axis|    s_axis_rx_data_V_keep_V|       pointer|
+|s_axis_rx_data_TSTRB              |   in|   64|          axis|    s_axis_rx_data_V_strb_V|       pointer|
+|s_axis_rx_data_TLAST              |   in|    1|          axis|    s_axis_rx_data_V_last_V|       pointer|
+|s_axis_rx_data_TVALID             |   in|    1|          axis|    s_axis_rx_data_V_last_V|       pointer|
+|s_axis_rx_data_TREADY             |  out|    1|          axis|    s_axis_rx_data_V_last_V|       pointer|
+|m_axis_open_connection_TDATA      |  out|   48|          axis|     m_axis_open_connection|       pointer|
+|m_axis_open_connection_TVALID     |  out|    1|          axis|     m_axis_open_connection|       pointer|
+|m_axis_open_connection_TREADY     |   in|    1|          axis|     m_axis_open_connection|       pointer|
+|s_axis_open_status_TDATA          |   in|   72|          axis|         s_axis_open_status|       pointer|
+|s_axis_open_status_TVALID         |   in|    1|          axis|         s_axis_open_status|       pointer|
+|s_axis_open_status_TREADY         |  out|    1|          axis|         s_axis_open_status|       pointer|
+|m_axis_close_connection_TDATA     |  out|   16|          axis|    m_axis_close_connection|       pointer|
+|m_axis_close_connection_TVALID    |  out|    1|          axis|    m_axis_close_connection|       pointer|
+|m_axis_close_connection_TREADY    |   in|    1|          axis|    m_axis_close_connection|       pointer|
+|m_axis_tx_metadata_TDATA          |  out|   32|          axis|         m_axis_tx_metadata|       pointer|
+|m_axis_tx_metadata_TVALID         |  out|    1|          axis|         m_axis_tx_metadata|       pointer|
+|m_axis_tx_metadata_TREADY         |   in|    1|          axis|         m_axis_tx_metadata|       pointer|
+|m_axis_tx_data_TDATA              |  out|  512|          axis|    m_axis_tx_data_V_data_V|       pointer|
+|m_axis_tx_data_TKEEP              |  out|   64|          axis|    m_axis_tx_data_V_keep_V|       pointer|
+|m_axis_tx_data_TSTRB              |  out|   64|          axis|    m_axis_tx_data_V_strb_V|       pointer|
+|m_axis_tx_data_TLAST              |  out|    1|          axis|    m_axis_tx_data_V_last_V|       pointer|
+|m_axis_tx_data_TVALID             |  out|    1|          axis|    m_axis_tx_data_V_last_V|       pointer|
+|m_axis_tx_data_TREADY             |   in|    1|          axis|    m_axis_tx_data_V_last_V|       pointer|
+|s_axis_tx_status_TDATA            |   in|   64|          axis|           s_axis_tx_status|       pointer|
+|s_axis_tx_status_TVALID           |   in|    1|          axis|           s_axis_tx_status|       pointer|
+|s_axis_tx_status_TREADY           |  out|    1|          axis|           s_axis_tx_status|       pointer|
+|runExperiment                     |   in|    1|       ap_none|              runExperiment|        scalar|
+|useConn                           |   in|   16|       ap_none|                    useConn|        scalar|
+|useIpAddr                         |   in|   16|       ap_none|                  useIpAddr|        scalar|
+|pkgWordCount                      |   in|   16|       ap_none|               pkgWordCount|        scalar|
+|regBasePort                       |   in|   16|       ap_none|                regBasePort|        scalar|
+|usePort                           |   in|   16|       ap_none|                    usePort|        scalar|
+|expectedRespInKB                  |   in|   16|       ap_none|           expectedRespInKB|        scalar|
+|finishExperiment                  |   in|    1|       ap_none|           finishExperiment|        scalar|
+|clientPkgNum                      |   in|   32|       ap_none|               clientPkgNum|        scalar|
+|regIpAddress0                     |   in|   32|       ap_none|              regIpAddress0|        scalar|
+|regIpAddress1                     |   in|   32|       ap_none|              regIpAddress1|        scalar|
+|regIpAddress2                     |   in|   32|       ap_none|              regIpAddress2|        scalar|
+|regIpAddress3                     |   in|   32|       ap_none|              regIpAddress3|        scalar|
+|regIpAddress4                     |   in|   32|       ap_none|              regIpAddress4|        scalar|
+|regIpAddress5                     |   in|   32|       ap_none|              regIpAddress5|        scalar|
+|regIpAddress6                     |   in|   32|       ap_none|              regIpAddress6|        scalar|
+|regIpAddress7                     |   in|   32|       ap_none|              regIpAddress7|        scalar|
+|regIpAddress8                     |   in|   32|       ap_none|              regIpAddress8|        scalar|
+|regIpAddress9                     |   in|   32|       ap_none|              regIpAddress9|        scalar|
+|regIpAddress10                    |   in|   32|       ap_none|             regIpAddress10|        scalar|
++----------------------------------+-----+-----+--------------+---------------------------+--------------+
+
