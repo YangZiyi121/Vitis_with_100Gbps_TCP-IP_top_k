@@ -7,13 +7,19 @@ This project provides a stream based integer top k sorting using a 100Gbps netwo
 This design refers to the paper [Histograms as a side effect of data movement for big data](https://dl.acm.org/doi/abs/10.1145/2588555.2612174)
 
 ![Architecture](/img/top_k_arch.png)
+
+<h3>Functionality</h3>
+
+The kernel is able to accumulately sort 32-bit integers sent with TCP packets.The user needs to send TCP packets that are multiples of 64 bytes in size, since the dataline is 64 bytes. The kernel will return the accumulated top-3 results. 
+
+For clearing the accumulation logic, the user should send a packet with 512-bit '1'.
+
 <h3>Build and Run</h3>
 
 **Clone the Repository**
 
 ```
 git clone	
-git submodule update --init --recursive
 ```
 
 **Configure TCP Stack**
