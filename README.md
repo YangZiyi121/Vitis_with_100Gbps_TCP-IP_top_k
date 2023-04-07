@@ -10,7 +10,7 @@ This design refers to the paper [Histograms as a side effect of data movement fo
 
 <h3>Functionality</h3>
 
-The kernel is able to accumulately sort 32-bit integers sent with TCP packets.The user needs to send TCP packets that are multiples of 64 bytes in size, since the dataline is 64 bytes. The kernel will return the accumulated top-3 results. 
+The kernel is able to accumulately sort 32-bit integers sent with TCP packets. The user needs to send TCP packets that are multiples of 64 bytes in size, since the dataline is 64 bytes. The kernel will return the accumulated top-3 results. 
 
 For clearing the accumulation logic, the user should send a packet with 512-bit '1'.
 
