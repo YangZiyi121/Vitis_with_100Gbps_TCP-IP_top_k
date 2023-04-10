@@ -267,11 +267,11 @@ assign interrupt = 1'b0;
 // // assign m_axis_tcp_tx_data_tvalid = 1'b0;
 // // assign s_axis_tcp_tx_status_tready = 1'b1;
 
-ipcore_top_gradient /*#( 
+ipcore_top_top_k /*#( 
   .C_S_AXI_CONTROL_DATA_WIDTH(C_S_AXI_CONTROL_DATA_WIDTH),  
   .C_S_AXI_CONTROL_ADDR_WIDTH(C_S_AXI_CONTROL_ADDR_WIDTH)
 )*/
-ipcore_top_gradient_inst (
+ipcore_top_top_k_inst (
     .ap_clk(ap_clk),
     .ap_rst_n(ap_rst_n),
 

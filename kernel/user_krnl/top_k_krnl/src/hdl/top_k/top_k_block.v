@@ -54,13 +54,16 @@ module top_k_block #(
     //result port
     wire [INTEGER_SIZE - 1: 0] result_TDATA [TOP_K_NUM: 0];
     wire [TOP_K_NUM: 0] result_TVALID;
-    wire tx_data_TVALID_wire; //for valid signal
     reg [INTEGER_SIZE - 1: 0] result_TDATA_reg [TOP_K_NUM: 0];
     
     
- 
+    //FIFO port
+    wire  [INTEGER_SIZE - 1: 0] FIFO_out_TDATA [TOP_K_NUM: 0];
+    wire  [TOP_K_NUM: 0] FIFO_out_TVALID;
+    reg [2: 0] FIFO_tx_TREADY;
     
-    
+    //out
+    reg [511: 0] tx_data_TDATA_reg = 512'b0;    
     //top-k block components
     top_k_unit top_k_unit_start( .clk(clk), .rx_data_TDATA({clear, rx_data_TDATA}), .rx_data_TVALID(rx_data_TVALID), .rx_data_TLAST(rx_data_TLAST), 
                            .tx_data_TREADY(tx_data_TREADY),
@@ -103,12 +106,53 @@ module top_k_block #(
                 result_TDATA_reg[i_result] = result_TDATA[i_result];
             end
           end
+          
+       
+       //Send data to FIFO 
+        nukv_fifogen #(
+                .DATA_SIZE(32), //with TLAST encrypted in TDATA, clear signal
+                .ADDR_BITS(5)
+            ) fifo_inst (
+                    .clk(clk),
+                    .rst(0),
+                    .s_axis_tvalid(block_TVALID[i_result] && block_TLAST[i_result]),
+                    .s_axis_tready(),
+                    .s_axis_tdata(result_TDATA_reg[i_result]),  
+                    .m_axis_tvalid(FIFO_out_TVALID[i_result]),
+                    .m_axis_tready(FIFO_tx_TREADY[2]),
+                    .m_axis_tdata(FIFO_out_TDATA[i_result])
+                    ); 	
         end
-    endgenerate   
+     endgenerate   
+    
+    
+     always @(posedge clk) begin
+           FIFO_tx_TREADY[0] <= block_TVALID[TOP_K_NUM] && block_TLAST[TOP_K_NUM];
+     end
      
+     genvar i_reg;
+     generate
+     for (i_reg = 1; i_reg < TOP_K_NUM + 1; i_reg = i_reg + 1)begin 
+          always @(posedge clk) begin
+                FIFO_tx_TREADY[i_reg] <= FIFO_tx_TREADY[i_reg - 1];
+          end
+      end
+      endgenerate
+      
+     generate
+     for (i_reg = 0; i_reg < TOP_K_NUM + 1; i_reg = i_reg + 1)begin 
+          always @(*) begin
+                tx_data_TDATA_reg[INTEGER_SIZE * (i_reg + 1) - 1: INTEGER_SIZE * i_reg] = FIFO_out_TDATA[i_reg];
+          end
+      end
+      endgenerate
+     
+    
+    
      //output
-     assign tx_data_TDATA = {406'b 0, result_TDATA_reg[2], result_TDATA_reg[1], result_TDATA_reg[0]};
-     assign tx_data_TVALID = block_TLAST[TOP_K_NUM] & block_TVALID[TOP_K_NUM];
+     
+     assign tx_data_TDATA = tx_data_TDATA_reg;
+     assign tx_data_TVALID = FIFO_out_TVALID[TOP_K_NUM] && FIFO_tx_TREADY[2]&&FIFO_out_TVALID[0];
      assign rx_data_TREADY = block_TREADY[TOP_K_NUM];
 
 endmodule

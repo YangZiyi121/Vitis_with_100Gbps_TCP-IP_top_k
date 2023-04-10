@@ -72,7 +72,7 @@ create_project -force $projName $path_to_tmp_project -part $projPart
 add_files -norecurse [glob $path_to_hdl/hdl/*.v $path_to_hdl/hdl/*.sv $path_to_hdl/hdl/*.svh ]
 add_files -norecurse [glob $path_to_common/types/*.v $path_to_common/types/*.sv $path_to_common/types/*.svh ]
 
-add_files -norecurse [glob $path_to_hdl/hdl/gradient/*.v $path_to_hdl/hdl/gradient/*.vhd $path_to_hdl/hdl/gradient/*.vhdl $path_to_hdl/hdl/gradient/*.xci  ]
+add_files -norecurse [glob $path_to_hdl/hdl/top_k/*.v $path_to_hdl/hdl/top_k/*.vhd $path_to_hdl/hdl/top_k/*.vhdl $path_to_hdl/hdl/top_k/*.xci  ]
 
 set_property top user_krnl [current_fileset]
 update_compile_order -fileset sources_1

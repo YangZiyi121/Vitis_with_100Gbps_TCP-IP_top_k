@@ -1,7 +1,7 @@
 `default_nettype none
 
 //(* DowngradeIPIdentifiedWarnings="yes" *)
-module ipcore_top_gradient
+module ipcore_top_top_k
 #(
    parameter integer C_S_AXI_CONTROL_ADDR_WIDTH                = 12 ,
   parameter integer C_S_AXI_CONTROL_DATA_WIDTH                = 32 ,
