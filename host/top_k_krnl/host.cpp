@@ -93,7 +93,7 @@ int main(int argc, char **argv) {
             OCL_CHECK(err,
                       network_kernel = cl::Kernel(program, "network_krnl", &err));
             OCL_CHECK(err,
-                      user_kernel = cl::Kernel(program, "gradient_krnl", &err));
+                      user_kernel = cl::Kernel(program, "top_k_krnl", &err));
             valid_device++;
             break; // we break because we found a valid device
         }
@@ -106,7 +106,7 @@ int main(int argc, char **argv) {
     wait_for_enter("\nPress ENTER to continue after setting up ILA trigger...");
 
 
-//set the gradient kernel arguments
+//set the top k kernel arguments
     uint32_t numPacketWord = 22;
     uint32_t connection = 100;
     uint32_t numIpAddr = 1;
@@ -191,7 +191,7 @@ int main(int argc, char **argv) {
     //OCL_CHECK(err, err = user_kernel.setArg(5, dualModeEn));
     
     //Launch the Kernel
-    printf("enqueue gradient kernel...\n");
+    printf("enqueue top k kernel...\n");
     auto start = std::chrono::high_resolution_clock::now();
     OCL_CHECK(err, err = q.enqueueTask(user_kernel));
     
