@@ -79,7 +79,7 @@ update_compile_order -fileset sources_1
 
 set __ip_list [get_property ip_repo_paths [current_project]]
 
-lappend __ip_list ./kernel/user_krnl/gradient_krnl/ip
+lappend __ip_list ./kernel/user_krnl/top_k_krnl/ip
 set_property ip_repo_paths $__ip_list [current_project]
 update_ip_catalog
 
