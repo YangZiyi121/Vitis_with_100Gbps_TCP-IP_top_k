@@ -152,7 +152,7 @@ module top_k_block #(
      //output
      
      assign tx_data_TDATA = tx_data_TDATA_reg;
-     assign tx_data_TVALID = FIFO_out_TVALID[TOP_K_NUM] && FIFO_tx_TREADY[2]&&FIFO_out_TVALID[0];
+     assign tx_data_TVALID = FIFO_out_TVALID[TOP_K_NUM];
      assign rx_data_TREADY = block_TREADY[TOP_K_NUM];
 
 endmodule
