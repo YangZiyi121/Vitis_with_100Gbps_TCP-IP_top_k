@@ -145,7 +145,7 @@ build: $(BINARY_CONTAINERS)
 # Building kernel
 $(BUILD_DIR)/${XCLBIN_NAME}.xclbin: $(BINARY_CONTAINER_OBJS)
 	mkdir -p $(BUILD_DIR)
-	$(VPP) $(CLFLAGS) --temp_dir $(BUILD_DIR) -l $(LDCLFLAGS) -o'$@' $(+)
+	$(VPP) $(CLFLAGS) --temp_dir $(BUILD_DIR) -l $(LDCLFLAGS) --hls.jobs 32 --vivado.synth.jobs 32 --vivado.impl.jobs 32 --vivado.param general.maxThreads=8 -o'$@' $(+)
 
 # Building Host
 .PHONY: compile
