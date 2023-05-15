@@ -49,3 +49,10 @@ make installip
 cd ../
 make all TARGET=hw DEVICE=/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm USER_KRNL=top_k_krnl USER_KRNL_MODE=rtl NETH=4
 ```
+
+**Testing Script**
+
+The script used to conduct the experiment is in directory **script_for_testing**. **test.py** is for generating concurrent requests and **script_for_wireshark.py** is for capturing packets with Tshark. To run both, use cmd
+```
+./run.sh
+```
