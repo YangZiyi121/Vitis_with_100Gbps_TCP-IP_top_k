@@ -18,9 +18,10 @@ The hardware architeture is initialized with 16 top-k units, and each unit has a
 
 ```python
 
-#top-8 sorting first packet
+#top-8 sorting first packet for initialization
 
-ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff[ff00] 
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 sixteen 32-bit integers in the next dataline 
 ```
 
