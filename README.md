@@ -13,14 +13,15 @@ This design refers to the paper [Histograms as a side effect of data movement fo
 The kernel is able to accumulately sort 32-bit integers sent with TCP packets. The user needs to send TCP packets that are multiples of 64 bytes in size, since the dataline is 64 bytes. The kernel will return the accumulated top-K results. 
 
 <h3>Runtime configurable K</h3>
-The hardware architeture is initialized with 16 top-k units, and each unit has an enable signal. To configure the K size, the first dataline (64 bytes) in the first packet should be sent in the following format. The 16-bit in the brackets specify the enable signal for each unit. For example, to have top-4 sorting, the 16-bit should be [f000], which enables four units. 
+The hardware architeture is initialized with 16 top-k units, and each unit has an enable signal. To configure the K size, the first dataline (64 bytes) in the first packet should be sent in the following format. The 16-bit in the brackets specify the enable signal for each unit. For example, to have top-4 sorting, the 16-bit should be [0f00], which enables four units. 
 
 
 ```python
 
-#top-8 sorting first packet
+#top-8 sorting first packet for initialization
 
-ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff[ff00] 
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 sixteen 32-bit integers in the next dataline 
 ```
 
@@ -48,4 +49,11 @@ make installip
 ```
 cd ../
 make all TARGET=hw DEVICE=/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm USER_KRNL=top_k_krnl USER_KRNL_MODE=rtl NETH=4
+```
+
+**Testing Script**
+
+The script used to conduct the experiment is in directory **script_for_testing**. **test.py** is for generating concurrent requests and **script_for_wireshark.py** is for capturing packets with Tshark. To run both, use cmd
+```
+./run.sh
 ```
