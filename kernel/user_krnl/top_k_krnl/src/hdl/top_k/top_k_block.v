@@ -107,20 +107,43 @@ module top_k_block #(
                 result_TDATA_reg[i_result] = result_TDATA[i_result];
             end
           end
-          
        
-       //Send data to FIFO 
+       
+       /*assign the input data*/
+       reg s_axis_tvalid_int;
+       reg [31:0]s_axis_tdata_int;
+       
+       always@* begin
+       if (enable_register[i_result] == 1) begin
+           s_axis_tvalid_int = block_TVALID[i_result] && block_TLAST[i_result];
+           s_axis_tdata_int = result_TDATA_reg[i_result];
+           
+       end
+       else begin 
+          s_axis_tvalid_int = block_TVALID[0] && block_TLAST[0];
+          s_axis_tdata_int = 0;
+       end
+       end
+       
+       
+         
+       
+       //Send data to FIFO
+       
+       wire ready_for_all_FIFO;
+       assign ready_for_all_FIFO = FIFO_tx_TREADY[0] & FIFO_tx_TREADY[1] & FIFO_tx_TREADY[2] & FIFO_tx_TREADY[3] & FIFO_tx_TREADY[4] & FIFO_tx_TREADY[5]& FIFO_tx_TREADY[6] & FIFO_tx_TREADY[7]& FIFO_tx_TREADY[8] & FIFO_tx_TREADY[9] & FIFO_tx_TREADY[10] & FIFO_tx_TREADY[11] & FIFO_tx_TREADY[12]& FIFO_tx_TREADY[13] & FIFO_tx_TREADY[14] & FIFO_tx_TREADY[15];
+        
         nukv_fifogen #(
                 .DATA_SIZE(32), //with TLAST encrypted in TDATA, clear signal
                 .ADDR_BITS(4)
             ) fifo_inst (
                     .clk(clk),
                     .rst(0),
-                    .s_axis_tvalid(block_TVALID[i_result] && block_TLAST[i_result]),
+                    .s_axis_tvalid(s_axis_tvalid_int),
                     .s_axis_tready(),
-                    .s_axis_tdata(result_TDATA_reg[i_result]),  
+                    .s_axis_tdata(s_axis_tdata_int),  
                     .m_axis_tvalid(FIFO_out_TVALID[i_result]),
-                    .m_axis_tready(FIFO_tx_TREADY[TOP_K_NUM]),
+                    .m_axis_tready(ready_for_all_FIFO),
                     .m_axis_tdata(FIFO_out_TDATA[i_result])
                     ); 	
         end
@@ -153,7 +176,7 @@ module top_k_block #(
      //output
      
      assign tx_data_TDATA = tx_data_TDATA_reg;
-     assign tx_data_TVALID = FIFO_out_TVALID[TOP_K_NUM]&& FIFO_tx_TREADY[TOP_K_NUM] && FIFO_out_TVALID[0];
+     assign tx_data_TVALID = FIFO_out_TVALID[TOP_K_NUM]&& FIFO_tx_TREADY[0] & FIFO_tx_TREADY[1] & FIFO_tx_TREADY[3] & FIFO_tx_TREADY[7] & FIFO_tx_TREADY[15] && FIFO_out_TVALID[0];
      assign rx_data_TREADY = block_TREADY[0];
 
 endmodule

@@ -51,14 +51,14 @@ module packet_parser(
                  current_data_TVALID = 1'b0;                
             end
             else if((rx_TDATA_parsing[511 + 1: 31 + 1 + 1] == 0) && (rx_TDATA_parsing[31+1] == 1'b1)) begin    //is the last
-                current_data_TDATA = rx_TDATA_parsing[32:0];   
+                current_data_TDATA = {1'b1, rx_TDATA_parsing[31:0]};   
                 rx_TDATA_parsing = 0; //shift
                 current_data_TVALID = 1'b1; 
                 rx_TREADY_reg = 0;
             end
             
             else begin      //not the last of this dataline
-                current_data_TDATA = rx_TDATA_parsing[32:0];  //not the last
+                current_data_TDATA = {1'b0, rx_TDATA_parsing[31:0]};  //not the last
                 rx_TDATA_parsing = {32'b0, rx_TDATA_parsing[511 + 1: 31+1]}; //shift
                 current_data_TVALID = 1'b1; 
                 rx_TREADY_reg = 0;
@@ -69,22 +69,11 @@ module packet_parser(
         else begin
             current_data_TVALID = 1'b0;
             if(rx_TVALID == 1 && rx_TREADY_reg == 1) begin  
-                if(last_dataline_reg == 0) begin    //in processing of one packet
-                    rx_TDATA_parsing = rx_TDATA;
-                    rx_TREADY_reg = 0;
-                    if(rx_TDATA[511+1] == 1) begin //if this is the last dataline 
-                        last_dataline_reg = 1;
-                        //rx_TREADY_reg = 1;  //get new dataline
-                    end
-                end
-                else if (last_dataline_reg == 1) begin //getting a new packet
-                    rx_TDATA_parsing = rx_TDATA;
-                    rx_TREADY_reg = 0;
-                    last_dataline_reg = 0;
-                    if(rx_TDATA[511+1] == 1) begin //if this is the last dataline 
-                        last_dataline_reg = 1;
-                        //rx_TREADY_reg = 0;  //get new dataline
-                    end
+                rx_TDATA_parsing = rx_TDATA;
+                rx_TREADY_reg = 0;
+                last_dataline_reg = 0;
+                if (rx_TDATA[511+1] == 1 & rx_TDATA[495: 0] != 496'hffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff) begin
+                    last_dataline_reg = 1;
                 end
             end
             else begin
