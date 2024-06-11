@@ -144,29 +144,33 @@ module tcp_top_loopback #(parameter IS_SIM = 0)
     );
 
 
-    wire [512+32-1 + 1: 0] pkt_TDATA_int;
-    wire pkt_TVALID_int;
-    wire pkt_TREADY_int;
+    wire [511:0] pkt_tx_TDATA_payload;
+    wire tx_data_TVALID;
+    wire tx_data_TREADY;
+    wire [31:0] meta_TDATA_out;
+    wire meta_TVALID_out;
     
-    
-    pkt_logic pkt_logic_inst(
+   top_k_workload top_k_workload_inst(
         .clk(clk),
-        .rst(reset),
-        .pkt_rx_TDATA(pkt_TDATA),
-        .pkt_rx_TVALID(pkt_TVALID),
-        .pkt_rx_TREADY(pkt_TREADY),
-        .pkt_tx_TDATA(pkt_TDATA_int),
-        .pkt_tx_TVALID(pkt_TVALID_int),
-        .pkt_tx_TREADY(pkt_TREADY_int)
+        .rx_TDATA(pkt_TDATA[512:0]),
+        .rx_TVALID(pkt_TVALID && pkt_TREADY),
+        .rx_TREADY(pkt_TREADY),
+        .meta_TDATA(pkt_TDATA[512 + 32 :512 + 1]),
+        .workload_selection(16'b0001), 
+        .pkt_tx_TDATA_payload(pkt_tx_TDATA_payload),
+        .tx_data_TVALID(tx_data_TVALID),
+        .tx_data_TREADY(1'b1),
+        .meta_TDATA_out(meta_TDATA_out), 
+        .meta_TVALID_out(meta_TVALID_out)
     );
     
-
+   
     pkt_sender pkt_sender_inst(
         .clk(clk),
         .rst(reset),
-        .pkt_rx_TDATA(pkt_TDATA_int), //metadata + tlast + tdata
-        .pkt_rx_TVALID(pkt_TVALID_int),
-        .pkt_rx_TREADY(pkt_TREADY_int),
+        .pkt_rx_TDATA({meta_TDATA_out, 1'b1, pkt_tx_TDATA_payload}), //metadata + tlast + tdata
+        .pkt_rx_TVALID(tx_data_TVALID && meta_TVALID_out),
+        .pkt_rx_TREADY(tx_data_TREADY),
         .s_axis_tx_status_TDATA(s_axis_tx_status_TDATA),
         .s_axis_tx_status_TVALID(s_axis_tx_status_TVALID),
         .s_axis_tx_status_TREADY(s_axis_tx_status_TREADY),
@@ -181,3 +185,4 @@ module tcp_top_loopback #(parameter IS_SIM = 0)
     );
 
 endmodule
+

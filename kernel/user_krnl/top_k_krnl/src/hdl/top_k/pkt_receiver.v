@@ -80,7 +80,7 @@ module pkt_receiver (
 
     nukv_fifogen #(
         .DATA_SIZE(512 + 1), //tlast + tdata
-        .ADDR_BITS(5)
+        .ADDR_BITS(7)
     ) fifo_payload (
         .clk(clk),
         .rst(rst),
@@ -103,11 +103,12 @@ module pkt_receiver (
 
     nukv_fifogen #(
         .DATA_SIZE(88),
-        .ADDR_BITS(5)
+        .ADDR_BITS(7)
     ) fifo_metadata (
         .clk(clk),
         .rst(rst),
         .s_axis_tvalid(metadata_rx_TVALID),
+        //.s_axis_tvalid(keep),
         .s_axis_tready(metadata_rx_TREADY),
         .s_axis_tdata(notif_tx_TDATA),
         .m_axis_tvalid(metadata_tx_TVALID),
@@ -115,23 +116,26 @@ module pkt_receiver (
         .m_axis_tdata(metadata_tx_TDATA)
     );    
     
-
-
+    
     /**********/
 
     always @(*) begin
         m_axis_read_package_TDATA = notif_tx_TDATA[31:0];
-        if (notif_tx_TVALID == 1'b1 && notif_tx_TDATA[31:16] != 16'd64 && notif_tx_TDATA[31:16] != 16'd128 && notif_tx_TDATA[31:16] != 16'd192) begin 
+        if (notif_tx_TVALID == 1'b1 && notif_tx_TDATA[31:16] != 16'd64 && notif_tx_TDATA[31:16] != 16'd128 && notif_tx_TDATA[31:16] != 16'd192 && notif_tx_TDATA[31:16] != 16'd256 && notif_tx_TDATA[31:16] != 16'd320 &&  notif_tx_TDATA[31:16] != 16'd384 && notif_tx_TDATA[31:16] != 16'd448 && notif_tx_TDATA[31:16] != 16'd512 && notif_tx_TDATA[31:16] != 16'd576 &&  notif_tx_TDATA[31:16] != 16'd640 && notif_tx_TDATA[31:16] != 16'd768 &&  notif_tx_TDATA[31:16] != 16'd832 && notif_tx_TDATA[31:16] != 16'd896 &&  notif_tx_TDATA[31:16] != 16'd960 && notif_tx_TDATA[31:16] != 16'd1024 && notif_tx_TDATA[31:16] != 16'd1088) begin
             // discard rx_data that are larger than 4096bytes
             // also handle conn_close notification (msg size = 0)
             notif_tx_TREADY = 1'b1;
             m_axis_read_package_TVALID = 1'b0;
             metadata_rx_TVALID = 1'b0;
         end else begin
+            //notif_tx_TREADY = metadata_rx_TREADY & m_axis_read_package_TREADY & (counter_packet == counter_packet_inst) & (counter_packet != 0);
             notif_tx_TREADY = metadata_rx_TREADY & m_axis_read_package_TREADY;
             m_axis_read_package_TVALID = notif_tx_TREADY & notif_tx_TVALID;
             metadata_rx_TVALID = m_axis_read_package_TVALID;
         end
+
+//        pkt_tx_TDATA = {metadata_tx_TDATA, payload_tx_TDATA_reg};  //metadata + tlast + tdata
+//        pkt_tx_TVALID = payload_tx_TVALID_reg;
 
         pkt_tx_TDATA = {metadata_tx_TDATA, payload_tx_TDATA};  //metadata + tlast + tdata
         pkt_tx_TVALID = payload_tx_TVALID;
@@ -143,7 +147,7 @@ module pkt_receiver (
             metadata_tx_TREADY = 0;
         end        
 
-        payload_tx_TREADY = pkt_tx_TVALID & pkt_tx_TREADY;
+        payload_tx_TREADY = payload_tx_TVALID & pkt_tx_TREADY;
     end
 
 endmodule
